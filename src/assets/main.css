@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Biofolio-Ultimate';
+    font-weight: normal;
+    font-style: normal;
+    src: local('Biofolio-Ultimate-Regular'), url(./fonts/BiofolioUltimateRegular.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Biofolio-Ultimate';
+    font-weight: 500;
+    font-style: normal;
+    src: local('Biofolio-Ultimate-Medium'), url(./fonts/BiofolioUltimateMedium.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Biofolio-Ultimate';
+    font-weight: 500;
+    font-style: italic;
+    src: local('Biofolio-Ultimate-Medium-Italic'), url(./fonts/BiofolioUltimateMediumItalic.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Biofolio-Ultimate';
+    font-weight: 700;
+    font-style: normal;
+    src: local('Biofolio-Ultimate-Bold'), url(./fonts/BiofolioUltimateBold.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Biofolio-Ultimate';
+    font-weight: 800;
+    font-style: normal;
+    src: local('Biofolio-Ultimate-ExtraBold'), url(./fonts/BiofolioUltimateExtraBold.otf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Biofolio-Ultimate';
+    font-weight: 900;
+    font-style: normal;
+    src: local('Biofolio-Ultimate-Heavy'), url(./fonts/BiofolioUltimateHeavy.otf) format('truetype');
+}
+
+@layer base {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        position: relative;
+        font-weight: normal;
+    }
+
+    html {
+        height: 100%;
+        height: stretch;
+        height: -webkit-stretch;
+    }
+
+    body {
+        height: 100%;
+        min-height: stretch;
+        min-height: -webkit-stretch;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    #app {
+        @apply font-base text-snow;
+    }
+
+    h1 {
+        @apply mb-5;  
+    }
+
+    p {
+        @apply font-medium mb-5 leading-normal last:mb-0;
+    }
+
+    strong {
+        @apply font-extrabold;
+    }
+
+    .special-gradient {
+        background-image:
+            linear-gradient(
+                to bottom,
+                #F4F4F4 0 50%,
+                #18181A 50%
+        );
+    }
+
+    ul.list {
+        @apply list-disc px-5;
+
+        list-style: square;
+    }
+
+    ul.list li {
+        @apply mb-2 font-medium last:mb-0;
+    }
+
+    .page-transition-enter-active,
+    .page-transition-leave-active {
+        @apply opacity-100 transition-opacity;
+    }
+
+    .page-transition-enter-from,
+    .page-transition-leave-to {
+        @apply opacity-0;
+    }
+}
