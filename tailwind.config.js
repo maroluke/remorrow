@@ -19,6 +19,9 @@ module.exports = {
         'primary': '0 6px 20px rgba(4, 138, 191, 0.75)',
         'contrast': '0 3px 15px rgba(0, 0, 0, 0.95)',
       },
+      boxShadow: {
+        'lg': '0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05)',
+      },
       fontFamily: {
         base: ["Biofolio-Ultimate"],
       },

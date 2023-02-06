@@ -45,6 +45,7 @@
 }
 
 @layer base {
+
     *,
     *::before,
     *::after {
@@ -74,7 +75,7 @@
     }
 
     h1 {
-        @apply mb-5;  
+        @apply mb-5;
     }
 
     p {
@@ -87,21 +88,17 @@
 
     .special-gradient {
         background-image:
-            linear-gradient(
-                to bottom,
+            linear-gradient(to bottom,
                 #F4F4F4 0 50%,
-                #18181A 50%
-        );
+                #18181A 50%);
     }
 
     ul.list {
-        @apply list-disc px-5;
-
-        list-style: square;
+        @apply flex flex-col gap-2 text-base;
     }
 
     ul.list li {
-        @apply mb-2 font-medium last:mb-0;
+        @apply rounded-lg p-3 bg-white text-coal font-medium shadow-lg;
     }
 
     .page-transition-enter-active,
