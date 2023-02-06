@@ -1,25 +1,75 @@
-<script setup>
+<script>
 import TheIntro from "@components/TheIntro.vue";
 import QuoteCard from "@components/QuoteCard.vue";
 import ParagraphWithCards from "@components/ParagraphWithCards.vue";
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
-import Button from "@components/Button.vue";
 import SquircleButton from "@components/SquircleButton.vue";
+import { defineComponent } from "vue";
+
+export default defineComponent({
+    setup() {
+    },
+    components: {
+        TheIntro,
+        QuoteCard,
+        ParagraphWithCards,
+        TitleParagraphItem,
+        SquircleButton,
+    },
+    data() {
+        return {
+            loading: false,
+            cmsData: [],
+            error: null
+        }
+    },
+    async mounted() {
+        this.error = this.cmsData = null
+        this.loading = true
+        // use route params to build the API endpoint URL
+        const url = `/api/notion`
+        await fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                this.cmsData = data.results[0].properties.Content.rich_text[0].plain_text
+                console.log(data.results)
+            })
+            .catch(error => {
+                this.error = error.toString()
+                console.log(this.error)
+            })
+            .finally(() => {
+                this.loading = false
+            });
+    },
+    // async mounted() {
+    //     this.error = this.cmsData = null
+    //     this.loading = true
+    //     // use route params to build the API endpoint URL
+    //     const url = '/api/notion'
+    //     const response = await fetch(url).then(res => res.json())
+
+    //     this.cmsData = response
+
+    //     console.log(response)
+    // },
+})
+
 </script>
 
 <template>
     <main class="bg-dark">
-        <TheIntro
-            :filename="'sunrise-over-Earth_1600.jpg'"
-            :rotate="180"
-            :bg-gradient="true"
-        >
+        <div class="absolute top-10 left-10 z-50 bg-white p-5 text-dark">
+            {{ cmsData }}
+        </div>
+        <TheIntro :filename="'sunrise-over-Earth_1600.jpg'" :rotate="180" :bg-gradient="true">
             <template #title>
                 Lass uns gemeinsam die Welt von Morgen schaffen.
             </template>
 
             <template #paragraph>
-                Wir unterstützen nachhaltige Projekte dabei zu wachsen und einen positiven Beitrag für unsere Zukunft zu erbringen.
+                Wir unterstützen nachhaltige Projekte dabei zu wachsen und einen positiven Beitrag für unsere Zukunft zu
+                erbringen.
             </template>
         </TheIntro>
 
@@ -31,17 +81,18 @@ import SquircleButton from "@components/SquircleButton.vue";
                 </template>
 
                 <template #paragraph>
-                    Als Kollektiv ist <span class="font-bold">fortomorrow</span>, mit begeisterten & motivierten Menschen, Teil der Veränderung.
+                    Als Kollektiv ist <span class="font-bold">fortomorrow</span>, mit begeisterten & motivierten
+                    Menschen, Teil der Veränderung.
                     <br /><br />
                     Weg von endlosem Streben nach Profit und unendlichem Wachstum,
                     hin zu sinnvollen und schönen Projekten, die ihre regenerative
                     Kraft entfesseln.
                 </template>
-            </TitleParagraphItem>   
+            </TitleParagraphItem>
         </section>
 
         <QuoteCard class="px-2" />
-        
+
         <section class="text-snow px-5 py-10">
             <TitleParagraphItem>
                 <template #title>
@@ -57,12 +108,7 @@ import SquircleButton from "@components/SquircleButton.vue";
                 </template>
             </TitleParagraphItem>
 
-            <SquircleButton
-                :icon="'direction'"
-                :classes="'bg-coal'"
-                :to="'/direction'"
-                class="mt-5"
-            >
+            <SquircleButton :icon="'direction'" :classes="'bg-coal'" :to="'/direction'" class="mt-5">
                 Unser Weg
             </SquircleButton>
         </section>
@@ -76,18 +122,14 @@ import SquircleButton from "@components/SquircleButton.vue";
                 </template>
 
                 <template #paragraph>
-                    Hey, wir brauchen nichts zu verstecken. Erfahre hier, wie unsere Roadmap aussieht. Ein Schritt nach dem anderen. So entwickeln wir fortomorrow, wachsen und schaffen Wachstum.
+                    Hey, wir brauchen nichts zu verstecken. Erfahre hier, wie unsere Roadmap aussieht. Ein Schritt nach
+                    dem anderen. So entwickeln wir fortomorrow, wachsen und schaffen Wachstum.
                     <br /><br />
                     Bist du Teil unseres nächsten Schritts und hast Bock mitzugestalten?
                 </template>
             </TitleParagraphItem>
 
-            <SquircleButton
-                :icon="'mail'"
-                :classes="'bg-coal'"
-                :to="'#'"
-                class="mt-5"
-            >
+            <SquircleButton :icon="'mail'" :classes="'bg-coal'" :to="'#'" class="mt-5">
                 Melde dich
             </SquircleButton>
         </section>
@@ -99,16 +141,12 @@ import SquircleButton from "@components/SquircleButton.vue";
                 </template>
 
                 <template #paragraph>
-                    Bist du neugierig, wer und was hinter fortomorrow steckt? Erfahre mehr über die Menschen dahinter und unseren Blickwinkel.
+                    Bist du neugierig, wer und was hinter fortomorrow steckt? Erfahre mehr über die Menschen dahinter
+                    und unseren Blickwinkel.
                 </template>
             </TitleParagraphItem>
 
-            <SquircleButton
-                :icon="'about'"
-                :classes="'bg-coal'"
-                :to="'/about'"
-                class="mt-5"
-            >
+            <SquircleButton :icon="'about'" :classes="'bg-coal'" :to="'/about'" class="mt-5">
                 Entdecken
             </SquircleButton>
         </section>
