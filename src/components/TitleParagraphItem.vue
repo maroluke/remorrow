@@ -1,11 +1,11 @@
 <template>
     <div class="rounded-sm">
         <div class="flex gap-2 justify-between">
-            <h2 v-if="$slots.title && this.heading === 2" class="mb-5">
+            <h2 v-if="$slots.title && heading === 2" class="mb-5">
                 <slot name="title"></slot>
             </h2>
 
-            <h3 v-if="$slots.title && this.heading === 3" class="mb-5">
+            <h3 v-if="$slots.title && heading === 3" class="mb-5">
                 <slot name="title"></slot>
             </h3>
 
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <p v-if="this.$slots.paragraph">
+        <p v-if="$slots.paragraph">
             <slot name="paragraph"></slot>
         </p>
     </div>
