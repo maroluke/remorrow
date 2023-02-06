@@ -10,12 +10,12 @@
             </h3>
 
             <div>
-                <IconChecked v-if="this.icon === 'checked'" :class="this.iconStyle" class="w-12 self-start">
+                <IconChecked v-if="icon === 'checked'" :class="this.iconStyle" class="w-12 self-start">
                 </IconChecked>
-                <IconRunning v-if="this.icon === 'running'" :class="this.iconStyle" class="w-12 self-start">
+                <IconRunning v-if="icon === 'running'" :class="this.iconStyle" class="w-12 self-start">
                 </IconRunning>
-                <IconPlaned v-if="this.icon === 'planed'" :class="this.iconStyle" class="w-12 self-start"></IconPlaned>
-                <IconWorld v-if="this.icon === 'world'" :class="this.iconStyle" class="w-12 self-start"></IconWorld>
+                <IconPlaned v-if="icon === 'planed'" :class="this.iconStyle" class="w-12 self-start"></IconPlaned>
+                <IconWorld v-if="icon === 'world'" :class="this.iconStyle" class="w-12 self-start"></IconWorld>
             </div>
         </div>
 
