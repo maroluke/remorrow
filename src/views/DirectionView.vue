@@ -1,7 +1,6 @@
 <script setup>
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
-import SquircleButton from "@components/SquircleButton.vue";
 </script>
 
 <template>
