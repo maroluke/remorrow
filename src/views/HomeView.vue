@@ -68,8 +68,8 @@ export default defineComponent({
 			</template>
 
 			<template #paragraph>
-				Wir unterstützen nachhaltige Projekte dabei zu wachsen und einen
-				positiven Beitrag für unsere Zukunft zu erbringen.
+				Wir unterstützen <a href="#" class="glossar-link">nachhaltige</a> Projekte dabei zu wachsen und einen
+                <a href="#" class="glossar-link">positiven Beitrag</a> für unsere Zukunft zu erbringen.
 			</template>
 		</TheIntro>
 
@@ -85,8 +85,8 @@ export default defineComponent({
 					<span class="font-bold">fortomorrow</span>, mit begeisterten
 					& motivierten Menschen, Teil der Veränderung. <br /><br />
 					Weg von endlosem Streben nach Profit und unendlichem
-					Wachstum, hin zu sinnvollen und schönen Projekten, die ihre
-					regenerative Kraft entfesseln.
+					Wachstum, hin zu sinnvollen und <a href="#" class="glossar-link">schönen</a> Projekten, die ihre
+					<a href="#" class="glossar-link">regenerative</a> Kraft entfesseln.
 				</template>
 			</TitleParagraphItem>
 		</section>

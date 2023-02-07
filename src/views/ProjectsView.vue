@@ -17,14 +17,12 @@ import SquircleButton from "@components/SquircleButton.vue";
 			</template>
 		</JumboHeader>
 
-		<section class="px-5 py-10 bg-snow bg-no-repeat bg-cover">
-			<TitleParagraphItem class="text-dark">
-				<template #title>
-					<span class="text-5xl font-extrabold text-center"
-						>Was brauchst du?</span
-					>
-				</template>
+		<section class="px-5 py-5 bg-snow bg-no-repeat bg-cover">
+			<div class="bg-rich-electric-blue py-10 px-20 mb-5 rounded-lg">
+				<h1 class="text-center text-snow m-0">Was<br />brauchst<br />du?</h1>
+			</div>
 
+			<TitleParagraphItem class="text-dark">
 				<template #paragraph>
 					Egal ob klein, mittel oder gross. Egal ob Startup, Nebenbeschäftigung, Hobby oder noch in der Ideenfindung. Wachstum
 					braucht eine Basis, einen funktionierenden Nährboden, um zu gedeihen.

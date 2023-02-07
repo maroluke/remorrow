@@ -23,7 +23,7 @@ import SquircleButton from "@components/SquircleButton.vue";
 					... auf unsere Weise und versuchen einen eigenen Weg zu finden. Nebst dem, dass wir uns als Kollektiv verstehen und eine
 					<strong class="font-extrabold">Community rundum nachhaltige Ideen und Projekte</strong> aufbauen wollen, gibt es natürlich immer treibende Kräfte.
 					<br /><br />
-					Bei uns sind das Marko und Sirik.
+					Bei uns sind das <a href="#" class="glossar-link">Marko</a> und <a href="#" class="glossar-link">Sirik</a>.
 					<br /><br />
 					Du willst uns kennenlernen? Für einen Schwatz sind wir immer zu haben!
 				</template>
