@@ -36,7 +36,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
             <div class="grid grid-cols-1 gap-2 px-2">
                 <TitleParagraphItem :heading="3" :icon="'norming'" :iconStyle="'fill-coal'" class="text-coal p-3 py-5">
                     <template #title>
-                        Phase 1 - Storming & Norming (2022)
+                        2022 - Storming & Norming
                     </template>
 
                     <template #paragraph>
@@ -65,7 +65,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
                 <TitleParagraphItem :heading="3" :icon="'running'" :iconStyle="'fill-coal'" class="text-coal p-3 py-5">
                     <template #title>
-                        Phase 2 - Seeding (2023)
+                        2023 - Seeding
                     </template>
 
                     <template #paragraph>
@@ -80,7 +80,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
                 <TitleParagraphItem :heading="3" :icon="'planed'" :iconStyle="'fill-coal'" class="text-coal p-3">
                     <template #title>
-                        Phase 3 - Planting (23/2024)
+                        2023/24 - Planting
                     </template>
 
                     <template #paragraph>
@@ -96,7 +96,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
                 <TitleParagraphItem :heading="3" :icon="'world'" :iconStyle="'fill-coal'" class="text-coal p-3">
                     <template #title>
-                        Phase 4 - Growing (2025)
+                        2025 - Growing
                     </template>
 
                     <template #paragraph>
