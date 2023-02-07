@@ -14,16 +14,16 @@ import { RouterLink } from "vue-router";
 export default defineComponent({
     name: "SquircleButton",
     components: {
-    ArrowIcon,
-    EmailIcon,
-    CommunityIcon,
-    ProjectIcon,
-    DirectionIcon,
-    AboutIcon,
-    LinkedinIcon,
-    InstagramIcon,
-    RouterLink,
-},
+        ArrowIcon,
+        EmailIcon,
+        CommunityIcon,
+        ProjectIcon,
+        DirectionIcon,
+        AboutIcon,
+        LinkedinIcon,
+        InstagramIcon,
+        RouterLink,
+    },
     props: {
         icon: {
             type: String,
@@ -35,12 +35,12 @@ export default defineComponent({
         },
         classes: {
             type: String,
-            default: 'bg-rich-electric-blue',
+            default: "bg-rich-electric-blue",
         },
         to: {
             type: String,
-            default: '/',
-        }
+            default: "/",
+        },
     },
     setup(props) {
         const uid = getCurrentInstance().uid;
@@ -79,10 +79,10 @@ export default defineComponent({
                 :style="{
                     clipPath: `url('#squircle-${uid}')`,
                 }"
-                :class="`m-0 w-full h-14 text-snow cursor-pointer flex justify-between items-center p-4 font-extrabold transition-all duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
+                :class="`m-0 w-full gap-2 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition-all duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
                 ref="buttonRef"
             >
-                <span class="text-left font-extrabold"><slot></slot></span>
+                <span v-if="$slots.buttonRef" class="text-left font-extrabold"><slot name="buttonRef"></slot></span>
 
                 <span>
                     <ArrowIcon v-if="icon === 'arrow'" :class="`-rotate-90 self-center w-3 fill-inherit ${this.fillIcon}`" />

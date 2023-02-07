@@ -1,4 +1,5 @@
-const { Client } = require("@notionhq/client")
+
+const { Client } = require("@notionhq/client");
 const { NOTION_KEY, NOTION_DB } = process.env;
 // Initializing a client
 const notion = new Client({ auth: NOTION_KEY });
@@ -12,7 +13,7 @@ exports.handler = async function (event, context) {
 				status: {
 					equals: "Done",
 				},
-			}
+			},
 		});
 		return {
 			statusCode: 200,

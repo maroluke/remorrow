@@ -6,10 +6,11 @@ import SquircleButton from "@components/SquircleButton.vue";
 
 <template>
 	<main class="bg-dark">
-		<JumboHeader :class="'bg-bottom'" :src="'bogomil-mihaylov-EPdCJtYPrPE-unsplash.jpg'">
-			<template #title>
-				Wir fördern Projekte
-			</template>
+		<JumboHeader
+			:class="'bg-bottom'"
+			:src="'bogomil-mihaylov-EPdCJtYPrPE-unsplash.jpg'"
+		>
+			<template #title> Wir fördern Projekte </template>
 
 			<template #paragraph>
 				Bei fortomorrow steht eine zentrale Frage im Mittelpunkt unseres Denkens und Handelns:
@@ -19,33 +20,44 @@ import SquircleButton from "@components/SquircleButton.vue";
 		<section class="px-5 py-10 bg-snow bg-no-repeat bg-cover">
 			<TitleParagraphItem class="text-dark">
 				<template #title>
-					<span class="text-7xl font-extrabold text-center">Was brauchst du?</span>
+					<span class="text-5xl font-extrabold text-center"
+						>Was brauchst du?</span
+					>
 				</template>
 
 				<template #paragraph>
-					Egal ob klein, mittel oder gross. Egal ob Startup, Nebenbeschäftigung, Hobby oder noch in der Ideenfindung. Wachstum braucht eine Basis, einen funktionierenden Nährboden, um zu gedeihen.
+					Egal ob klein, mittel oder gross. Egal ob Startup, Nebenbeschäftigung, Hobby oder noch in der Ideenfindung. Wachstum
+					braucht eine Basis, einen funktionierenden Nährboden, um zu gedeihen.
 					<br /><br />
-					Wir suchen nachhaltige Projekte und Unterfangen, an die wir glauben und die unseren Vorstellungen entsprechen. Sind diese identifiziert, möchten wir sie als Kollektiv unterstützen und aktiv mithelfen, damit sie wachsen können.
+					Wir suchen nachhaltige Projekte und Unterfangen, an die wir glauben und die unseren Vorstellungen entsprechen. Sind
+					diese identifiziert, möchten wir sie als Kollektiv unterstützen und aktiv Wachstum schaffen.
 					<br /><br />
-					Zu Beginn unserer Reise geschieht dies noch eher opportunistisch und wir involvieren uns da, wo wir konkrete Möglichkeiten sehen. Perspektivisch möchten wir für diese Art von Projekten eine technische Plattform aufbauen, um die Unterstützung effizienter, direkter und globaler auszubauen.
+					Zu Beginn unserer Reise müssen wir flexibel sein und involvieren uns da, wo wir konkrete Möglichkeiten sehen.
+					Perspektivisch möchten wir für diese Art von Projekten eine digitale Plattform aufbauen, um die Unterstützung
+					effizienter, direkter und globaler auszubauen.
 				</template>
 			</TitleParagraphItem>
+
+			<SquircleButton :icon="'direction'" :classes="'bg-coal text-rich-electric-blue'" :to="'/unser-weg#roadmap'" class="mt-5">
+				<template #buttonRef>Entdecke unsere Roadmap</template>
+			</SquircleButton>
 		</section>
 
 		<section class="px-5 py-10 bg-dark text-snow">
 			<TitleParagraphItem>
 				<template #title>
-					Bock bei der Entwicklung mitzumachen?
+					Bock zu helfen?
 				</template>
 			</TitleParagraphItem>
 
-			<SquircleButton 
+			<SquircleButton
 				:icon="'mail'"
-				:classes="'bg-rich-electric-blue text-snow'"
+				:classes="'bg-coal'"
+				:to="'/sei-dabei'"
 				class="mt-5"
 			>
-				Melde dich bei uns
-			</SquircleButton>
+			<template #buttonRef>Sei ein Teil davon</template>
+		</SquircleButton>
 		</section>
 	</main>
 </template>
