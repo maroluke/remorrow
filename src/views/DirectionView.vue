@@ -163,12 +163,34 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
                     Trotzdem, nicht vergessen:
                     <br />
                     «Plans are nothing – planning is everything».
+                </template>
+            </TitleParagraphItem>
 
+            <TitleParagraphItem :heading="3" class="px-5 pt-10">
+                <template #title>
+                    2024 
+                </template>
+            
+                <template #paragraph>
                     <div class="mt-5">
                         <ul class="list">
-                            <li>Reporting 2024 & Re-Evaluation Strategie</li>
-                            <li>Weitere Projekte, Mitglieder und Partner gewinnen</li>
-                            <li>Plattform-Erweiterung: Ideen</li>
+                            <li>Auf mindestens einem sozialen Kanal hat fortomorrow seine Bekanntheit resp. Reichweite auf 2’000 Follower ausgebaut.</li>
+                            <li>Es existiert eine digitale Plattform für Ideen & Projekte.</li>
+                        </ul>
+                    </div>
+                </template>
+            </TitleParagraphItem>
+
+            <TitleParagraphItem :heading="3" class="px-5 pt-10">
+                <template #title>
+                    2025
+                </template>
+            
+                <template #paragraph>
+                    <div class="mt-5">
+                        <ul class="list">
+                            <li>Die fortomorrow-Familie zählt 15 Projekte.</li>
+                            <li>500 Menschen sind Teil der fortomorrow-Community und setzen sich aktiv für nachhaltige Ideen und deren Umsetzung ein.</li>
                         </ul>
                     </div>
                 </template>
