@@ -59,9 +59,6 @@ export default defineComponent({
 
 <template>
     <main class="bg-dark">
-        <div class="absolute top-10 left-10 z-50 bg-white p-5 text-dark">
-            {{ cmsData }}
-        </div>
         <TheIntro :filename="'sunrise-over-Earth_1600.jpg'" :rotate="180" :bg-gradient="true">
             <template #title>
                 Lass uns gemeinsam die Welt von Morgen schaffen.
