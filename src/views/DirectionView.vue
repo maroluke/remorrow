@@ -1,6 +1,7 @@
 <script setup>
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
+import IconChecked2 from "@components/icons/IconChecked2.vue";
 </script>
 
 <template>
@@ -33,23 +34,36 @@ import JumboHeader from "@components/JumboHeader.vue";
             </TitleParagraphItem>
 
             <div class="grid grid-cols-1 gap-2 px-2">
-                <TitleParagraphItem :heading="3" :icon="'checked'" :iconStyle="'fill-coal'"
-                    class="text-coal p-3 py-5">
+                <TitleParagraphItem :heading="3" :icon="'norming'" :iconStyle="'fill-coal'" class="text-coal p-3 py-5">
                     <template #title>
                         Phase 1 - Storming & Norming (2022)
                     </template>
 
                     <template #paragraph>
                         <ul class="list">
-                            <li>Entwicklung der Repräsentation (Branding) und Kommunikation</li>
-                            <li>Aufbau des 42-Fundaments (entwickeln eigener Konzepte)</li>
-                            <li>Schärfung Value Proposition und Strategie</li>
+                            <li class="!bg-caribbean-green">
+                                <span class="!text-white">Entwicklung der Repräsentation (Branding) und Kommunikation</span>
+                                <div>
+                                    <IconChecked2 class="fill-white w-6 self-start" />
+                                </div>
+                            </li>
+                            <li class="!bg-caribbean-green">
+                                <span class="!text-white">Aufbau des 42-Fundaments (entwickeln eigener Konzepte)</span>
+                                <div>
+                                    <IconChecked2 class="fill-white w-6 self-start" />
+                                </div>
+                            </li>
+                            <li class="!bg-caribbean-green">
+                                <span class="!text-white">Schärfung Value Proposition und Strategie</span>
+                                <div>
+                                    <IconChecked2 class="fill-white w-6 self-start" />
+                                </div>
+                            </li>
                         </ul>
                     </template>
                 </TitleParagraphItem>
 
-                <TitleParagraphItem :heading="3" :icon="'running'" :iconStyle="'fill-coal'"
-                    class="text-coal p-3 py-5">
+                <TitleParagraphItem :heading="3" :icon="'running'" :iconStyle="'fill-coal'" class="text-coal p-3 py-5">
                     <template #title>
                         Phase 2 - Seeding (2023)
                     </template>
@@ -64,8 +78,7 @@ import JumboHeader from "@components/JumboHeader.vue";
                     </template>
                 </TitleParagraphItem>
 
-                <TitleParagraphItem :heading="3" :icon="'planed'" :iconStyle="'fill-coal'"
-                    class="text-coal p-3">
+                <TitleParagraphItem :heading="3" :icon="'planed'" :iconStyle="'fill-coal'" class="text-coal p-3">
                     <template #title>
                         Phase 3 - Planting (23/2024)
                     </template>
@@ -81,8 +94,7 @@ import JumboHeader from "@components/JumboHeader.vue";
                     </template>
                 </TitleParagraphItem>
 
-                <TitleParagraphItem :heading="3" :icon="'world'" :iconStyle="'fill-coal'"
-                    class="text-coal p-3">
+                <TitleParagraphItem :heading="3" :icon="'world'" :iconStyle="'fill-coal'" class="text-coal p-3">
                     <template #title>
                         Phase 4 - Growing (2025)
                     </template>
@@ -154,11 +166,9 @@ import JumboHeader from "@components/JumboHeader.vue";
 
                     <div class="mt-5">
                         <ul class="list">
-                            <li>Reporting 2024 & Re-Evaluation Strategie
-                            </li>
-                            <li>Weitere Projekte, Mitglieder und Partner
-                                gewinnen</li>
-                            <li>Plattform-Erweiterung: Ideen.</li>
+                            <li>Reporting 2024 & Re-Evaluation Strategie</li>
+                            <li>Weitere Projekte, Mitglieder und Partner gewinnen</li>
+                            <li>Plattform-Erweiterung: Ideen</li>
                         </ul>
                     </div>
                 </template>

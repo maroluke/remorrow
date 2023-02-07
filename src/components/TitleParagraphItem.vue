@@ -10,12 +10,11 @@
             </h3>
 
             <div>
-                <IconChecked v-if="icon === 'checked'" :class="iconStyle" class="w-12 self-start">
-                </IconChecked>
-                <IconRunning v-if="icon === 'running'" :class="iconStyle" class="w-12 self-start">
-                </IconRunning>
-                <IconPlaned v-if="icon === 'planed'" :class="iconStyle" class="w-12 self-start"></IconPlaned>
-                <IconWorld v-if="icon === 'world'" :class="iconStyle" class="w-12 self-start"></IconWorld>
+                <IconChecked v-if="icon === 'checked'" :class="iconStyle" class="w-12 self-start" />
+                <IconRunning v-if="icon === 'running'" :class="iconStyle" class="w-12 self-start" />
+                <IconPlaned v-if="icon === 'planed'" :class="iconStyle" class="w-12 self-start" />
+                <IconWorld v-if="icon === 'world'" :class="iconStyle" class="w-12 self-start" />
+                <IconNorming v-if="icon === 'norming'" :class="iconStyle" class="w-12 self-start" />
             </div>
         </div>
 
@@ -31,6 +30,7 @@ import IconChecked from "./icons/IconChecked.vue";
 import IconRunning from "./icons/IconRunning.vue";
 import IconPlaned from "./icons/IconPlaned.vue";
 import IconWorld from "./icons/IconWorld.vue";
+import IconNorming from "./icons/IconNorming.vue";
 
 defineProps({
     title: { type: String, default: null },
