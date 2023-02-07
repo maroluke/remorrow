@@ -98,7 +98,7 @@
     }
 
     ul.list li {
-        @apply rounded-lg p-3 bg-white text-coal font-medium shadow-lg flex items-center;
+        @apply rounded-lg p-3 bg-white text-coal font-medium shadow-lg flex items-center justify-between;
     }
 
     ul.list li span {
