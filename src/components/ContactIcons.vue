@@ -19,21 +19,29 @@ const navigationState = useNavigationStore();
 		<!-- divider -->
 		<!-- <div class="w-0.5 h-10 bg-silver opacity-10"></div> -->
 
-		<ul class="flex justify-end gap-6 flex-grow">
+		<ul class="contact-icons flex justify-end gap-6 flex-grow">
 			<li>
-				<a href="#"><EmailIcon class="fill-silver h-4 text-coal" /></a>
+				<RouterLink to="#">
+                    <EmailIcon class="fill-silver h-4 text-coal" />
+                </RouterLink>
 			</li>
-			<!-- <li><a href="#"><LinkedinIcon class="fill-silver h-4 text-coal" /></a></li> -->
+
 			<li>
-				<a href="#"
-					><InstagramIcon class="fill-silver h-4 text-coal"
-				/></a>
+				<a href="https://www.instagram.com/42mrrw/">
+                    <InstagramIcon class="fill-silver h-4 text-coal" />
+                </a>
 			</li>
-			<li>
+
+            <li>
+                <a href="https://www.linkedin.com/company/42mrrw/">
+                    <LinkedinIcon class="fill-silver h-4 text-coal" />
+                </a>
+            </li>
+			<!-- <li>
 				<a href="#"
 					><TwitterIcon class="stroke-silver h-4 text-coal"
 				/></a>
-			</li>
+			</li> -->
 		</ul>
 	</div>
 </template>
