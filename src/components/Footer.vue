@@ -77,7 +77,7 @@ export default {
             <p class="font-normal mt-5 text-base">
                 Initiated in Switzerland.<br />
                 Inspired by nature.<br />
-                Follow us &<br />spread the future.
+                Follow us & spread the future.
             </p>
 
             <div class="contact-icons flex gap-8"></div>
