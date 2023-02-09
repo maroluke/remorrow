@@ -35,7 +35,7 @@ export default {
 			<IconLogo class="fill-silver w-20" />
 		</RouterLink>
         
-        <ul class=" flex justify-end gap-6 flex-grow">
+        <ul class="contact-icons flex justify-end gap-6 flex-grow">
 			<li>
 				<RouterLink to="#">
                     <EmailIcon class="fill-silver h-4 text-coal" />
