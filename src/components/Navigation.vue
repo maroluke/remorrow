@@ -1,8 +1,19 @@
-<script setup>
+<script>
 import { useNavigationStore } from "@/stores/navigation";
 import NavigationItem from "./NavigationItem.vue";
 import ContactIcons from "./ContactIcons.vue";
-const navigationState = useNavigationStore();
+
+export default {
+	name: "Navigation",
+	components: {
+		NavigationItem,
+		ContactIcons,
+	},
+	setup() {
+		const navigationState = useNavigationStore();
+		return { navigationState };
+	},
+};
 </script>
 
 <template>
