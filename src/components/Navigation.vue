@@ -25,20 +25,14 @@ export default {
 	<Transition name="nav-toggle">
 		<nav
 			v-show="navigationState.isNavigationOpen"
-			class="nav z-50 fixed w-full h-full px-2 pt-5 max-w-screen-sm top-0 right-0 bg-coal bg-opacity-25 backdrop-blur-sm duration-200"
+			class="nav z-50 fixed w-full h-full px-2 pt-5 max-w-screen-sm top-0 right-0 bg-coal bg-opacity-25 backdrop-blur-sm duration-300"
 		>
 			<div class="bg-snow rounded-lg overflow-hidden z-40 shadow-2xl">
-				<div class="flex flex-col justify-between">
+				<div class="flex flex-col justify-between pt-12">
 					<!-- Close navigation button -->
-					<div
+					<!-- <div
 						class="close-nav flex justify-between items-center cursor-pointer z-20 w-full py-4 pl-4 pr-0"
 					>
-						<!-- <IconLogo class="fill-silver" /> -->
-						<div class="text-silver flex gap-1">
-							<!-- <span class=" border-b-2 border-silver px-3 text-coal text-sm">DE</span>
-							<span class="px-3 text-coal text-sm">EN</span> -->
-						</div>
-
 						<div
 							@click="navigationState.toggleNavigation"
 							class="flex justify-center items-center w-10 h-5 flex-shrink"
@@ -50,7 +44,7 @@ export default {
 								class="w-6 h-0.5 bg-silver -rotate-45 block absolute"
 							></span>
 						</div>
-					</div>
+					</div> -->
 
 					<!-- The menu -->
 					<ul
