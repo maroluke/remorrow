@@ -1,4 +1,4 @@
-<script setup>
+<script>
 import EmailIcon from "./icons/IconEmail.vue";
 import LinkedinIcon from "./icons/IconLinkedin.vue";
 import InstagramIcon from "./icons/IconInstagram.vue";
@@ -7,7 +7,21 @@ import IconLogo from "./icons/IconLogo.vue";
 import { RouterLink } from "vue-router";
 import { useNavigationStore } from "@/stores/navigation";
 
-const navigationState = useNavigationStore();
+export default {
+    name: "ContactIcons",
+    components: {
+        EmailIcon,
+        LinkedinIcon,
+        InstagramIcon,
+        TwitterIcon,
+        IconLogo,
+        RouterLink,
+    },
+    setup() {
+        const navigationState = useNavigationStore();
+        return { navigationState };
+    },  
+};
 </script>
 
 <template>

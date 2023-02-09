@@ -153,6 +153,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 			<div class="px-2 my-5">
 				<img
+					loading="lazy"
 					class="object-contain rounded-lg"
 					src="@assets/media/the-loop-approach.jpg"
 					alt="Purpose"

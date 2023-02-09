@@ -65,8 +65,10 @@ export default {
 </script>
 
 <template>
-    <footer class="bg-black px-5 pt-20 pb-10 bg-[url('/globe.png')] bg-cover bg-no-repeat">
-        <div class="drop-shadow-md">
+    <footer class="bg-black px-5 pt-20 pb-10 bg-[url('/globe3.jpg')] bg-cover bg-no-repeat">
+        <div class="bg-gradient-to-r from-black to-transparent absolute w-full h-full top-0 left-0 z-10"></div>
+        
+        <div class="drop-shadow-md z-20">
             <RouterLink to="/">
                 <IconLogoMini class="fill-snow" />
             </RouterLink>
@@ -81,14 +83,14 @@ export default {
             <div class="contact-icons flex gap-8 mt-10"></div>
         </div>
 
-        <ul class="flex flex-col gap-5 mt-10">
-            <li v-for="link in navigationLinks" :key="link.linkText" class="flex gap-3 items-center">
-                <!-- <IconArrow class="w-2 fill-snow -rotate-90" /> -->
+        <!-- <ul class="flex flex-col gap-5 mt-10 z-20">
+            <li v-for="link in navigationLinks" :key="link.linkText" class="flex gap-3 items-center text-base">
+                <IconArrow class="w-2 fill-snow -rotate-90" />
                 <RouterLink :to="link.linkHref">{{ link.linkText }}</RouterLink>
             </li>
-        </ul>
+        </ul> -->
         
-        <div class="mt-10">
+        <div class="mt-10 z-20">
             <h4 class="font-medium">Credits</h4>
             
             <ul>
@@ -100,6 +102,6 @@ export default {
             </ul>
         </div>
         
-        <p class="text-sm font-normal mt-10 opacity-50">Copywright © 2021 - 2023</p>
+        <p class="text-sm font-normal mt-10 opacity-50 z-20">Copywright © 2021 - 2023</p>
     </footer>
 </template>

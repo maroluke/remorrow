@@ -24,7 +24,7 @@
 
 				<div class="w-1/3 flex flex-col justify-between">
 					<div class="rounded-full overflow-hidden">
-						<img
+						<img loading="lazy"
 							class="object-cover rounded-full"
 							src="../assets/media/profile-maja-goepel.jpg"
 							alt="Maja Göpel"

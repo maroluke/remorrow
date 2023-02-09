@@ -57,6 +57,7 @@ export default {
 			<!-- <div class="rotate-180 bg-no-repeat bg-[url('media/{}')] bg-cover bg-center h-[200px]"></div> -->
 
 			<img
+				loading="lazy"
 				alt="Title image"
 				:class="`rotate-${rotate} ${twClass}`"
 				class="object-contain h-200"

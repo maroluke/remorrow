@@ -34,7 +34,7 @@ import SquircleButton from "@components/SquircleButton.vue";
 
         <div class="relative overflow-hidden">
             <div class="w-full h-[50%] absolute top-0 left-0 bg-gradient-to-b from-snow to-transparent z-10"></div>
-            <img class="object-contain -mt-32" src="@assets/media/alexander-milo-HwxVLhLyg2s-unsplash.jpg" alt="Unser Weg" />
+            <img loading="lazy" class="object-contain -mt-32" src="@assets/media/alexander-milo-HwxVLhLyg2s-unsplash.jpg" alt="Unser Weg" />
         </div>
 
 		<section class="px-5 py-10 bg-dark text-snow">
