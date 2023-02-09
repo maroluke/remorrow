@@ -65,7 +65,7 @@ export default {
 </script>
 
 <template>
-    <footer class="bg-black px-5 pt-20 pb-10 bg-[url('/globe3.jpg')] bg-cover bg-no-repeat">
+    <footer class="bg-black px-5 pt-10 pb-10 bg-[url('/globe3.jpg')] bg-cover bg-no-repeat">
         <div class="bg-gradient-to-r from-black to-transparent absolute w-full h-full top-0 left-0 z-10"></div>
         
         <div class="drop-shadow-md z-20">
@@ -80,7 +80,7 @@ export default {
                 Follow us &<br />spread the future.
             </p>
 
-            <div class="contact-icons flex gap-8 mt-10"></div>
+            <div class="contact-icons flex gap-8"></div>
         </div>
 
         <!-- <ul class="flex flex-col gap-5 mt-10 z-20">
@@ -90,7 +90,7 @@ export default {
             </li>
         </ul> -->
         
-        <div class="mt-10 z-20">
+        <div class="mt-20 z-20">
             <h4 class="font-medium">Credits</h4>
             
             <ul>
