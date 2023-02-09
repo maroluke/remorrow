@@ -65,7 +65,7 @@ export default {
 </script>
 
 <template>
-    <footer class="bg-black px-5 pt-20 pb-10 bg-[url('./globe.png')] bg-cover bg-no-repeat">
+    <footer class="bg-black px-5 pt-20 pb-10 bg-[url('globe.png')] bg-cover bg-no-repeat">
         <div class="drop-shadow-md">
             <RouterLink to="/">
                 <IconLogoMini class="fill-snow" />
@@ -103,9 +103,3 @@ export default {
         <p class="text-sm font-normal mt-10 opacity-50">Copywright © 2021 - 2023</p>
     </footer>
 </template>
-
-<style scoped>
-    footer {
-        background-image: url('./globe.png');
-    }
-</style>
