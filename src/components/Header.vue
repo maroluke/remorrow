@@ -8,7 +8,7 @@
 			<!-- Open navigation button -->
 			<div
 				@click="navigationState.toggleNavigation"
-				class="burger flex cursor-pointer items-center h-10 transition-all duration-300 fixed right-4"
+				class="burger flex cursor-pointer items-center h-10 transition-all duration-600 fixed right-4"
 			>
 				<div
 					class="flex flex-col gap-1 bg-dark bg-opacity-0 backdrop-blur-xl py-2 px-2 rounded-sm"
