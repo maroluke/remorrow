@@ -66,7 +66,7 @@ export default {
 
 <template>
     <footer class="bg-black px-5 pt-10 pb-10 bg-[url('/globe3.jpg')] bg-cover bg-no-repeat">
-        <div class="bg-gradient-to-r from-black to-transparent absolute w-full h-full top-0 left-0 z-10"></div>
+        <div class="bg-gradient-to-r from-[rgba(0,0,0,.80)] to-transparent absolute w-full h-full top-0 left-0 z-10"></div>
         
         <div class="drop-shadow-md z-20">
             <RouterLink to="/">
