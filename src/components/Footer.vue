@@ -65,7 +65,7 @@ export default {
 </script>
 
 <template>
-    <footer class="bg-black px-5 pt-20 pb-10 bg-[url('globe.png')] bg-cover bg-no-repeat">
+    <footer class="bg-black px-5 pt-20 pb-10 bg-[url('/globe.png')] bg-cover bg-no-repeat">
         <div class="drop-shadow-md">
             <RouterLink to="/">
                 <IconLogoMini class="fill-snow" />
