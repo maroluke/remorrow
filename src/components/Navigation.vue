@@ -9,9 +9,13 @@ export default {
 		NavigationItem,
 		ContactIcons,
 	},
-	setup() {
-		const navigationState = useNavigationStore();
-		return { navigationState };
+	data() {
+		return {
+			navigationState: {},
+		};
+	},
+	mounted() {
+		this.navigationState = useNavigationStore();
 	},
 };
 </script>

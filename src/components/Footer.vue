@@ -51,7 +51,8 @@ export default {
         outputContactIcons() {
             const contact = document.querySelector('footer .contact-icons');
             this.contactIcons.forEach((item) => {
-                contact.appendChild(item);
+                const duplicate = item.cloneNode(true);
+                contact.append(duplicate);
             });
         },
     },

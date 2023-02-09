@@ -23,7 +23,7 @@ export default {
             navigationState: {},
         };
     },
-    created() {
+    mounted() {
         this.navigationState = useNavigationStore();
     },
 };
