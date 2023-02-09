@@ -13,14 +13,19 @@ export default {
         EmailIcon,
         LinkedinIcon,
         InstagramIcon,
-        TwitterIcon,
         IconLogo,
         RouterLink,
     },
-    setup() {
-        const navigationState = useNavigationStore();
-        return { navigationState };
-    },  
+    data() {
+        return {
+            navigationLinks: [],
+            contactIcons: {},
+            navigationState: {},
+        };
+    },
+    created() {
+        this.navigationState = useNavigationStore();
+    },
 };
 </script>
 
@@ -29,11 +34,8 @@ export default {
 		<RouterLink to="/" @click="navigationState.toggleNavigation">
 			<IconLogo class="fill-silver w-20" />
 		</RouterLink>
-
-		<!-- divider -->
-		<!-- <div class="w-0.5 h-10 bg-silver opacity-10"></div> -->
-
-		<ul class="contact-icons flex justify-end gap-6 flex-grow">
+        
+        <ul class=" flex justify-end gap-6 flex-grow">
 			<li>
 				<RouterLink to="#">
                     <EmailIcon class="fill-silver h-4 text-coal" />
@@ -51,11 +53,6 @@ export default {
                     <LinkedinIcon class="fill-silver h-4 text-coal" />
                 </a>
             </li>
-			<!-- <li>
-				<a href="#"
-					><TwitterIcon class="stroke-silver h-4 text-coal"
-				/></a>
-			</li> -->
 		</ul>
 	</div>
 </template>

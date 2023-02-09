@@ -80,7 +80,8 @@ export default {
             <p class="font-normal mt-5 text-base">
                 Initiated in Switzerland.<br />
                 Inspired by nature.<br />
-                Follow us & spread the future.
+                Impact by people.<br />
+                Follow us and spread the word.
             </p>
 
             <div class="contact-icons flex gap-8"></div>
@@ -104,7 +105,7 @@ export default {
                 <li><a href="#" class="text-sm">Bild #5: Mykhailo Kopyt, Unsplash</a></li>
             </ul>
         </div>
-        
-        <p class="text-sm font-normal mt-10 opacity-50 z-20">Copywright © 2021 - 2023</p>
+
+        <p class="text-sm font-normal mt-10 opacity-50 z-20">Copyright © 2021 - 2023</p>
     </footer>
 </template>
