@@ -15,6 +15,7 @@ export default {
         InstagramIcon,
         IconLogo,
         RouterLink,
+        TwitterIcon,
     },
     data() {
         return {
@@ -30,27 +31,33 @@ export default {
 </script>
 
 <template>
-	<div class="flex items-center justify-between gap-5 pt-5 pb-4">
-		<RouterLink to="/" @click="navigationState.toggleNavigation">
+	<div class="flex items-center justify-between gap-5 pt-8 pb-6">
+		<!-- <RouterLink to="/" @click="navigationState.toggleNavigation">
 			<IconLogo class="fill-silver w-20" />
-		</RouterLink>
+		</RouterLink> -->
         
-        <ul class="contact-icons flex justify-end gap-6 flex-grow">
+        <ul class="contact-icons flex justify-end gap-10 flex-grow">
 			<li>
 				<RouterLink to="#">
                     <EmailIcon class="fill-silver h-4 text-coal" />
                 </RouterLink>
 			</li>
 
-			<li>
-				<a href="https://www.instagram.com/42mrrw/">
-                    <InstagramIcon class="fill-silver h-4 text-coal" />
+            <li>
+                <a href="https://www.twitter.com/42mrrw/">
+                    <TwitterIcon class="fill-silver h-4 text-coal" />
                 </a>
-			</li>
+            </li>
 
             <li>
                 <a href="https://www.linkedin.com/company/42mrrw/">
                     <LinkedinIcon class="fill-silver h-4 text-coal" />
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.instagram.com/42mrrw/">
+                    <InstagramIcon class="fill-silver h-4 text-coal" />
                 </a>
             </li>
 		</ul>

@@ -1,31 +1,17 @@
-<script>
+<script setup>
 import { useNavigationStore } from "@/stores/navigation";
 import NavigationItem from "./NavigationItem.vue";
 import ContactIcons from "./ContactIcons.vue";
 
-export default {
-	name: "Navigation",
-	components: {
-		NavigationItem,
-		ContactIcons,
-	},
-	data() {
-		return {
-			navigationState: {},
-		};
-	},
-	mounted() {
-		this.navigationState = useNavigationStore();
-	},
-};
+const navigationState = useNavigationStore();
 </script>
 
 <template>
 	<!-- Main Navigation -->
 	<Transition name="nav-toggle">
 		<nav
-			v-show="navigationState.isNavigationOpen"
-			class="nav z-50 fixed w-full h-full px-2 pt-5 max-w-screen-sm top-0 right-0 bg-coal bg-opacity-25 backdrop-blur-sm duration-300"
+			v-show="navigationState.navigationIsOpen"
+			class="nav z-50 fixed w-full h-full px-2 pt-2 max-w-screen-sm top-0 right-0 bg-coal bg-opacity-25 backdrop-blur-sm duration-300"
 		>
 			<div class="bg-snow rounded-lg overflow-hidden z-40 shadow-2xl">
 				<div class="flex flex-col justify-between pt-12">
@@ -48,8 +34,8 @@ export default {
 
 					<!-- The menu -->
 					<ul
-						@click="navigationState.toggleNavigation"
-						class="flex gap-1 flex-col z-10 flex-grow pt-2 text-dark"
+						@click="navigationState.navigationIsOpen = !navigationState.navigationIsOpen"
+						class="flex gap-1 flex-col z-10 flex-grow pt-5 text-dark"
 					>
 						<NavigationItem :to="'/community'"
 							>Wir bauen eine Community</NavigationItem
@@ -88,9 +74,5 @@ export default {
 
 .nav-open {
 	@apply overflow-hidden;
-}
-
-.nav-open .logo {
-	@apply fill-dark sm:fill-inherit;
 }
 </style>

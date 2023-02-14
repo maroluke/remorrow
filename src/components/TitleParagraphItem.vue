@@ -44,19 +44,38 @@
 	</div>
 </template>
 
-<script setup>
-import { defineProps } from "vue";
+<script>
 import IconChecked from "./icons/IconChecked.vue";
 import IconRunning from "./icons/IconRunning.vue";
 import IconPlaned from "./icons/IconPlaned.vue";
 import IconWorld from "./icons/IconWorld.vue";
 import IconNorming from "./icons/IconNorming.vue";
 
-defineProps({
-	title: { type: String, default: null },
-	paragraph: { type: String, default: null },
-	heading: { type: Number, default: 2 },
-	icon: { type: String, default: null },
-	iconStyle: { type: String, default: null },
-});
+export default {
+	name: "TitleParagraphItem",
+	components: {
+		IconChecked,
+		IconRunning,
+		IconPlaned,
+		IconWorld,
+		IconNorming,
+	},
+	props: {
+		heading: {
+			type: Number,
+			default: 2,
+		},
+		icon: {
+			type: String,
+			default: null,
+		},
+		iconStyle: {
+			type: String,
+			default: "fill-snow",
+		},
+
+		title: { type: String, default: null },
+		paragraph: { type: String, default: null },
+	},
+};
 </script>

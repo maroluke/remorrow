@@ -16,13 +16,13 @@ export default {
 		<a
 			v-if="isExternal"
 			:href="to"
-			class="font-bold px-5 py-3 block rounded-lg text-xl text-coal bg-white hover:text-rich-electric-blue hover:bg-coal transition-colors duration-200"
+			class="font-bold px-5 py-3 block rounded-lg text-xl text-coal bg-white hover:text-rich-electric-blue hover:bg-coal"
 			><slot></slot
 		></a>
 		<RouterLink
 			v-else
 			v-bind="$props"
-			class="font-bold px-5 py-3 block rounded-lg text-xl text-coal bg-white hover:text-rich-electric-blue hover:bg-coal transition-colors duration-200"
+			class="font-bold px-5 py-3 block rounded-lg text-xl text-coal bg-white hover:text-rich-electric-blue hover:bg-coal"
 			><slot></slot
 		></RouterLink>
 	</li>
