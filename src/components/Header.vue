@@ -11,21 +11,21 @@ const navigationState = useNavigationStore();
 		<div class="flex items-center justify-between px-6 h-20 relative">
 			<!-- Logo -->
 			<RouterLink to="/" class="absolute h-8">
-				<Transition name="logo-toggle" v-show="navigationState.navigationIsOpen">
+				<Transition name="logo-mini-toggle" v-show="navigationState.navigationIsOpen">
 					<LogoMiniIcon
-						class="logo fill-silver h-full transition-opacity duration-700 absolute left-0"
+						class="logo fill-silver transition-opacity duration-700 delay-200 fixed"
 					/>
 				</Transition>
 				
 				<Transition name="logo-toggle" v-show="!navigationState.navigationIsOpen">
 					<LogoIcon
-						class="logo fill-snow h-full transition-opacity duration-1000 absolute left-0"
+						class="logo fill-snow h-full transition-all ease-[cubic-bezier(0.85, 0, 0.15, 1)] duration-[2000ms] delay-500 absolute left-0"
 					/>
 				</Transition>
 			</RouterLink>
 			<!-- Open navigation button -->
 			<div @click="navigationState.navigationIsOpen = !navigationState.navigationIsOpen"
-				class="burger flex cursor-pointer items-center h-10 transition-all duration-200 fixed right-4">
+				class="burger flex cursor-pointer items-center h-10 transition duration-200 fixed right-4">
 				<div class="flex flex-col gap-1 bg-dark bg-opacity-0 backdrop-blur-xl py-2 px-2 rounded-sm">
 					<span class="w-10 h-0.5 bg-silver"></span>
 					<span class="w-10 h-0.5 bg-silver"></span>
@@ -44,7 +44,17 @@ const navigationState = useNavigationStore();
 
 .logo-toggle-enter-from,
 .logo-toggle-leave-to {
-	@apply opacity-0;
+	@apply opacity-0 -left-5 transition-none;
+}
+
+.logo-mini-toggle-enter-active,
+.logo-mini-toggle-leave-active {
+	@apply opacity-100;
+}
+
+.logo-mini-toggle-enter-from,
+.logo-mini-toggle-leave-to {
+	@apply opacity-0 duration-300 delay-[0ms];
 }
 
 /* .nav-open .logo {
