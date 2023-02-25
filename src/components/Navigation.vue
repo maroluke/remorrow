@@ -2,6 +2,7 @@
 import { useNavigationStore } from "@/stores/navigation";
 import NavigationItem from "./NavigationItem.vue";
 import ContactIcons from "./ContactIcons.vue";
+import { RouterLink } from "vue-router";
 
 const navigationState = useNavigationStore();
 </script>
@@ -53,8 +54,22 @@ const navigationState = useNavigationStore();
 							>Unser Weg</NavigationItem
 						>
 					</ul>
+					
+					<ul
+						@click="navigationState.navigationIsOpen = !navigationState.navigationIsOpen"
+						class="secondary-nav flex flex-col gap-4 px-8 py-8 text-base text-gray-500"
+					>
+						<RouterLink to="/glossar"
+							class="font-light hover:text-rich-electric-blue"
+							>Glossar</RouterLink
+						>
+						<RouterLink to="/impressum"
+							class="font-light hover:text-rich-electric-blue"
+							>Impressum</RouterLink
+						>
+					</ul>
 
-					<ContactIcons class="px-4 bg-snow" />
+					<ContactIcons class="px-8 bg-snow" />
 				</div>
 			</div>
 		</nav>

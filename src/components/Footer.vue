@@ -67,8 +67,8 @@ export default {
 
 <template>
     <footer class="bg-black px-5 pt-10 pb-10">
-        <div class="absolute w-full h-full top-0 left-0 z-10">
-            <img loading="lazy" src="@assets/media/globe3.jpg" alt="Globe from outta space" class="z-10 block">
+        <div class="absolute w-full h-full bottom-0 left-0 z-10">
+            <img loading="lazy" src="sunrise-over-Earth_1600.jpg" alt="Globe from outta space" class="z-10 block">
             <div class="bg-gradient-to-r from-[rgba(0,0,0,.80)] to-transparent z-20 absolute w-full h-full top-0 left-0"></div>
         </div>
         
@@ -77,7 +77,7 @@ export default {
                 <IconLogoMini class="fill-snow" />
             </RouterLink>
 
-            <h4 class="font-medium mt-5">Für eine<br />regenerative Zukunft</h4>
+            <h4 class="font-medium mt-5">Gemeinsam für ein<br /><span class="text-rich-electric-blue font-medium">besseres Morgen</span>.</h4>
             <p class="font-normal mt-5 text-base">
                 Initiated in Switzerland.<br />
                 Inspired by nature.<br />

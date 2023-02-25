@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 const plugin = require("tailwindcss/plugin");
 module.exports = {
-	content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+	content: [
+		"./index.html",
+		"./src/**/*.{vue,js,ts,jsx,tsx}",
+		"./node_modules/flowbite/**/*.js",
+	],
 	theme: {
 		extend: {
 			colors: {
@@ -60,5 +64,7 @@ module.exports = {
 				h3: { fontSize: theme("fontSize.2xl") },
 			});
 		}),
+
+		require("flowbite/plugin"),
 	],
 };

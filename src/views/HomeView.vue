@@ -5,15 +5,16 @@ import ParagraphWithCards from "@components/ParagraphWithCards.vue";
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import SquircleButton from "@components/SquircleButton.vue";
 import { defineComponent } from "vue";
+import ContactModal from "@components/ContactModal.vue";
 
 export default defineComponent({
-	setup() {},
 	components: {
 		TheIntro,
 		QuoteCard,
 		ParagraphWithCards,
 		TitleParagraphItem,
 		SquircleButton,
+		ContactModal,
 	},
 	data() {
 		return {
@@ -59,8 +60,8 @@ export default defineComponent({
 <template>
 	<main class="bg-dark">
 		<TheIntro
-			:filename="'sunrise-over-Earth_1600.jpg'"
-			:rotate="180"
+			:filename="'globe3.jpg'"
+			:rotate="0"
 			:bg-gradient="true"
 		>
 			<template #title>
@@ -143,6 +144,8 @@ export default defineComponent({
 			>
 				<template #buttonRef>Melde dich</template>
 			</SquircleButton>
+
+			<ContactModal>Melde dich</ContactModal>
 		</section>
 
 		<section class="px-5 py-10 bg-snow text-coal">

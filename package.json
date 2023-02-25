@@ -12,6 +12,7 @@
     "@notionhq/client": "^2.2.3",
     "@vueuse/core": "^9.11.0",
     "figma-squircle": "^0.3.0",
+    "flowbite": "^1.6.3",
     "gsap": "^3.11.4",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",

@@ -35,29 +35,30 @@ export default {
 		<!-- <RouterLink to="/" @click="navigationState.toggleNavigation">
 			<IconLogo class="fill-silver w-20" />
 		</RouterLink> -->
+        <!-- <p class="mb-0 text-gray-500 font-light text-base">Kontakt</p> -->
         
-        <ul class="contact-icons flex justify-end gap-10 flex-grow">
+        <ul class="contact-icons flex justify-start gap-8 flex-grow">
 			<li>
 				<RouterLink to="#">
-                    <EmailIcon class="fill-silver h-4 text-coal" />
+                    <EmailIcon class="fill-gray-500 h-5 text-coal hover:fill-rich-electric-blue" />
                 </RouterLink>
 			</li>
 
             <li>
-                <a href="https://www.twitter.com/42mrrw/">
-                    <TwitterIcon class="fill-silver h-4 text-coal" />
+                <a href="https://twitter.com/42mrrw">
+                    <TwitterIcon class="fill-gray-500 h-5 text-coal hover:fill-rich-electric-blue" />
                 </a>
             </li>
 
             <li>
-                <a href="https://www.linkedin.com/company/42mrrw/">
-                    <LinkedinIcon class="fill-silver h-4 text-coal" />
+                <a href="https://linkedin.com/company/42mrrw/">
+                    <LinkedinIcon class="fill-gray-500 h-5 text-coal hover:fill-rich-electric-blue" />
                 </a>
             </li>
 
             <li>
-                <a href="https://www.instagram.com/42mrrw/">
-                    <InstagramIcon class="fill-silver h-4 text-coal" />
+                <a href="https://instagram.com/42mrrw/">
+                    <InstagramIcon class="fill-gray-500 h-5 text-coal hover:fill-rich-electric-blue" />
                 </a>
             </li>
 		</ul>

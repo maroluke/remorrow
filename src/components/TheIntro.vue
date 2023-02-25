@@ -17,9 +17,9 @@ export default {
 <template>
 	<section
 		id="theIntro"
-		class="px-5 text-snow pt-24 h-screen transition-all duration-500"
+		class="px-5 text-snow h-full min-h-screen transition-all"
 	>
-		<div class="flex gap-10 flex-col items-center pt-0 h-full z-20">
+		<div class="flex gap-10 flex-col items-center h-full z-30 pt-24">
 			<div>
 				<h1 class="pt-5">
 					<slot name="title">Titel</slot>
@@ -47,20 +47,22 @@ export default {
 		</div>
 
 		<div
-			class="z-10 absolute left-0 bottom-0 w-screen h-full flex flex-col pt-24"
+			v-if="bgGradient"
+			class="z-20 absolute left-0 bottom-0 w-full h-full bg-gradient-to-r from-black to-[rgba(0,0,0,.3)]"
+		></div>
+
+		<div
+			v-if="bgGradient"
 			:class="{ 'justify-end': !bgGradient }"
+			class="z-10 absolute left-0 bottom-0 w-screen h-full"
 		>
-			<div
-				v-if="bgGradient"
-				class="bg-gradient-to-b from-dark to-black flex-grow"
-			></div>
 			<!-- <div class="rotate-180 bg-no-repeat bg-[url('media/{}')] bg-cover bg-center h-[200px]"></div> -->
 
 			<img
 				loading="lazy"
 				alt="Title image"
 				:class="`rotate-${rotate} ${twClass}`"
-				class="object-contain h-200"
+				class="object-contain w-full"
 				:src="filename"
 			/>
 		</div>

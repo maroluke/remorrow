@@ -39,10 +39,10 @@ export default defineComponent({
         },
         to: {
             type: String,
-            default: "/",
+            default: null,
         },
     },
-    setup(props) {
+    setup() {
         const uid = getCurrentInstance().uid;
         const buttonRef = ref();
         const svgPath = computed(() => {
@@ -74,7 +74,7 @@ export default defineComponent({
 
 <template>
     <div class="button-wrapper">
-        <RouterLink :to="this.to">
+        <RouterLink v-if="this.to" :to="this.to">
             <button :style="{
                 clipPath: `url('#squircle-${uid}')`,
             }"
@@ -108,6 +108,39 @@ export default defineComponent({
                 </defs>
             </svg>
         </RouterLink>
+
+        <button v-else :style="{
+            clipPath: `url('#squircle-${uid}')`,
+        }"
+            :class="`m-0 w-full gap-2 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition-all duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
+            ref="buttonRef">
+            <span v-if="$slots.buttonRef" class="text-left font-extrabold">
+                <slot name="buttonRef"></slot>
+            </span>
+
+            <span>
+                <ArrowIcon v-if="icon === 'arrow'"
+                    :class="`-rotate-90 self-center w-3 fill-inherit ${this.fillIcon}`" />
+                <EmailIcon v-if="icon === 'mail'" :class="`self-center w-6 fill-inherit ${this.fillIcon}`" />
+                <CommunityIcon v-if="icon === 'community'"
+                    :class="`self-center w-6 fill-inherit ${this.fillIcon}`" />
+                <ProjectIcon v-if="icon === 'project'" :class="`self-center w-6 fill-inherit ${this.fillIcon}`" />
+                <DirectionIcon v-if="icon === 'direction'"
+                    :class="`self-center w-6 fill-inherit ${this.fillIcon}`" />
+                <AboutIcon v-if="icon === 'about'" :class="`self-center w-6 fill-inherit ${this.fillIcon}`" />
+                <LinkedinIcon v-if="icon === 'linkedin'" :class="`self-center w-4 fill-inherit ${this.fillIcon}`" />
+                <InstagramIcon v-if="icon === 'instagram'"
+                    :class="`self-center w-4 fill-inherit ${this.fillIcon}`" />
+            </span>
+        </button>
+
+        <svg v-if="svgPath" style="width: 0; height: 0; pointer-events: none">
+            <defs>
+                <clipPath :id="`squircle-${uid}`">
+                    <path :d="svgPath" />
+                </clipPath>
+            </defs>
+        </svg>
     </div>
 </template>
 
