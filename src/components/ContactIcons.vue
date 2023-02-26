@@ -39,26 +39,26 @@ export default {
         
         <ul class="contact-icons flex justify-start gap-8 flex-grow">
 			<li>
-				<RouterLink to="#">
-                    <EmailIcon class="fill-gray-500 h-5 text-coal hover:fill-rich-electric-blue" />
+				<RouterLink to="#" class="text-silver">
+                    <EmailIcon class="h-5 text-inherit hover:fill-rich-electric-blue" />
                 </RouterLink>
 			</li>
 
             <li>
-                <a href="https://twitter.com/42mrrw">
-                    <TwitterIcon class="fill-gray-500 h-5 text-coal hover:fill-rich-electric-blue" />
+                <a href="https://twitter.com/42mrrw" class="text-silver">
+                    <TwitterIcon class="h-5 text-inherit hover:fill-rich-electric-blue" />
                 </a>
             </li>
 
             <li>
-                <a href="https://linkedin.com/company/42mrrw/">
-                    <LinkedinIcon class="fill-gray-500 h-5 text-coal hover:fill-rich-electric-blue" />
+                <a href="https://linkedin.com/company/42mrrw/" class="text-silver">
+                    <LinkedinIcon class="h-5 text-inherit hover:fill-rich-electric-blue" />
                 </a>
             </li>
 
             <li>
-                <a href="https://instagram.com/42mrrw/">
-                    <InstagramIcon class="fill-gray-500 h-5 text-coal hover:fill-rich-electric-blue" />
+                <a href="https://instagram.com/42mrrw/" class="text-silver">
+                    <InstagramIcon class="h-5 text-inherit hover:fill-rich-electric-blue" />
                 </a>
             </li>
 		</ul>

@@ -11,7 +11,7 @@ const navigationState = useNavigationStore();
 		<div class="flex items-center justify-between px-5 h-20 relative">
 			<!-- Logo -->
 			<RouterLink to="/" class="absolute h-8">
-				<Transition name="logo-mini-toggle" v-show="navigationState.navigationIsOpen">
+				<Transition name="logo-mini-toggle" v-show="navigationState.navigationIsOpen" @click="navigationState.navigationIsOpen = false">
 					<LogoMiniIcon
 						class="logo fill-gray-500 transition-opacity duration-1000 delay-300 fixed"
 					/>

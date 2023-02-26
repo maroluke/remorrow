@@ -1,7 +1,7 @@
 <script setup>
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
-import SquircleButton from "@components/SquircleButton.vue";
+import ContactModal from "@components/ContactModal.vue";
 </script>
 
 <template>
@@ -70,11 +70,7 @@ import SquircleButton from "@components/SquircleButton.vue";
 				</template>
 			</TitleParagraphItem>
 
-			<SquircleButton :icon="'mail'" :classes="'bg-snow'" class="mt-5">
-				<template #buttonRef>Melde dich bei uns</template>
-			</SquircleButton>
-
-			<ContactModal class="text-rich-electric-blue">Melde dich</ContactModal>
+			<ContactModal :classes="'text-rich-electric-blue bg-snow'" />
 		</section>
 	</main>
 </template>

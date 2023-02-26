@@ -1,3 +1,8 @@
+<script setup>
+import SquircleButton from "./SquircleButton.vue";
+</script>
+
+
 <template>
 	<section class="special-gradient z-30">
 		<div class="rounded-lg px-5 py-10 bg-white text-coal drop-shadow-xl">
@@ -57,10 +62,3 @@
 	</section>
 </template>
 
-<script setup>
-import TitleParagraphItem from "./TitleParagraphItem.vue";
-import IconArrow from "./icons/IconArrow.vue";
-import InstagramIcon from "./icons/IconInstagram.vue";
-import LinkedinIcon from "./icons/IconLinkedin.vue";
-import SquircleButton from "./SquircleButton.vue";
-</script>

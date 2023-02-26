@@ -2,6 +2,7 @@
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
 import SquircleButton from "@components/SquircleButton.vue";
+import ContactModal from "@components/ContactModal.vue";
 </script>
 
 <template>
@@ -31,8 +32,13 @@ import SquircleButton from "@components/SquircleButton.vue";
 				</template>
 			</TitleParagraphItem>
 
-			<SquircleButton :icon="'mail'" :classes="'bg-coal'" class="mt-5">
-				<template #buttonRef>Let's talk</template>
+			<SquircleButton
+				:icon="'mail'"
+				:classes="'bg-coal'"
+				class="mt-5 modal-toggle"
+				type="button"
+			>
+				<template #buttonRef><slot>Melde dich</slot></template>
 			</SquircleButton>
 		</section>
 
@@ -49,8 +55,13 @@ import SquircleButton from "@components/SquircleButton.vue";
 				</template>
 			</TitleParagraphItem>
 
-			<SquircleButton :icon="'mail'" :classes="'bg-coal'" class="mt-5">
-				<template #buttonRef>Melde dich</template>
+			<SquircleButton
+				:icon="'mail'"
+				:classes="'bg-coal'"
+				class="mt-5 modal-toggle"
+				type="button"
+			>
+				<template #buttonRef><slot>Let's talk</slot></template>
 			</SquircleButton>
 		</section>
 
@@ -67,11 +78,17 @@ import SquircleButton from "@components/SquircleButton.vue";
 				</template>
 			</TitleParagraphItem>
 
-			<SquircleButton :icon="'mail'" :classes="'bg-coal'" class="mt-5">
+			<SquircleButton
+				:icon="'mail'"
+				:classes="'bg-coal'"
+				class="mt-5 modal-toggle"
+			>
 				<template #buttonRef>Melde dich</template>
 			</SquircleButton>
 		</section>
 	</main>
+
+	<ContactModal />
 	<!-- <div class="bg-[url('./src/assets/media/Sunrise-ISS.jpg')] absolute top-[90vh] w-full h-96 bg-cover bg-center bg-no-repeat"></div> -->
 	<!-- <div class="intro-bg bg-[url('media/sunrise-over-Earth_1600.jpg')] bg-[length:150%_auto] bg-center bg-no-repeat absolute top-[80vh] w-full h-[500px] rotate-180">
         <div class="bg-gradient-to-b from-black via-transparent to-transparent w-full h-full"></div>

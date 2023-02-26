@@ -2,6 +2,7 @@
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
 import SquircleButton from "@components/SquircleButton.vue";
+import ContactModal from "@components/ContactModal.vue";
 </script>
 
 <template>
@@ -17,10 +18,10 @@ import SquircleButton from "@components/SquircleButton.vue";
 			</template>
 		</JumboHeader>
 
-		<section class="px-5 py-5 bg-snow bg-no-repeat bg-cover">
-			<div class="bg-rich-electric-blue py-10 px-20 mb-5 rounded-lg">
-				<h1 class="text-center text-snow m-0">Was<br />brauchst<br />du?</h1>
-			</div>
+		<section class="px-5 py-10 bg-snow bg-no-repeat bg-cover">
+			<!-- <div class="bg-rich-electric-blue py-10 px-20 mb-5 rounded-lg"> -->
+				<h1 class="text-rich-electric-blue">Was brauchst du?</h1>
+			<!-- </div> -->
 
 			<TitleParagraphItem class="text-dark">
 				<template #paragraph>
@@ -41,21 +42,14 @@ import SquircleButton from "@components/SquircleButton.vue";
 			</SquircleButton>
 		</section>
 
-		<section class="px-5 py-10 bg-dark text-snow">
+		<section class="px-5 py-10 bg-rich-electric-blue text-snow">
 			<TitleParagraphItem>
 				<template #title>
 					Bock zu helfen?
 				</template>
 			</TitleParagraphItem>
 
-			<SquircleButton
-				:icon="'mail'"
-				:classes="'bg-coal'"
-				:to="'/sei-dabei'"
-				class="mt-5"
-			>
-			<template #buttonRef>Sei ein Teil davon</template>
-		</SquircleButton>
+			<ContactModal :classes="'text-rich-electric-blue bg-snow'">Sei ein Teil davon</ContactModal>
 		</section>
 	</main>
 </template>

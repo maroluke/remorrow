@@ -136,16 +136,16 @@ export default defineComponent({
 				</template>
 			</TitleParagraphItem>
 
-			<SquircleButton
+			<!-- <SquircleButton
 				:icon="'mail'"
 				:classes="'bg-coal'"
 				:to="'#'"
 				class="mt-5"
 			>
 				<template #buttonRef>Melde dich</template>
-			</SquircleButton>
+			</SquircleButton> -->
 
-			<ContactModal>Melde dich</ContactModal>
+			<ContactModal />
 		</section>
 
 		<section class="px-5 py-10 bg-snow text-coal">

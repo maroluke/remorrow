@@ -2,6 +2,7 @@
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
 import SquircleButton from "@components/SquircleButton.vue";
+import ContactModal from "@components/ContactModal.vue";
 </script>
 
 <template>
@@ -29,9 +30,7 @@ import SquircleButton from "@components/SquircleButton.vue";
 				</template>
 			</TitleParagraphItem>
 
-			<SquircleButton :icon="'mail'" :classes="'bg-coal'" class="mt-5">
-				<template #buttonRef>Kontakt</template>
-			</SquircleButton>
+			<ContactModal>Kontakt</ContactModal>
 		</section>
 
 		<section class="text-snow px-5 py-10">

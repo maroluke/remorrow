@@ -1,48 +1,50 @@
 <script>
 import { Modal } from "flowbite";
-import SquircleButton from "@components/SquircleButton.vue";
 import EmailIcon from "@components/icons/IconEmail.vue";
 export default {
 	name: "ContactModal",
 	components: {
-		SquircleButton,
 		EmailIcon,
 	},
 	mounted() {
-		const $buttonElement = document.querySelector("#button");
-		const $modalElement = document.querySelector("#modal");
-		const $closeButton = document.querySelector("#closeButton");
+		const modalToggle = document.querySelectorAll(".modal-toggle");
+		const modalElement = document.querySelector("#contact-modal");
+		const closeModal = document.querySelector(".modal-close");
 
 		const modalOptions = {
 			backdropClasses:
 				"bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40 backdrop-filter backdrop-blur-sm",
 		};
 
-		if ($modalElement) {
-			const modal = new Modal($modalElement, modalOptions);
-			$buttonElement.addEventListener("click", () => modal.toggle());
-			$closeButton.addEventListener("click", () => modal.hide());
+		if (modalElement) {
+			modalToggle.forEach((toggle) => {
+				toggle.addEventListener("click", (e) => {
+					e.preventDefault();
+
+					const modal = new Modal(modalElement, modalOptions);
+					modal.toggle();
+
+					this.closeModal(closeModal, modal);
+				});
+			});
 
 			// programmatically show
 			// modal.show();
 		}
 	},
+	methods: {
+		closeModal(closeButton, modal) {
+			closeButton.addEventListener("click", () => {
+				modal.hide();
+			});
+		},
+	},
 };
 </script>
 
 <template>
-	<SquircleButton
-		:icon="'mail'"
-		:classes="'bg-coal'"
-		class="mt-5"
-		id="button"
-		type="button"
-	>
-		<template #buttonRef>Melde dichxx</template>
-	</SquircleButton>
-
 	<div
-		id="modal"
+		id="contact-modal"
 		tabindex="-1"
 		aria-hidden="true"
 		class="fixed top-0 left-0 right-0 z-[100] hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
@@ -55,9 +57,8 @@ export default {
 					<h3 class="text-coal">Kontakt</h3>
 
 					<button
-						id="closeButton"
 						type="button"
-						class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+						class="modal-close text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
 					>
 						<svg
 							class="w-5 h-5"
