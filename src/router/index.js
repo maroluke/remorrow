@@ -5,6 +5,7 @@ import JoinView from "../views/JoinView.vue";
 import PathView from "../views/PathView.vue";
 import CommunityView from "../views/CommunityView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
+import GlossarView from "../views/GlossarView.vue"
 
 const routes = [
 	{
@@ -36,6 +37,11 @@ const routes = [
 		path: "/projekte",
 		name: "Projects",
 		component: ProjectsView,
+	},
+	{
+		path: "/glossar",
+		name: "Glossar",
+		component: GlossarView,
 	},
 ];
 
