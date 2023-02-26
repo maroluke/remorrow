@@ -2,8 +2,12 @@
 import { useNavigationStore } from "@/stores/navigation";
 import LogoIcon from "@/components/icons/IconLogo.vue";
 import LogoMiniIcon from "@/components/icons/IconLogoMini.vue";
+import { RouterLink } from "vue-router";
+import { useRouter } from "vue-router";
 
 const navigationState = useNavigationStore();
+
+const router = useRouter();
 </script>
 
 <template>
@@ -19,7 +23,7 @@ const navigationState = useNavigationStore();
 				
 				<Transition name="logo-toggle" v-show="!navigationState.navigationIsOpen">
 					<LogoIcon
-						v-if="this.$route.name === 'Home'"
+						v-if="router.currentRoute.value.name === 'Home'"
 						class="logo fill-snow h-full transition-all ease-[cubic-bezier(0.85, 0, 0.15, 1)] duration-500 delay-500 absolute -left-1 text-left"
 					/>
 

@@ -50,6 +50,6 @@ import ArrowIcon from '@components/icons/IconArrow.vue';
 
 <style>
 .logo {
-	@apply !fill-coal;
+	@apply !fill-gray-500;
 }
 </style>
