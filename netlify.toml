@@ -1,6 +1,6 @@
 [build]
     functions = "functions"
-    base = "client"
+    base = "src"
 [[redirects]]
     from = "/api/*"
     to = "/.netlify/functions/:splat"
