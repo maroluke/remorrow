@@ -51,7 +51,7 @@ export default {
 	>
 		<div class="relative w-full h-full max-w-2xl md:h-auto">
 			<!-- Modal content -->
-			<div class="relative bg-snow rounded-lg shadow">
+			<div class="relative bg-snow rounded-xl shadow">
 				<!-- Modal header -->
 				<div class="flex items-start justify-between p-5 rounded-t">
 					<h3 class="text-coal">Kontakt</h3>

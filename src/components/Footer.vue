@@ -52,7 +52,7 @@ export default {
 			const contact = document.querySelector("footer .contact-icons");
 			this.contactIcons.forEach((item) => {
 				const duplicate = item.cloneNode(true);
-				duplicate.classList.add("text-snow");
+				duplicate.classList.add("text-moon");
 				contact.append(duplicate);
 			});
 		},
@@ -68,7 +68,7 @@ export default {
 
 <template>
 	<footer
-		class="bg-black px-5 pt-20 pb-10 h-screen flex flex-col justify-end"
+		class="bg-black px-5 py-10 h-screen flex flex-col justify-end"
 	>
 		<div class="absolute w-full h-full bottom-0 left-0 z-10">
 			<img
@@ -81,25 +81,27 @@ export default {
 		</div>
 
 		<div class="drop-shadow-md z-20 pt-28">
-			<RouterLink to="/">
-				<IconLogoMini class="fill-snow" />
-			</RouterLink>
-
-			<p class="font-medium mt-5 text-2xl">
+			<p class="font-medium mt-5 text-base">
 				Gemeinsam für ein<br /><span
 					class="text-rich-electric-blue font-medium"
 					>besseres Morgen</span
 				>.
 			</p>
 
-			<p class="font-medium text-2xl">
+			<p class="font-medium text-base">
                 Lass uns zusammen <br />handeln.
             </p>
 
-			<div class="contact-icons flex gap-8 mt-10"></div>
+            <div class="flex justify-between items-center mt-10">
+                <RouterLink to="/">
+                    <IconLogoMini class="fill-moon" />
+                </RouterLink>
+
+                <div class="contact-icons flex gap-8"></div>
+            </div>
 		</div>
 
-		<hr class="my-10 opacity-10" />
+		<hr class="my-8 opacity-10" />
 
 		<div class="z-20 opacity-30">
 			<h4 class="font-medium text-sm mb-5">Credits</h4>
@@ -136,3 +138,9 @@ export default {
 		</div>
 	</footer>
 </template>
+
+<style>
+    footer .contact-icons a svg {
+        @apply !h-4;
+    }
+</style>
