@@ -83,7 +83,7 @@ import ContactModal from "@components/ContactModal.vue";
 				:classes="'bg-coal'"
 				class="mt-5 modal-toggle"
 			>
-				<template #buttonRef>Melde dich</template>
+				<template #buttonRef><slot>Melde dich</slot></template>
 			</SquircleButton>
 		</section>
 	</main>

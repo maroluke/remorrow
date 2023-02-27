@@ -49,7 +49,16 @@ import ContactModal from "@components/ContactModal.vue";
 				</template>
 			</TitleParagraphItem>
 
-			<ContactModal :classes="'text-rich-electric-blue bg-snow'">Sei ein Teil davon</ContactModal>
+			<SquircleButton
+				:icon="'direction'"
+				:classes="'bg-snow'"
+				:to="'#'"
+				class="mt-5 modal-toggle"
+			>
+				<template #buttonRef>Sei ein Teil davon</template>
+			</SquircleButton>
 		</section>
 	</main>
+
+	<ContactModal />
 </template>

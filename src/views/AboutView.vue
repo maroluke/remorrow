@@ -30,7 +30,14 @@ import ContactModal from "@components/ContactModal.vue";
 				</template>
 			</TitleParagraphItem>
 
-			<ContactModal>Kontakt</ContactModal>
+			<SquircleButton
+				:icon="'mail'"
+				:classes="'bg-coal'"
+				:to="'#'"
+				class="mt-5 modal-toggle"
+			>
+				<template #buttonRef>Kontakt</template>
+			</SquircleButton>
 		</section>
 
 		<section class="text-snow px-5 py-10">
@@ -47,7 +54,12 @@ import ContactModal from "@components/ContactModal.vue";
 				</template>
 			</TitleParagraphItem>
 
-			<SquircleButton :icon="'community'" :classes="'bg-coal'" :to="'/community'" class="mt-5">
+			<SquircleButton
+				:icon="'community'"
+				:classes="'bg-coal'"
+				:to="'/community'"
+				class="mt-5 modal-toggle"
+			>
 				<template #buttonRef>Wir bauen eine Community</template>
 			</SquircleButton>
 		</section>
@@ -88,6 +100,8 @@ import ContactModal from "@components/ContactModal.vue";
 			</SquircleButton>
 		</section>
 	</main>
+
+	<ContactModal />
 	<!-- <div class="bg-[url('./src/assets/media/Sunrise-ISS.jpg')] absolute top-[90vh] w-full h-96 bg-cover bg-center bg-no-repeat"></div> -->
 	<!-- <div class="intro-bg bg-[url('media/sunrise-over-Earth_1600.jpg')] bg-[length:150%_auto] bg-center bg-no-repeat absolute top-[80vh] w-full h-[500px] rotate-180">
         <div class="bg-gradient-to-b from-black via-transparent to-transparent w-full h-full"></div>

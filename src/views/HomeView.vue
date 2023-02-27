@@ -136,16 +136,14 @@ export default defineComponent({
 				</template>
 			</TitleParagraphItem>
 
-			<!-- <SquircleButton
+			<SquircleButton
 				:icon="'mail'"
 				:classes="'bg-coal'"
 				:to="'#'"
-				class="mt-5"
+				class="mt-5 modal-toggle"
 			>
 				<template #buttonRef>Melde dich</template>
-			</SquircleButton> -->
-
-			<ContactModal />
+			</SquircleButton>
 		</section>
 
 		<section class="px-5 py-10 bg-snow text-coal">
@@ -165,10 +163,12 @@ export default defineComponent({
 				:to="'/wer-wir-sind'"
 				class="mt-5"
 			>
-				<template #buttonRef>Entdecken</template>
+				<template #buttonRef><slot>Entdecken</slot></template>
 			</SquircleButton>
 		</section>
 	</main>
+
+	<ContactModal />
 	<!-- <div class="bg-[url('./src/assets/media/Sunrise-ISS.jpg')] absolute top-[90vh] w-full h-96 bg-cover bg-center bg-no-repeat"></div> -->
 	<!-- <div class="intro-bg bg-[url('media/sunrise-over-Earth_1600.jpg')] bg-[length:150%_auto] bg-center bg-no-repeat absolute top-[80vh] w-full h-[500px] rotate-180">
         <div class="bg-gradient-to-b from-black via-transparent to-transparent w-full h-full"></div>

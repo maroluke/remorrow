@@ -2,6 +2,7 @@
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
 import ContactModal from "@components/ContactModal.vue";
+import SquircleButton from "@components/SquircleButton.vue";
 </script>
 
 <template>
@@ -70,7 +71,16 @@ import ContactModal from "@components/ContactModal.vue";
 				</template>
 			</TitleParagraphItem>
 
-			<ContactModal :classes="'text-rich-electric-blue bg-snow'" />
+			<SquircleButton
+				:icon="'mail'"
+				:classes="'bg-snow'"
+				:to="'#'"
+				class="mt-5 modal-toggle"
+			>
+				<template #buttonRef>Melde dich</template>
+			</SquircleButton>
 		</section>
 	</main>
+	
+	<ContactModal />
 </template>

@@ -17,19 +17,19 @@ const router = useRouter();
 			<RouterLink to="/" class="absolute h-8">
 				<Transition name="logo-mini-toggle" v-show="navigationState.navigationIsOpen" @click="navigationState.navigationIsOpen = false">
 					<LogoMiniIcon
-						class="logo fill-gray-500 transition-opacity duration-1000 delay-300 fixed"
+						class="logo text-moon transition-opacity duration-1000 delay-200 fixed"
 					/>
 				</Transition>
 				
 				<Transition name="logo-toggle" v-show="!navigationState.navigationIsOpen">
 					<LogoIcon
 						v-if="router.currentRoute.value.name === 'Home'"
-						class="logo fill-snow h-full transition-all ease-[cubic-bezier(0.85, 0, 0.15, 1)] duration-500 delay-500 absolute -left-1 text-left"
+						class="logo text-moon h-full transition-all ease-[cubic-bezier(0.85, 0, 0.15, 1)] duration-1000 delay-1000 absolute -left-1 text-left"
 					/>
 
 					<LogoMiniIcon
 						v-else
-						class="logo fill-snow h-full transition-all ease-[cubic-bezier(0.85, 0, 0.15, 1)] duration-500 delay-500 absolute left-0"
+						class="logo text-moon h-full transition-all ease-[cubic-bezier(0.85, 0, 0.15, 1)] duration-500 delay-500 absolute left-0"
 					/>
 				</Transition>
 			</RouterLink>
@@ -37,9 +37,9 @@ const router = useRouter();
 			<div @click="navigationState.navigationIsOpen = !navigationState.navigationIsOpen"
 				class="burger flex cursor-pointer items-center h-10 transition duration-200 fixed right-4">
 				<div class="flex flex-col gap-1 bg-dark bg-opacity-0 backdrop-blur-xl py-2 px-2 rounded-sm">
-					<span class="w-10 h-0.5 bg-gray-500"></span>
-					<span class="w-10 h-0.5 bg-gray-500"></span>
-					<span class="w-10 h-0.5 bg-gray-500"></span>
+					<span class="w-10 h-0.5 bg-moon"></span>
+					<span class="w-10 h-0.5 bg-moon"></span>
+					<span class="w-10 h-0.5 bg-moon"></span>
 				</div>
 			</div>
 		</div>
@@ -49,7 +49,7 @@ const router = useRouter();
 <style scoped>
 .logo-toggle-enter-active,
 .logo-toggle-leave-active {
-	@apply opacity-100;
+	@apply opacity-100 delay-200;
 }
 
 .logo-toggle-enter-from,

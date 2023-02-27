@@ -35,6 +35,16 @@
 					:class="iconStyle"
 					class="w-12 self-start"
 				/>
+				<IconGrow
+					v-if="icon === 'grow'"
+					:class="iconStyle"
+					class="w-12 self-start"
+				/>
+				<IconFusion
+					v-if="icon === 'fusion'"
+					:class="iconStyle"
+					class="w-12 self-start"
+				/>
 			</div>
 		</div>
 
@@ -50,6 +60,8 @@ import IconRunning from "./icons/IconRunning.vue";
 import IconPlaned from "./icons/IconPlaned.vue";
 import IconWorld from "./icons/IconWorld.vue";
 import IconNorming from "./icons/IconNorming.vue";
+import IconGrow from "./icons/IconGrow.vue";
+import IconFusion from "./icons/IconFusion.vue";
 
 export default {
 	name: "TitleParagraphItem",
@@ -59,6 +71,8 @@ export default {
 		IconPlaned,
 		IconWorld,
 		IconNorming,
+		IconGrow,
+		IconFusion,
 	},
 	props: {
 		heading: {

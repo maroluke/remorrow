@@ -50,7 +50,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 								</span>
 								<div>
 									<IconChecked2
-										class="fill-moon w-6 self-start"
+										class="fill-green-400 w-6 self-start"
 									/>
 								</div>
 							</li>
@@ -61,7 +61,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 								</span>
 								<div>
 									<IconChecked2
-										class="fill-moon w-6 self-start"
+										class="fill-green-400 w-6 self-start"
 									/>
 								</div>
 							</li>
@@ -72,7 +72,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 								</span>
 								<div>
 									<IconChecked2
-										class="fill-moon w-6 self-start"
+										class="fill-green-400 w-6 self-start"
 									/>
 								</div>
 							</li>
@@ -82,7 +82,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 				<TitleParagraphItem
 					:heading="3"
-					:icon="'running'"
+					:icon="'planed'"
 					:iconStyle="'fill-coal'"
 					class="text-coal p-3 py-5"
 				>
@@ -100,7 +100,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 				<TitleParagraphItem
 					:heading="3"
-					:icon="'planed'"
+					:icon="'world'"
 					:iconStyle="'fill-coal'"
 					class="text-coal p-3"
 				>
@@ -119,7 +119,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 				<TitleParagraphItem
 					:heading="3"
-					:icon="'world'"
+					:icon="'fusion'"
 					:iconStyle="'fill-coal'"
 					class="text-coal p-3"
 				>

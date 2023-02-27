@@ -48,8 +48,8 @@ import ArrowIcon from '@components/icons/IconArrow.vue';
 	</main>
 </template>
 
-<style>
+<style scoped>
 .logo {
-	@apply !fill-gray-500;
+	@apply !fill-gray-900;
 }
 </style>
