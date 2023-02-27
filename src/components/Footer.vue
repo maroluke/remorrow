@@ -68,7 +68,7 @@ export default {
 
 <template>
 	<footer
-		class="bg-black px-5 pt-10 pb-10 h-screen flex flex-col justify-end"
+		class="bg-black px-5 pt-20 pb-10 h-screen flex flex-col justify-end"
 	>
 		<div class="absolute w-full h-full bottom-0 left-0 z-10">
 			<img
