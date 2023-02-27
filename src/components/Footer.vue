@@ -73,7 +73,7 @@ export default {
 		<div class="absolute w-full h-full bottom-0 left-0 z-10">
 			<img
 				loading="lazy"
-				src="/public/sunrise-over-Earth_1600.jpg"
+				src="/sunrise-over-Earth_1600.jpg"
 				alt="Globe from outta space"
 				class="z-10 block"
 			/>
