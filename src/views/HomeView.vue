@@ -59,18 +59,17 @@ export default defineComponent({
 
 <template>
 	<main class="bg-dark">
-		<TheIntro
-			:filename="'globe3.jpg'"
-			:rotate="0"
-			:bg-gradient="true"
-		>
+		<TheIntro :filename="'globe3.jpg'" :rotate="0" :bg-gradient="true">
 			<template #title>
 				Lass uns gemeinsam die Welt von Morgen schaffen.
 			</template>
 
 			<template #paragraph>
-				Wir unterstützen <a href="#" class="glossar-link">nachhaltige</a> Projekte dabei zu wachsen und einen
-                <a href="#" class="glossar-link">positiven Beitrag</a> für unsere Zukunft zu erbringen.
+				Wir unterstützen
+				<a href="#" class="glossar-link">nachhaltige</a> Projekte dabei
+				zu wachsen und einen
+				<a href="#" class="glossar-link">positiven Beitrag</a> für
+				unsere Zukunft zu erbringen.
 			</template>
 		</TheIntro>
 
@@ -86,8 +85,10 @@ export default defineComponent({
 					<span class="font-bold">fortomorrow</span>, mit begeisterten
 					& motivierten Menschen, Teil der Veränderung. <br /><br />
 					Weg von endlosem Streben nach Profit und unendlichem
-					Wachstum, hin zu sinnvollen und <a href="#" class="glossar-link">schönen</a> Projekten, die ihre
-					<a href="#" class="glossar-link">regenerative</a> Kraft entfesseln.
+					Wachstum, hin zu sinnvollen und
+					<a href="#" class="glossar-link">schönen</a> Projekten, die
+					ihre <a href="#" class="glossar-link">regenerative</a> Kraft
+					entfesseln.
 				</template>
 			</TitleParagraphItem>
 		</section>
@@ -116,7 +117,7 @@ export default defineComponent({
 				:to="'/unser-weg'"
 				class="mt-5"
 			>
-                <template #buttonRef>Unser Weg</template>
+				<template #buttonRef>Unser Weg</template>
 			</SquircleButton>
 		</section>
 
@@ -169,8 +170,4 @@ export default defineComponent({
 	</main>
 
 	<ContactModal />
-	<!-- <div class="bg-[url('./src/assets/media/Sunrise-ISS.jpg')] absolute top-[90vh] w-full h-96 bg-cover bg-center bg-no-repeat"></div> -->
-	<!-- <div class="intro-bg bg-[url('media/sunrise-over-Earth_1600.jpg')] bg-[length:150%_auto] bg-center bg-no-repeat absolute top-[80vh] w-full h-[500px] rotate-180">
-        <div class="bg-gradient-to-b from-black via-transparent to-transparent w-full h-full"></div>
-    </div> -->
 </template>
