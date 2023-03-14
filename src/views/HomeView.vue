@@ -59,25 +59,24 @@ export default defineComponent({
 
 <template>
 	<main class="bg-dark">
-		<TheIntro :filename="'globe3.jpg'" :rotate="0" :bg-gradient="true">
+		<TheIntro :filename="'globe4.jpg'" :rotate="0" :bg-gradient="true" class="z-20">
 			<template #title>
 				Lass uns gemeinsam die Welt von Morgen schaffen.
 			</template>
 
 			<template #paragraph>
 				Wir unterstützen
-				<a href="#" class="glossar-link">nachhaltige</a> Projekte dabei
+				nachhaltige Projekte dabei
 				zu wachsen und einen
-				<a href="#" class="glossar-link">positiven Beitrag</a> für
+				positiven Beitrag für
 				unsere Zukunft zu erbringen.
 			</template>
 		</TheIntro>
 
-		<section class="px-5 py-10 bg-snow z-20">
-			<TitleParagraphItem class="text-coal">
+		<section class="px-5 py-10 bg-snow z-30 flex flex-col items-center gap-10 justify-center md:flex-row md:py-20">
+			<TitleParagraphItem class="text-coal max-w-screen-sm">
 				<template #title>
-					Nachhaltigkeit ist nur ein erster Schritt –
-					<br />wir brauchen regenerative Ideen!
+					Nachhaltigkeit ist nur ein erster Schritt – wir brauchen regenerative Ideen!
 				</template>
 
 				<template #paragraph>
@@ -91,12 +90,12 @@ export default defineComponent({
 					entfesseln.
 				</template>
 			</TitleParagraphItem>
+
+			<QuoteCard />
 		</section>
 
-		<QuoteCard class="px-2" />
-
-		<section class="text-snow px-5 py-10">
-			<TitleParagraphItem>
+		<section class="text-snow px-5 py-10 bg-dark z-20 flex flex-col md:py-20">
+			<TitleParagraphItem :button="'Unser Weg'" :to="'/unser-weg'" class="max-w-screen-sm flex flex-col gap-10 !mb-0 !items-start mx-auto md:flex-row">
 				<template #title>
 					Wir wissen, dass wir zusammen stärker sind!
 				</template>
@@ -110,21 +109,12 @@ export default defineComponent({
 					Vision.
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'direction'"
-				:classes="'bg-coal'"
-				:to="'/unser-weg'"
-				class="mt-5"
-			>
-				<template #buttonRef>Unser Weg</template>
-			</SquircleButton>
 		</section>
 
-		<ParagraphWithCards class="bg-snow text-coal px-5 py-10" />
+		<ParagraphWithCards class="bg-snow text-coal px-5 py-10 z-20 md:py-20" />
 
-		<section class="px-5 py-10">
-			<TitleParagraphItem>
+		<section class="text-snow px-5 py-10 bg-dark z-20 flex flex-col md:py-20">
+			<TitleParagraphItem :button="'Melde dich'" :to="'#'" class="modal-toggle max-w-screen-sm flex flex-col gap-10 !mb-0 !items-start mx-auto md:flex-row">
 				<template #title> Wohin die Reise führt. </template>
 
 				<template #paragraph>
@@ -136,19 +126,10 @@ export default defineComponent({
 					mitzugestalten?
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'mail'"
-				:classes="'bg-coal'"
-				:to="'#'"
-				class="mt-5 modal-toggle"
-			>
-				<template #buttonRef>Melde dich</template>
-			</SquircleButton>
 		</section>
 
-		<section class="px-5 py-10 bg-snow text-coal">
-			<TitleParagraphItem>
+		<section class="px-5 py-10 bg-snow text-coal z-20 flex flex-col md:py-20">
+			<TitleParagraphItem :button="'Entdecken'" :to="'/wer-wir-sind'" class="max-w-sm flex flex-col gap-10 !mb-0 !items-start mx-auto">
 				<template #title> Wer wir sind. </template>
 
 				<template #paragraph>
@@ -157,17 +138,8 @@ export default defineComponent({
 					Blickwinkel.
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'about'"
-				:classes="'bg-coal'"
-				:to="'/wer-wir-sind'"
-				class="mt-5"
-			>
-				<template #buttonRef><slot>Entdecken</slot></template>
-			</SquircleButton>
 		</section>
 	</main>
-
+	
 	<ContactModal />
 </template>

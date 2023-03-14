@@ -75,11 +75,15 @@
     }
 
     h1 {
-        @apply mb-5;
+        @apply mb-5 md:text-5xl lg:text-6xl xl:text-7xl;
+    }
+
+    h2 {
+        @apply xl:text-4xl xl:leading-snug;
     }
 
     p {
-        @apply font-medium mb-5 leading-normal last:mb-0;
+        @apply font-medium mb-5 leading-normal last:mb-0 md:text-xl md:font-light;
     }
 
     strong {

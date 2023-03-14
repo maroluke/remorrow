@@ -79,7 +79,12 @@ import ContactModal from "@components/ContactModal.vue";
 				</template>
 			</TitleParagraphItem>
 
-			<SquircleButton :icon="'project'" :classes="'bg-coal'" :to="'/projekte'" class="mt-5">
+			<SquircleButton
+				:icon="'project'"
+				:classes="'bg-coal'"
+				:to="'/projekte'"
+				class="mt-5 modal-toggle"
+			>
 				<template #buttonRef>Wir fördern Projekte</template>
 			</SquircleButton>
 		</section>

@@ -1,11 +1,11 @@
 <template>
 	<div class="rounded-sm">
 		<div v-if="$slots.title" class="flex gap-5 justify-between items-center mb-5">
-			<h2 v-if="heading === 2">
+			<h2 v-if="heading === 2" class="sm:min-w-[200px]">
 				<slot name="title"></slot>
 			</h2>
 
-			<h3 v-if="heading === 3">
+			<h3 v-if="heading === 3" class="sm:min-w-[200px]">
 				<slot name="title"></slot>
 			</h3>
 
@@ -48,9 +48,21 @@
 			</div>
 		</div>
 
-		<p v-if="$slots.paragraph">
-			<slot name="paragraph"></slot>
-		</p>
+		<div class="flex flex-col">
+			<p v-if="$slots.paragraph">
+				<slot name="paragraph"></slot>
+			</p>
+
+			<SquircleButton
+				v-if="button"
+				:icon="'direction'"
+				:classes="'bg-coal'"
+				:to="to"
+				class="mt-5"
+			>
+				<template #buttonRef>{{ button }}</template>
+			</SquircleButton>
+		</div>
 	</div>
 </template>
 
@@ -62,6 +74,7 @@ import IconWorld from "./icons/IconWorld.vue";
 import IconNorming from "./icons/IconNorming.vue";
 import IconGrow from "./icons/IconGrow.vue";
 import IconFusion from "./icons/IconFusion.vue";
+import SquircleButton from "./SquircleButton.vue";
 
 export default {
 	name: "TitleParagraphItem",
@@ -73,6 +86,7 @@ export default {
 		IconNorming,
 		IconGrow,
 		IconFusion,
+		SquircleButton,
 	},
 	props: {
 		heading: {
@@ -90,6 +104,8 @@ export default {
 
 		title: { type: String, default: null },
 		paragraph: { type: String, default: null },
+		button: { type: String, default: null },
+		to: { type: String, default: null },
 	},
 };
 </script>

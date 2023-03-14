@@ -15,12 +15,6 @@ const router = useRouter();
 		<div class="flex items-center justify-between px-5 h-20 relative">
 			<!-- Logo -->
 			<RouterLink to="/" class="absolute h-8">
-				<Transition name="logo-mini-toggle" v-show="navigationState.navigationIsOpen" @click="navigationState.navigationIsOpen = false">
-					<LogoMiniIcon
-						class="logo text-moon transition-opacity duration-1000 delay-200 fixed"
-					/>
-				</Transition>
-				
 				<Transition name="logo-toggle" v-show="!navigationState.navigationIsOpen">
 					<LogoIcon
 						v-if="router.currentRoute.value.name === 'Home'"
@@ -54,17 +48,7 @@ const router = useRouter();
 
 .logo-toggle-enter-from,
 .logo-toggle-leave-to {
-	@apply opacity-0 -left-2 transition-none;
-}
-
-.logo-mini-toggle-enter-active,
-.logo-mini-toggle-leave-active {
-	@apply opacity-100;
-}
-
-.logo-mini-toggle-enter-from,
-.logo-mini-toggle-leave-to {
-	@apply opacity-0 duration-200 delay-[0ms];
+	@apply opacity-0 -left-2 transition-none sm:transition-all;
 }
 
 /* .nav-open .logo {

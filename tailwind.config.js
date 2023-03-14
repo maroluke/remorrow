@@ -47,6 +47,10 @@ module.exports = {
 				"fade-in-top-bottom":
 					"fade-in-top-bottom 5s cubic-bezier(0.83, 0, 0.17, 1) infinite",
 			},
+			screens: {
+				"2xs": "375px",
+				xs: "475px",
+			},
 		},
 	},
 	plugins: [

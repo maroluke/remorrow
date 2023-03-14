@@ -52,7 +52,6 @@ export default {
 			const contact = document.querySelector("footer .contact-icons");
 			this.contactIcons.forEach((item) => {
 				const duplicate = item.cloneNode(true);
-				duplicate.classList.add("text-moon");
 				contact.append(duplicate);
 			});
 		},
@@ -68,42 +67,44 @@ export default {
 
 <template>
 	<footer
-		class="bg-black px-5 py-10 h-screen flex flex-col justify-end"
+		class="bg-black px-5 py-10 flex flex-col justify-end"
 	>
-		<div class="absolute w-full h-full bottom-0 left-0 z-10">
+		<!-- <div class="absolute w-full h-full bottom-0 left-0 z-10">
 			<img
 				loading="lazy"
 				src="/sunrise-over-Earth_1600.jpg"
 				alt="Globe from outta space"
 				class="z-10 block"
-			/>
+			/> -->
 			<!-- <div class="bg-gradient-to-r from-[rgba(0,0,0,.80)] to-transparent z-20 absolute w-full h-full top-0 left-0"></div> -->
-		</div>
+		<!-- </div> -->
 
-		<div class="drop-shadow-md z-20 pt-28">
-			<p class="font-medium mt-5 text-base">
-				Gemeinsam für ein<br /><span
-					class="text-rich-electric-blue font-medium"
-					>besseres Morgen</span
-				>.
-			</p>
+		<div class="drop-shadow-md z-20 md:flex md:gap-32">
+			<div class="">
+				<p class="font-medium mt-5 text-base md:mt-0">
+					Gemeinsam für ein<br /><span
+						class="text-rich-electric-blue font-medium"
+						>besseres Morgen</span
+					>.
+				</p>
 
-			<p class="font-medium text-base">
-                Lass uns zusammen <br />handeln.
-            </p>
+				<p class="font-medium text-base">
+					Lass uns zusammen <br />handeln.
+				</p>
+			</div>
 
-            <div class="flex justify-between items-center mt-10">
+            <div class="flex flex-col gap-10 justify-start mt-10 md:mt-0">
                 <RouterLink to="/">
                     <IconLogoMini class="fill-moon" />
                 </RouterLink>
 
-                <div class="contact-icons flex gap-8"></div>
+                <div class="contact-icons flex gap-8 drop-shadow"></div>
             </div>
 		</div>
 
-		<hr class="my-8 opacity-10" />
+		<hr class="my-8 border-snow bg-snow" />
 
-		<div class="z-20 opacity-30">
+		<div class="z-20 opacity-60">
 			<h4 class="font-medium text-sm mb-5">Credits</h4>
 
 			<ul>
@@ -143,4 +144,8 @@ export default {
     footer .contact-icons a svg {
         @apply !h-4;
     }
+
+	footer .contact-icons a {
+		@apply bg-snow p-1 rounded text-black opacity-75;
+	}
 </style>

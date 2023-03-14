@@ -1,10 +1,24 @@
-<script setup>
+<script>
 import { useNavigationStore } from "@/stores/navigation";
 import NavigationItem from "./NavigationItem.vue";
 import ContactIcons from "./ContactIcons.vue";
 import { RouterLink } from "vue-router";
+import LogoMiniIcon from "@components/icons/IconLogoMini.vue";
 
-const navigationState = useNavigationStore();
+export default {
+	components: {
+		NavigationItem,
+		ContactIcons,
+		RouterLink,
+		LogoMiniIcon,
+	},
+	setup() {
+		const navigationState = useNavigationStore();
+		return {
+			navigationState,
+		};
+	},
+};
 </script>
 
 <template>
@@ -12,10 +26,15 @@ const navigationState = useNavigationStore();
 	<Transition name="nav-toggle">
 		<nav
 			v-show="navigationState.navigationIsOpen"
-			class="nav z-50 fixed w-full h-full px-2 pt-2 max-w-screen-sm top-0 right-0 bg-coal bg-opacity-25 backdrop-blur-sm duration-300"
+			class="nav z-50 fixed flex justify-end w-full h-full p-2 max-w-screen-sm top-0 right-0 bg-coal bg-opacity-25 backdrop-blur-sm duration-300 sm:max-w-none"
 		>
-			<div class="bg-snow rounded-lg overflow-hidden z-40 shadow-2xl">
-				<div class="flex flex-col justify-between pt-12">
+			<div class="bg-snow rounded-lg overflow-hidden z-40 shadow-2xl w-full h-full max-w-screen-xs xs:h-auto xs:self-start">
+				<Transition name="logo-mini-toggle" v-show="navigationState.navigationIsOpen" @click="navigationState.navigationIsOpen = false">
+					<LogoMiniIcon
+						class="logo text-moon transition-opacity duration-1000 delay-200 fixed ml-4 mt-4"
+					/>
+				</Transition>
+				<div class="flex flex-col justify-between py-12 h-full">
 					<!-- Close navigation button -->
 					<!-- <div
 						class="close-nav flex justify-between items-center cursor-pointer z-20 w-full py-4 pl-4 pr-0"
@@ -55,21 +74,23 @@ const navigationState = useNavigationStore();
 						>
 					</ul>
 					
-					<ul
-						@click="navigationState.navigationIsOpen = !navigationState.navigationIsOpen"
-						class="secondary-nav flex flex-col gap-4 px-8 py-8 text-base text-gray-500"
-					>
-						<RouterLink to="/glossar"
-							class="font-light hover:text-rich-electric-blue"
-							>Glossar</RouterLink
+					<div class="flex flex-col">
+						<ul
+							@click="navigationState.navigationIsOpen = !navigationState.navigationIsOpen"
+							class="secondary-nav flex flex-col px-8 pt-12 pb-2 text-base text-gray-500"
 						>
-						<RouterLink to="/impressum"
-							class="font-light hover:text-rich-electric-blue"
-							>Impressum</RouterLink
-						>
-					</ul>
+							<RouterLink to="/glossar"
+								class="font-light hover:text-rich-electric-blue"
+								>Glossar</RouterLink
+							>
+							<RouterLink to="/impressum"
+								class="font-light hover:text-rich-electric-blue"
+								>Impressum</RouterLink
+							>
+						</ul>
 
-					<ContactIcons class="px-8 bg-snow" />
+						<ContactIcons class="px-8 bg-snow" />
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -89,5 +110,15 @@ const navigationState = useNavigationStore();
 
 .nav-open {
 	@apply overflow-hidden;
+}
+
+.logo-mini-toggle-enter-active,
+.logo-mini-toggle-leave-active {
+	@apply opacity-100;
+}
+
+.logo-mini-toggle-enter-from,
+.logo-mini-toggle-leave-to {
+	@apply opacity-0 duration-200 delay-[0ms];
 }
 </style>

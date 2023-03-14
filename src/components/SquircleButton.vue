@@ -33,6 +33,10 @@ export default defineComponent({
 			type: String,
 			default: "",
 		},
+		sizeIcon: {
+			type: String,
+			default: "w-3",
+		},
 		classes: {
 			type: String,
 			default: "bg-rich-electric-blue",
@@ -73,23 +77,28 @@ export default defineComponent({
 </script>
 
 <template>
-	<div class="button-wrapper">
+	<div class="button-wrapper max-w-sm">
 		<RouterLink v-if="this.to" :to="this.to">
 			<button
 				:style="{
 					clipPath: `url('#squircle-${uid}')`,
 				}"
-				:class="`m-0 w-full gap-2 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition-all duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
+				:class="`m-0 w-full gap-4 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition-all duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
 				ref="buttonRef"
 			>
-				<span v-if="$slots.buttonRef" class="text-left font-extrabold">
+				<span
+					v-if="$slots.buttonRef"
+					class="text-left font-medium whitespace-nowrap tracking-wide"
+				>
 					<slot name="buttonRef"></slot>
 				</span>
 
 				<span>
 					<ArrowIcon
 						v-if="icon === 'arrow'"
-						:class="`-rotate-90 self-center w-3 fill-inherit ${this.fillIcon}`"
+						:class="`-rotate-90 self-center fill-inherit ${
+							(this.fillIcon, this.sizeIcon)
+						}`"
 					/>
 					<EmailIcon
 						v-if="icon === 'mail'"
@@ -139,15 +148,20 @@ export default defineComponent({
 			:style="{
 				clipPath: `url('#squircle-${uid}')`,
 			}"
-			:class="`m-0 w-full gap-2 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition-all duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
+			:class="`m-0 w-full gap-4 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition-all duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
 			ref="buttonRef"
 		>
-			<span v-if="$slots.buttonRef" class="text-left font-extrabold">
+			<span
+				v-if="$slots.buttonRef"
+				class="text-left font-medium whitespace-nowrap tracking-wide"
+			>
 				<slot name="buttonRef"></slot>
 			</span>
 			<ArrowIcon
 				v-if="icon === 'arrow'"
-				:class="`-rotate-90 self-center w-3 fill-inherit ${this.fillIcon}`"
+				:class="`-rotate-90 self-center fill-inherit ${
+					(this.fillIcon, this.sizeIcon)
+				}`"
 			/>
 			<EmailIcon
 				v-if="icon === 'mail'"
@@ -204,5 +218,9 @@ export default defineComponent({
 
 .button-wrapper button.bg-snow {
 	@apply text-rich-electric-blue fill-rich-electric-blue hover:bg-coal hover:text-rich-electric-blue hover:fill-rich-electric-blue focus-within:bg-coal focus-within:text-rich-electric-blue focus-within:fill-rich-electric-blue;
+}
+
+.button-wrapper button.bg-moon {
+	@apply text-coal fill-coal hover:bg-rich-electric-blue hover:text-snow hover:fill-snow focus-within:bg-rich-electric-blue focus-within:text-snow focus-within:fill-snow;
 }
 </style>
