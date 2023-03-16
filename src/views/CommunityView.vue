@@ -71,7 +71,7 @@ import SquircleButton from "@components/SquircleButton.vue";
 			</TitleParagraphItem>
 		</section>
 
-		<section class="px-5 py-10 md:py-20 bg-[url('sarah-lee-QURU8IY-RaI-unsplash.jpg')] bg-center bg-cover bg-no-repeat">
+		<section class="px-5 py-10 md:py-20 bg-[url('./sarah-lee-QURU8IY-RaI-unsplash.jpg')] bg-center bg-cover bg-no-repeat">
 			<!-- <div class="w-full h-full absolute top-0 left-0 z-0 bg-dark bg-opacity-5"></div> -->
 			<TitleParagraphItem :button="'Melde dich'" :to="'#'" :icon="'mail'" :classes="'bg-snow !w-full'" class="modal-toggle max-w-screen-xs gap-10 !mb-0 !items-start mx-auto drop-shadow-md md:pr-40 md:max-w-screen-sm">
 				<template #title>
