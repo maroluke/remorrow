@@ -1,7 +1,6 @@
 <script setup>
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
-import SquircleButton from "@components/SquircleButton.vue";
 import ContactModal from "@components/ContactModal.vue";
 </script>
 
@@ -11,38 +10,29 @@ import ContactModal from "@components/ContactModal.vue";
 			<template #title>Wer wir sind </template>
 
 			<template #paragraph>
-				Hinter fortomorrow stehen Menschen, die sich aktiv für ein besseres Morgen einsetzen möchten und mit Begeisterung und
-				Motivation gemeinsam einen Schritt weiter gehen wollen.
+				Hinter fortomorrow stehen Menschen, die sich aktiv für ein besseres Morgen einsetzen und mit Begeisterung und
+				Motivation gemeinsam einen Schritt weiter gehen.
 			</template>
 		</JumboHeader>
 
-		<section class="px-5 py-10 bg-snow">
-			<TitleParagraphItem class="text-dark">
+		<section class="px-5 py-10 bg-snow md:bg-dark md:py-20">
+			<TitleParagraphItem :button="'Kontakt'" :to="'#'" :icon="'mail'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>Wir tun dies...</template>
 
 				<template #paragraph>
-					... auf unsere Weise und versuchen einen eigenen Weg zu finden. Nebst dem, dass wir uns als Kollektiv verstehen und eine
-					<strong class="font-extrabold">Community rundum nachhaltige Ideen und Projekte</strong> aufbauen wollen, gibt es natürlich immer treibende Kräfte.
+					... auf unsere Weise und suchen nach einem eigenen Weg. Nebst dem, dass wir uns als Kollektiv verstehen und eine
+					<strong class="font-extrabold">Community rundum nachhaltige Ideen und Projekte</strong> aufbauen, gibt es natürlich immer treibende Kräfte.
 					<br /><br />
 					Bei uns sind das <a href="#" class="glossar-link">Marko</a> und <a href="#" class="glossar-link">Sirik</a>.
 					<br /><br />
 					Du willst uns kennenlernen? Für einen Schwatz sind wir immer zu haben!
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'mail'"
-				:classes="'bg-coal'"
-				:to="'#'"
-				class="mt-5 modal-toggle"
-			>
-				<template #buttonRef>Kontakt</template>
-			</SquircleButton>
 		</section>
 
-		<section class="text-snow px-5 py-10">
-			<TitleParagraphItem>
-				<template #title>Der Garten. </template>
+		<section class="text-snow px-5 py-10 md:bg-snow md:text-dark md:py-20">
+			<TitleParagraphItem :button="'Wir bauen eine Community'" :to="'/community'" :icon="'community'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
+				<template #title>Der Garten.</template>
 
 				<template #paragraph>
 					Die Analogie des Gartens mögen wir gern. Ein Garten voller Pflanzen in all ihren Wachstumsstadien. Ein Garten, der darum
@@ -53,20 +43,11 @@ import ContactModal from "@components/ContactModal.vue";
 					schaffen, die es braucht, damit starke Pflanzen wurzeln können.
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'community'"
-				:classes="'bg-coal'"
-				:to="'/community'"
-				class="mt-5 modal-toggle"
-			>
-				<template #buttonRef>Wir bauen eine Community</template>
-			</SquircleButton>
 		</section>
 
-		<section class="text-dark px-5 py-10 bg-snow">
-			<TitleParagraphItem>
-				<template #title> Die Projekte. </template>
+		<section class="text-dark px-5 py-10 bg-snow md:bg-dark md:text-snow md:py-20">
+			<TitleParagraphItem :button="'Wir fördern Projekte'" :to="'/projekte'" :icon="'project'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
+				<template #title>Die Projekte.</template>
 
 				<template #paragraph>
 					Alle Projekte bei fortomorrow haben einen klaren, nachhaltigen Bezug – das ist uns besonders wichtig. Aus ökologischer
@@ -78,19 +59,10 @@ import ContactModal from "@components/ContactModal.vue";
 					Zukunft hat.
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'project'"
-				:classes="'bg-coal'"
-				:to="'/projekte'"
-				class="mt-5 modal-toggle"
-			>
-				<template #buttonRef>Wir fördern Projekte</template>
-			</SquircleButton>
 		</section>
 
-		<section class="text-snow px-5 py-10">
-			<TitleParagraphItem>
+		<section class="text-snow px-5 py-10 md:bg-snow md:text-dark md:py-20">
+			<TitleParagraphItem :button="'Mehr erfahren'" :to="'/unser-weg'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>
 					Entdecke das Warum.
 				</template>
@@ -99,10 +71,6 @@ import ContactModal from "@components/ContactModal.vue";
 					Lerne unseren Purpose, unsere Ziele und die dahinterliegende Vision kennen.
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton :classes="'bg-coal'" :to="'/unser-weg'" class="mt-5">
-				<template #buttonRef>Mehr erfahren</template>
-			</SquircleButton>
 		</section>
 	</main>
 

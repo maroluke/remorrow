@@ -60,7 +60,7 @@ export default defineComponent({
 		</div>
 
 		<div
-			class="flex gap-10 flex-col items-center px-5 pt-5 z-20 flex-shrink md:p-0 md:text-dark md:w-1/2"
+			class="flex gap-10 flex-col px-5 pt-5 z-20 flex-shrink md:p-0 md:text-dark md:w-1/2"
 		>
 			<h1 class="pt-5 drop-shadow-contrast hidden md:block max-w-screen-sm md:drop-shadow-none">
 				<slot name="title">Titel</slot>
@@ -72,7 +72,7 @@ export default defineComponent({
 				</p>
 			</div>
 
-			<IconArrow class="w-2 h-2 animate-fade-in-top-bottom fill-snow md:fill-dark" />
+			<IconArrow class="w-2 h-2 animate-fade-in-top-bottom fill-snow self-center md:fill-dark" />
 
 			<!-- <p class="text-xl">
                 Wir wissen alle, dass das schwierig wird.

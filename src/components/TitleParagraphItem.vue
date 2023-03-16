@@ -62,7 +62,7 @@
 			:icon="icon"
 			:classes="classes"
 			:to="link"
-			class="mt-5 modal-toggle"
+			class="mt-5 modal-toggle w-full"
 		>
 			<template #buttonRef>{{ button }}</template>
 		</SquircleButton>
@@ -98,7 +98,7 @@ export default {
 		},
 		icon: {
 			type: String,
-			default: "direction",
+			default: "arrow",
 		},
 		iconStyle: {
 			type: String,
