@@ -19,9 +19,9 @@ import SquircleButton from "@components/SquircleButton.vue";
 			</template>
 		</JumboHeader>
 
-		<div class="sm:bg-snow md:bg-dark">
-			<div class="max-w-screen-lg sm:flex sm:p-10 sm:items-center sm:gap-10 md:items-center md:justify-center md:mx-auto md:p-20">
-				<section class="px-5 py-10 bg-snow sm:w-7/12 md:py-20 md:flex md:justify-center text-dark flex-1 sm:p-0 md:flex-initial md:bg-dark md:text-snow">
+		<div class="sm:bg-snow md:bg-dark md:flex md:justify-center">
+			<div class="max-w-screen-lg sm:flex sm:p-10 sm:items-center sm:gap-10 md:items-center md:justify-center xl:p-0">
+				<section class="px-5 py-10 bg-snow grow md:py-20 md:flex md:justify-center text-dark sm:p-0 md:flex-initial md:bg-dark md:text-snow">
 					<TitleParagraphItem>
 						<template #paragraph>
 							<p>Da wir alles Individuen sind, mit eigenen Vorstellungen,
@@ -39,13 +39,13 @@ import SquircleButton from "@components/SquircleButton.vue";
 					</TitleParagraphItem>
 				</section>
 
-				<div class="bg-snow to-dark relative overflow-hidden flex-1 xs:flex xs:justify-center xs:pb-10 sm:py-20 sm:p-0 md:flex-initial md:bg-transparent">
+				<div class="bg-snow to-dark relative overflow-hidden xs:flex xs:justify-center sm:justify-end md:bg-transparent sm:min-w-[300px]">
 					<div
 						class="w-full h-[50%] absolute top-0 left-0 bg-gradient-to-b from-snow to-transparent z-10 xs:z-0 xs:special-gradient xs:h-full sm:bg-none md:hidden"
 					></div>
 					<img
 						loading="lazy"
-						class="object-contain -mt-32 w-full sm:object-cover xs:max-w-sm xs:rounded-lg xs:m-0 sm:h-2/3"
+						class="object-contain -mt-32 w-full sm:object-cover xs:max-w-sm xs:rounded-lg xs:m-0"
 						src="@assets/media/alexander-milo-HwxVLhLyg2s-unsplash.jpg"
 						alt="Unser Weg"
 					/>

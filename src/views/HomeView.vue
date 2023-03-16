@@ -71,25 +71,27 @@ export default defineComponent({
 			</template>
 		</TheIntro>
 
-		<section class="px-5 py-10 bg-snow z-30 flex flex-col items-center gap-10 justify-center md:flex-row md:py-20">
-			<TitleParagraphItem class="text-coal max-w-screen-sm">
-				<template #title>
-					Nachhaltigkeit ist nur ein erster Schritt – wir brauchen regenerative Ideen!
-				</template>
+		<section class="px-5 py-10 bg-snow z-30 md:py-20 md:flex md:justify-center">
+			<div class="flex flex-col items-center gap-10 justify-center md:flex-row md:max-w-screen-lg">
+				<TitleParagraphItem class="text-coal md:basis-2/3 ">
+					<template #title>
+						Nachhaltigkeit ist nur ein erster Schritt – wir brauchen regenerative Ideen!
+					</template>
 
-				<template #paragraph>
-					Als Kollektiv ist
-					<span class="font-bold">fortomorrow</span>, mit begeisterten
-					& motivierten Menschen, Teil der Veränderung. <br /><br />
-					Weg von endlosem Streben nach Profit und unendlichem
-					Wachstum, hin zu sinnvollen und
-					<a href="#" class="glossar-link">schönen</a> Projekten, die
-					ihre <a href="#" class="glossar-link">regenerative</a> Kraft
-					entfesseln.
-				</template>
-			</TitleParagraphItem>
+					<template #paragraph>
+						Als Kollektiv ist
+						<span class="font-bold">fortomorrow</span>, mit begeisterten
+						& motivierten Menschen, Teil der Veränderung. <br /><br />
+						Weg von endlosem Streben nach Profit und unendlichem
+						Wachstum, hin zu sinnvollen und
+						<a href="#" class="glossar-link">schönen</a> Projekten, die
+						ihre <a href="#" class="glossar-link">regenerative</a> Kraft
+						entfesseln.
+					</template>
+				</TitleParagraphItem>
 
-			<QuoteCard />
+				<QuoteCard class="md:basis-1/3" />
+			</div>
 		</section>
 
 		<section class="text-snow px-5 py-10 bg-dark z-20 flex flex-col items-center md:py-20">

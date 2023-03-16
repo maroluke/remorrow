@@ -81,14 +81,14 @@ export default {
 							@click="navigationState.navigationIsOpen = !navigationState.navigationIsOpen"
 							class="secondary-nav flex flex-col px-8 pt-12 pb-2 text-base text-gray-500"
 						>
-							<RouterLink to="/glossar"
+							<!-- <RouterLink to="/glossar"
 								class="font-light hover:text-rich-electric-blue"
 								>Glossar</RouterLink
-							>
-							<RouterLink to="/impressum"
+							> -->
+							<!-- <RouterLink to="/impressum"
 								class="font-light hover:text-rich-electric-blue"
 								>Impressum</RouterLink
-							>
+							> -->
 						</ul>
 
 						<ContactIcons class="px-8 bg-snow" />

@@ -1,7 +1,6 @@
 <script setup>
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
-import SquircleButton from "@components/SquircleButton.vue";
 import ContactModal from "@components/ContactModal.vue";
 </script>
 
@@ -17,8 +16,8 @@ import ContactModal from "@components/ContactModal.vue";
 			</template>
 		</JumboHeader>
 
-		<section class="px-5 py-10 bg-snow">
-			<TitleParagraphItem class="text-dark">
+		<section class="px-5 py-10 bg-snow text-dark md:bg-dark md:text-snow md:py-20">
+			<TitleParagraphItem :button="'Melde dich'" :icon="'mail'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>
 					Projekt, Unternehmen oder Initiative.
 				</template>
@@ -31,19 +30,10 @@ import ContactModal from "@components/ContactModal.vue";
 					gesundes Wachstum beitragen.
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'mail'"
-				:classes="'bg-coal'"
-				class="mt-5 modal-toggle"
-				type="button"
-			>
-				<template #buttonRef><slot>Melde dich</slot></template>
-			</SquircleButton>
 		</section>
 
-		<section class="text-snow px-5 py-10">
-			<TitleParagraphItem>
+		<section class="text-snow px-5 py-10 md:bg-snow md:text-dark md:py-20">
+			<TitleParagraphItem :button="'Let\'s talk'" :icon="'mail'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title> Allem ein Anfang. </template>
 
 				<template #paragraph>
@@ -54,19 +44,10 @@ import ContactModal from "@components/ContactModal.vue";
 					Lass uns gemeinsam den ersten Schritt gehen und herausfinden, wie wir dich auf deinem Weg unterstützen können.
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'mail'"
-				:classes="'bg-coal'"
-				class="mt-5 modal-toggle"
-				type="button"
-			>
-				<template #buttonRef><slot>Let's talk</slot></template>
-			</SquircleButton>
 		</section>
 
-		<section class="text-dark px-5 py-10 bg-snow">
-			<TitleParagraphItem>
+		<section class="px-5 py-10 bg-snow text-dark md:bg-dark md:text-snow md:py-20">
+			<TitleParagraphItem :button="'Melde dich'" :icon="'mail'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>Wirke mit uns zusammen. </template>
 
 				<template #paragraph>
@@ -77,14 +58,6 @@ import ContactModal from "@components/ContactModal.vue";
 					entfalten kannst.
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'mail'"
-				:classes="'bg-coal'"
-				class="mt-5 modal-toggle"
-			>
-				<template #buttonRef><slot>Melde dich</slot></template>
-			</SquircleButton>
 		</section>
 	</main>
 
