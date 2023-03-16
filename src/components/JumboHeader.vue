@@ -47,10 +47,10 @@ export default defineComponent({
 <template>
 	<section
 		id="jumboHeader"
-		class="text-snow transition-all duration-500 flex flex-col pb-10 relative md:justify-center md:flex-row md:gap-10 md:p-0 md:items-center md:px-20 md:bg-snow"
+		class="text-snow transition-all duration-500 flex flex-col pb-10 relative md:flex-row md:gap-10 md:items-center md:p-20 xl:p-10 md:bg-snow"
 	>
 		<div
-			class="object-cover flex-grow bg-cover bg-no-repeat flex items-end px-5 md:max-w-lg md:h-2/3 md:rounded-xl md:p-0 md:w-1/2"
+			class="object-cover flex-grow bg-cover bg-no-repeat flex items-end px-5 md:max-w-lg md:h-[85%] lg:h-full md:rounded-xl md:p-0 md:w-1/2"
 			:class="classes"
 			:style="{ backgroundImage: `url(./${src})` }"
 		>

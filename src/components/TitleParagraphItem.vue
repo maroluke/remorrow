@@ -1,6 +1,9 @@
 <template>
 	<div class="rounded-sm">
-		<div v-if="$slots.title" class="flex gap-5 justify-between items-center mb-5">
+		<div
+			v-if="$slots.title"
+			class="flex gap-5 justify-between items-center mb-5"
+		>
 			<h2 v-if="heading === 2" class="sm:min-w-[200px]">
 				<slot name="title"></slot>
 			</h2>
@@ -57,8 +60,8 @@
 				v-if="button"
 				:icon="icon"
 				:classes="classes"
-				:to="to"
-				class="mt-5"
+				:to="link"
+				class="mt-5 modal-toggle"
 			>
 				<template #buttonRef>{{ button }}</template>
 			</SquircleButton>
@@ -95,7 +98,7 @@ export default {
 		},
 		icon: {
 			type: String,
-			default: 'direction',
+			default: "direction",
 		},
 		iconStyle: {
 			type: String,
@@ -105,8 +108,8 @@ export default {
 		title: { type: String, default: null },
 		paragraph: { type: String, default: null },
 		button: { type: String, default: null },
-		to: { type: String, default: null },
-		classes: { type: String, default: 'bg-coal' },
+		link: { type: String, default: null },
+		classes: { type: String, default: "bg-coal" },
 	},
 };
 </script>

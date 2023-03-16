@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<TitleParagraphItem class="max-w-screen-sm mx-auto">
+		<TitleParagraphItem class="max-w-screen-md mx-auto">
 			<template #title>Was wir tun.</template>
 			<template #paragraph>
 				Mit <span class="font-bold">fortomorrow</span> wirken wir in den
@@ -8,7 +8,7 @@
 			</template>
 		</TitleParagraphItem>
 
-		<div class="flex flex-col gap-10 items-stretch mt-10 max-w-screen-sm mx-auto 2xs:flex-row 2xs:gap-4 sm:gap-10 md:gap-12">
+		<div class="flex flex-col gap-10 items-stretch mt-10 max-w-screen-md mx-auto 2xs:flex-row 2xs:gap-4 sm:gap-10 md:gap-12">
 			<div class="flex-1 flex flex-col">
 				<CommunityIcon class="w-10 h-10 fill-dark" />
 				<h3 class="leading-loose">Community</h3>

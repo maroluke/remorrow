@@ -93,7 +93,7 @@ export default defineComponent({
 		</section>
 
 		<section class="text-snow px-5 py-10 bg-dark z-20 flex flex-col md:py-20">
-			<TitleParagraphItem :button="'Unser Weg'" :to="'/unser-weg'" class="max-w-screen-sm flex flex-col gap-10 !mb-0 !items-start mx-auto md:flex-row">
+			<TitleParagraphItem :button="'Unser Weg'" :to="'/unser-weg'" class="max-w-screen-md flex flex-col gap-10 !mb-0 !items-start mx-auto md:flex-row">
 				<template #title>
 					Wir wissen, dass wir zusammen stärker sind!
 				</template>
@@ -112,7 +112,7 @@ export default defineComponent({
 		<ParagraphWithCards class="bg-snow text-coal px-5 py-10 z-20 md:py-20" />
 
 		<section class="text-snow px-5 py-10 bg-dark z-20 flex flex-col md:py-20">
-			<TitleParagraphItem :button="'Melde dich'" :to="'#'" class="modal-toggle max-w-screen-sm flex flex-col gap-10 !mb-0 !items-start mx-auto md:flex-row">
+			<TitleParagraphItem :button="'Melde dich'" :link="'#'" class="max-w-screen-md flex flex-col gap-10 !mb-0 !items-start mx-auto md:flex-row">
 				<template #title> Wohin die Reise führt. </template>
 
 				<template #paragraph>
@@ -127,7 +127,7 @@ export default defineComponent({
 		</section>
 
 		<section class="px-5 py-10 bg-snow text-coal z-20 flex flex-col md:py-20">
-			<TitleParagraphItem :button="'Entdecken'" :to="'/wer-wir-sind'" class="max-w-sm flex flex-col gap-10 !mb-0 !items-start mx-auto">
+			<TitleParagraphItem :button="'Entdecken'" :to="'/wer-wir-sind'" class="max-w-sm flex flex-col !mb-0 !items-start mx-auto">
 				<template #title> Wer wir sind. </template>
 
 				<template #paragraph>
