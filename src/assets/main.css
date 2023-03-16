@@ -83,7 +83,7 @@
     }
 
     p {
-        @apply font-medium mb-5 leading-normal last:mb-0 md:text-xl md:font-light;
+        @apply font-medium mb-5 leading-normal last:mb-0 md:text-2xl md:font-light md:leading-relaxed;
     }
 
     strong {

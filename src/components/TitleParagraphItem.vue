@@ -55,8 +55,8 @@
 
 			<SquircleButton
 				v-if="button"
-				:icon="'direction'"
-				:classes="'bg-coal'"
+				:icon="icon"
+				:classes="classes"
 				:to="to"
 				class="mt-5"
 			>
@@ -95,7 +95,7 @@ export default {
 		},
 		icon: {
 			type: String,
-			default: null,
+			default: 'direction',
 		},
 		iconStyle: {
 			type: String,
@@ -106,6 +106,7 @@ export default {
 		paragraph: { type: String, default: null },
 		button: { type: String, default: null },
 		to: { type: String, default: null },
+		classes: { type: String, default: 'bg-coal' },
 	},
 };
 </script>

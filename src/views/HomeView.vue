@@ -3,7 +3,6 @@ import TheIntro from "@components/TheIntro.vue";
 import QuoteCard from "@components/QuoteCard.vue";
 import ParagraphWithCards from "@components/ParagraphWithCards.vue";
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
-import SquircleButton from "@components/SquircleButton.vue";
 import { defineComponent } from "vue";
 import ContactModal from "@components/ContactModal.vue";
 
@@ -13,7 +12,6 @@ export default defineComponent({
 		QuoteCard,
 		ParagraphWithCards,
 		TitleParagraphItem,
-		SquircleButton,
 		ContactModal,
 	},
 	data() {

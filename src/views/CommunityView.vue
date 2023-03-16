@@ -8,7 +8,7 @@ import SquircleButton from "@components/SquircleButton.vue";
 <template>
 	<main class="bg-dark">
 		<JumboHeader
-			:class="'bg-bottom'"
+			:classes="'bg-bottom'"
 			:src="'lawrence-aritao-k2sTHzAnmfY-unsplash.jpg'"
 		>
 			<template #title>Wir bauen eine Community </template>
@@ -19,42 +19,49 @@ import SquircleButton from "@components/SquircleButton.vue";
 			</template>
 		</JumboHeader>
 
-		<section class="px-5 py-10 bg-snow">
-			<TitleParagraphItem class="text-dark">
-				<template #paragraph>
-					Da wir alles Individuen sind, mit eigenen Vorstellungen,
-					Ideen und Fähigkeiten, werden wir geeignete Kanäle für
-					Austausch etablieren.
-					<br /><br />
-					Wie wäre es denn mit einem regelmässigen, virtuellen
-					Roundtable? Darin sind wir in der Lage, spannende und
-					inspirierende Themen zu teilen, einander kennenzulernen,
-					Anknüpfungspunkte zu finden und uns über inhaltliche Themen
-					auszutauschen.
-					<br /><br />
-					Ein solches Format ist bis zu einem gewissen Punkt
-					wachstumsfähig. Es ist auch denkbar, physische Treffen
-					einzuflechten, wenn sich die Möglichkeiten dazu ergeben.
-				</template>
-			</TitleParagraphItem>
-		</section>
+		<div class="sm:bg-snow md:bg-dark">
+			<div class="max-w-screen-lg sm:flex sm:p-10 sm:items-center sm:gap-10 md:items-center md:justify-center md:mx-auto lg:p-0">
+				<section class="px-5 py-10 bg-snow sm:w-7/12 md:py-20 md:flex md:justify-center text-dark flex-1 sm:p-0 md:flex-initial md:bg-dark md:text-snow">
+					<TitleParagraphItem>
+						<template #paragraph>
+							Da wir alles Individuen sind, mit eigenen Vorstellungen,
+							Ideen und Fähigkeiten, werden wir geeignete Kanäle für
+							Austausch etablieren.
+							<br /><br />
+							Wie wäre es denn mit einem regelmässigen, virtuellen
+							Roundtable? Darin sind wir in der Lage, spannende und
+							inspirierende Themen zu teilen, einander kennenzulernen,
+							Anknüpfungspunkte zu finden und uns über inhaltliche Themen
+							auszutauschen.
+							<br /><br />
+							Ein solches Format ist bis zu einem gewissen Punkt
+							wachstumsfähig. Es ist auch denkbar, physische Treffen
+							einzuflechten, wenn sich die Möglichkeiten dazu ergeben.
+						</template>
+					</TitleParagraphItem>
+				</section>
 
-		<div class="relative overflow-hidden">
-			<div
-				class="w-full h-[50%] absolute top-0 left-0 bg-gradient-to-b from-snow to-transparent z-10"
-			></div>
-			<img
-				loading="lazy"
-				class="object-contain -mt-32"
-				src="@assets/media/alexander-milo-HwxVLhLyg2s-unsplash.jpg"
-				alt="Unser Weg"
-			/>
+				<div class="bg-snow to-dark relative overflow-hidden flex-1 xs:flex xs:justify-center xs:pb-10 sm:py-20 sm:p-0 md:flex-initial md:bg-transparent">
+					<div
+						class="w-full h-[50%] absolute top-0 left-0 bg-gradient-to-b from-snow to-transparent z-10 xs:z-0 xs:special-gradient xs:h-full sm:bg-none md:hidden"
+					></div>
+					<img
+						loading="lazy"
+						class="object-contain -mt-32 w-full sm:object-cover xs:max-w-sm xs:rounded-lg xs:m-0 sm:h-2/3"
+						src="@assets/media/alexander-milo-HwxVLhLyg2s-unsplash.jpg"
+						alt="Unser Weg"
+					/>
+				</div>
+			</div>
 		</div>
 
-		<section class="px-5 py-10 bg-dark text-snow">
-			<TitleParagraphItem>
+		<section class="px-5 py-10 bg-dark text-snow md:bg-snow md:text-dark md:flex md:justify-center md:py-20">
+			<TitleParagraphItem class="max-w-screen-xs flex flex-col gap-10 !mb-0 !items-start mx-auto md:flex-row md:max-w-screen-sm">
+				<template #title>
+					Fakt ist
+				</template>
 				<template #paragraph>
-					Fakt ist: Es ist eine Reise und wir werden an den
+					Es ist eine Reise und wir werden an den
 					Erfahrungen wachsen.
 					<br /><br />
 					Hast du Lust, uns auf dieser Reise zu begleiten,
@@ -64,21 +71,13 @@ import SquircleButton from "@components/SquircleButton.vue";
 			</TitleParagraphItem>
 		</section>
 
-		<section class="px-5 py-10 bg-rich-electric-blue">
-			<TitleParagraphItem class="text-snow">
+		<section class="px-5 py-10 md:py-20 bg-[url('krystian-tambur-k7rZ8wTfABA-unsplash.jpg')] bg-center bg-cover bg-no-repeat">
+			<div class="w-full h-full absolute top-0 left-0 z-0 bg-dark bg-opacity-5"></div>
+			<TitleParagraphItem :button="'Melde dich'" :to="'#'" :icon="'mail'" :classes="'bg-snow !w-full'" class="modal-toggle max-w-screen-xs gap-10 !mb-0 !items-start mx-auto drop-shadow-md md:pr-40 md:max-w-screen-sm">
 				<template #title>
 					Werde Teil dieser wachsenden Community.
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'mail'"
-				:classes="'bg-snow'"
-				:to="'#'"
-				class="mt-5 modal-toggle"
-			>
-				<template #buttonRef>Melde dich</template>
-			</SquircleButton>
 		</section>
 	</main>
 	

@@ -1,16 +1,14 @@
 <script>
-import SquircleButton from "./SquircleButton.vue";
 import { RouterLink } from "vue-router";
 import IconLogoMini from "./icons/IconLogoMini.vue";
-import IconArrow from "./icons/IconArrow.vue";
+import IconLogo from "./icons/IconLogo.vue";
 
 export default {
-	name: "Footer",
+	name: "AppFooter",
 	components: {
-		SquircleButton,
 		RouterLink,
 		IconLogoMini,
-		IconArrow,
+		IconLogo,
 	},
 
 	data() {
@@ -67,7 +65,7 @@ export default {
 
 <template>
 	<footer
-		class="bg-black px-5 py-10 flex flex-col justify-end"
+		class="bg-black px-5 py-10 flex flex-col gap-10 justify-end"
 	>
 		<!-- <div class="absolute w-full h-full bottom-0 left-0 z-10">
 			<img
@@ -79,35 +77,39 @@ export default {
 			<!-- <div class="bg-gradient-to-r from-[rgba(0,0,0,.80)] to-transparent z-20 absolute w-full h-full top-0 left-0"></div> -->
 		<!-- </div> -->
 
-		<div class="drop-shadow-md z-20 md:flex md:gap-32">
-			<div class="">
-				<p class="font-medium mt-5 text-base md:mt-0">
+		<div class="drop-shadow-md z-20 md:flex md:flex-wrap md:gap-28 md:justify-between max-w-screen-lg md:w-full md:mx-auto">
+			<div class="flex flex-col gap-10 justify-start mt-10 max-w-[75px] md:max-w-none md:mt-0 md:order-2">
+				<RouterLink to="/">
+					<IconLogoMini class="fill-snow md:hidden" />
+					<IconLogo class="fill-snow hidden md:inline-block md:w-full md:h-full md:h-14" />
+				</RouterLink>
+			</div>
+
+			<div class="flex flex-col gap-5 md:order-1">
+				<p class="font-medium mt-5 md:mt-0 text-base m-0">
 					Gemeinsam für ein<br /><span
 						class="text-rich-electric-blue font-medium"
 						>besseres Morgen</span
 					>.
 				</p>
 
-				<p class="font-medium text-base">
+				<p class="font-medium text-base m-0">
 					Lass uns zusammen <br />handeln.
 				</p>
+
+				<div class="contact-icons flex w-full gap-8 drop-shadow mt-4"></div>
+
+				<div class="mt-5">
+					<p class="font-medium text-sm text-moon mb-2">Image Credits: <a href="#" class="underline font-medium text-sm">Unsplash</a></p>
+					<p class="font-medium text-sm text-moon mb-2">Copyright fortomorrow © 2023</p>
+				</div>
 			</div>
-
-            <div class="flex flex-col gap-10 justify-start mt-10 md:mt-0">
-                <RouterLink to="/">
-                    <IconLogoMini class="fill-moon" />
-                </RouterLink>
-
-                <div class="contact-icons flex gap-8 drop-shadow"></div>
-            </div>
 		</div>
 
-		<hr class="my-8 border-snow bg-snow" />
+		<!--<div class="z-20 opacity-60">
+			
 
-		<div class="z-20 opacity-60">
-			<h4 class="font-medium text-sm mb-5">Credits</h4>
-
-			<ul>
+			 <ul>
 				<li>
 					<a href="#" class="text-sm"
 						>Bild #1: Lawrence Aritao, Unsplash</a
@@ -134,9 +136,7 @@ export default {
 					>
 				</li>
 			</ul>
-
-			<p class="text-sm font-normal mt-10 z-20">Copyright © 2023</p>
-		</div>
+		</div>-->
 	</footer>
 </template>
 

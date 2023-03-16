@@ -26,15 +26,17 @@ export default {
 	<Transition name="nav-toggle">
 		<nav
 			v-show="navigationState.navigationIsOpen"
-			class="nav z-50 fixed flex justify-end w-full h-full p-2 max-w-screen-sm top-0 right-0 bg-coal bg-opacity-25 backdrop-blur-sm duration-300 sm:max-w-none"
+			class="nav z-10 fixed flex justify-end w-full h-full p-2 max-w-screen-sm top-0 right-0 bg-coal bg-opacity-25 backdrop-blur-3xl duration-150 sm:max-w-none xl:pt-14 xl:pr-14"
 		>
-			<div class="bg-snow rounded-lg overflow-hidden z-40 shadow-2xl w-full h-full max-w-screen-xs xs:h-auto xs:self-start">
+			<div class="bg-snow rounded-lg overflow-hidden shadow-2xl w-full h-full max-w-screen-xs xs:h-auto xs:self-start">
 				<Transition name="logo-mini-toggle" v-show="navigationState.navigationIsOpen" @click="navigationState.navigationIsOpen = false">
-					<LogoMiniIcon
-						class="logo text-moon transition-opacity duration-1000 delay-200 fixed ml-4 mt-4"
-					/>
+					<RouterLink to="/" class="transition ease-easeInOutQuint duration-1000 delay-400 z-30 fixed ml-4 mt-4">
+						<LogoMiniIcon
+							class="logo text-moon"
+						/>
+					</RouterLink>
 				</Transition>
-				<div class="flex flex-col justify-between py-12 h-full">
+				<div class="flex flex-col justify-between pt-12 h-full">
 					<!-- Close navigation button -->
 					<!-- <div
 						class="close-nav flex justify-between items-center cursor-pointer z-20 w-full py-4 pl-4 pr-0"
@@ -119,6 +121,6 @@ export default {
 
 .logo-mini-toggle-enter-from,
 .logo-mini-toggle-leave-to {
-	@apply opacity-0 duration-200 delay-[0ms];
+	@apply opacity-0 -translate-x-3 duration-200 delay-[0ms];
 }
 </style>

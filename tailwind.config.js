@@ -32,6 +32,7 @@ module.exports = {
 			},
 			transitionTimingFunction: {
 				easeInOutQuint: "cubic-bezier(0.83, 0, 0.17, 1)",
+				// ease-[cubic-bezier(0.85, 0, 0.15, 1)]
 			},
 			keyframes: {
 				"fade-in-top-bottom": {
