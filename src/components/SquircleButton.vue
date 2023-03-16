@@ -217,7 +217,7 @@ export default defineComponent({
 }
 
 .button-wrapper button.bg-snow {
-	@apply text-rich-electric-blue fill-rich-electric-blue hover:bg-coal hover:text-rich-electric-blue hover:fill-rich-electric-blue focus-within:bg-coal focus-within:text-rich-electric-blue focus-within:fill-rich-electric-blue;
+	@apply text-rich-electric-blue fill-rich-electric-blue hover:bg-rich-electric-blue hover:text-snow hover:fill-snow focus-within:bg-rich-electric-blue focus-within:text-snow focus-within:fill-snow;
 }
 
 .button-wrapper button.bg-moon {
