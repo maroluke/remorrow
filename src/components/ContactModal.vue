@@ -79,37 +79,65 @@ export default {
 					<p class="text-base text-dark">
 						Beschreibe uns dein Anliegen und wir kontaktieren dich.
 					</p>
-					<form name="contact" method="POST" data-netlify="true">
-						<p>
+					<form name="contact" method="POST" data-netlify="true" class="flex flex-col gap-5 hidden">
+						<!-- User Message -->
+						<div>
 							<label
-								>Your Name: <input type="text" name="name"
-							/></label>
-						</p>
-						<p>
-							<label
-								>Your Email: <input type="email" name="email"
-							/></label>
-						</p>
-						<p>
-							<label
-								>Your Role:
-								<select name="role[]" multiple>
-									<option value="leader">Leader</option>
-									<option value="follower">Follower</option>
-								</select></label
+								for="message"
+								class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+								>Deine Nachricht:</label
 							>
-						</p>
-						<p>
-							<label
-								>Message: <textarea name="message"></textarea>
-							</label>
-						</p>
-						<p>
-							<button type="submit">Send</button>
-						</p>
-					</form>
+							<textarea
+								id="message"
+								rows="4"
+								class="border-none block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:text-white"
+								placeholder="Was brauchst du? Was möchtest du erreichen? Wieso glaubst du wir können dir helfen?"
+							></textarea>
+						</div>
 
-					
+						<!-- Select Purpose -->
+						<div>
+							<label
+								for="countries"
+								class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+								>Ich melde mich als:</label
+							>
+							<select
+								id="countries"
+								class="bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:text-white"
+							>
+								<option>als Volunteer</option>
+								<option>als Unternehmen</option>
+								<option>als Verein</option>
+								<option>einfach so</option>
+							</select>
+						</div>
+
+						<!-- User E-mail -->
+						<div>
+							<label
+								for="website-admin"
+								class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+								>Deine E-Mail Adresse:</label
+							>
+							<div class="flex">
+								<span
+									class="inline-flex items-center px-3 text-sm text-snow bg-coal rounded-l-md"
+								>
+									<EmailIcon
+										class="fill-current h-4 hover:fill-rich-electric-blue"
+									/>
+								</span>
+
+								<input
+									type="text"
+									id="website-admin"
+									class="rounded-none rounded-r-lg border-none bg-white text-coal focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+									placeholder="steve.jobs@me.com"
+								/>
+							</div>
+						</div>
+					</form>
 				</div>
 				<!-- Modal footer -->
 				<div class="flex items-center p-6 space-x-2 border-t rounded-b">
