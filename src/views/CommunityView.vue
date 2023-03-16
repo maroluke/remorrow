@@ -20,23 +20,21 @@ import SquircleButton from "@components/SquircleButton.vue";
 		</JumboHeader>
 
 		<div class="sm:bg-snow md:bg-dark">
-			<div class="max-w-screen-lg sm:flex sm:p-10 sm:items-center sm:gap-10 md:items-center md:justify-center md:mx-auto lg:p-0">
+			<div class="max-w-screen-lg sm:flex sm:p-10 sm:items-center sm:gap-10 md:items-center md:justify-center md:mx-auto md:p-20">
 				<section class="px-5 py-10 bg-snow sm:w-7/12 md:py-20 md:flex md:justify-center text-dark flex-1 sm:p-0 md:flex-initial md:bg-dark md:text-snow">
 					<TitleParagraphItem>
 						<template #paragraph>
-							Da wir alles Individuen sind, mit eigenen Vorstellungen,
+							<p>Da wir alles Individuen sind, mit eigenen Vorstellungen,
 							Ideen und Fähigkeiten, werden wir geeignete Kanäle für
-							Austausch etablieren.
-							<br /><br />
-							Wie wäre es denn mit einem regelmässigen, virtuellen
+							Austausch etablieren.</p>
+							<p>Wie wäre es denn mit einem regelmässigen, virtuellen
 							Roundtable? Darin sind wir in der Lage, spannende und
 							inspirierende Themen zu teilen, einander kennenzulernen,
 							Anknüpfungspunkte zu finden und uns über inhaltliche Themen
-							auszutauschen.
-							<br /><br />
-							Ein solches Format ist bis zu einem gewissen Punkt
+							auszutauschen.</p>
+							<p>Ein solches Format ist bis zu einem gewissen Punkt
 							wachstumsfähig. Es ist auch denkbar, physische Treffen
-							einzuflechten, wenn sich die Möglichkeiten dazu ergeben.
+							einzuflechten, wenn sich die Möglichkeiten dazu ergeben.</p>
 						</template>
 					</TitleParagraphItem>
 				</section>
@@ -55,25 +53,25 @@ import SquircleButton from "@components/SquircleButton.vue";
 			</div>
 		</div>
 
-		<section class="px-5 py-10 bg-dark text-snow md:bg-snow md:text-dark md:flex md:justify-center md:py-20">
-			<TitleParagraphItem class="max-w-screen-xs flex flex-col gap-10 !mb-0 !items-start mx-auto md:flex-row md:max-w-screen-sm">
+		<section class="px-5 py-10 bg-dark text-snow md:bg-snow md:text-dark md:flex md:justify-center md:p-20">
+			<TitleParagraphItem class="max-w-screen-md w-full flex flex-col gap-10 !mb-0 !items-start">
 				<template #title>
 					Fakt ist
 				</template>
 				<template #paragraph>
-					Es ist eine Reise und wir werden an den
+					<p>Es ist eine Reise und wir werden an den
 					Erfahrungen wachsen.
 					<br /><br />
 					Hast du Lust, uns auf dieser Reise zu begleiten,
 					mitzugestalten und glaubst ebenso ebenso an unsere
-					<a href="/unser-weg" class="glossar-link">Grundsätze</a>?
+					<a href="/unser-weg" class="glossar-link">Grundsätze</a>?</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
 
-		<section class="px-5 py-10 md:py-20 bg-[url('/sarah-lee-QURU8IY-RaI-unsplash.jpg')] bg-center bg-cover bg-no-repeat">
+		<section class="px-5 py-10 md:p-20 bg-[url('/sarah-lee-QURU8IY-RaI-unsplash.jpg')] bg-center bg-cover bg-no-repeat flex justify-center">
 			<!-- <div class="w-full h-full absolute top-0 left-0 z-0 bg-dark bg-opacity-5"></div> -->
-			<TitleParagraphItem :button="'Melde dich'" :to="'#'" :icon="'mail'" :classes="'bg-snow !w-full'" class="modal-toggle max-w-screen-xs gap-10 !mb-0 !items-start mx-auto drop-shadow-md md:pr-40 md:max-w-screen-sm">
+			<TitleParagraphItem :button="'Melde dich'" :to="'#'" :icon="'mail'" :classes="'bg-snow !w-full'" class="modal-toggle gap-10 !mb-0 !items-start justify-center drop-shadow-md max-w-screen-md w-full">
 				<template #title>
 					Werde Teil dieser wachsenden Community.
 				</template>

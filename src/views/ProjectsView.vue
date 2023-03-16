@@ -18,45 +18,37 @@ import ContactModal from "@components/ContactModal.vue";
 			</template>
 		</JumboHeader>
 
-		<section class="px-5 py-10 bg-snow bg-no-repeat bg-cover">
+		<section class="px-5 py-10 bg-snow text-dark md:bg-dark md:text-snow md:flex md:justify-center md:p-20">
 			<!-- <div class="bg-rich-electric-blue py-10 px-20 mb-5 rounded-lg"> -->
-				<h1 class="text-rich-electric-blue">Was brauchst du?</h1>
+				<!-- <h1 class="text-rich-electric-blue">Was brauchst du?</h1> -->
 			<!-- </div> -->
 
-			<TitleParagraphItem class="text-dark">
+			<TitleParagraphItem :button="'Entdecke unsere Roadmap'" :icon="'direction'" :classes="'bg-coal text-rich-electric-blue'" :link="'/unser-weg#roadmap'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
+				<template #title>
+					Was brauchst du?
+				</template>
+
 				<template #paragraph>
-					Egal ob klein, mittel oder gross. Egal ob Startup, Nebenbeschäftigung, Hobby oder noch in der Ideenfindung. Wachstum
-					braucht eine Basis, einen funktionierenden Nährboden, um zu gedeihen.
-					<br /><br />
-					Wir suchen nachhaltige Projekte und Unterfangen, an die wir glauben und die unseren Vorstellungen entsprechen. Sind
-					diese identifiziert, möchten wir sie als Kollektiv unterstützen und aktiv Wachstum schaffen.
-					<br /><br />
-					Zu Beginn unserer Reise müssen wir flexibel sein und involvieren uns da, wo wir konkrete Möglichkeiten sehen.
-					Perspektivisch möchten wir für diese Art von Projekten eine digitale Plattform aufbauen, um die Unterstützung
-					effizienter, direkter und globaler auszubauen.
+					<p class="flex-1">Egal ob klein, mittel oder gross. Egal ob Startup, Nebenbeschäftigung, Hobby oder noch in der Ideenfindung. Wachstum
+					braucht eine Basis, einen funktionierenden Nährboden, um zu gedeihen.</p>
+					
+					<p class="flex-1">Wir suchen nachhaltige Projekte und Unterfangen, an die wir glauben und die unseren Vorstellungen entsprechen. Sind
+					diese identifiziert, unterstützen wir sie als Kollektiv und schaffen aktiv Wachstum.</p>
+					
+					<p class="flex-1">Zu Beginn unserer Reise sind wir flexibel und involvieren uns da, wo wir konkrete Möglichkeiten sehen.
+					Perspektivisch bauen wir für diese Art von Projekten eine digitale Plattform auf, um die Unterstützung
+					effizienter, direkter und globaler auszubauen.</p>
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton :icon="'direction'" :classes="'bg-coal text-rich-electric-blue'" :to="'/unser-weg#roadmap'" class="mt-5">
-				<template #buttonRef>Entdecke unsere Roadmap</template>
-			</SquircleButton>
 		</section>
 
-		<section class="px-5 py-10 bg-rich-electric-blue text-snow">
-			<TitleParagraphItem>
+		<section class="px-5 py-10 md:p-20 bg-[url('/sarah-lee-QURU8IY-RaI-unsplash.jpg')] bg-center bg-cover bg-no-repeat">
+			<!-- <div class="w-full h-full absolute top-0 left-0 z-0 bg-dark bg-opacity-5"></div> -->
+			<TitleParagraphItem :button="'Sei ein Teil davon'" :icon="'mail'" :classes="'bg-snow !w-full'" class="gap-10 !mb-0 !items-start mx-auto drop-shadow-md max-w-screen-md">
 				<template #title>
 					Bock zu helfen?
 				</template>
 			</TitleParagraphItem>
-
-			<SquircleButton
-				:icon="'direction'"
-				:classes="'bg-snow'"
-				:to="'#'"
-				class="mt-5 modal-toggle"
-			>
-				<template #buttonRef>Sei ein Teil davon</template>
-			</SquircleButton>
 		</section>
 	</main>
 

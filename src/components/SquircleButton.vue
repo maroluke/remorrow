@@ -77,7 +77,7 @@ export default defineComponent({
 </script>
 
 <template>
-	<div class="button-wrapper max-w-sm">
+	<div class="button-wrapper max-w-screen-2xs">
 		<RouterLink v-if="this.to" :to="this.to">
 			<button
 				:style="{

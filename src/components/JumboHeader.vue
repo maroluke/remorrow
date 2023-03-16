@@ -72,7 +72,7 @@ export default defineComponent({
 				</p>
 			</div>
 
-			<IconArrow class="w-2 h-2 animate-fade-in-top-bottom fill-snow" />
+			<IconArrow class="w-2 h-2 animate-fade-in-top-bottom fill-snow md:fill-dark" />
 
 			<!-- <p class="text-xl">
                 Wir wissen alle, dass das schwierig wird.

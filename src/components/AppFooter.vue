@@ -65,7 +65,7 @@ export default {
 
 <template>
 	<footer
-		class="bg-black px-5 py-10 flex flex-col gap-10 justify-end"
+		class="bg-black px-5 py-10 flex flex-col gap-10 justify-end md:py-12 md:px-20"
 	>
 		<!-- <div class="absolute w-full h-full bottom-0 left-0 z-10">
 			<img
@@ -77,7 +77,7 @@ export default {
 			<!-- <div class="bg-gradient-to-r from-[rgba(0,0,0,.80)] to-transparent z-20 absolute w-full h-full top-0 left-0"></div> -->
 		<!-- </div> -->
 
-		<div class="drop-shadow-md z-20 md:flex md:flex-wrap md:gap-28 md:justify-between max-w-screen-lg md:w-full md:mx-auto">
+		<div class="drop-shadow-md z-20 md:flex md:flex-wrap md:gap-28 md:justify-between max-w-screen-xl md:w-full md:mx-auto">
 			<div class="flex flex-col gap-10 justify-start mt-10 max-w-[75px] md:max-w-none md:mt-0 md:order-2">
 				<RouterLink to="/">
 					<IconLogoMini class="fill-snow md:hidden" />
