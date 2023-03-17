@@ -23,7 +23,8 @@ import ContactModal from "@components/ContactModal.vue";
 					... auf unsere Weise und suchen nach einem eigenen Weg. Nebst dem, dass wir uns als Kollektiv verstehen und eine
 					<strong class="font-extrabold">Community rundum nachhaltige Ideen und Projekte</strong> aufbauen, gibt es natürlich immer treibende Kräfte.
 					<br /><br />
-					Bei uns sind das <a href="#" class="glossar-link">Marko</a> und <a href="#" class="glossar-link">Sirik</a>.
+					<!-- Bei uns sind das <a href="#" class="glossar-link font-bold">Marko</a> und <a href="#" class="glossar-link font-bold">Sirik</a>. -->
+					Bei uns sind das <span class="glossar-link font-bold">Marko</span> und <span class="glossar-link font-bold">Sirik</span>.
 					<br /><br />
 					Du willst uns kennenlernen? Für einen Schwatz sind wir immer zu haben!
 				</template>
