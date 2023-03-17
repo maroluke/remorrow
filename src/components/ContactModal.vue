@@ -9,7 +9,7 @@ export default {
 	mounted() {
 		const modalToggle = document.querySelectorAll(".modal-toggle");
 		const modalElement = document.querySelector("#contact-modal");
-		const closeModal = document.querySelector(".modal-close");
+		const closeModal = document.querySelectorAll(".modal-close");
 
 		const modalOptions = {
 			backdropClasses:
@@ -24,7 +24,9 @@ export default {
 					const modal = new Modal(modalElement, modalOptions);
 					modal.toggle();
 
-					this.closeModal(closeModal, modal);
+					for (const close in closeModal) {
+						this.closeModal(closeModal[close], modal);
+					}
 				});
 			});
 
@@ -34,6 +36,7 @@ export default {
 	},
 	methods: {
 		closeModal(closeButton, modal) {
+			console.log(modal);
 			closeButton.addEventListener("click", () => {
 				modal.hide();
 			});
@@ -79,7 +82,7 @@ export default {
 					<p class="text-base text-dark">
 						Beschreibe uns dein Anliegen und wir kontaktieren dich.
 					</p>
-					<form name="contact" method="POST" data-netlify="true" class="flex flex-col gap-5 hidden">
+					<form name="contact" method="POST" data-netlify="true" class="flex flex-col gap-5">
 						<!-- User Message -->
 						<div>
 							<label
@@ -98,25 +101,28 @@ export default {
 						<!-- Select Purpose -->
 						<div>
 							<label
-								for="countries"
+								for="position"
 								class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
 								>Ich melde mich als:</label
 							>
 							<select
-								id="countries"
+								id="position"
+								name="role[]"
+								multiple
 								class="bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:text-white"
 							>
-								<option>als Volunteer</option>
-								<option>als Unternehmen</option>
-								<option>als Verein</option>
-								<option>einfach so</option>
+								<option value="single-person">interessierte Person</option>
+								<option value="company">Unternehmen</option>
+								<option value="association">Verein</option>
+								<option value="ngo">NGO</option>
+								<option value="willy-nilly">willy nilly</option>
 							</select>
 						</div>
 
 						<!-- User E-mail -->
 						<div>
 							<label
-								for="website-admin"
+								for="email"
 								class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
 								>Deine E-Mail Adresse:</label
 							>
@@ -130,29 +136,30 @@ export default {
 								</span>
 
 								<input
-									type="text"
-									id="website-admin"
+									type="email"
+									id="email"
 									class="rounded-none rounded-r-lg border-none bg-white text-coal focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5"
-									placeholder="steve.jobs@me.com"
+									placeholder="maja.göpel@me.com"
 								/>
 							</div>
 						</div>
+
+						<!-- Modal footer -->
+						<div class="flex items-center py-6 space-x-2 border-t rounded-b justify-between">
+							<button
+								type="submit"
+								class="flex-1 text-snow bg-rich-electric-blue hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+							>
+								Abschicken
+							</button>
+							<button
+								type="button"
+								class="modal-close flex-1 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10"
+							>
+								Abbrechen
+							</button>
+						</div>
 					</form>
-				</div>
-				<!-- Modal footer -->
-				<div class="flex items-center p-6 space-x-2 border-t rounded-b">
-					<button
-						type="button"
-						class="flex-1 text-snow bg-rich-electric-blue hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-					>
-						Abschicken
-					</button>
-					<button
-						type="button"
-						class="flex-1 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10"
-					>
-						Abbrechen
-					</button>
 				</div>
 			</div>
 		</div>
