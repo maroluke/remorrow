@@ -60,7 +60,7 @@ export default {
 		id="theIntro"
 		class="px-5 text-snow h-full min-h-screen transition-all z-0 md:flex"
 	>
-		<div id="outtaspace" class="fixed left-0 right-0 top-0 bottom-0 z-10 w-2/3 h-full"></div>
+		<div id="outtaspace" class="fixed left-0 right-0 top-0 bottom-0 z-10 w-full h-full"></div>
 
 		<div
 			class="flex gap-10 flex-col items-center justify-center z-30 pt-24 max-w-screen-sm drop-shadow-contrast md:pt-0 md:mx-auto"
@@ -102,9 +102,9 @@ export default {
 			></div> -->
 			<figure class="h-full">
 				<img
-					alt="Title image"
+					alt="Globe"
 					:class="`rotate-${rotate} ${twClass}`"
-					class="object-cover object-left w-11/12 h-full absolute right-0 2xs:object-left 2xs:w-3/4 md:object-right md:w-1/3 lg:w-1/4"
+					class="object-cover object-left w-11/12 h-full absolute right-0 2xs:object-left 2xs:w-3/4 md:object-center md:w-1/3 lg:w-1/4 xl:object-right"
 					:src="filename"
 				/>
 			</figure>

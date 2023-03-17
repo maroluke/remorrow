@@ -10,8 +10,11 @@ module.exports = {
 		extend: {
 			colors: {
 				"dark-sky-blue": "#81B5D0",
-				"rich-electric-blue": "#0096C7",
+				"rich-electric-blue": "#0892D0",
 				"caribbean-green": "#0AC78F",
+				"burning-orange": "#F76D2F",
+				"macaroni-and-cheese": "#EFB435",
+				"medium-teal-blue": "#0054B4",
 				dark: "#18181A",
 				coal: "#333333",
 				nickel: "#666666",

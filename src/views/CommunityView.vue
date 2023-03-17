@@ -2,7 +2,6 @@
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
 import ContactModal from "@components/ContactModal.vue";
-import SquircleButton from "@components/SquircleButton.vue";
 </script>
 
 <template>
@@ -63,13 +62,14 @@ import SquircleButton from "@components/SquircleButton.vue";
 					Erfahrungen wachsen.
 					<br /><br />
 					Hast du Lust, uns auf dieser Reise zu begleiten,
-					mitzugestalten und glaubst ebenso ebenso an unsere
+					mitzugestalten und glaubst ebenso an unsere
 					<a href="/unser-weg" class="glossar-link">Grundsätze</a>?</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
 
-		<section class="px-5 py-10 md:p-20 bg-[url('/sarah-lee-QURU8IY-RaI-unsplash.jpg')] bg-center bg-cover bg-no-repeat flex justify-center">
+		<!-- <section class="px-5 py-10 md:p-20 bg-[url('/sarah-lee-QURU8IY-RaI-unsplash.jpg')] bg-center bg-cover bg-no-repeat flex justify-center"> -->
+			<section class="px-5 py-10 md:p-20 bg-gradient-to-tr from-rich-electric-blue to-dark-sky-blue flex justify-center">
 			<!-- <div class="w-full h-full absolute top-0 left-0 z-0 bg-dark bg-opacity-5"></div> -->
 			<TitleParagraphItem :button="'Melde dich'" :icon="'mail'" :classes="'bg-snow !w-full modal-toggle'" class="modal-toggle gap-10 !mb-0 !items-start justify-center drop-shadow-md max-w-screen-md w-full">
 				<template #title>

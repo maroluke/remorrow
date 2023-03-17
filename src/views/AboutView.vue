@@ -39,8 +39,7 @@ import ContactModal from "@components/ContactModal.vue";
 					bemüht ist, den idealen Boden für gesundes Wachstum von neuen, nachhaltigen und <a href="#" class="glossar-link">zukunftsorientierten</a> Projekten
 					herzustellen.
 					<br /><br />
-					Egal ob diese gerade erst keimen oder bereits kleine Pflänzchen sind. Wir versuchen die individuellen Voraussetzungen zu
-					schaffen, die es braucht, damit starke Pflanzen wurzeln können.
+					Egal ob diese gerade erst keimen oder bereits kleine Pflänzchen sind. Wir schaffen die individuellen Voraussetzungen die es braucht, damit starke Pflanzen wurzeln können.
 				</template>
 			</TitleParagraphItem>
 		</section>

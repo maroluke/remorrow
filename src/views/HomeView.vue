@@ -57,7 +57,7 @@ export default defineComponent({
 
 <template>
 	<main class="bg-dark">
-		<TheIntro :filename="'globe4.jpg'" :rotate="0" :bg-gradient="true" class="z-20">
+		<TheIntro :filename="'globe.png'" :rotate="0" :bg-gradient="true" class="z-20">
 			<template #title>
 				Lass uns gemeinsam die Welt von Morgen schaffen.
 			</template>
