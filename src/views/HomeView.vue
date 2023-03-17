@@ -114,7 +114,7 @@ export default defineComponent({
 		<ParagraphWithCards class="bg-snow text-coal px-5 py-10 z-20 md:py-20" />
 
 		<section class="text-snow px-5 py-10 bg-dark z-20 flex flex-col items-center md:py-20">
-			<TitleParagraphItem :button="'Melde dich'" :link="'#'" class="max-w-screen-md flex flex-col gap-10 !mb-0">
+			<TitleParagraphItem :button="'Melde dich'" class="max-w-screen-md flex flex-col gap-10 !mb-0">
 				<template #title> Wohin die Reise führt. </template>
 
 				<template #paragraph>
