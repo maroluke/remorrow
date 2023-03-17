@@ -157,7 +157,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 				<div class="my-5 drop-shadow">
 					<img
 						loading="lazy"
-						class="object-contain rounded-lg"
+						class="object-contain rounded-lg md:rounded-xl"
 						src="@assets/media/the-loop-approach.jpg"
 						alt="Purpose"
 					/>
