@@ -6,7 +6,6 @@ import TwitterIcon from "./icons/IconTwitter.vue";
 import IconLogo from "./icons/IconLogo.vue";
 import { RouterLink } from "vue-router";
 import { useNavigationStore } from "@/stores/navigation";
-import ContactModal from "@components/ContactModal.vue";
 
 export default {
 	name: "ContactIcons",
@@ -17,7 +16,6 @@ export default {
 		IconLogo,
 		RouterLink,
 		TwitterIcon,
-        ContactModal,
 	},
 	data() {
 		return {
@@ -41,7 +39,7 @@ export default {
 
 		<ul class="contact-icons flex justify-start gap-8 flex-grow">
 			<li>
-				<RouterLink to="" class="text-silver modal-toggle">
+				<RouterLink to="#" class="text-silver modal-toggle">
 					<EmailIcon
 						class="h-5 text-inherit hover:fill-rich-electric-blue"
 					/>
@@ -79,6 +77,4 @@ export default {
 			</li>
 		</ul>
 	</div>
-
-    <ContactModal />
 </template>

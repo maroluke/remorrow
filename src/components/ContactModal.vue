@@ -17,26 +17,26 @@ export default {
 		};
 
 		if (modalElement) {
-			modalToggle.forEach((toggle) => {
+			const modal = new Modal(modalElement, modalOptions);
+
+			modalToggle.forEach((toggle, i) => {
 				toggle.addEventListener("click", (e) => {
 					e.preventDefault();
 
-					const modal = new Modal(modalElement, modalOptions);
 					modal.toggle();
 
 					for (const close in closeModal) {
-						this.closeModal(closeModal[close], modal);
+						console.log( typeof closeModal[close]);
+						if (typeof closeModal[close] === "object") {
+							this.closeModal(closeModal[close], modal);
+						}
 					}
 				});
 			});
-
-			// programmatically show
-			// modal.show();
 		}
 	},
 	methods: {
 		closeModal(closeButton, modal) {
-			console.log(modal);
 			closeButton.addEventListener("click", () => {
 				modal.hide();
 			});
