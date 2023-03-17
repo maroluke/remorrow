@@ -82,7 +82,7 @@ export default {
 					<p class="text-base text-dark">
 						Beschreibe uns dein Anliegen und wir kontaktieren dich.
 					</p>
-					<form name="contact" method="POST" data-netlify="true" class="flex flex-col gap-5">
+					<form name="contact" method="POST" class="flex flex-col gap-5" netlify>
 						<!-- User Message -->
 						<div>
 							<label
