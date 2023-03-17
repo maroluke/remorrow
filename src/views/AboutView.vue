@@ -16,7 +16,7 @@ import ContactModal from "@components/ContactModal.vue";
 		</JumboHeader>
 
 		<section class="px-5 py-10 bg-snow md:bg-dark md:py-20">
-			<TitleParagraphItem :button="'Kontakt'" :to="'#'" :icon="'mail'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
+			<TitleParagraphItem :button="'Kontakt'" :icon="'mail'" :classes="'bg-coal w-full modal-toggle'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>Wir tun dies...</template>
 
 				<template #paragraph>
@@ -31,7 +31,7 @@ import ContactModal from "@components/ContactModal.vue";
 		</section>
 
 		<section class="text-snow px-5 py-10 md:bg-snow md:text-dark md:py-20">
-			<TitleParagraphItem :button="'Wir bauen eine Community'" :to="'/community'" :icon="'community'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
+			<TitleParagraphItem :button="'Wir bauen eine Community'" :link="'/community'" :icon="'community'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>Der Garten.</template>
 
 				<template #paragraph>
@@ -46,7 +46,7 @@ import ContactModal from "@components/ContactModal.vue";
 		</section>
 
 		<section class="text-dark px-5 py-10 bg-snow md:bg-dark md:text-snow md:py-20">
-			<TitleParagraphItem :button="'Wir fördern Projekte'" :to="'/projekte'" :icon="'project'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
+			<TitleParagraphItem :button="'Wir fördern Projekte'" :link="'/projekte'" :icon="'project'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>Die Projekte.</template>
 
 				<template #paragraph>
@@ -62,7 +62,7 @@ import ContactModal from "@components/ContactModal.vue";
 		</section>
 
 		<section class="text-snow px-5 py-10 md:bg-snow md:text-dark md:py-20">
-			<TitleParagraphItem :button="'Mehr erfahren'" :to="'/unser-weg'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
+			<TitleParagraphItem :button="'Mehr erfahren'" :link="'/unser-weg'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>
 					Entdecke das Warum.
 				</template>

@@ -95,7 +95,7 @@ export default defineComponent({
 		</section>
 
 		<section class="text-snow px-5 py-10 bg-dark z-20 flex flex-col items-center md:py-20">
-			<TitleParagraphItem :button="'Unser Weg'" :to="'/unser-weg'" class="max-w-screen-md flex flex-col gap-10 !mb-0">
+			<TitleParagraphItem :button="'Unser Weg'" :link="'/unser-weg'" class="max-w-screen-md flex flex-col gap-10 !mb-0">
 				<template #title>
 					Wir wissen, dass wir zusammen stärker sind!
 				</template>
@@ -114,7 +114,7 @@ export default defineComponent({
 		<ParagraphWithCards class="bg-snow text-coal px-5 py-10 z-20 md:py-20" />
 
 		<section class="text-snow px-5 py-10 bg-dark z-20 flex flex-col items-center md:py-20">
-			<TitleParagraphItem :button="'Melde dich'" class="max-w-screen-md flex flex-col gap-10 !mb-0">
+			<TitleParagraphItem :button="'Melde dich'" class="max-w-screen-md flex flex-col gap-10 !mb-0 modal-toggle">
 				<template #title> Wohin die Reise führt. </template>
 
 				<template #paragraph>
@@ -129,7 +129,7 @@ export default defineComponent({
 		</section>
 
 		<section class="px-5 py-10 bg-snow text-coal z-20 flex flex-col items-center md:py-20">
-			<TitleParagraphItem :button="'Entdecken'" :to="'/wer-wir-sind'" class="max-w-screen-md flex flex-col !mb-0">
+			<TitleParagraphItem :button="'Entdecken'" :link="'/wer-wir-sind'" class="max-w-screen-md flex flex-col !mb-0">
 				<template #title> Wer wir sind. </template>
 
 				<template #paragraph>

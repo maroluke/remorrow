@@ -62,7 +62,7 @@
 			:icon="icon"
 			:classes="classes"
 			:to="link"
-			class="mt-5 modal-toggle w-full"
+			class="mt-5 w-full"
 		>
 			<template #buttonRef>{{ button }}</template>
 		</SquircleButton>

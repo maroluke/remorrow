@@ -17,7 +17,7 @@ import ContactModal from "@components/ContactModal.vue";
 		</JumboHeader>
 
 		<section class="px-5 py-10 bg-snow text-dark md:bg-dark md:text-snow md:py-20">
-			<TitleParagraphItem :button="'Melde dich'" :icon="'mail'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
+			<TitleParagraphItem :button="'Melde dich'" :icon="'mail'" :classes="'bg-coal w-full modal-toggle'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>
 					Projekt, Unternehmen oder Initiative.
 				</template>
@@ -33,7 +33,7 @@ import ContactModal from "@components/ContactModal.vue";
 		</section>
 
 		<section class="text-snow px-5 py-10 md:bg-snow md:text-dark md:py-20">
-			<TitleParagraphItem :button="'Let\'s talk'" :icon="'mail'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
+			<TitleParagraphItem :button="'Let\'s talk'" :icon="'mail'" :classes="'bg-coal w-full modal-toggle'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title> Allem ein Anfang. </template>
 
 				<template #paragraph>
@@ -47,7 +47,7 @@ import ContactModal from "@components/ContactModal.vue";
 		</section>
 
 		<section class="px-5 py-10 bg-snow text-dark md:bg-dark md:text-snow md:py-20">
-			<TitleParagraphItem :button="'Melde dich'" :icon="'mail'" :classes="'bg-coal w-full'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
+			<TitleParagraphItem :button="'Melde dich'" :icon="'mail'" :classes="'bg-coal w-full modal-toggle'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>Wirke mit uns zusammen. </template>
 
 				<template #paragraph>

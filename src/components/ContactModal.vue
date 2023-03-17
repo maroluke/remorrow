@@ -79,10 +79,20 @@ export default {
 				</div>
 				<!-- Modal body -->
 				<div class="p-6 space-y-6">
-					<p class="text-base text-dark">
+					<p class="text-base text-dark hidden">
 						Beschreibe uns dein Anliegen und wir kontaktieren dich.
 					</p>
-					<form name="contact" method="POST" data-netlify="true" class="flex flex-col gap-5">
+
+					<p class="text-base text-dark !m-0">
+						Schön dass du dich für uns interessierst. Wir freuen uns über deine
+						Nachricht. Wie du siehst arbeiten wir noch an dieser Seite. Wenn du
+						uns kontaktieren möchtest, schreib uns doch eine E-Mail an
+						<a
+							href="mailto:hey@42mrrw.net"
+							class="text-blue-500 hover:text-blue-600"
+							>hey@42mrrw.net</a>
+					</p>
+					<form name="contact" method="POST" data-netlify="true" class="flex flex-col gap-5 hidden">
 						<!-- User Message -->
 						<div>
 							<label
