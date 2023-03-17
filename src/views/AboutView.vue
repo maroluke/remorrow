@@ -15,7 +15,7 @@ import ContactModal from "@components/ContactModal.vue";
 			</template>
 		</JumboHeader>
 
-		<section class="px-5 py-10 bg-snow md:bg-dark md:py-20">
+		<section class="px-5 py-10 bg-snow text-dark md:bg-dark md:py-20 md:text-snow">
 			<TitleParagraphItem :button="'Kontakt'" :icon="'mail'" :classes="'bg-coal w-full modal-toggle'" class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md">
 				<template #title>Wir tun dies...</template>
 
