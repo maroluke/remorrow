@@ -98,26 +98,7 @@ export default {
 							></textarea>
 						</div>
 
-						<!-- Select Purpose -->
-						<div>
-							<label
-								for="position"
-								class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-								>Ich melde mich als:</label
-							>
-							<select
-								id="position"
-								name="role[]"
-								multiple
-								class="bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:text-white"
-							>
-								<option value="single-person">interessierte Person</option>
-								<option value="company">Unternehmen</option>
-								<option value="association">Verein</option>
-								<option value="ngo">NGO</option>
-								<option value="willy-nilly">willy nilly</option>
-							</select>
-						</div>
+						
 
 						<!-- User E-mail -->
 						<div>
