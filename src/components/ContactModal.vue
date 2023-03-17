@@ -103,7 +103,7 @@ export default {
 						<!-- User E-mail -->
 						<div>
 							<label
-								for="email"
+								for="inputEmail"
 								class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
 								>Deine E-Mail Adresse:</label
 							>
@@ -118,7 +118,8 @@ export default {
 
 								<input
 									type="email"
-									id="email"
+									id="inputEmail"
+									name="email"
 									class="rounded-none rounded-r-lg border-none bg-white text-coal focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5"
 									placeholder="maja.göpel@me.com"
 								/>
