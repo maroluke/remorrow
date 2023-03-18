@@ -36,7 +36,7 @@ import SquircleButton from "./SquircleButton.vue";
 						/>
 					</div>
 
-					<ul class="flex gap-3 justify-center w-full">
+					<!-- <ul class="flex gap-3 justify-center w-full">
 						<li class="flex justify-center">
 							<SquircleButton
 								:icon="'instagram'"
@@ -55,7 +55,7 @@ import SquircleButton from "./SquircleButton.vue";
 							>
 							</SquircleButton>
 						</li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 		</div>
