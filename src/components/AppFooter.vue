@@ -100,8 +100,16 @@ export default {
 				<div class="contact-icons flex w-full gap-8 drop-shadow mt-4"></div>
 
 				<div class="mt-5">
-					<p class="font-medium text-sm text-moon mb-2">Image Credits: <a href="#" class="underline font-medium text-sm">Unsplash</a></p>
-					<p class="font-medium text-sm text-moon mb-2">Copyright fortomorrow © 2023</p>
+					<p class="font-medium text-sm text-moon mb-2">Image Credits:</p>
+					<p class="font-medium text-sm text-moon mb-2 grid grid-cols-3 gap-2">
+						<a href="https://unsplash.com/de/fotos/HwxVLhLyg2s" target="_blank" class="underline font-medium text-sm block">Alexander Milo</a>
+						<a href="https://unsplash.com/de/fotos/frWOcVisp8U" target="_blank" class="underline font-medium text-sm block">Lawrence Kayku</a>
+						<a href="https://unsplash.com/de/fotos/EPdCJtYPrPE" target="_blank" class="underline font-medium text-sm">Bogomil Mihaylov</a>
+						<a href="https://unsplash.com/de/fotos/k2sTHzAnmfY" target="_blank" class="underline font-medium text-sm block">Lawrence Aritao</a>
+						<a href="https://unsplash.com/de/@markusspiske" target="_blank" class="underline font-medium text-sm block">Markus Spiske</a>
+						<a href="https://unsplash.com/de/@mykhailokopyt" target="_blank" class="underline font-medium text-sm block">Mykhailo Kopyt</a>
+					</p>
+					<p class="font-medium text-sm text-moon mb-2 mt-10">Copyright fortomorrow © 2023</p>
 				</div>
 			</div>
 		</div>

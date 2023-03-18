@@ -20,7 +20,7 @@
 					</p>
 					<SquircleButton
 						:classes="'bg-coal px-3 !h-10 w-min'"
-						:link="'/community'"
+						:to="'/community'"
 						:sizeIcon="'w-2'"
 						class="mt-5 text-sm"
 					>
