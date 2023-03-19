@@ -3,7 +3,6 @@ import EmailIcon from "./icons/IconEmail.vue";
 import LinkedinIcon from "./icons/IconLinkedin.vue";
 import InstagramIcon from "./icons/IconInstagram.vue";
 import TwitterIcon from "./icons/IconTwitter.vue";
-import IconLogo from "./icons/IconLogo.vue";
 import { RouterLink } from "vue-router";
 import { useNavigationStore } from "@/stores/navigation";
 
@@ -13,7 +12,6 @@ export default {
 		EmailIcon,
 		LinkedinIcon,
 		InstagramIcon,
-		IconLogo,
 		RouterLink,
 		TwitterIcon,
 	},
@@ -39,11 +37,11 @@ export default {
 
 		<ul class="contact-icons flex justify-start gap-8 flex-grow">
 			<li>
-				<RouterLink to="#" class="text-silver modal-toggle">
+				<button type="button" class="text-silver modal-toggle">
 					<EmailIcon
 						class="h-5 text-inherit hover:fill-rich-electric-blue"
 					/>
-				</RouterLink>
+				</button>
 			</li>
 
 			<li>
