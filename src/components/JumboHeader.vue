@@ -10,34 +10,19 @@ export default {
 		src: { type: String, default: "" },
 		classes: { type: String, default: "" },
 	},
-	data() {
-		return {
-			imagePath: this.src,
-		};
-	},
-	mounted() {
-		const jumboContainer = document.querySelector("#jumbo");
-		jumboContainer.style.backgroundImage = `url(${this.imagePath})`;
-	},
-	methods: {
-		viewHeight() {
-			document.querySelector(
-				"#jumboHeader"
-			).style.height = `${window.innerHeight}px`;
-		},
-	},
 };
 </script>
 
 <template>
 	<section
 		id="jumboHeader"
-		class="min-h-screen relative text-snow transition-all duration-500 flex flex-col pb-10 justify-stretch md:flex-row md:gap-10 md:md:justify-between md:items-center md:p-20 xl:p-10 md:bg-snow"
+		class="min-h-screen relative text-snow transition-all duration-500 flex flex-col pb-10 md:flex-row md:gap-10 md:items-center md:p-20 xl:p-10 md:bg-snow"
 	>
 		<div
 			id="jumbo"
 			class="jumbo object-cover bg-cover bg-no-repeat flex grow items-end px-5 md:max-w-lg md:min-h-[90vh] md:rounded-xl md:p-0 md:w-1/2"
 			:class="classes"
+			:style="{ backgroundImage: `url(./${src})` }"
 		>
 			<h1 class="pt-5 drop-shadow-contrast md:hidden">
 				<slot name="title">Titel</slot>
@@ -45,9 +30,9 @@ export default {
 		</div>
 
 		<div
-			class="flex gap-10 flex-col px-5 pt-5 z-20 flex-shrink md:p-0 md:text-dark md:w-1/2"
+			class="flex gap-10 flex-col px-5 pt-5 z-20 grow flex-shrink items-center md:p-0 md:text-dark"
 		>
-			<h1 class="pt-5 drop-shadow-contrast hidden md:block max-w-screen-sm md:drop-shadow-none">
+			<h1 class="pt-5 drop-shadow-contrast hidden max-w-screen-sm md:block md:drop-shadow-none">
 				<slot name="title">Titel</slot>
 			</h1>
 
@@ -58,6 +43,9 @@ export default {
 			</div>
 
 			<!-- <IconArrow class="w-2 h-2 animate-fade-in-top-bottom fill-snow self-center md:fill-dark" /> -->
+			<div class="max-w-screen-sm">
+				<IconArrow class="w-2 h-2 fill-snow self-center md:fill-dark" />
+			</div>
 			<!-- <Transition name="scroll-down-animation">
 				<IconArrow class="w-2 h-2 fill-snow transition self-center md:fill-dark" />
 			</Transition> -->
