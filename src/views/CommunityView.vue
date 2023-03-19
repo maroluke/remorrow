@@ -1,7 +1,16 @@
-<script setup>
+<script>
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
 import ContactModal from "@components/ContactModal.vue";
+
+export default {
+	name: "CommunityView",
+	components: {
+		TitleParagraphItem,
+		JumboHeader,
+		ContactModal,
+	},
+};
 </script>
 
 <template>

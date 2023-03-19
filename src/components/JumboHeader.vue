@@ -1,9 +1,8 @@
 <script>
 import IconArrow from "./icons/IconArrow.vue";
-import { defineComponent } from "vue";
 
-export default defineComponent({
-	setup() {},
+export default {
+	name: "JumboHeader",
 	components: {
 		IconArrow,
 	},
@@ -11,13 +10,14 @@ export default defineComponent({
 		src: { type: String, default: "" },
 		classes: { type: String, default: "" },
 	},
+	data() {
+		return {
+			imagePath: this.src,
+		};
+	},
 	mounted() {
-		const jumboContainer = document.querySelector(".jumbo");
-		jumboContainer.style.backgroundImage = `url(${this.src})`;
-		//this.viewHeight();
-		// window.addEventListener("resize", () => {
-		// 	this.viewHeight();
-		// });
+		const jumboContainer = document.querySelector("#jumbo");
+		jumboContainer.style.backgroundImage = `url(${this.imagePath})`;
 	},
 	methods: {
 		viewHeight() {
@@ -26,24 +26,7 @@ export default defineComponent({
 			).style.height = `${window.innerHeight}px`;
 		},
 	},
-});
-
-// export default {
-//     name: 'JumboHeader',
-//     props: {
-//         src: { type: String, default: '' },
-//         class: { type: String, default: '' },
-//     },
-//     mounted() {
-//         this.viewHeight();
-//         window.addEventListener('resize', this.viewHeight);
-//     },
-//     methods: {
-//         viewHeight() {
-//             document.querySelector('#jumboHeader').style.height = `${window.innerHeight}px`;
-//         },
-//     },
-// };
+};
 </script>
 
 <template>
@@ -52,6 +35,7 @@ export default defineComponent({
 		class="min-h-screen relative text-snow transition-all duration-500 flex flex-col pb-10 justify-stretch md:flex-row md:gap-10 md:md:justify-between md:items-center md:p-20 xl:p-10 md:bg-snow"
 	>
 		<div
+			id="jumbo"
 			class="jumbo object-cover bg-cover bg-no-repeat flex grow items-end px-5 md:max-w-lg md:min-h-[90vh] md:rounded-xl md:p-0 md:w-1/2"
 			:class="classes"
 		>
@@ -73,26 +57,23 @@ export default defineComponent({
 				</p>
 			</div>
 
-			<IconArrow class="w-2 h-2 animate-fade-in-top-bottom fill-snow self-center md:fill-dark" />
-
-			<!-- <p class="text-xl">
-                Wir wissen alle, dass das schwierig wird.
-            </p>
-
-            <p class="text-xl">
-                Wandel und Umdenken herbeizuführen ist schlicht herausfordernd.
-            </p>
-
-            <p class="text-2xl font-bold">
-                Aber es gibt immer Hoffnung.
-            </p> -->
-
-			<!-- <button class="text-left font-bold text-2xl text-primary-700 uppercase text-base tracking-widest">Erfahre mehr</button> -->
+			<!-- <IconArrow class="w-2 h-2 animate-fade-in-top-bottom fill-snow self-center md:fill-dark" /> -->
+			<!-- <Transition name="scroll-down-animation">
+				<IconArrow class="w-2 h-2 fill-snow transition self-center md:fill-dark" />
+			</Transition> -->
 		</div>
 		<!-- <ContactIcons /> -->
 	</section>
 </template>
 
 <style scoped>
+.scroll-down-animation-enter-active,
+.scroll-down-animation-leave-active {
+	@apply opacity-100;
+}
 
+.scroll-down-animation-enter-from,
+.scroll-down-animation-leave-to {
+	@apply opacity-0 -translate-x-3 duration-200 delay-[0ms];
+}
 </style>
