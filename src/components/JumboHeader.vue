@@ -52,7 +52,7 @@ export default defineComponent({
 		class="min-h-screen relative text-snow transition-all duration-500 flex flex-col pb-10 justify-stretch md:flex-row md:gap-10 md:md:justify-between md:items-center md:p-20 xl:p-10 md:bg-snow"
 	>
 		<div
-			class="jumbo object-cover bg-cover bg-no-repeat flex grow items-end px-5 md:max-w-lg md:min-h-[85vh] md:rounded-xl md:p-0 md:w-1/2"
+			class="jumbo object-cover bg-cover bg-no-repeat flex grow items-end px-5 md:max-w-lg md:min-h-[90vh] md:rounded-xl md:p-0 md:w-1/2"
 			:class="classes"
 		>
 			<h1 class="pt-5 drop-shadow-contrast md:hidden">
@@ -94,7 +94,5 @@ export default defineComponent({
 </template>
 
 <style scoped>
-.jumbo {
-	background-image: url(${src});
-}
+
 </style>
