@@ -36,7 +36,7 @@ export default {
 
 		getContactIcons() {
 			const contact = document.querySelector("nav .contact-icons");
-			const contactItems = contact.querySelectorAll("li a");
+			const contactItems = contact.querySelectorAll("li > *");
 			const contactIcons = [];
 
 			contactItems.forEach((item) => {

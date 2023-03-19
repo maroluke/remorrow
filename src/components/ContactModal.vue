@@ -26,7 +26,6 @@ export default {
 					modal.toggle();
 
 					for (const close in closeModal) {
-						console.log( typeof closeModal[close]);
 						if (typeof closeModal[close] === "object") {
 							this.closeModal(closeModal[close], modal);
 						}
@@ -52,12 +51,12 @@ export default {
 		aria-hidden="true"
 		class="fixed top-0 left-0 right-0 z-[100] hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
 	>
-		<div class="relative w-full h-full max-w-screen-sm md:h-auto">
+		<div class="relative w-full h-auto max-w-screen-sm">
 			<!-- Modal content -->
-			<div class="relative bg-snow rounded-xl shadow">
+			<div class="relative bg-coal rounded-xl shadow-2xl">
 				<!-- Modal header -->
 				<div class="flex items-start justify-between p-5 rounded-t">
-					<h3 class="text-coal">Kontakt</h3>
+					<h3 class="text-snow">Kontakt</h3>
 
 					<button
 						type="button"
@@ -83,7 +82,7 @@ export default {
 						Beschreibe uns dein Anliegen und wir kontaktieren dich.
 					</p>
 
-					<p class="text-base text-dark !m-0">
+					<p class="text-base text-snow !m-0">
 						Schön dass du dich für uns interessierst. Wir freuen uns über deine
 						Nachricht. Wie du siehst arbeiten wir noch an dieser Seite. Wenn du
 						uns kontaktieren möchtest, schreib uns doch eine E-Mail an
