@@ -83,7 +83,7 @@ export default defineComponent({
 				:style="{
 					clipPath: `url('#squircle-${uid}')`,
 				}"
-				:class="`m-0 w-full gap-4 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition-all duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
+				:class="`m-0 w-full gap-4 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
 				ref="buttonRef"
 			>
 				<span
@@ -148,7 +148,7 @@ export default defineComponent({
 			:style="{
 				clipPath: `url('#squircle-${uid}')`,
 			}"
-			:class="`m-0 w-full gap-4 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition-all duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
+			:class="`m-0 w-full gap-4 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
 			ref="buttonRef"
 		>
 			<span

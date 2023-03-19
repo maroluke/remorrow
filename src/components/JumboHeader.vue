@@ -12,10 +12,12 @@ export default defineComponent({
 		classes: { type: String, default: "" },
 	},
 	mounted() {
-		this.viewHeight();
-		window.addEventListener("resize", () => {
-			this.viewHeight();
-		});
+		const jumboContainer = document.querySelector(".jumbo");
+		jumboContainer.style.backgroundImage = `url(${this.src})`;
+		//this.viewHeight();
+		// window.addEventListener("resize", () => {
+		// 	this.viewHeight();
+		// });
 	},
 	methods: {
 		viewHeight() {
@@ -47,12 +49,11 @@ export default defineComponent({
 <template>
 	<section
 		id="jumboHeader"
-		class="text-snow transition-all duration-500 flex flex-col pb-10 relative md:flex-row md:gap-10 md:md:justify-between md:items-center md:p-20 xl:p-10 md:bg-snow"
+		class="min-h-screen relative text-snow transition-all duration-500 flex flex-col pb-10 justify-stretch md:flex-row md:gap-10 md:md:justify-between md:items-center md:p-20 xl:p-10 md:bg-snow"
 	>
 		<div
-			class="object-cover flex-grow bg-cover bg-no-repeat flex items-end px-5 md:max-w-lg md:h-[85%] lg:h-full md:rounded-xl md:p-0 md:w-1/2"
+			class="jumbo object-cover bg-cover bg-no-repeat flex grow items-end px-5 md:max-w-lg md:min-h-[85vh] md:rounded-xl md:p-0 md:w-1/2"
 			:class="classes"
-			:style="{ backgroundImage: `url(./${src})` }"
 		>
 			<h1 class="pt-5 drop-shadow-contrast md:hidden">
 				<slot name="title">Titel</slot>
@@ -93,4 +94,7 @@ export default defineComponent({
 </template>
 
 <style scoped>
+.jumbo {
+	background-image: url(${src});
+}
 </style>

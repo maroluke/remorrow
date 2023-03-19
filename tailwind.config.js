@@ -31,7 +31,7 @@ module.exports = {
 				lg: "0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05)",
 			},
 			fontFamily: {
-				base: ["Biofolio-Ultimate"],
+				base: ["Biofolio Ultimate"],
 			},
 			transitionTimingFunction: {
 				easeInOutQuint: "cubic-bezier(0.83, 0, 0.17, 1)",
@@ -64,7 +64,7 @@ module.exports = {
 					fontSize: theme("fontSize.xl"),
 				},
 				["h1, h2, h3, h4"]: {
-					fontWeight: theme("fontWeight.extrabold"),
+					fontWeight: theme("fontWeight.bold"),
 					lineHeight: theme("lineHeight.tight"),
 				},
 				h1: { fontSize: theme("fontSize.4xl") },

@@ -24,22 +24,21 @@ export default defineComponent({
 	async mounted() {
 		this.error = this.cmsData = null;
 		this.loading = true;
-		// use route params to build the API endpoint URL
-		const url = `/api/notion`;
-		await fetch(url)
-			.then((response) => response.json())
-			.then((data) => {
-				this.cmsData =
-					data.results[0].properties.Content.rich_text[0].plain_text;
-				console.log(data.results);
-			})
-			.catch((error) => {
-				this.error = error.toString();
-				console.log(this.error);
-			})
-			.finally(() => {
-				this.loading = false;
-			});
+		// const url = `/api/notion`;
+		// await fetch(url)
+		// 	.then((response) => response.json())
+		// 	.then((data) => {
+		// 		this.cmsData =
+		// 			data.results[0].properties.Content.rich_text[0].plain_text;
+		// 		console.log(data.results);
+		// 	})
+		// 	.catch((error) => {
+		// 		this.error = error.toString();
+		// 		console.log(this.error);
+		// 	})
+		// 	.finally(() => {
+		// 		this.loading = false;
+		// 	});
 	},
 	// async mounted() {
 	//     this.error = this.cmsData = null

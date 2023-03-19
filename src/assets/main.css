@@ -3,45 +3,57 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Biofolio-Ultimate';
+    font-family: 'Biofolio Ultimate';
+    src: local('Biofolio Ultimate Regular'), local('BiofolioUltimate-Regular'),
+        url('./fonts/subset-BiofolioUltimate-Regular.woff2') format('woff2'),
+        url('./fonts/subset-BiofolioUltimate-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    src: local('Biofolio-Ultimate-Regular'), url(./fonts/BiofolioUltimateRegular.otf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Biofolio-Ultimate';
+    font-family: 'Biofolio Ultimate';
+    src: local('Biofolio Ultimate ExtraBold'), local('BiofolioUltimate-ExtraBold'),
+        url('./fonts/subset-BiofolioUltimate-ExtraBold.woff2') format('woff2'),
+        url('./fonts/subset-BiofolioUltimate-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Biofolio Ultimate';
+    src: local('Biofolio Ultimate Bold'), local('BiofolioUltimate-Bold'),
+        url('./fonts/subset-BiofolioUltimate-Bold.woff2') format('woff2'),
+        url('./fonts/subset-BiofolioUltimate-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Biofolio Ultimate';
+    src: local('Biofolio Ultimate Medium'), local('BiofolioUltimate-Medium'),
+        url('./fonts/subset-BiofolioUltimate-Medium.woff2') format('woff2'),
+        url('./fonts/subset-BiofolioUltimate-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
-    src: local('Biofolio-Ultimate-Medium'), url(./fonts/BiofolioUltimateMedium.otf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Biofolio-Ultimate';
+    font-family: 'Biofolio Ultimate';
+    src: local('Biofolio Ultimate Medium Italic'), local('BiofolioUltimate-MediumItalic'),
+        url('./fonts/subset-BiofolioUltimate-MediumItalic.woff2') format('woff2'),
+        url('./fonts/subset-BiofolioUltimate-MediumItalic.woff') format('woff');
     font-weight: 500;
     font-style: italic;
-    src: local('Biofolio-Ultimate-Medium-Italic'), url(./fonts/BiofolioUltimateMediumItalic.otf) format('truetype');
 }
 
 @font-face {
-    font-family: 'Biofolio-Ultimate';
-    font-weight: 700;
-    font-style: normal;
-    src: local('Biofolio-Ultimate-Bold'), url(./fonts/BiofolioUltimateBold.otf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Biofolio-Ultimate';
-    font-weight: 800;
-    font-style: normal;
-    src: local('Biofolio-Ultimate-ExtraBold'), url(./fonts/BiofolioUltimateExtraBold.otf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Biofolio-Ultimate';
+    font-family: 'Biofolio Ultimate';
+    src: local('Biofolio Ultimate Heavy'), local('BiofolioUltimate-Heavy'),
+        url('./fonts/subset-BiofolioUltimate-Heavy.woff2') format('woff2'),
+        url('./fonts/subset-BiofolioUltimate-Heavy.woff') format('woff');
     font-weight: 900;
     font-style: normal;
-    src: local('Biofolio-Ultimate-Heavy'), url(./fonts/BiofolioUltimateHeavy.otf) format('truetype');
 }
 
 @layer base {
