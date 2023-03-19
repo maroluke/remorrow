@@ -101,7 +101,7 @@ export default {
 
 				<div class="mt-5">
 					<p class="font-medium text-sm text-moon mb-2">Image Credits:</p>
-					<p class="font-medium text-sm text-moon mb-2 grid grid-cols-3 gap-2">
+					<p class="font-medium text-sm text-moon mb-2 grid grid-cols-1 xs:grid-cols-3 2xs:gap-2">
 						<a href="https://unsplash.com/de/fotos/HwxVLhLyg2s" target="_blank" class="underline font-medium text-sm block">Alexander Milo</a>
 						<a href="https://unsplash.com/de/fotos/frWOcVisp8U" target="_blank" class="underline font-medium text-sm block">Lawrence Kayku</a>
 						<a href="https://unsplash.com/de/fotos/EPdCJtYPrPE" target="_blank" class="underline font-medium text-sm">Bogomil Mihaylov</a>
