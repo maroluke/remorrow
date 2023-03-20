@@ -16,7 +16,7 @@ export default {
 <template>
 	<section
 		id="jumboHeader"
-		class="min-h-screen relative text-snow transition-all duration-500 flex flex-col pb-10 md:flex-row md:gap-10 md:items-center md:p-20 xl:p-10 md:bg-snow"
+		class="min-h-screen relative text-snow transition-all duration-500 flex flex-col pb-28 md:flex-row md:gap-10 md:items-center md:p-20 xl:p-10 md:bg-snow"
 	>
 		<div
 			id="jumbo"
