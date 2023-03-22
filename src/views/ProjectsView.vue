@@ -1,8 +1,6 @@
 <script setup>
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
-import SquircleButton from "@components/SquircleButton.vue";
-import ContactModal from "@components/ContactModal.vue";
 </script>
 
 <template>
@@ -67,6 +65,7 @@ import ContactModal from "@components/ContactModal.vue";
 			<!-- <div class="w-full h-full absolute top-0 left-0 z-0 bg-dark bg-opacity-5"></div> -->
 			<TitleParagraphItem
 				:button="'Sei ein Teil davon'"
+				:contact="true"
 				:icon="'mail'"
 				:classes="'bg-snow !w-full modal-toggle'"
 				class="gap-10 !mb-0 !items-start mx-auto drop-shadow-md max-w-screen-md"
@@ -75,6 +74,4 @@ import ContactModal from "@components/ContactModal.vue";
 			</TitleParagraphItem>
 		</section>
 	</main>
-
-	<ContactModal />
 </template>

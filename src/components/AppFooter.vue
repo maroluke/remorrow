@@ -2,6 +2,7 @@
 import { RouterLink } from "vue-router";
 import IconLogoMini from "./icons/IconLogoMini.vue";
 import IconLogo from "./icons/IconLogo.vue";
+import { useNavigationStore } from "@/stores/navigation";
 
 export default {
 	name: "AppFooter",
@@ -15,6 +16,7 @@ export default {
 		return {
 			navigationLinks: [],
 			contactIcons: {},
+			navigationState: {},
 		};
 	},
 
@@ -51,6 +53,11 @@ export default {
 			this.contactIcons.forEach((item) => {
 				const duplicate = item.cloneNode(true);
 				contact.append(duplicate);
+				if(duplicate.type === 'button') {
+					duplicate.addEventListener("click", () => {
+						this.navigationState.toggleModal();
+					});
+				}
 			});
 		},
 	},
@@ -59,6 +66,7 @@ export default {
 		this.navigationLinks = this.getNavigationLinks();
 		this.contactIcons = this.getContactIcons();
 		this.outputContactIcons();
+		this.navigationState = useNavigationStore();
 	},
 };
 </script>

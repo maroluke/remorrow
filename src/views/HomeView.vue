@@ -4,7 +4,6 @@ import QuoteCard from "@components/QuoteCard.vue";
 import ParagraphWithCards from "@components/ParagraphWithCards.vue";
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import { defineComponent } from "vue";
-import ContactModal from "@components/ContactModal.vue";
 
 export default defineComponent({
 	components: {
@@ -12,7 +11,6 @@ export default defineComponent({
 		QuoteCard,
 		ParagraphWithCards,
 		TitleParagraphItem,
-		ContactModal,
 	},
 	data() {
 		return {
@@ -56,35 +54,44 @@ export default defineComponent({
 
 <template>
 	<main class="bg-dark">
-		<TheIntro :filename="'globe.png'" :rotate="0" :bg-gradient="true" class="z-20">
+		<TheIntro
+			:filename="'globe.png'"
+			:rotate="0"
+			:bg-gradient="true"
+			class="z-20"
+		>
 			<template #title>
 				Lass uns gemeinsam die Welt von Morgen schaffen.
 			</template>
 
 			<template #paragraph>
-				Wir unterstützen
-				nachhaltige Projekte dabei
-				zu wachsen und einen
-				positiven Beitrag für
-				unsere Zukunft zu erbringen.
+				Wir unterstützen nachhaltige Projekte dabei zu wachsen und einen
+				positiven Beitrag für unsere Zukunft zu erbringen.
 			</template>
 		</TheIntro>
 
-		<section class="px-5 py-10 bg-snow z-30 md:py-20 md:flex md:justify-center">
-			<div class="flex flex-col items-center gap-10 justify-center md:flex-row md:max-w-screen-lg">
-				<TitleParagraphItem class="text-coal md:basis-2/3 ">
+		<section
+			class="px-5 py-10 bg-snow z-30 md:py-20 md:flex md:justify-center"
+		>
+			<div
+				class="flex flex-col items-center gap-10 justify-center md:flex-row md:max-w-screen-lg"
+			>
+				<TitleParagraphItem class="text-coal md:basis-2/3">
 					<template #title>
-						Nachhaltigkeit ist nur ein erster Schritt – wir brauchen regenerative Ideen!
+						Nachhaltigkeit ist nur ein erster Schritt – wir brauchen
+						regenerative Ideen!
 					</template>
 
 					<template #paragraph>
 						Als Kollektiv ist
-						<span class="font-bold">fortomorrow</span>, mit begeisterten
-						& motivierten Menschen, Teil der Veränderung. <br /><br />
+						<span class="font-bold">fortomorrow</span>, mit
+						begeisterten & motivierten Menschen, Teil der
+						Veränderung. <br /><br />
 						Weg von endlosem Streben nach Profit und unendlichem
 						Wachstum, hin zu sinnvollen und
-						<a href="#" class="glossar-link">schönen</a> Projekten, die
-						ihre <a href="#" class="glossar-link">regenerative</a> Kraft
+						<a href="#" class="glossar-link">schönen</a> Projekten,
+						die ihre
+						<a href="#" class="glossar-link">regenerative</a> Kraft
 						entfesseln.
 					</template>
 				</TitleParagraphItem>
@@ -93,8 +100,14 @@ export default defineComponent({
 			</div>
 		</section>
 
-		<section class="text-snow px-5 py-10 bg-dark z-20 flex flex-col items-center md:py-20">
-			<TitleParagraphItem :button="'Unser Weg'" :link="'/unser-weg'" class="max-w-screen-md flex flex-col gap-10 !mb-0">
+		<section
+			class="text-snow px-5 py-10 bg-dark z-20 flex flex-col items-center md:py-20"
+		>
+			<TitleParagraphItem
+				:button="'Unser Weg'"
+				:link="'/unser-weg'"
+				class="max-w-screen-md flex flex-col gap-10 !mb-0"
+			>
 				<template #title>
 					Wir wissen, dass wir zusammen stärker sind!
 				</template>
@@ -110,10 +123,18 @@ export default defineComponent({
 			</TitleParagraphItem>
 		</section>
 
-		<ParagraphWithCards class="bg-snow text-coal px-5 py-10 z-20 md:py-20" />
+		<ParagraphWithCards
+			class="bg-snow text-coal px-5 py-10 z-20 md:py-20"
+		/>
 
-		<section class="text-snow px-5 py-10 bg-dark z-20 flex flex-col items-center md:py-20">
-			<TitleParagraphItem :button="'Melde dich'" class="max-w-screen-md flex flex-col gap-10 !mb-0 modal-toggle">
+		<section
+			class="text-snow px-5 py-10 bg-dark z-20 flex flex-col items-center md:py-20"
+		>
+			<TitleParagraphItem
+				:button="'Melde dich'"
+				:contact="true"
+				class="max-w-screen-md flex flex-col gap-10 !mb-0 modal-toggle"
+			>
 				<template #title> Wohin die Reise führt. </template>
 
 				<template #paragraph>
@@ -127,8 +148,14 @@ export default defineComponent({
 			</TitleParagraphItem>
 		</section>
 
-		<section class="px-5 py-10 bg-snow text-coal z-20 flex flex-col items-center md:py-20">
-			<TitleParagraphItem :button="'Entdecken'" :link="'/wer-wir-sind'" class="max-w-screen-md flex flex-col !mb-0">
+		<section
+			class="px-5 py-10 bg-snow text-coal z-20 flex flex-col items-center md:py-20"
+		>
+			<TitleParagraphItem
+				:button="'Entdecken'"
+				:link="'/wer-wir-sind'"
+				class="max-w-screen-md flex flex-col !mb-0"
+			>
 				<template #title> Wer wir sind. </template>
 
 				<template #paragraph>
@@ -139,6 +166,4 @@ export default defineComponent({
 			</TitleParagraphItem>
 		</section>
 	</main>
-	
-	<ContactModal />
 </template>

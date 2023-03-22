@@ -37,7 +37,11 @@ export default {
 
 		<ul class="contact-icons flex justify-start gap-8 flex-grow">
 			<li>
-				<button type="button" class="text-silver modal-toggle">
+				<button
+					@click="navigationState.toggleModal"
+					type="button"
+					class="text-silver"
+				>
 					<EmailIcon
 						class="h-5 text-inherit hover:fill-rich-electric-blue"
 					/>
@@ -45,8 +49,11 @@ export default {
 			</li>
 
 			<li>
-				<a href="https://twitter.com/42mrrw"
-                target="_blank" class="text-silver">
+				<a
+					href="https://twitter.com/42mrrw"
+					target="_blank"
+					class="text-silver"
+				>
 					<TwitterIcon
 						class="h-5 text-inherit hover:fill-rich-electric-blue"
 					/>
@@ -56,7 +63,7 @@ export default {
 			<li>
 				<a
 					href="https://linkedin.com/company/42mrrw/"
-                    target="_blank"
+					target="_blank"
 					class="text-silver"
 				>
 					<LinkedinIcon
@@ -66,8 +73,11 @@ export default {
 			</li>
 
 			<li>
-				<a href="https://instagram.com/42mrrw/"
-                target="_blank" class="text-silver">
+				<a
+					href="https://instagram.com/42mrrw/"
+					target="_blank"
+					class="text-silver"
+				>
 					<InstagramIcon
 						class="h-5 text-inherit hover:fill-rich-electric-blue"
 					/>

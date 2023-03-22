@@ -1,45 +1,19 @@
 <script>
-import { Modal } from "flowbite";
 import EmailIcon from "@components/icons/IconEmail.vue";
+import { useNavigationStore } from "@/stores/navigation";
+
 export default {
 	name: "ContactModal",
 	components: {
 		EmailIcon,
 	},
-	mounted() {
-		const modalToggle = document.querySelectorAll(".modal-toggle");
-		const modalElement = document.querySelector("#contact-modal");
-		const closeModal = document.querySelectorAll(".modal-close");
-
-		const modalOptions = {
-			backdropClasses:
-				"bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40 backdrop-filter backdrop-blur-sm",
+	data() {
+		return {
+			navigationState: {},
 		};
-
-		if (modalElement) {
-			const modal = new Modal(modalElement, modalOptions);
-
-			modalToggle.forEach((toggle, i) => {
-				toggle.addEventListener("click", (e) => {
-					e.preventDefault();
-
-					modal.toggle();
-
-					for (const close in closeModal) {
-						if (typeof closeModal[close] === "object") {
-							this.closeModal(closeModal[close], modal);
-						}
-					}
-				});
-			});
-		}
 	},
-	methods: {
-		closeModal(closeButton, modal) {
-			closeButton.addEventListener("click", () => {
-				modal.hide();
-			});
-		},
+	mounted() {
+		this.navigationState = useNavigationStore();
 	},
 };
 </script>
@@ -49,18 +23,19 @@ export default {
 		id="contact-modal"
 		tabindex="-1"
 		aria-hidden="true"
-		class="fixed top-0 left-0 right-0 z-[100] hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+		class="fixed top-0 left-0 right-0 z-[100] w-full p-4 hidden overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
 	>
 		<div class="relative w-full h-auto max-w-screen-sm">
 			<!-- Modal content -->
-			<div class="relative bg-coal rounded-xl shadow-2xl">
+			<div class="relative bg-snow text-coal rounded-xl shadow-2xl">
 				<!-- Modal header -->
 				<div class="flex items-start justify-between p-5 rounded-t">
-					<h3 class="text-snow">Kontakt</h3>
+					<h3>Kontakt</h3>
 
 					<button
+						@click="navigationState.closeModal"
 						type="button"
-						class="modal-close text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+						class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
 					>
 						<svg
 							class="w-5 h-5"
@@ -77,12 +52,12 @@ export default {
 					</button>
 				</div>
 				<!-- Modal body -->
-				<div class="p-6 space-y-6 md:pt-0 md:mt-0">
-					<p class="text-base text-dark hidden">
+				<div class="p-6 pt-0 space-y-6 md:pt-0 md:mt-0 text-coal">
+					<p class="text-base hidden">
 						Beschreibe uns dein Anliegen und wir kontaktieren dich.
 					</p>
 
-					<p class="text-base text-snow !m-0">
+					<p class="text-base !m-0">
 						Schön dass du dich für uns interessierst. Wir freuen uns über deine
 						Nachricht. Wie du siehst arbeiten wir noch an dieser Seite. Wenn du
 						uns kontaktieren möchtest, schreib uns doch eine E-Mail an

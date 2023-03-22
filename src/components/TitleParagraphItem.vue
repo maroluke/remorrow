@@ -58,7 +58,17 @@
 		</div>
 
 		<SquircleButton
-			v-if="button"
+			v-if="contact"
+			:icon="icon"
+			:classes="classes"
+			@click="navigationState.toggleModal"
+			class="mt-5 w-full"
+		>
+			<template #buttonRef>{{ button }}</template>
+		</SquircleButton>
+		
+		<SquircleButton
+			v-else-if="button"
 			:icon="icon"
 			:classes="classes"
 			:to="link"
@@ -79,6 +89,8 @@ import IconGrow from "./icons/IconGrow.vue";
 import IconFusion from "./icons/IconFusion.vue";
 import SquircleButton from "./SquircleButton.vue";
 
+import { useNavigationStore } from "@/stores/navigation";
+
 export default {
 	name: "TitleParagraphItem",
 	components: {
@@ -90,6 +102,10 @@ export default {
 		IconGrow,
 		IconFusion,
 		SquircleButton,
+	},
+	setup() {
+		const navigationState = useNavigationStore();
+		return { navigationState };
 	},
 	props: {
 		heading: {
@@ -110,6 +126,7 @@ export default {
 		button: { type: String, default: null },
 		link: { type: String, default: null },
 		classes: { type: String, default: "bg-coal" },
+		contact: { type: Boolean, default: false },
 	},
 };
 </script>
