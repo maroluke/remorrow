@@ -20,7 +20,7 @@ export default {
 	>
 		<div
 			id="jumbo"
-			class="jumbo object-cover bg-cover bg-no-repeat flex grow items-end px-5 md:max-w-lg md:min-h-[90vh] md:rounded-xl md:p-0 md:w-1/2"
+			class="jumbo object-cover bg-cover bg-no-repeat flex grow items-end px-5 bg-center md:max-w-lg md:min-h-[90vh] md:rounded-xl md:p-0 md:w-full"
 			:class="classes"
 			:style="{ backgroundImage: `url(./${src})` }"
 		>
@@ -32,7 +32,7 @@ export default {
 		<div
 			class="flex gap-10 flex-col px-5 pt-5 z-20 shrink items-center md:p-0 md:text-dark"
 		>
-			<h1 class="pt-5 drop-shadow-contrast hidden max-w-screen-sm md:block md:drop-shadow-none">
+			<h1 class="pt-5 drop-shadow-contrast hidden max-w-screen-sm self-start md:block md:drop-shadow-none">
 				<slot name="title">Titel</slot>
 			</h1>
 
