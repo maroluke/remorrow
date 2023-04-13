@@ -62,11 +62,11 @@ export default {
 						Nachricht. Wie du siehst arbeiten wir noch an dieser Seite. Wenn du
 						uns kontaktieren möchtest, schreib uns doch eine E-Mail an
 						<a
-							href="mailto:hey@42mrrw.net"
-							class="text-blue-500 hover:text-blue-600"
-							>hey@42mrrw.net</a>
+							href="mailto:hey@fortomorrow.world"
+							class="text-rich-electric-blue hover:text-blue-600"
+							>hey@fortomorrow.world</a>
 					</p>
-					<form name="contact" method="POST" data-netlify="true" class="flex flex-col gap-5 hidden">
+					<form name="contact" method="POST" netlify class="flex flex-col gap-5">
 						<!-- User Message -->
 						<div>
 							<label
@@ -77,13 +77,13 @@ export default {
 							<textarea
 								id="message"
 								rows="4"
-								class="border-none block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:text-white"
+								class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-200 shadow-inner focus:border-rich-electric-blue"
 								placeholder="Was brauchst du? Was möchtest du erreichen? Wieso glaubst du wir können dir helfen?"
 							></textarea>
 						</div>
 
 						<!-- Select Purpose -->
-						<!-- <div>
+						<div>
 							<label
 								for="position"
 								class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -93,7 +93,7 @@ export default {
 								id="position"
 								name="role[]"
 								multiple
-								class="bg-gray-50 border-none text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:text-white"
+								class="bg-gray-50 border-gray-200 shadow-inner text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:border-rich-electric-blue"
 							>
 								<option value="single-person">interessierte Person</option>
 								<option value="company">Unternehmen</option>
@@ -101,7 +101,7 @@ export default {
 								<option value="ngo">NGO</option>
 								<option value="willy-nilly">willy nilly</option>
 							</select>
-						</div> -->
+						</div>
 
 						<!-- User E-mail -->
 						<div>
@@ -115,14 +115,14 @@ export default {
 									class="inline-flex items-center px-3 text-sm text-snow bg-coal rounded-l-md"
 								>
 									<EmailIcon
-										class="fill-current h-4 hover:fill-rich-electric-blue"
+										class="fill-current h-4"
 									/>
 								</span>
 
 								<input
 									type="email"
 									id="email"
-									class="rounded-none rounded-r-lg border-none bg-white text-coal focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-2.5"
+									class="rounded-none rounded-r-lg border-gray-200 bg-white text-coal focus:ring-rich-electric-blue focus:border-rich-electric-blue block flex-1 min-w-0 w-full text-sm p-2.5"
 									placeholder="maja.göpel@me.com"
 								/>
 							</div>
