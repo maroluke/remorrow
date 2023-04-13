@@ -10,6 +10,7 @@ export default {
 	data() {
 		return {
 			navigationState: {},
+			userRole: ["interessierte Person", "Unternehmen", "Verein", "NGO", "willy nilly"],
 		};
 	},
 	mounted() {
@@ -58,15 +59,28 @@ export default {
 					</p>
 
 					<p class="text-base !m-0">
-						Schön dass du dich für uns interessierst. Wir freuen uns über deine
-						Nachricht. Wie du siehst arbeiten wir noch an dieser Seite. Wenn du
-						uns kontaktieren möchtest, schreib uns doch eine E-Mail an
+						Schön dass du dich für uns interessierst. Wir freuen uns
+						über deine Nachricht. Wie du siehst arbeiten wir noch an
+						dieser Seite. Wenn du uns kontaktieren möchtest, schreib
+						uns doch eine E-Mail an
 						<a
 							href="mailto:hey@fortomorrow.world"
 							class="text-rich-electric-blue hover:text-blue-600"
-							>hey@fortomorrow.world</a>
+							>hey@fortomorrow.world</a
+						>
 					</p>
-					<form name="contact" method="POST" netlify class="flex flex-col gap-5">
+					<form
+						name="user-contact"
+						method="POST"
+						data-netlify="true"
+						data-netlify-honeypot="bot-field"
+						class="flex flex-col gap-5 hidden"
+					>
+						<input
+							type="hidden"
+							name="form-name"
+							value="user-contact"
+						/>
 						<!-- User Message -->
 						<div>
 							<label
@@ -85,17 +99,19 @@ export default {
 						<!-- Select Purpose -->
 						<div>
 							<label
-								for="position"
+								for="user-role"
 								class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
 								>Ich melde mich als:</label
 							>
 							<select
-								id="position"
+								id="user-role"
 								name="role[]"
 								multiple
 								class="bg-gray-50 border-gray-200 shadow-inner text-gray-900 text-sm rounded-lg block w-full p-2.5 focus:border-rich-electric-blue"
 							>
-								<option value="single-person">interessierte Person</option>
+								<option value="role">
+									interessierte Person
+								</option>
 								<option value="company">Unternehmen</option>
 								<option value="association">Verein</option>
 								<option value="ngo">NGO</option>
@@ -114,9 +130,7 @@ export default {
 								<span
 									class="inline-flex items-center px-3 text-sm text-snow bg-coal rounded-l-md"
 								>
-									<EmailIcon
-										class="fill-current h-4"
-									/>
+									<EmailIcon class="fill-current h-4" />
 								</span>
 
 								<input
@@ -129,7 +143,9 @@ export default {
 						</div>
 
 						<!-- Modal footer -->
-						<div class="flex items-center py-6 space-x-2 border-t rounded-b justify-between">
+						<div
+							class="flex items-center py-6 space-x-2 border-t rounded-b justify-between"
+						>
 							<button
 								type="submit"
 								class="flex-1 text-snow bg-rich-electric-blue hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
