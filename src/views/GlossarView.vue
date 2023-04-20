@@ -102,16 +102,16 @@ export default {
 <template>
 	<main class="bg-white">
 		<section
-			class="pt-44 px-6 pb-10 bg-no-repeat bg-cover text-coal max-w-screen-lg mx-auto xl:px-16"
+			class="pt-20 pb-10 bg-no-repeat bg-cover text-coal max-w-screen-lg mx-auto sm:pt-44 px-6 xl:px-16"
 		>
 			<h1 class="py-5">Glossar</h1>
 
-			<div class="text-coal bg-snow p-10 rounded-lg">
+			<div class="text-coal bg-snow px-6 py-5 -mx-6 sm:mx-0 sm:rounded-lg">
 				<ItemContent :index="'nachhaltig'">
 					<template #title>Nachhaltig</template>
 					<template #paragraph>
-						<div class="flex gap-10">
-							<div class="flex-1">
+						<div class="flex flex-col md:gap-10 md:flex-row">
+							<div class="flex-1 order-2 md:order-1">
 								<span class="block pb-5">
 									Zur Definition von Nachhaltigkeit stützen
 									wir uns auf das 3-Säule-Modell.
@@ -194,23 +194,24 @@ export default {
 								</span>
 							</div>
 
-							<div class="flex-1 flex flex-col gap-5">
+							<div class="flex-1 flex flex-col gap-5 order-1 mb-5 sm:flex-row md:mb-0 md:order-2 md:flex-col">
 								<figure
-									class="shadow flex flex-col p-5 bg-white rounded-lg"
+									class="shadow flex flex-col p-5 bg-white rounded-lg flex-1 md:flex-none self-center md:self-start"
 								>
 									<img
 										loading="lazy"
 										src="/nachhaltig.jpg"
 										alt="Nachhaltigkeit"
-										class="w-full"
+										class="w-full max-w-sm"
 									/>
-									<footer>
+									<footer class="mt-3">
 										<small
 											>Quelle:
 											<a
 												rel="license"
 												href="https://abwassernetzwerk-rheinland.nrw/nachhaltigkeit/"
-												>https://abwassernetzwerk-rheinland.nrw/nachhaltigkeit/</a
+												class="underline"
+												>abwassernetzwerk-rheinland.nrw</a
 											></small
 										>
 									</footer>
@@ -218,21 +219,22 @@ export default {
 								</figure>
 
 								<figure
-									class="shadow flex flex-col p-5 bg-white rounded-lg"
+									class="shadow flex flex-col p-5 bg-white rounded-lg flex-1 md:flex-none self-center md:self-start"
 								>
 									<img
 										loading="lazy"
 										src="/sdg.jpg"
 										alt="Sustainable Development Goals"
-										class="w-full max-w-xs"
+										class="w-full max-w-sm"
 									/>
-									<footer>
+									<footer class="mt-3">
 										<small
 											>Quelle:
 											<a
 												rel="license"
 												href="https://primecapital-ag.com/un-sdgs/"
-												>https://primecapital-ag.com/un-sdgs/</a
+												class="underline"
+												>primecapital-ag.com</a
 											></small
 										>
 									</footer>
@@ -433,7 +435,7 @@ export default {
 				<ItemContent :index="'schoen'">
 					<template #title>Schön</template>
 					<template #paragraph>
-						<div class="flex gap-20">
+						<div class="flex flex-col mb-10 md:gap-20 md:flex-row">
 							<span class="mb-5 block flex-1">
 								Ein schönes Projekt oder eine schöne
 								Zusammenarbeit sind für uns etwas
@@ -458,7 +460,7 @@ export default {
 							</figure>
 						</div>
 
-						<div class="flex gap-20">
+						<div class="flex flex-col md:gap-20 md:flex-row">
 							<span class="mb-5 block flex-1">
 								Der Autor des obigen Zitats, Alan Moore,
 								beschreibt die Wirkung von Design sogar auf
@@ -492,7 +494,7 @@ export default {
 							frameborder="0"
 							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 							allowfullscreen
-							class="mx-auto mt-10"
+							class="mx-auto mt-10 max-w-full"
 						></iframe>
 					</template>
 				</ItemContent>

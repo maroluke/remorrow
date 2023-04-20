@@ -39,7 +39,7 @@ export default {
 
 	<article
 		:id="this.accordionBody"
-		class="pb-5 hidden"
+		class="pb-5 hidden border-b"
 		:aria-labelledby="this.accordionHeader"
 	>
 		<p class="text-base font-medium"><slot name="paragraph"></slot></p>

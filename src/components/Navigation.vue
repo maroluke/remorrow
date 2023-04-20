@@ -84,6 +84,9 @@ export default {
 						<NavigationItem :to="'/unser-weg'"
 							>Unser Weg</NavigationItem
 						>
+						<NavigationItem :to="'/glossar'"
+							>Glossar</NavigationItem
+						>
 					</ul>
 
 					<div class="flex flex-col">
@@ -94,11 +97,11 @@ export default {
 							"
 							class="secondary-nav flex flex-col px-8 pt-12 pb-2 text-base text-gray-500"
 						>
-							<RouterLink
+							<!-- <RouterLink
 								:to="'/glossar'"
 								class="font-light hover:text-rich-electric-blue"
 								>Glossar</RouterLink
-							>
+							> -->
 							<!-- <RouterLink to="/impressum"
 								class="font-light hover:text-rich-electric-blue"
 								>Impressum</RouterLink
