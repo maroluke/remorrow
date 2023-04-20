@@ -43,6 +43,11 @@ const routes = [
 		name: "Glossar",
 		component: GlossarView,
 	},
+	{
+		path: "/glossar/:itemId",
+		name: "AccordionItem",
+		component: GlossarView,
+	},
 ];
 
 const router = createRouter({
@@ -53,7 +58,7 @@ const router = createRouter({
 			return savedPosition;
 		} else if (to.hash) {
 			return {
-				selector: to.hash,
+				el: to.hash,
 				behavior: "smooth",
 			};
 		} else {

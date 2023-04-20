@@ -1,21 +1,12 @@
 <script>
 import ItemContent from "@partials/glossar/ItemContent.vue";
 import { Accordion } from "flowbite";
-import SquircleButton from "../components/SquircleButton.vue";
+import { useRoute } from "vue-router";
 
 export default {
 	name: "GlossarView",
 	components: {
 		ItemContent,
-		SquircleButton,
-		Accordion,
-	},
-
-	params: {
-		currentAccordionItem: {
-			type: String,
-			default: null,
-		},
 	},
 
 	data() {
@@ -23,69 +14,75 @@ export default {
 			accordion: null,
 			accordionItems: null,
 			accordionOptions: null,
-			currentAccordionItem: null,
+			route: useRoute(),
 		};
 	},
 
 	mounted() {
-		this.currentAccordionItem = this.$route.query.currentAccordionItem;
-
 		this.accordionItems = [
 			{
-				id: "accordion-open-header-0",
-				triggerEl: document.querySelector("#accordion-open-header-0"),
-				targetEl: document.querySelector("#accordion-open-body-0"),
-				active: true,
+				id: "accordion-nachhaltig",
+				triggerEl: document.querySelector("#nachhaltig"),
+				targetEl: document.querySelector("#accordion-body-nachhaltig"),
+				active: false,
 			},
 			{
-				id: "accordion-open-header-1",
-				triggerEl: document.querySelector("#accordion-open-header-1"),
-				targetEl: document.querySelector("#accordion-open-body-1"),
-				active: true,
+				id: "accordion-klimaneutral",
+				triggerEl: document.querySelector("#klimaneutral"),
+				targetEl: document.querySelector(
+					"#accordion-body-klimaneutral"
+				),
+				active: false,
 			},
 			{
-				id: "accordion-open-header-2",
-				triggerEl: document.querySelector("#accordion-open-header-2"),
-				targetEl: document.querySelector("#accordion-open-body-2"),
-				active: true,
+				id: "accordion-klimapositiv",
+				triggerEl: document.querySelector("#klimapositiv"),
+				targetEl: document.querySelector(
+					"#accordion-body-klimapositiv"
+				),
+				active: false,
 			},
 			{
-				id: "accordion-open-header-3",
-				triggerEl: document.querySelector("#accordion-open-header-3"),
-				targetEl: document.querySelector("#accordion-open-body-3"),
-				active: true,
+				id: "accordion-regenerativ",
+				triggerEl: document.querySelector("#regenerativ"),
+				targetEl: document.querySelector("#accordion-body-regenerativ"),
+				active: false,
 			},
 			{
-				id: "accordion-open-header-4",
-				triggerEl: document.querySelector("#accordion-open-header-4"),
-				targetEl: document.querySelector("#accordion-open-body-4"),
-				active: true,
+				id: "accordion-positiver-impact",
+				triggerEl: document.querySelector("#positiver-impact"),
+				targetEl: document.querySelector(
+					"#accordion-body-positiver-impact"
+				),
+				active: false,
 			},
 			{
-				id: "accordion-open-header-5",
-				triggerEl: document.querySelector("#accordion-open-header-5"),
-				targetEl: document.querySelector("#accordion-open-body-5"),
-				active: true,
+				id: "accordion-zukunftsorientiert",
+				triggerEl: document.querySelector("#zukunftsorientiert"),
+				targetEl: document.querySelector(
+					"#accordion-body-zukunftsorientiert"
+				),
+				active: false,
 			},
 			{
-				id: "accordion-open-header-6",
-				triggerEl: document.querySelector("#accordion-open-header-6"),
-				targetEl: document.querySelector("#accordion-open-body-6"),
-				active: true,
+				id: "accordion-schoen",
+				triggerEl: document.querySelector("#schoen"),
+				targetEl: document.querySelector("#accordion-body-schoen"),
+				active: false,
 			},
 			{
-				id: "accordion-open-header-7",
-				triggerEl: document.querySelector("#accordion-open-header-7"),
-				targetEl: document.querySelector("#accordion-open-body-7"),
-				active: true,
+				id: "accordion-projekte",
+				triggerEl: document.querySelector("#projekte"),
+				targetEl: document.querySelector("#accordion-body-projekte"),
+				active: false,
 			},
 		];
 
-		// options with default values
 		this.accordionOptions = {
-			alwaysOpen: false,
-			activeClasses: "bg-gray-100 dark:bg-gray-800 text-gray-900",
+			alwaysOpen: true,
+			activeClasses: "bg-gray-100 text-gray-900",
 			inactiveClasses: "text-gray-500",
+			transitionDuration: 300,
 		};
 
 		this.accordion = new Accordion(
@@ -93,10 +90,10 @@ export default {
 			this.accordionOptions
 		);
 
-		if (this.currentAccordionItem === null) {
-			this.accordion.open('accordion-open-header-0')
-		} else {
-			this.accordion.open(`accordion-open-header-${this.currentAccordionItem}`)
+		if (this.route.hash) {
+			this.accordion.open(
+				`accordion-${this.route.hash.replace("#", "")}`
+			);
 		}
 	},
 };
@@ -109,12 +106,8 @@ export default {
 		>
 			<h1 class="py-5">Glossar</h1>
 
-			<div
-				id="accordion-open"
-				data-accordion="close"
-				class="text-coal bg-snow p-10 rounded-lg"
-			>
-				<ItemContent :index="0">
+			<div class="text-coal bg-snow p-10 rounded-lg">
+				<ItemContent :index="'nachhaltig'">
 					<template #title>Nachhaltig</template>
 					<template #paragraph>
 						<div class="flex gap-10">
@@ -249,8 +242,8 @@ export default {
 						</div>
 					</template>
 				</ItemContent>
-
-				<ItemContent :index="1">
+				
+				<ItemContent :index="'klimaneutral'">
 					<template #title>Klimaneutral</template>
 					<template #paragraph>
 						<span class="mb-5 block">
@@ -275,8 +268,8 @@ export default {
 						</span>
 					</template>
 				</ItemContent>
-
-				<ItemContent :index="2">
+				
+				<ItemContent :index="'klimapositiv'">
 					<template #title>Klimapositiv</template>
 					<template #paragraph>
 						<span class="mb-5 block">
@@ -294,8 +287,8 @@ export default {
 						</span>
 					</template>
 				</ItemContent>
-
-				<ItemContent :index="3">
+				
+				<ItemContent :index="'regenerativ'">
 					<template #title>Regenerativ</template>
 					<template #paragraph>
 						<span class="mb-5 block">
@@ -381,8 +374,8 @@ export default {
 						</span>
 					</template>
 				</ItemContent>
-
-				<ItemContent :index="4">
+				
+				<ItemContent :index="'positiver-impact'">
 					<template #title>Positiver Impact</template>
 					<template #paragraph>
 						<span class="mb-5 block">
@@ -417,8 +410,8 @@ export default {
 						</span>
 					</template>
 				</ItemContent>
-
-				<ItemContent :index="5">
+				
+				<ItemContent :index="'zukunftsorientiert'">
 					<template #title>Zukunftsorientierung</template>
 					<template #paragraph>
 						<span class="mb-5 block">
@@ -436,8 +429,8 @@ export default {
 						</span>
 					</template>
 				</ItemContent>
-
-				<ItemContent :index="6">
+				
+				<ItemContent :index="'schoen'">
 					<template #title>Schön</template>
 					<template #paragraph>
 						<div class="flex gap-20">
@@ -503,52 +496,19 @@ export default {
 						></iframe>
 					</template>
 				</ItemContent>
-
-				<ItemContent :index="7">
+				
+				<ItemContent :index="'projekte'">
 					<template #title>Projekte</template>
 					<template #paragraph>
 						<span class="mb-5 block">
-							Ein Projekt bei fortomorrow ist... ein Vorhaben, Produkt oder eine Dienstleistung, welche einen Beitrag zur Erreichung der Klimaneutralität respektive -positivität leisten.
+							Ein Projekt bei fortomorrow ist... ein Vorhaben,
+							Produkt oder eine Dienstleistung, welche einen
+							Beitrag zur Erreichung der Klimaneutralität
+							respektive -positivität leisten.
 						</span>
 					</template>
 				</ItemContent>
 			</div>
-
-			<!-- <ul class="flex flex-col">
-				<li class="text-coal border-b relative">
-					<ItemContent />
-				</li>
-				<li class="font-medium flex justify-between text-coal border-b pb-5">
-					Klimaneutral
-					<ArrowIcon :class="`self-center w-3 fill-current`"
-					/>
-				</li>
-				<li class="font-medium flex justify-between text-coal border-b pb-5">
-					Klimapositiv
-					<ArrowIcon :class="`self-center w-3 fill-current`"
-					/>
-				</li>
-				<li class="font-medium flex justify-between text-coal border-b pb-5">
-					Regenerativ
-					<ArrowIcon :class="`self-center w-3 fill-current`"
-					/>
-				</li>
-				<li class="font-medium flex justify-between text-coal border-b pb-5">
-					Positiver Impact
-					<ArrowIcon :class="`self-center w-3 fill-current`"
-					/>
-				</li>
-				<li class="font-medium flex justify-between text-coal border-b pb-5">
-					Zukunftsorientierung
-					<ArrowIcon :class="`self-center w-3 fill-current`"
-					/>
-				</li>
-				<li class="font-medium flex justify-between text-coal border-b pb-5 last:border-b-0">
-					Schön
-					<ArrowIcon :class="`self-center w-3 fill-current`"
-					/>
-				</li>
-			</ul> -->
 		</section>
 	</main>
 </template>

@@ -65,8 +65,14 @@ export default defineComponent({
 			</template>
 
 			<template #paragraph>
-				Wir unterstützen <RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-6', query: {currentAccordionItem: 6} }">nachhaltige</RouterLink> Projekte dabei zu wachsen und einen
-				positiven Beitrag für unsere Zukunft zu erbringen.
+				Wir unterstützen
+				<RouterLink
+					class="glossar-link"
+					:to="{ path: `/glossar/#accordion-header-nachhaltig` }"
+					>nachhaltige</RouterLink
+				>
+				Projekte dabei zu wachsen und einen positiven Beitrag für unsere
+				Zukunft zu erbringen.
 			</template>
 		</TheIntro>
 
@@ -89,10 +95,18 @@ export default defineComponent({
 						Veränderung. <br /><br />
 						Weg von endlosem Streben nach Profit und unendlichem
 						Wachstum, hin zu sinnvollen und
-						<RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-6', query: {currentAccordionItem: 6} }">schönen</RouterLink> Projekten,
-						die ihre
-						<RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-3', query: {currentAccordionItem: 3} }">regenerative</RouterLink> Kraft
-						entfesseln.
+						<RouterLink
+							class="glossar-link"
+							:to="{ path: `/glossar/`, hash: `#schoen` }"
+							>schönen</RouterLink
+						>
+						Projekten, die ihre
+						<RouterLink
+							class="glossar-link"
+							:to="{ path: `/glossar/`, hash: `#regenerativ` }"
+							>regenerative</RouterLink
+						>
+						Kraft entfesseln.
 					</template>
 				</TitleParagraphItem>
 
