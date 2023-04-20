@@ -53,7 +53,7 @@ export default {
 			this.contactIcons.forEach((item) => {
 				const duplicate = item.cloneNode(true);
 				contact.append(duplicate);
-				if(duplicate.type === 'button') {
+				if (duplicate.type === "button") {
 					duplicate.addEventListener("click", () => {
 						this.navigationState.toggleModal();
 					});
@@ -82,14 +82,20 @@ export default {
 				alt="Globe from outta space"
 				class="z-10 block"
 			/> -->
-			<!-- <div class="bg-gradient-to-r from-[rgba(0,0,0,.80)] to-transparent z-20 absolute w-full h-full top-0 left-0"></div> -->
+		<!-- <div class="bg-gradient-to-r from-[rgba(0,0,0,.80)] to-transparent z-20 absolute w-full h-full top-0 left-0"></div> -->
 		<!-- </div> -->
 
-		<div class="drop-shadow-md z-20 md:flex md:flex-wrap md:gap-28 md:justify-between max-w-screen-xl md:w-full md:mx-auto">
-			<div class="flex flex-col gap-10 justify-start mt-10 max-w-[75px] md:max-w-none md:mt-0 md:order-2">
+		<div
+			class="drop-shadow-md z-20 md:flex md:flex-wrap md:gap-28 md:justify-between max-w-screen-xl md:w-full md:mx-auto"
+		>
+			<div
+				class="flex flex-col gap-10 justify-start mt-10 max-w-[75px] md:max-w-none md:mt-0 md:order-2"
+			>
 				<RouterLink to="/">
 					<IconLogoMini class="fill-snow md:hidden" />
-					<IconLogo class="fill-snow hidden md:inline-block md:w-full md:h-full md:h-14" />
+					<IconLogo
+						class="fill-snow hidden md:inline-block md:w-full md:h-full md:h-14"
+					/>
 				</RouterLink>
 			</div>
 
@@ -105,19 +111,57 @@ export default {
 					Lass uns zusammen <br />handeln.
 				</p>
 
-				<div class="contact-icons flex w-full gap-8 drop-shadow mt-4"></div>
+				<div
+					class="contact-icons flex w-full gap-8 drop-shadow mt-4"
+				></div>
 
 				<div class="mt-5">
-					<p class="font-medium text-sm text-moon mb-2">Image Credits:</p>
-					<p class="font-medium text-sm text-moon mb-2 grid grid-cols-1 xs:grid-cols-3 2xs:gap-2">
-						<a href="https://unsplash.com/de/fotos/HwxVLhLyg2s" target="_blank" class="underline font-medium text-sm block">Alexander Milo</a>
-						<a href="https://unsplash.com/de/fotos/frWOcVisp8U" target="_blank" class="underline font-medium text-sm block">Lawrence Kayku</a>
-						<a href="https://unsplash.com/de/fotos/EPdCJtYPrPE" target="_blank" class="underline font-medium text-sm">Bogomil Mihaylov</a>
-						<a href="https://unsplash.com/de/fotos/k2sTHzAnmfY" target="_blank" class="underline font-medium text-sm block">Lawrence Aritao</a>
-						<a href="https://unsplash.com/de/@markusspiske" target="_blank" class="underline font-medium text-sm block">Markus Spiske</a>
-						<a href="https://unsplash.com/de/@mykhailokopyt" target="_blank" class="underline font-medium text-sm block">Mykhailo Kopyt</a>
+					<p class="font-medium text-sm text-moon mb-2">
+						Image Credits:
 					</p>
-					<p class="font-medium text-sm text-moon mb-2 mt-10">Copyright fortomorrow © 2023</p>
+					<p
+						class="font-medium text-sm text-moon mb-2 grid grid-cols-1 xs:grid-cols-3 2xs:gap-2"
+					>
+						<a
+							href="https://unsplash.com/de/fotos/HwxVLhLyg2s"
+							target="_blank"
+							class="underline font-medium text-sm block"
+							>Alexander Milo</a
+						>
+						<a
+							href="https://unsplash.com/de/fotos/frWOcVisp8U"
+							target="_blank"
+							class="underline font-medium text-sm block"
+							>Lawrence Kayku</a
+						>
+						<a
+							href="https://unsplash.com/de/fotos/EPdCJtYPrPE"
+							target="_blank"
+							class="underline font-medium text-sm"
+							>Bogomil Mihaylov</a
+						>
+						<a
+							href="https://unsplash.com/de/fotos/k2sTHzAnmfY"
+							target="_blank"
+							class="underline font-medium text-sm block"
+							>Lawrence Aritao</a
+						>
+						<a
+							href="https://unsplash.com/de/@markusspiske"
+							target="_blank"
+							class="underline font-medium text-sm block"
+							>Markus Spiske</a
+						>
+						<a
+							href="https://unsplash.com/de/@mykhailokopyt"
+							target="_blank"
+							class="underline font-medium text-sm block"
+							>Mykhailo Kopyt</a
+						>
+					</p>
+					<p class="font-medium text-sm text-moon mb-2 mt-10">
+						Copyright fortomorrow © 2023
+					</p>
 				</div>
 			</div>
 		</div>
@@ -157,11 +201,11 @@ export default {
 </template>
 
 <style>
-    footer .contact-icons a svg {
-        @apply !h-4;
-    }
+footer .contact-icons a svg {
+	@apply !h-4;
+}
 
-	footer .contact-icons a {
-		@apply bg-snow p-1 rounded text-black opacity-75;
-	}
+footer .contact-icons a {
+	@apply bg-snow p-1 rounded text-black opacity-75;
+}
 </style>

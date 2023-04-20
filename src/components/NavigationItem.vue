@@ -29,7 +29,7 @@ export default {
 </template>
 
 <style scoped>
-    .router-link-active {
-        @apply bg-rich-electric-blue text-snow cursor-default hover:bg-rich-electric-blue hover:text-snow;
-    }
+.router-link-active {
+	@apply bg-rich-electric-blue text-snow cursor-default hover:bg-rich-electric-blue hover:text-snow;
+}
 </style>

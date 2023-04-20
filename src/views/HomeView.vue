@@ -19,9 +19,9 @@ export default defineComponent({
 			error: null,
 		};
 	},
-	async mounted() {
-		this.error = this.cmsData = null;
-		this.loading = true;
+	mounted() {
+		// this.loading = true;
+		// this.error = this.cmsData = null;
 		// const url = `/api/notion`;
 		// await fetch(url)
 		// 	.then((response) => response.json())
@@ -65,7 +65,7 @@ export default defineComponent({
 			</template>
 
 			<template #paragraph>
-				Wir unterstützen nachhaltige Projekte dabei zu wachsen und einen
+				Wir unterstützen <RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-6', query: {currentAccordionItem: 6} }">nachhaltige</RouterLink> Projekte dabei zu wachsen und einen
 				positiven Beitrag für unsere Zukunft zu erbringen.
 			</template>
 		</TheIntro>
@@ -89,9 +89,9 @@ export default defineComponent({
 						Veränderung. <br /><br />
 						Weg von endlosem Streben nach Profit und unendlichem
 						Wachstum, hin zu sinnvollen und
-						<a href="#" class="glossar-link">schönen</a> Projekten,
+						<RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-6', query: {currentAccordionItem: 6} }">schönen</RouterLink> Projekten,
 						die ihre
-						<a href="#" class="glossar-link">regenerative</a> Kraft
+						<RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-3', query: {currentAccordionItem: 3} }">regenerative</RouterLink> Kraft
 						entfesseln.
 					</template>
 				</TitleParagraphItem>

@@ -10,7 +10,13 @@ export default {
 	data() {
 		return {
 			navigationState: {},
-			userRole: ["interessierte Person", "Unternehmen", "Verein", "NGO", "willy nilly"],
+			userRole: [
+				"interessierte Person",
+				"Unternehmen",
+				"Verein",
+				"NGO",
+				"willy nilly",
+			],
 		};
 	},
 	mounted() {

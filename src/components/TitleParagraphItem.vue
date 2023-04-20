@@ -66,7 +66,7 @@
 		>
 			<template #buttonRef>{{ button }}</template>
 		</SquircleButton>
-		
+
 		<SquircleButton
 			v-else-if="button"
 			:icon="icon"

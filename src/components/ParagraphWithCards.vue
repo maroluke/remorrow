@@ -3,20 +3,23 @@
 		<div class="max-w-screen-lg md:flex md:justify-center md:gap-20">
 			<TitleParagraphItem class="md:!w-1/3">
 				<template #title>Was wir tun.</template>
-				
+
 				<template #paragraph>
-					Mit <span class="font-bold">fortomorrow</span> wirken wir in den
-					folgenden Bereichen.
+					Mit <span class="font-bold">fortomorrow</span> wirken wir in
+					den folgenden Bereichen.
 				</template>
 			</TitleParagraphItem>
 
-			<div class="flex flex-col gap-10 mt-10 2xs:flex-row 2xs:gap-4 sm:gap-10 md:gap-12 md:w-2/3 md:mt-0">
+			<div
+				class="flex flex-col gap-10 mt-10 2xs:flex-row 2xs:gap-4 sm:gap-10 md:gap-12 md:w-2/3 md:mt-0"
+			>
 				<div class="flex-1 flex flex-col">
 					<CommunityIcon class="w-10 h-10 fill-dark" />
 					<h3 class="leading-loose">Community</h3>
 					<p class="text-sm mt-2 flex-grow m-0 md:text-xl">
-						Aufbau einer Com&shy;munity mit mo&shy;ti&shy;vier&shy;ten
-						Men&shy;schen, die ver&shy;ändern und helfen wol&shy;len.
+						Aufbau einer Com&shy;munity mit
+						mo&shy;ti&shy;vier&shy;ten Men&shy;schen, die
+						ver&shy;ändern und helfen wol&shy;len.
 					</p>
 					<SquircleButton
 						:classes="'bg-coal px-3 !h-10 w-min'"
@@ -32,8 +35,8 @@
 					<ProjectIcon class="w-10 h-10 fill-dark" />
 					<h3 class="leading-loose">Projekte</h3>
 					<p class="text-sm mt-2 flex-grow m-0 md:text-xl">
-						Aktive Unterstützung und Förderung von nach&shy;haltigen &
-						rege&shy;ne&shy;ra&shy;tiven Ideen und Projekten.
+						Aktive Unterstützung und Förderung von nach&shy;haltigen
+						& rege&shy;ne&shy;ra&shy;tiven Ideen und Projekten.
 					</p>
 					<SquircleButton
 						:classes="'bg-coal px-3 !h-10 w-min'"

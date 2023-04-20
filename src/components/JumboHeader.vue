@@ -32,7 +32,9 @@ export default {
 		<div
 			class="flex gap-10 flex-col px-5 pt-5 z-20 shrink items-center md:p-0 md:text-dark"
 		>
-			<h1 class="pt-5 drop-shadow-contrast hidden max-w-screen-sm self-start md:block md:drop-shadow-none">
+			<h1
+				class="pt-5 drop-shadow-contrast hidden max-w-screen-sm self-start md:block md:drop-shadow-none"
+			>
 				<slot name="title">Titel</slot>
 			</h1>
 

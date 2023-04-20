@@ -61,7 +61,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 					Pflanzen in all ihren Wachstumsstadien. Ein Garten, der
 					darum bemüht ist, den idealen Boden für gesundes Wachstum
 					von neuen, nachhaltigen und
-					<a href="#" class="glossar-link">zukunftsorientierten</a>
+					<RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-5', query: {currentAccordionItem: 5} }">zukunftsorientierten</RouterLink>
 					Projekten herzustellen. <br /><br />
 					Egal ob diese gerade erst keimen oder bereits kleine
 					Pflänzchen sind. Wir schaffen die individuellen
@@ -87,9 +87,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 					Alle Projekte bei fortomorrow haben einen klaren,
 					nachhaltigen Bezug – das ist uns besonders wichtig. Aus
 					ökologischer Sicht sind sie so bspw.
-					<a href="#" class="glossar-link"
-						>klimaneutral/klimapositiv</a
-					>, <a href="#" class="glossar-link">regenerativ</a> oder
+					<RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-1', query: {currentAccordionItem: 1} }">klimaneutral</RouterLink>/<RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-2', query: {currentAccordionItem: 2} }">klimapositiv</RouterLink>, <RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-3', query: {currentAccordionItem: 3} }">regenerativ</RouterLink> oder
 					unterwegs dahin. Wir stellen diesen Bezug sicher und
 					unterstützen die Projekte aktiv auf diesem Weg. <br /><br />
 					So streben wir gemeinsam ein besseres Morgen an. Für uns

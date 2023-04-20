@@ -1,13 +1,14 @@
 import { defineStore } from "pinia";
 import { Modal } from "flowbite";
 
+
 export const useNavigationStore = defineStore("navigation", {
 	state: () => ({
 		navigationIsOpen: false,
 		modal: null,
 		modalOptions: {
 			backdropClasses:
-				"bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40 backdrop-filter backdrop-blur-sm",
+				"bg-gray-900 bg-opacity-50 fixed inset-0 z-40 backdrop-filter backdrop-blur-3xl",
 		},
 	}),
 	actions: {

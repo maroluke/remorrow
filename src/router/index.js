@@ -5,7 +5,7 @@ import JoinView from "../views/JoinView.vue";
 import PathView from "../views/PathView.vue";
 import CommunityView from "../views/CommunityView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
-import GlossarView from "../views/GlossarView.vue"
+import GlossarView from "../views/GlossarView.vue";
 
 const routes = [
 	{

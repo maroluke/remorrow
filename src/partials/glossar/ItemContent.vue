@@ -22,13 +22,12 @@ export default {
 </script>
 
 <template>
-	<section class="border-b z-10 px-5 last:border-b-0">
-		<h2 :id="this.accordionOpenHeader" class="h-16 flex items-center">
+	<section :id="this.accordionOpenHeader" class="border-b z-10 last:border-b-0">
+		<h2 class="h-16 flex items-center">
 			<button
 				class="text-xl font-medium m-0 flex justify-between items-center w-full h-full bg-transparent"
 				type="button"
 				:data-accordion-target="`#${this.accordionOpenBody}`"
-				aria-expanded="true"
 				:aria-controls="this.accordionOpenBody"
 			>
 				<slot name="title"></slot>

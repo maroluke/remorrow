@@ -13,10 +13,10 @@ export default {
 	components: {
 		IconArrow,
 	},
-	data () {
+	data() {
 		return {
 			isLoaded: false,
-		}
+		};
 	},
 	methods: {
 		onImgLoad() {
@@ -25,7 +25,7 @@ export default {
 	},
 	mounted() {
 		const container = document.querySelector("#outtaspace");
-		const count = (/Mobi|Android/i.test(navigator.userAgent)) ? 100 : 500;
+		const count = /Mobi|Android/i.test(navigator.userAgent) ? 100 : 500;
 		new Sparticles(container, {
 			composition: "source-over",
 			count: count,
@@ -60,7 +60,10 @@ export default {
 		id="theIntro"
 		class="px-5 text-snow h-full min-h-screen transition-all z-0 md:flex"
 	>
-		<div id="outtaspace" class="fixed left-0 right-0 top-0 bottom-0 z-10 w-full h-full"></div>
+		<div
+			id="outtaspace"
+			class="fixed left-0 right-0 top-0 bottom-0 z-10 w-full h-full"
+		></div>
 
 		<div
 			class="flex gap-10 flex-col items-center justify-center z-30 pt-24 max-w-screen-sm drop-shadow-contrast md:pt-0 md:mx-auto"

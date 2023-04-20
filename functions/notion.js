@@ -1,4 +1,3 @@
-
 const { Client } = require("@notionhq/client");
 const { NOTION_KEY, NOTION_DB } = process.env;
 // Initializing a client

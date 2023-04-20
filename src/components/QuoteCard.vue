@@ -2,10 +2,11 @@
 import SquircleButton from "./SquircleButton.vue";
 </script>
 
-
 <template>
 	<section class="z-50">
-		<div class="text-xs rounded-lg px-5 py-10 bg-white text-coal drop-shadow-xl w-full max-w-screen-sm mx-auto opacity-90 md:w-96">
+		<div
+			class="text-xs rounded-lg px-5 py-10 bg-white text-coal drop-shadow-xl w-full max-w-screen-sm mx-auto opacity-90 md:w-96"
+		>
 			<p class="italic text-base">
 				“Wenn wir die Welt neu denken wollen, müssen wir zu den
 				gedanklichen Fundamenten zurückgehen, auf denen die uns heute
@@ -28,8 +29,11 @@ import SquircleButton from "./SquircleButton.vue";
 				</div>
 
 				<div class="w-1/3 flex flex-col justify-between items-center">
-					<div class="rounded-full overflow-hidden max-w-[100px] lg:max-w-[140px]">
-						<img loading="lazy"
+					<div
+						class="rounded-full overflow-hidden max-w-[100px] lg:max-w-[140px]"
+					>
+						<img
+							loading="lazy"
 							class="object-cover rounded-full"
 							src="../assets/media/profile-maja-goepel.jpg"
 							alt="Maja Göpel"
@@ -61,4 +65,3 @@ import SquircleButton from "./SquircleButton.vue";
 		</div>
 	</section>
 </template>
-
