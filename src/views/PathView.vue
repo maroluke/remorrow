@@ -99,14 +99,38 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 						<template #paragraph>
 							<ul class="list">
-								<li>Weiterentwicklung von 42-Konzepten</li>
 								<li>
-									Projekte finden und Kollaboration aufbauen
+									<span>
+										Weiterentwicklung von 42-Konzepten
+									</span>
+									<div>
+										<img class="w-6" src="loader.gif" alt="On progress animation">
+									</div>
 								</li>
 								<li>
-									Start / Verstärkung des Community-Building
+									<span>
+										Projekte finden und Kollaboration aufbauen
+									</span>
+									<div>
+										<img class="w-6" src="loader.gif" alt="On progress animation">
+									</div>
 								</li>
-								<li>Konzeption Plattform</li>
+								<li>
+									<span>
+										Start / Verstärkung des Community-Building
+									</span>
+									<div>
+										<img class="w-6" src="loader.gif" alt="On progress animation">
+									</div>
+								</li>
+								<li>
+									<span>
+										Konzeption Plattform
+									</span>
+									<div>
+										<img class="w-6" src="loader.gif" alt="On progress animation">
+									</div>
+								</li>
 							</ul>
 						</template>
 					</TitleParagraphItem>

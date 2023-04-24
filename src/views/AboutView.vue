@@ -30,14 +30,14 @@ import JumboHeader from "@components/JumboHeader.vue";
 				<template #paragraph>
 					... auf unsere Weise und suchen nach einem eigenen Weg.
 					Nebst dem, dass wir uns als Kollektiv verstehen und eine
-					<strong class="font-extrabold"
+					<strong class="font-bold"
 						>Community rundum nachhaltige Ideen und Projekte</strong
 					>
 					aufbauen, gibt es natürlich immer treibende Kräfte.
 					<br /><br />
 					<!-- Bei uns sind das <a href="#" class="glossar-link font-bold">Marko</a> und <a href="#" class="glossar-link font-bold">Sirik</a>. -->
-					Bei uns sind das <strong>Marko</strong> und
-					<strong>Sirik</strong>.
+					Bei uns sind das <strong class="font-bold">Marko</strong> und
+					<strong class="font-bold">Sirik</strong>.
 					<br /><br />
 					Du willst uns kennenlernen? Für einen Schwatz sind wir immer
 					zu haben!
