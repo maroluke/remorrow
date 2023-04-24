@@ -104,7 +104,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 										Weiterentwicklung von 42-Konzepten
 									</span>
 									<div>
-										<img class="w-6" src="loader.gif" alt="On progress animation">
+										<img class="w-6" src="/loader.gif" alt="On progress animation">
 									</div>
 								</li>
 								<li>
@@ -112,7 +112,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 										Projekte finden und Kollaboration aufbauen
 									</span>
 									<div>
-										<img class="w-6" src="loader.gif" alt="On progress animation">
+										<img class="w-6" src="/loader.gif" alt="On progress animation">
 									</div>
 								</li>
 								<li>
@@ -120,7 +120,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 										Start / Verstärkung des Community-Building
 									</span>
 									<div>
-										<img class="w-6" src="loader.gif" alt="On progress animation">
+										<img class="w-6" src="/loader.gif" alt="On progress animation">
 									</div>
 								</li>
 								<li>
@@ -128,7 +128,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 										Konzeption Plattform
 									</span>
 									<div>
-										<img class="w-6" src="loader.gif" alt="On progress animation">
+										<img class="w-6" src="/loader.gif" alt="On progress animation">
 									</div>
 								</li>
 							</ul>
