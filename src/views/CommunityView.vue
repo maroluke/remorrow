@@ -85,9 +85,7 @@ export default {
 						Es ist eine Reise und wir werden an den Erfahrungen
 						wachsen. <br /><br />
 						Hast du Lust, uns auf dieser Reise zu begleiten,
-						mitzugestalten und glaubst ebenso an unsere
-						<a href="/unser-weg" class="glossar-link">Grundsätze</a
-						>?
+						mitzugestalten und glaubst ebenso an unsere Grundsätze?
 					</p>
 				</template>
 			</TitleParagraphItem>

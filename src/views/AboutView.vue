@@ -36,9 +36,8 @@ import JumboHeader from "@components/JumboHeader.vue";
 					aufbauen, gibt es natürlich immer treibende Kräfte.
 					<br /><br />
 					<!-- Bei uns sind das <a href="#" class="glossar-link font-bold">Marko</a> und <a href="#" class="glossar-link font-bold">Sirik</a>. -->
-					Bei uns sind das
-					<span class="glossar-link font-bold">Marko</span> und
-					<span class="glossar-link font-bold">Sirik</span>.
+					Bei uns sind das <strong>Marko</strong> und
+					<strong>Sirik</strong>.
 					<br /><br />
 					Du willst uns kennenlernen? Für einen Schwatz sind wir immer
 					zu haben!
@@ -61,7 +60,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 					Pflanzen in all ihren Wachstumsstadien. Ein Garten, der
 					darum bemüht ist, den idealen Boden für gesundes Wachstum
 					von neuen, nachhaltigen und
-					<RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-5', query: {currentAccordionItem: 5} }">zukunftsorientierten</RouterLink>
+					<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#zukunftsorientiert' }">zukunftsorientierten</RouterLink>
 					Projekten herzustellen. <br /><br />
 					Egal ob diese gerade erst keimen oder bereits kleine
 					Pflänzchen sind. Wir schaffen die individuellen
@@ -87,7 +86,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 					Alle Projekte bei fortomorrow haben einen klaren,
 					nachhaltigen Bezug – das ist uns besonders wichtig. Aus
 					ökologischer Sicht sind sie so bspw.
-					<RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-1', query: {currentAccordionItem: 1} }">klimaneutral</RouterLink>/<RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-2', query: {currentAccordionItem: 2} }">klimapositiv</RouterLink>, <RouterLink class="glossar-link" :to="{ path: '/glossar', hash: '#accordion-open-header-3', query: {currentAccordionItem: 3} }">regenerativ</RouterLink> oder
+					<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#klimaneutral' }">klimaneutral</RouterLink>/<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#klimapositiv' }">klimapositiv</RouterLink>, <RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#regenerativ' }">regenerativ</RouterLink> oder
 					unterwegs dahin. Wir stellen diesen Bezug sicher und
 					unterstützen die Projekte aktiv auf diesem Weg. <br /><br />
 					So streben wir gemeinsam ein besseres Morgen an. Für uns

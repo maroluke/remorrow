@@ -65,12 +65,7 @@ export default defineComponent({
 			</template>
 
 			<template #paragraph>
-				Wir unterstützen
-				<RouterLink
-					class="glossar-link"
-					:to="{ path: `/glossar/#accordion-header-nachhaltig` }"
-					>nachhaltige</RouterLink
-				>
+				Wir unterstützen nachhaltige
 				Projekte dabei zu wachsen und einen positiven Beitrag für unsere
 				Zukunft zu erbringen.
 			</template>
