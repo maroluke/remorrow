@@ -160,7 +160,7 @@ export default {
 						>
 					</p>
 					<p class="font-medium text-sm text-moon mb-2 mt-10">
-						Copyright fortomorrow © 2023
+						Copyright re:morrow © 2023
 					</p>
 				</div>
 			</div>

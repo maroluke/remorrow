@@ -11,7 +11,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 			<template #paragraph>
 				Wir sind der Meinung, dass wir miteinander nicht nur mehr
 				bewirken, sondern auch aneinander wachsen können. Auf unserer
-				Reise mit fortomorrow freuen wir uns auf alle, die mit uns einen
+				Reise mit re:morrow freuen wir uns auf alle, die mit uns einen
 				nachhaltig positiven Beitrag für eine hoffnungsvolle Zukunft
 				leisten wollen.
 			</template>
@@ -88,7 +88,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 					ausprobieren?
 					<br /><br />
 					Wir freuen uns dich kennenzulernen und gemeinsam mit dir zu
-					entdecken, wo du dich in der fortomorrow-Community am besten
+					entdecken, wo du dich in der re:morrow-Community am besten
 					entfalten kannst.
 				</template>
 			</TitleParagraphItem>

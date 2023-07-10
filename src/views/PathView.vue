@@ -34,7 +34,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 						denen wir uns gemeinsam entwickeln und für künftiges
 						Wachstum wurzeln können.
 						<br /><br />
-						Fortomorrow entwickeln wir durch die nachfolgenden
+						re:morrow entwickeln wir durch die nachfolgenden
 						Etappen:
 					</template>
 				</TitleParagraphItem>
@@ -240,7 +240,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 						>, in dem Hoffnung, Inspiration und Begeisterung
 						gegenwärtig ist und Mut für Veränderung macht.
 						<br /><br />
-						Konkret will sich fortomorrow als relevante, globale
+						Konkret will sich re:morrow als relevante, globale
 						Plattform etablieren um die richtigen Menschen &
 						nachhaltige Projekte zusammenzubringen. So schaffen wir
 						eine Basis für kollaboratives Wirken, die Lösung von
@@ -268,7 +268,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 							<ul class="list">
 								<li>
 									Auf mindestens einem sozialen Kanal hat
-									fortomorrow seine Bekanntheit resp.
+									re:morrow seine Bekanntheit resp.
 									Reichweite auf 2’000 Follower ausgebaut.
 								</li>
 								<li>
@@ -287,11 +287,11 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 						<div class="mt-5">
 							<ul class="list">
 								<li>
-									Die fortomorrow-Familie zählt 15 Projekte.
+									Die re:morrow-Familie zählt 15 Projekte.
 								</li>
 								<li>
 									500 Menschen sind Teil der
-									fortomorrow-Community und setzen sich aktiv
+									re:morrow-Community und setzen sich aktiv
 									für nachhaltige Ideen und deren Umsetzung
 									ein.
 								</li>

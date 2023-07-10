@@ -20,7 +20,7 @@ export default {
 			<template #title>Wir bauen eine Community </template>
 
 			<template #paragraph>
-				Noch stehen wir am Anfang und müssen das fortomorrow-Verständnis
+				Noch stehen wir am Anfang und müssen das re:morrow-Verständnis
 				einer funktionierenden Community erst noch entwickeln.
 			</template>
 		</JumboHeader>

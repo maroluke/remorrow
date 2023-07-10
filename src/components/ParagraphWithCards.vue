@@ -5,7 +5,7 @@
 				<template #title>Was wir tun.</template>
 
 				<template #paragraph>
-					Mit <span class="font-bold">fortomorrow</span> wirken wir in
+					Mit <span class="font-bold">re:morrow</span> wirken wir in
 					den folgenden Bereichen.
 				</template>
 			</TitleParagraphItem>

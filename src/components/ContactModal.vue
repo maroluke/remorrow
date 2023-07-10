@@ -70,9 +70,9 @@ export default {
 						dieser Seite. Wenn du uns kontaktieren möchtest, schreib
 						uns doch eine E-Mail an
 						<a
-							href="mailto:hey@fortomorrow.world"
+							href="mailto:hey@remorrow.world"
 							class="text-rich-electric-blue hover:text-blue-600"
-							>hey@fortomorrow.world</a
+							>hey@remorrow.world</a
 						>
 					</p>
 					<form

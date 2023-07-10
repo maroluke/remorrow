@@ -85,7 +85,7 @@ export default defineComponent({
 
 					<template #paragraph>
 						Als Kollektiv ist
-						<span class="font-bold">fortomorrow</span>, mit
+						<span class="font-bold">re:morrow</span>, mit
 						begeisterten & motivierten Menschen, Teil der
 						Veränderung. <br /><br />
 						Weg von endlosem Streben nach Profit und unendlichem
@@ -149,7 +149,7 @@ export default defineComponent({
 				<template #paragraph>
 					Hey, wir brauchen nichts zu verstecken. Erfahre hier, wie
 					unsere Roadmap aussieht. Ein Schritt nach dem anderen. So
-					entwickeln wir fortomorrow, wachsen und schaffen Wachstum.
+					entwickeln wir re:morrow, wachsen und schaffen Wachstum.
 					<br /><br />
 					Bist du Teil unseres nächsten Schritts und hast Bock
 					mitzugestalten?
@@ -168,7 +168,7 @@ export default defineComponent({
 				<template #title> Wer wir sind. </template>
 
 				<template #paragraph>
-					Bist du neugierig, wer und was hinter fortomorrow steckt?
+					Bist du neugierig, wer und was hinter re:morrow steckt?
 					Erfahre mehr über die Menschen dahinter und unseren
 					Blickwinkel.
 				</template>

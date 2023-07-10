@@ -12,7 +12,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 			<template #title> Wir fördern Projekte </template>
 
 			<template #paragraph>
-				Bei fortomorrow steht eine zentrale Frage im Mittelpunkt unseres
+				Bei re:morrow steht eine zentrale Frage im Mittelpunkt unseres
 				Denkens und Handelns:
 			</template>
 		</JumboHeader>

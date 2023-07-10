@@ -9,7 +9,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 			<template #title>Wer wir sind </template>
 
 			<template #paragraph>
-				Hinter fortomorrow stehen Menschen, die sich aktiv für ein
+				Hinter re:morrow stehen Menschen, die sich aktiv für ein
 				besseres Morgen einsetzen und mit Begeisterung und Motivation
 				gemeinsam einen Schritt weiter gehen.
 			</template>
@@ -83,7 +83,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 				<template #title>Die Projekte.</template>
 
 				<template #paragraph>
-					Alle Projekte bei fortomorrow haben einen klaren,
+					Alle Projekte bei re:morrow haben einen klaren,
 					nachhaltigen Bezug – das ist uns besonders wichtig. Aus
 					ökologischer Sicht sind sie so bspw.
 					<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#klimaneutral' }">klimaneutral</RouterLink>/<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#klimapositiv' }">klimapositiv</RouterLink>, <RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#regenerativ' }">regenerativ</RouterLink> oder

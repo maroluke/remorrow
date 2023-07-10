@@ -261,7 +261,7 @@ export default {
 						</span>
 
 						<span class="mb-5 block">
-							Fortomorrow nimmt die Definition von myclimate als
+							re:morrow nimmt die Definition von myclimate als
 							Grundlage zur Definition dieses Begriffs. Wo immer
 							möglich, soll versucht werden, die Perspektive nicht
 							alleine auf CO2-Emissionen zu beschränken, sondern
@@ -445,7 +445,7 @@ export default {
 								wenn sich Funktion und Design in einem
 								Gleichgewicht befinden. Aus diesem Grund gehört
 								für uns Schönheit zur Basis und zum Fundament,
-								was fortomorrow verkörpern soll.
+								was re:morrow verkörpern soll.
 							</span>
 
 							<figure class="flex-1">
@@ -503,7 +503,7 @@ export default {
 					<template #title>Projekte</template>
 					<template #paragraph>
 						<span class="mb-5 block">
-							Ein Projekt bei fortomorrow ist... ein Vorhaben,
+							Ein Projekt bei re:morrow ist... ein Vorhaben,
 							Produkt oder eine Dienstleistung, welche einen
 							Beitrag zur Erreichung der Klimaneutralität
 							respektive -positivität leisten.
