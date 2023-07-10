@@ -50,7 +50,7 @@ export default {
 
 			<li>
 				<a
-					href="https://twitter.com/42mrrw"
+					href="https://twitter.com/remorrow_world"
 					target="_blank"
 					class="text-silver"
 				>
@@ -62,7 +62,7 @@ export default {
 
 			<li>
 				<a
-					href="https://linkedin.com/company/42mrrw/"
+					href="https://linkedin.com/company/remorrow/"
 					target="_blank"
 					class="text-silver"
 				>
@@ -74,7 +74,7 @@ export default {
 
 			<li>
 				<a
-					href="https://instagram.com/42mrrw/"
+					href="https://instagram.com/remorrow.world/"
 					target="_blank"
 					class="text-silver"
 				>
