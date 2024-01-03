@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
+import EventsView from "../views/EventsView.vue";
 import JoinView from "../views/JoinView.vue";
 import PathView from "../views/PathView.vue";
 import CommunityView from "../views/CommunityView.vue";
@@ -17,6 +18,11 @@ const routes = [
 		path: "/wer-wir-sind",
 		name: "About",
 		component: AboutView,
+	},
+	{
+		path: "/events",
+		name: "Events",
+		component: EventsView,
 	},
 	{
 		path: "/sei-dabei",

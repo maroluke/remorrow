@@ -54,8 +54,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 							<ul class="list">
 								<li class="!bg-green-400">
 									<span>
-										Entwicklung der Repräsentation
-										(Branding) und Kommunikation
+										Entwicklung der Idee und zentraler Konzepte
 									</span>
 									<div>
 										<IconChecked2
@@ -65,8 +64,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 								</li>
 								<li class="!bg-green-400">
 									<span>
-										Aufbau des 42-Fundaments (entwickeln
-										eigener Konzepte)
+										Repräsentation / Branding
 									</span>
 									<div>
 										<IconChecked2
@@ -76,8 +74,17 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 								</li>
 								<li class="!bg-green-400">
 									<span>
-										Schärfung Value Proposition und
-										Strategie
+										Aufbau der Strategie und Kommunikation
+									</span>
+									<div>
+										<IconChecked2
+											class="fill-snow w-6 self-start"
+										/>
+									</div>
+								</li>
+								<li class="!bg-green-400">
+									<span>
+										Purpose, Vision und Mission
 									</span>
 									<div>
 										<IconChecked2
@@ -99,36 +106,54 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 						<template #paragraph>
 							<ul class="list">
-								<li>
+								<li class="!bg-green-400">
 									<span>
-										Weiterentwicklung von 42-Konzepten
+										Offizieller Launch von Webseite & Social Media
 									</span>
 									<div>
-										<img class="w-6" src="/loader.gif" alt="On progress animation">
+										<IconChecked2
+											class="fill-snow w-6 self-start"
+										/>
 									</div>
 								</li>
-								<li>
+								<li class="!bg-green-400">
 									<span>
-										Projekte finden und Kollaboration aufbauen
+										Schärfung Value Proposition
 									</span>
 									<div>
-										<img class="w-6" src="/loader.gif" alt="On progress animation">
+										<IconChecked2
+											class="fill-snow w-6 self-start"
+										/>
 									</div>
 								</li>
-								<li>
+								<li class="!bg-green-400">
 									<span>
-										Start / Verstärkung des Community-Building
+										Erste Projekte & Partnerschaften
 									</span>
 									<div>
-										<img class="w-6" src="/loader.gif" alt="On progress animation">
+										<IconChecked2
+											class="fill-snow w-6 self-start"
+										/>
 									</div>
 								</li>
-								<li>
+								<li class="!bg-green-400">
 									<span>
-										Konzeption Plattform
+										Weiterentwicklung Kernkonzepte
 									</span>
 									<div>
-										<img class="w-6" src="/loader.gif" alt="On progress animation">
+										<IconChecked2
+											class="fill-snow w-6 self-start"
+										/>
+									</div>
+								</li>
+								<li class="!bg-green-400">
+									<span>
+										Entwicklung des holistischen Scorings
+									</span>
+									<div>
+										<IconChecked2
+											class="fill-snow w-6 self-start"
+										/>
 									</div>
 								</li>
 							</ul>
@@ -141,17 +166,50 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 						:iconStyle="'fill-coal md:fill-moon'"
 						class="text-coal py-5 md:text-snow"
 					>
-						<template #title>2023/24 - Planting </template>
+						<template #title>2024 - Working with the plants </template>
 
 						<template #paragraph>
 							<ul class="list">
 								<li>
-									Reporting 2023 & Re-Evaluation Strategie
+									<span>
+										Strukturiertes Onboarding von Projekten & Startups
+									</span>
+									<div>
+										<img class="w-6" src="/loader.gif" alt="On progress animation">
+									</div>
 								</li>
-								<li>Onboarding weiterer Projekte</li>
-								<li>Fokus auf Plattform</li>
-								<li>Definition & Angebot erster Services</li>
-								<li>Etablierung erster Partnerschaften</li>
+								<li>
+									<span>
+										Kontinuierliche Verbesserung des holistischen Scorings
+									</span>
+									<div>
+										<img class="w-6" src="/loader.gif" alt="On progress animation">
+									</div>
+								</li>
+								<li>
+									<span>
+										Erweiterung der Pioneer- & Hero-Teams
+									</span>
+									<div>
+										<img class="w-6" src="/loader.gif" alt="On progress animation">
+									</div>
+								</li>
+								<li>
+									<span>
+										Umsetzen von Events / kommunikativen Massnahmen
+									</span>
+									<div>
+										<img class="w-6" src="/loader.gif" alt="On progress animation">
+									</div>
+								</li>
+								<li>
+									<span>
+										Lancierung des initialen Angebots
+									</span>
+									<div>
+										<img class="w-6" src="/loader.gif" alt="On progress animation">
+									</div>
+								</li>
 							</ul>
 						</template>
 					</TitleParagraphItem>
@@ -162,18 +220,18 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 						:iconStyle="'fill-coal md:fill-moon'"
 						class="text-coal pt-5 md:text-snow"
 					>
-						<template #title>2025 - Growing </template>
+						<template #title>2025/26 - Growing </template>
 
 						<template #paragraph>
 							<ul class="list">
 								<li>
-									Reporting 2024 & Re-Evaluation Strategie
+									Fokussierung der Arbeiten an der Plattform
 								</li>
 								<li>
-									Weitere Projekte, Mitglieder und Partner
-									gewinnen
+									Erweiterung der Pioneer- & Hero-Teams
 								</li>
-								<li>Plattform-Erweiterung: Ideen.</li>
+								<li>Stabilisierung des Angebots</li>
+								<li>Vorbereitung für breitere Skalierung</li>
 							</ul>
 						</template>
 					</TitleParagraphItem>
@@ -192,10 +250,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 					<template #title>Purpose </template>
 
 					<template #paragraph>
-						<strong>Zusammen leisten wir einen Beitrag</strong> für
-						eine hoffnungsvolle und begeisternde Zukunft, in der wir
-						Menschen im Einklang mit unserem Planeten und
-						Mitmenschen leben können.
+						<strong>Auf den Punkt:</strong> Wir wollen eine hoffnungsvolle und inspirierende Zukunft. Wir leisten unseren Beitrag, indem wir nachhaltige Ideen mit positiver Wirkung aktiv unterstützen und fördern.
 					</template>
 				</TitleParagraphItem>
 
@@ -213,12 +268,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 				<TitleParagraphItem>
 					<template #paragraph>
-						<strong>Wir setzen uns für Ideen & Projekte ein</strong
-						>, die einen nachweisbaren und positiven Impact
-						realisieren und diesen in ihren Werten sowie
-						Geschäftsmodell verankert haben. Für diese Unterfangen,
-						die unseren Werten entsprechen und überzeugen, schaffen
-						wir einen fruchtbaren Nährboden.
+						Konkret entwickeln wir eine Community von interessierten und motivierten Menschen, die gemeinsam das Morgen mitgestalten wollen, sich gegenseitig unterstützen und an guten, nachhaltigen Ideen arbeiten. Perspektivisch bauen wir eine digitale Plattform, die diese Unterstützung auf globaler Ebene zu skaliert.
 					</template>
 				</TitleParagraphItem>
 			</div>
@@ -235,20 +285,16 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 					<template #title>Vision </template>
 
 					<template #paragraph>
-						<strong
-							>Ein besseres Morgen für Mensch und Planet</strong
-						>, in dem Hoffnung, Inspiration und Begeisterung
-						gegenwärtig ist und Mut für Veränderung macht.
+						<strong>Ein besseres Morgen für Mensch und Planet</strong>, in dem Hoffnung, Inspiration und Begeisterung gegenwärtig ist und Mut für Veränderung macht. 
 						<br /><br />
-						Konkret will sich re:morrow als relevante, globale
-						Plattform etablieren um die richtigen Menschen &
-						nachhaltige Projekte zusammenzubringen. So schaffen wir
-						eine Basis für kollaboratives Wirken, die Lösung von
-						Problemen und positivem Impact.
+						Wir sehen re:morrow als globale Plattform, um die richtigen Menschen zusammenzubringen. 
+						Die Menschen, die aktiv mitgestalten und jene, die Ideen mit positiver Wirkung vorantreiben. 
+						<br /><br />
+						So schaffen wir eine Basis für kollaboratives Wirken, die Lösung von Problemen und mehr Hoffnung in eine bessere Zukunft für alle.
 					</template>
 				</TitleParagraphItem>
 
-				<TitleParagraphItem>
+				<!-- <TitleParagraphItem>
 					<template #title>Ziele </template>
 
 					<template #paragraph>
@@ -298,7 +344,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 							</ul>
 						</div>
 					</template>
-				</TitleParagraphItem>
+				</TitleParagraphItem> -->
 			</div>
 		</section>
 	</main>

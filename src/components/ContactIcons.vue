@@ -2,7 +2,7 @@
 import EmailIcon from "./icons/IconEmail.vue";
 import LinkedinIcon from "./icons/IconLinkedin.vue";
 import InstagramIcon from "./icons/IconInstagram.vue";
-import TwitterIcon from "./icons/IconTwitter.vue";
+import XIcon from "./icons/IconX.vue";
 import { RouterLink } from "vue-router";
 import { useNavigationStore } from "@/stores/navigation";
 
@@ -13,7 +13,7 @@ export default {
 		LinkedinIcon,
 		InstagramIcon,
 		RouterLink,
-		TwitterIcon,
+		XIcon,
 	},
 	data() {
 		return {
@@ -54,7 +54,7 @@ export default {
 					target="_blank"
 					class="text-silver"
 				>
-					<TwitterIcon
+					<XIcon
 						class="h-5 text-inherit hover:fill-rich-electric-blue"
 					/>
 				</a>

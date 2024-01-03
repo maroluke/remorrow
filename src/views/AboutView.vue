@@ -23,24 +23,19 @@ import JumboHeader from "@components/JumboHeader.vue";
 				:icon="'mail'"
 				:contact="true"
 				:classes="'bg-coal w-full'"
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md"
+				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-sm"
 			>
-				<template #title>Wir tun dies...</template>
+				<template #title>Eigener Weg.</template>
 
 				<template #paragraph>
-					... auf unsere Weise und suchen nach einem eigenen Weg.
-					Nebst dem, dass wir uns als Kollektiv verstehen und eine
-					<strong class="font-bold"
-						>Community rundum nachhaltige Ideen und Projekte</strong
-					>
-					aufbauen, gibt es natürlich immer treibende Kräfte.
+					Wir arbeiten kollektiv am Aufbau von re:morrow und suchen dabei unseren eigenen Weg.
 					<br /><br />
-					<!-- Bei uns sind das <a href="#" class="glossar-link font-bold">Marko</a> und <a href="#" class="glossar-link font-bold">Sirik</a>. -->
-					Bei uns sind das <strong class="font-bold">Marko</strong> und
+					Perspektivisch bauen wir eine digitale und globale Plattform zur Unterstützung von nachhaltigen <RouterLink class="glossar-link" to="/projekte/">Ideen, Projekten und Startups</RouterLink> auf. Gleichzeitig entwickeln wir <strong class="font-bold">eine <RouterLink class="glossar-link" to="/community/">Community</RouterLink> mit Menschen, die Ideen mit positiver Wirkung aktiv unterstützen</strong>. 
+					<br /><br />
+					Die treibenden Kräfte bei uns sind <strong class="font-bold">Marko</strong> und
 					<strong class="font-bold">Sirik</strong>.
 					<br /><br />
-					Du willst uns kennenlernen? Für einen Schwatz sind wir immer
-					zu haben!
+					Du willst uns kennenlernen? Für einen Schwatz sind wir immer zu haben!
 				</template>
 			</TitleParagraphItem>
 		</section>
@@ -51,7 +46,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 				:link="'/community'"
 				:icon="'community'"
 				:classes="'bg-coal w-full'"
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md"
+				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-sm"
 			>
 				<template #title>Der Garten.</template>
 
@@ -78,7 +73,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 				:link="'/projekte'"
 				:icon="'project'"
 				:classes="'bg-coal w-full'"
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md"
+				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-sm"
 			>
 				<template #title>Die Projekte.</template>
 
@@ -101,7 +96,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 				:button="'Mehr erfahren'"
 				:link="'/unser-weg'"
 				:classes="'bg-coal w-full'"
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md"
+				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-sm"
 			>
 				<template #title> Entdecke das Warum. </template>
 

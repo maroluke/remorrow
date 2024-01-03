@@ -8,13 +8,9 @@ import SquircleButton from "./SquircleButton.vue";
 			class="text-xs rounded-lg px-5 py-10 bg-white text-coal drop-shadow-xl w-full max-w-screen-sm mx-auto opacity-90 md:w-96"
 		>
 			<p class="italic text-base">
-				“Wenn wir die Welt neu denken wollen, müssen wir zu den
-				gedanklichen Fundamenten zurückgehen, auf denen die uns heute
-				geläufige Welt aufgebaut ist.
-			</p>
-			<p class="italic text-base">
-				Dazu gehört neben dem Blick, den der Mensch auf die Natur hat,
-				auch der Blick, den er auf sich selbst hat.”
+				“Alle Menschen, die ich kenne, wünschen sich Liebe, Frieden, die Überwindung von Armut und eine schöne und sichere Umwelt.
+				Warum also machen wir das nicht einfach?
+				Was hält uns als Gesellschaft davon ab?”
 			</p>
 
 			<div class="flex gap-5">

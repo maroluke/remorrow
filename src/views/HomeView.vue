@@ -89,12 +89,7 @@ export default defineComponent({
 						begeisterten & motivierten Menschen, Teil der
 						Veränderung. <br /><br />
 						Weg von endlosem Streben nach Profit und unendlichem
-						Wachstum, hin zu sinnvollen und
-						<RouterLink
-							class="glossar-link"
-							:to="{ path: `/glossar/`, hash: `#schoen` }"
-							>schönen</RouterLink
-						>
+						Wachstum, hin zu sinnvollen
 						Projekten, die ihre
 						<RouterLink
 							class="glossar-link"
@@ -122,12 +117,9 @@ export default defineComponent({
 				</template>
 
 				<template #paragraph>
-					Gemeinsam arbeiten wir daran, Sinn & Zweck von Wirtschaft
-					neu zu definieren und mit unserer Umwelt und Gesellschaft in
-					Einklang zu bringen.
+					Wir leisten einen Beitrag für ein besseres Morgen – und wenn wir das gemeinsam tun, ist dieser nur noch grösser! Dafür finden wir die guten Ideen und unterstützen deren Wachstum. Jeder von uns hat Stärken, die er dafür einsetzen kann. 
 					<br /><br />
-					Weshalb? Entdecke unseren Purpose, unsere Ziele und unsere
-					Vision.
+					Als Individuum kann man stark sein, aber als Kollektiv, sind wir Teil der Veränderung.
 				</template>
 			</TitleParagraphItem>
 		</section>

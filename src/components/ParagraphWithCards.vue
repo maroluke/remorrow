@@ -5,47 +5,42 @@
 				<template #title>Was wir tun.</template>
 
 				<template #paragraph>
-					Mit <span class="font-bold">re:morrow</span> wirken wir in
-					den folgenden Bereichen.
+					Bei <span class="font-bold">re:morrow</span> steht die Unterstützung nachhaltiger & regenerativer Ideen im Zentrum.
 				</template>
 			</TitleParagraphItem>
 
 			<div
-				class="flex flex-col gap-10 mt-10 2xs:flex-row 2xs:gap-4 sm:gap-10 md:gap-12 md:w-2/3 md:mt-0"
+				class="flex flex-col gap-10 mt-10 2xs:gap-4 sm:gap-10 md:gap-4 md:w-2/3 md:mt-0"
 			>
-				<div class="flex-1 flex flex-col">
-					<CommunityIcon class="w-10 h-10 fill-dark" />
-					<h3 class="leading-loose">Community</h3>
-					<p class="text-sm mt-2 flex-grow m-0 md:text-xl">
-						Aufbau einer Com&shy;munity mit
-						mo&shy;ti&shy;vier&shy;ten Men&shy;schen, die
-						ver&shy;ändern und helfen wol&shy;len.
+				<div class="flex flex-col">
+					<h3 class="leading-loose">1. Suche</h3>
+					<p class="text-sm mt-0 flex-grow m-0 md:text-xl">
+						Aufspüren von <RouterLink
+							class="glossar-link"
+							to="/projekte/"
+							>Projekten & Startups</RouterLink
+						> mit positiver Wirkung.
 					</p>
-					<SquircleButton
-						:classes="'bg-coal px-3 !h-10 w-min'"
-						:to="'/community'"
-						:sizeIcon="'w-2'"
-						class="mt-5 text-sm"
-					>
-						<template #buttonRef>Mehr erfahren</template>
-					</SquircleButton>
 				</div>
 
-				<div class="flex-1 flex flex-col">
-					<ProjectIcon class="w-10 h-10 fill-dark" />
-					<h3 class="leading-loose">Projekte</h3>
-					<p class="text-sm mt-2 flex-grow m-0 md:text-xl">
-						Aktive Unterstützung und Förderung von nach&shy;haltigen
-						& rege&shy;ne&shy;ra&shy;tiven Ideen und Projekten.
+				<div class="flex flex-col">
+					<h3 class="leading-loose">2. Scoring</h3>
+					<p class="text-sm mt-0 flex-grow m-0 md:text-xl">
+						Mit einem holistischen Scoring finden wir heraus, ob die Idee zu uns und unseren Werten passt.
 					</p>
-					<SquircleButton
-						:classes="'bg-coal px-3 !h-10 w-min'"
-						:to="'/projekte'"
-						:sizeIcon="'w-2'"
-						class="mt-5 text-sm"
-					>
-						<template #buttonRef>Mehr erfahren</template>
-					</SquircleButton>
+				</div>
+
+				<div class="flex flex-col">
+					<h3 class="leading-loose">3. Unterstützung</h3>
+					<p class="text-sm mt-0 flex-grow m-0 md:text-xl">
+						Jetzt wollen wir nur noch eins: Gesundes Wachstum.
+					</p>
+				</div>
+
+				<div class="flex flex col">
+					<p class="text-sm md:text-xl mt-4">Und da wir wissen, dass wir gemeinsam mehr erreichen können, bauen wir dafür eine 
+						<RouterLink class="glossar-link" to="/community/">Community</RouterLink> auf.
+					</p>
 				</div>
 			</div>
 		</div>

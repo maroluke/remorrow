@@ -22,7 +22,7 @@ export default {
 			id="jumbo"
 			class="jumbo object-cover bg-cover bg-no-repeat flex grow items-end px-5 bg-center md:max-w-lg md:min-h-[90vh] md:rounded-xl md:p-0 md:w-full"
 			:class="classes"
-			:style="{ backgroundImage: `url(./${src})` }"
+			:style="{ backgroundImage: `url(/${src})` }"
 		>
 			<h1 class="pt-5 drop-shadow-contrast md:hidden">
 				<slot name="title">Titel</slot>

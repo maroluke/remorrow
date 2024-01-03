@@ -36,6 +36,12 @@ export default {
 			return navigationLinks;
 		},
 
+		getCurrentYear() {
+			const date = new Date();
+			const year = date.getFullYear();
+			return year;
+		},
+
 		getContactIcons() {
 			const contact = document.querySelector("nav .contact-icons");
 			const contactItems = contact.querySelectorAll("li > *");
@@ -158,9 +164,15 @@ export default {
 							class="underline font-medium text-sm block"
 							>Mykhailo Kopyt</a
 						>
+						<a
+							href="https://unsplash.com/de/@marissar"
+							target="_blank"
+							class="underline font-medium text-sm block"
+							>Marissa Rodriguez</a
+						>
 					</p>
 					<p class="font-medium text-sm text-moon mb-2 mt-10">
-						Copyright re:morrow © 2023
+						Copyright re:morrow © {{ getCurrentYear() }}
 					</p>
 				</div>
 			</div>
