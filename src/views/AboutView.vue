@@ -6,7 +6,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 <template>
 	<main class="bg-dark">
 		<JumboHeader :src="'markus-spiske-sFydXGrt5OA-unsplash.jpg'">
-			<template #title>Wer wir sind </template>
+			<template #title>Wer wir sind</template>
 
 			<template #paragraph>
 				Hinter re:morrow stehen Menschen, die sich aktiv für ein
