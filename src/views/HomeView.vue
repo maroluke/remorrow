@@ -84,19 +84,21 @@ export default defineComponent({
 					</template>
 
 					<template #paragraph>
-						Als Kollektiv ist
-						<span class="font-bold">re:morrow</span>, mit
-						begeisterten & motivierten Menschen, Teil der
-						Veränderung. <br /><br />
-						Weg von endlosem Streben nach Profit und unendlichem
-						Wachstum, hin zu sinnvollen
-						Projekten, die ihre
-						<RouterLink
-							class="glossar-link"
-							:to="{ path: `/glossar/`, hash: `#regenerativ` }"
-							>regenerative</RouterLink
-						>
-						Kraft entfesseln.
+						<p>
+							Als Kollektiv ist
+							<span class="font-bold">re:morrow</span>, mit
+							begeisterten & motivierten Menschen, Teil der
+							Veränderung. <br /><br />
+							Weg von endlosem Streben nach Profit und unendlichem
+							Wachstum, hin zu sinnvollen
+							Projekten, die ihre
+							<RouterLink
+								class="glossar-link"
+								:to="{ path: `/glossar/`, hash: `#regenerativ` }"
+								>regenerative</RouterLink
+							>
+							Kraft entfesseln.
+						</p>
 					</template>
 				</TitleParagraphItem>
 
@@ -117,9 +119,11 @@ export default defineComponent({
 				</template>
 
 				<template #paragraph>
-					Wir leisten einen Beitrag für ein besseres Morgen – und wenn wir das gemeinsam tun, ist dieser nur noch grösser! Dafür finden wir die guten Ideen und unterstützen deren Wachstum. Jeder von uns hat Stärken, die er dafür einsetzen kann. 
-					<br /><br />
-					Als Individuum kann man stark sein, aber als Kollektiv, sind wir Teil der Veränderung.
+					<p>
+						Wir leisten einen Beitrag für ein besseres Morgen – und wenn wir das gemeinsam tun, ist dieser nur noch grösser! Dafür finden wir die guten Ideen und unterstützen deren Wachstum. Jeder von uns hat Stärken, die er dafür einsetzen kann. 
+						<br /><br />
+						Als Individuum kann man stark sein, aber als Kollektiv, sind wir Teil der Veränderung.
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
@@ -139,12 +143,14 @@ export default defineComponent({
 				<template #title> Wohin die Reise führt. </template>
 
 				<template #paragraph>
-					Hey, wir brauchen nichts zu verstecken. Erfahre hier, wie
-					unsere Roadmap aussieht. Ein Schritt nach dem anderen. So
-					entwickeln wir re:morrow, wachsen und schaffen Wachstum.
-					<br /><br />
-					Bist du Teil unseres nächsten Schritts und hast Bock
-					mitzugestalten?
+					<p>
+						Hey, wir brauchen nichts zu verstecken. Erfahre hier, wie
+						unsere Roadmap aussieht. Ein Schritt nach dem anderen. So
+						entwickeln wir re:morrow, wachsen und schaffen Wachstum.
+						<br /><br />
+						Bist du Teil unseres nächsten Schritts und hast Bock
+						mitzugestalten?
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
@@ -160,9 +166,11 @@ export default defineComponent({
 				<template #title> Wer wir sind. </template>
 
 				<template #paragraph>
-					Bist du neugierig, wer und was hinter re:morrow steckt?
-					Erfahre mehr über die Menschen dahinter und unseren
-					Blickwinkel.
+					<p>
+						Bist du neugierig, wer und was hinter re:morrow steckt?
+						Erfahre mehr über die Menschen dahinter und unseren
+						Blickwinkel.
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>

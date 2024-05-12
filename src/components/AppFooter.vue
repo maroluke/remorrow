@@ -121,9 +121,14 @@ export default {
 					class="contact-icons flex w-full gap-8 drop-shadow mt-4"
 				></div>
 
+				<div class="text-moon">
+					<RouterLink to="/impressum" class="underline font-medium text-sm block">Impressum</RouterLink>
+					<RouterLink to="/datenschutz" class="underline font-medium text-sm block">Datenschutzerklärung</RouterLink>
+				</div>
+
 				<div class="mt-5">
-					<p class="font-medium text-sm text-moon mb-2">
-						Image Credits:
+					<p class="font-medium text-base mb-3">
+						Image Credits
 					</p>
 					<p
 						class="font-medium text-sm text-moon mb-2 grid grid-cols-1 xs:grid-cols-3 2xs:gap-2"
@@ -171,7 +176,8 @@ export default {
 							>Marissa Rodriguez</a
 						>
 					</p>
-					<p class="font-medium text-sm text-moon mb-2 mt-10">
+
+					<p class="font-medium text-sm text-moon mt-10">
 						Copyright re:morrow © {{ getCurrentYear() }}
 					</p>
 				</div>
@@ -213,11 +219,21 @@ export default {
 </template>
 
 <style>
-footer .contact-icons a svg {
+footer .contact-icons a svg,
+footer .contact-icons button svg {
 	@apply !h-4;
 }
 
-footer .contact-icons a {
+footer .contact-icons a,
+footer .contact-icons button {
 	@apply bg-snow p-1 rounded text-black opacity-75;
+
+	&:hover {
+		@apply opacity-100;
+
+		svg {
+			@apply fill-rich-electric-blue;
+		}
+	}
 }
 </style>

@@ -72,6 +72,7 @@
 			:icon="icon"
 			:classes="classes"
 			:to="link"
+			:external-link="externalLink"
 			class="mt-5 w-full"
 		>
 			<template #buttonRef>{{ button }}</template>
@@ -127,6 +128,7 @@ export default {
 		link: { type: String, default: null },
 		classes: { type: String, default: "bg-coal" },
 		contact: { type: Boolean, default: false },
+		externalLink: { type: Boolean, default: false },
 	},
 };
 </script>

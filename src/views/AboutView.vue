@@ -28,14 +28,16 @@ import JumboHeader from "@components/JumboHeader.vue";
 				<template #title>Eigener Weg.</template>
 
 				<template #paragraph>
-					Wir arbeiten kollektiv am Aufbau von re:morrow und suchen dabei unseren eigenen Weg.
-					<br /><br />
-					Perspektivisch bauen wir eine digitale und globale Plattform zur Unterstützung von nachhaltigen <RouterLink class="glossar-link" to="/projekte/">Ideen, Projekten und Startups</RouterLink> auf. Gleichzeitig entwickeln wir <strong class="font-bold">eine <RouterLink class="glossar-link" to="/community/">Community</RouterLink> mit Menschen, die Ideen mit positiver Wirkung aktiv unterstützen</strong>. 
-					<br /><br />
-					Die treibenden Kräfte bei uns sind <strong class="font-bold">Marko</strong> und
-					<strong class="font-bold">Sirik</strong>.
-					<br /><br />
-					Du willst uns kennenlernen? Für einen Schwatz sind wir immer zu haben!
+					<p>
+						Wir arbeiten kollektiv am Aufbau von re:morrow und suchen dabei unseren eigenen Weg.
+						<br /><br />
+						Perspektivisch bauen wir eine digitale und globale Plattform zur Unterstützung von nachhaltigen <RouterLink class="glossar-link" to="/projekte/">Ideen, Projekten und Startups</RouterLink> auf. Gleichzeitig entwickeln wir <strong class="font-bold">eine <RouterLink class="glossar-link" to="/community/">Community</RouterLink> mit Menschen, die Ideen mit positiver Wirkung aktiv unterstützen</strong>. 
+						<br /><br />
+						Die treibenden Kräfte bei uns sind <strong class="font-bold">Marko</strong> und
+						<strong class="font-bold">Sirik</strong>.
+						<br /><br />
+						Du willst uns kennenlernen? Für einen Schwatz sind wir immer zu haben!
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
@@ -51,16 +53,18 @@ import JumboHeader from "@components/JumboHeader.vue";
 				<template #title>Der Garten.</template>
 
 				<template #paragraph>
-					Die Analogie des Gartens mögen wir gern. Ein Garten voller
-					Pflanzen in all ihren Wachstumsstadien. Ein Garten, der
-					darum bemüht ist, den idealen Boden für gesundes Wachstum
-					von neuen, nachhaltigen und
-					<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#zukunftsorientiert' }">zukunftsorientierten</RouterLink>
-					Projekten herzustellen. <br /><br />
-					Egal ob diese gerade erst keimen oder bereits kleine
-					Pflänzchen sind. Wir schaffen die individuellen
-					Voraussetzungen die es braucht, damit starke Pflanzen
-					wurzeln können.
+					<p>
+						Die Analogie des Gartens mögen wir gern. Ein Garten voller
+						Pflanzen in all ihren Wachstumsstadien. Ein Garten, der
+						darum bemüht ist, den idealen Boden für gesundes Wachstum
+						von neuen, nachhaltigen und
+						<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#zukunftsorientiert' }">zukunftsorientierten</RouterLink>
+						Projekten herzustellen. <br /><br />
+						Egal ob diese gerade erst keimen oder bereits kleine
+						Pflänzchen sind. Wir schaffen die individuellen
+						Voraussetzungen die es braucht, damit starke Pflanzen
+						wurzeln können.
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
@@ -78,15 +82,17 @@ import JumboHeader from "@components/JumboHeader.vue";
 				<template #title>Die Projekte.</template>
 
 				<template #paragraph>
-					Alle Projekte bei re:morrow haben einen klaren,
-					nachhaltigen Bezug – das ist uns besonders wichtig. Aus
-					ökologischer Sicht sind sie so bspw.
-					<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#klimaneutral' }">klimaneutral</RouterLink>/<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#klimapositiv' }">klimapositiv</RouterLink>, <RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#regenerativ' }">regenerativ</RouterLink> oder
-					unterwegs dahin. Wir stellen diesen Bezug sicher und
-					unterstützen die Projekte aktiv auf diesem Weg. <br /><br />
-					So streben wir gemeinsam ein besseres Morgen an. Für uns
-					zählt jede Pflanze, die eine positive Wirkung auf unsere
-					Zukunft hat.
+					<p>
+						Alle Projekte bei re:morrow haben einen klaren,
+						nachhaltigen Bezug – das ist uns besonders wichtig. Aus
+						ökologischer Sicht sind sie so bspw.
+						<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#klimaneutral' }">klimaneutral</RouterLink>/<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#klimapositiv' }">klimapositiv</RouterLink>, <RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#regenerativ' }">regenerativ</RouterLink> oder
+						unterwegs dahin. Wir stellen diesen Bezug sicher und
+						unterstützen die Projekte aktiv auf diesem Weg. <br /><br />
+						So streben wir gemeinsam ein besseres Morgen an. Für uns
+						zählt jede Pflanze, die eine positive Wirkung auf unsere
+						Zukunft hat.
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
@@ -101,8 +107,10 @@ import JumboHeader from "@components/JumboHeader.vue";
 				<template #title> Entdecke das Warum. </template>
 
 				<template #paragraph>
-					Lerne unseren Purpose, unsere Ziele und die dahinterliegende
-					Vision kennen.
+					<p>
+						Lerne unseren Purpose, unsere Ziele und die dahinterliegende
+						Vision kennen.
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>

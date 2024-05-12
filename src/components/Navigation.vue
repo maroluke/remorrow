@@ -90,6 +90,9 @@ export default {
 						<NavigationItem :to="'/glossar'"
 							>Glossar</NavigationItem
 						>
+						<NavigationItem :to="'/partner'"
+							>Partner</NavigationItem
+						>
 					</ul>
 
 					<div class="flex flex-col">
@@ -112,6 +115,17 @@ export default {
 						</ul>
 
 						<ContactIcons class="px-8 bg-snow" />
+
+						<ul 
+							@click="
+								navigationState.navigationIsOpen =
+									!navigationState.navigationIsOpen
+							"
+							class="px-8 pb-4 text-moon flex gap-4"
+						>
+							<RouterLink to="/impressum" class="underline font-medium text-sm block">Impressum</RouterLink>
+							<RouterLink to="/datenschutz" class="underline font-medium text-sm block">Datenschutzerklärung</RouterLink>
+						</ul>
 					</div>
 				</div>
 			</div>

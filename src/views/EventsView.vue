@@ -27,9 +27,11 @@ import JumboHeader from "@components/JumboHeader.vue";
 				</template>
 
 				<template #paragraph>
-					Die match:make ist ein physisches Event-Format um nachhaltige Startups, die unser Scoring durchlaufen haben und in irgendeiner Form Unterstützung benötigen, mit Unternehmen oder Organisationen zusammenzubringen, die diese anbieten können. 
-					<br /><br />
-					Das Format findet im September dieses Jahres gemeinsam mit <a class="glossar-link" target="_blank" href="https://aws.amazon.com/de/local/switzerland/">AWS Schweiz (Amazon Web Services)</a> in Zürich statt. Die Veranstaltung wird in geschlossenem Rahmen, d.h. basierend auf Einladungen, durchgeführt.
+					<p>
+						Die match:make ist ein physisches Event-Format um nachhaltige Startups, die unser Scoring durchlaufen haben und in irgendeiner Form Unterstützung benötigen, mit Unternehmen oder Organisationen zusammenzubringen, die diese anbieten können. 
+						<br /><br />
+						Das Format findet im September dieses Jahres gemeinsam mit <a class="glossar-link" target="_blank" href="https://aws.amazon.com/de/local/switzerland/">AWS Schweiz (Amazon Web Services)</a> in Zürich statt. Die Veranstaltung wird in geschlossenem Rahmen, d.h. basierend auf Einladungen, durchgeführt.
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
@@ -45,7 +47,9 @@ import JumboHeader from "@components/JumboHeader.vue";
 				<template #title>More to come.</template>
 
 				<template #paragraph>
-					Wir arbeiten aktuell daran. Sobald es mehr zu erzählen gibt, wirst du es hier lesen können. Hast du zwischenzeitlich Fragen an uns oder – noch besser – willst <strong>als Hero oder Pioneer selbst mitgestalten?</strong>
+					<p>
+						Wir arbeiten aktuell daran. Sobald es mehr zu erzählen gibt, wirst du es hier lesen können. Hast du zwischenzeitlich Fragen an uns oder – noch besser – willst <strong>als Hero oder Pioneer selbst mitgestalten?</strong>
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>

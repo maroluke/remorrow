@@ -28,14 +28,16 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 					<template #title>Die Roadmap </template>
 
 					<template #paragraph>
-						In erster Linie möchten wir organisch wachsen. Wir
-						möchten begeisterte Menschen finden, die Teil dieser
-						Vision sein wollen und Partnerschaften schliessen, mit
-						denen wir uns gemeinsam entwickeln und für künftiges
-						Wachstum wurzeln können.
-						<br /><br />
-						re:morrow entwickeln wir durch die nachfolgenden
-						Etappen:
+						<p>
+							In erster Linie möchten wir organisch wachsen. Wir
+							möchten begeisterte Menschen finden, die Teil dieser
+							Vision sein wollen und Partnerschaften schliessen, mit
+							denen wir uns gemeinsam entwickeln und für künftiges
+							Wachstum wurzeln können.
+							<br /><br />
+							re:morrow entwickeln wir durch die nachfolgenden
+							Etappen:
+						</p>
 					</template>
 				</TitleParagraphItem>
 
@@ -250,7 +252,9 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 					<template #title>Purpose </template>
 
 					<template #paragraph>
-						<strong>Auf den Punkt:</strong> Wir wollen eine hoffnungsvolle und inspirierende Zukunft. Wir leisten unseren Beitrag, indem wir nachhaltige Ideen mit positiver Wirkung aktiv unterstützen und fördern.
+						<p>
+							<strong>Auf den Punkt:</strong> Wir wollen eine hoffnungsvolle und inspirierende Zukunft. Wir leisten unseren Beitrag, indem wir nachhaltige Ideen mit positiver Wirkung aktiv unterstützen und fördern.
+						</p>
 					</template>
 				</TitleParagraphItem>
 
@@ -268,7 +272,9 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 				<TitleParagraphItem>
 					<template #paragraph>
-						Konkret entwickeln wir eine Community von interessierten und motivierten Menschen, die gemeinsam das Morgen mitgestalten wollen, sich gegenseitig unterstützen und an guten, nachhaltigen Ideen arbeiten. Perspektivisch bauen wir eine digitale Plattform, die diese Unterstützung auf globaler Ebene zu skaliert.
+						<p>
+							Konkret entwickeln wir eine Community von interessierten und motivierten Menschen, die gemeinsam das Morgen mitgestalten wollen, sich gegenseitig unterstützen und an guten, nachhaltigen Ideen arbeiten. Perspektivisch bauen wir eine digitale Plattform, die diese Unterstützung auf globaler Ebene zu skaliert.
+						</p>
 					</template>
 				</TitleParagraphItem>
 			</div>
@@ -285,12 +291,14 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 					<template #title>Vision </template>
 
 					<template #paragraph>
-						<strong>Ein besseres Morgen für Mensch und Planet</strong>, in dem Hoffnung, Inspiration und Begeisterung gegenwärtig ist und Mut für Veränderung macht. 
-						<br /><br />
-						Wir sehen re:morrow als globale Plattform, um die richtigen Menschen zusammenzubringen. 
-						Die Menschen, die aktiv mitgestalten und jene, die Ideen mit positiver Wirkung vorantreiben. 
-						<br /><br />
-						So schaffen wir eine Basis für kollaboratives Wirken, die Lösung von Problemen und mehr Hoffnung in eine bessere Zukunft für alle.
+						<p>
+							<strong>Ein besseres Morgen für Mensch und Planet</strong>, in dem Hoffnung, Inspiration und Begeisterung gegenwärtig ist und Mut für Veränderung macht. 
+							<br /><br />
+							Wir sehen re:morrow als globale Plattform, um die richtigen Menschen zusammenzubringen. 
+							Die Menschen, die aktiv mitgestalten und jene, die Ideen mit positiver Wirkung vorantreiben. 
+							<br /><br />
+							So schaffen wir eine Basis für kollaboratives Wirken, die Lösung von Problemen und mehr Hoffnung in eine bessere Zukunft für alle.
+						</p>
 					</template>
 				</TitleParagraphItem>
 

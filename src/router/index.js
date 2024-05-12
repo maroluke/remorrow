@@ -7,6 +7,8 @@ import PathView from "../views/PathView.vue";
 import CommunityView from "../views/CommunityView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
 import GlossarView from "../views/GlossarView.vue";
+import ImpressumView from "../views/ImpressumView.vue";
+import PrivacyPolicyView from "../views/PrivacyPolicyView.vue";
 
 const routes = [
 	{
@@ -53,6 +55,16 @@ const routes = [
 		path: "/glossar/:itemId",
 		name: "AccordionItem",
 		component: GlossarView,
+	},
+	{
+		path: "/impressum",
+		name: "Impressum",
+		component: ImpressumView,
+	},
+	{
+		path: "/datenschutz",
+		name: "PrivacyPolicy",
+		component: PrivacyPolicyView,
 	},
 ];
 

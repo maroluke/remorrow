@@ -32,15 +32,17 @@ import JumboHeader from "@components/JumboHeader.vue";
 				</template>
 
 				<template #paragraph>
-					Du bist für ein laufendes Projekt verantwortlich, glaubst an
-					das Potenzial und bist offen für partnerschaftliche
-					Kollaboration? Dann lass uns die Köpfe zusammenstecken, so
-					richtig auf die Tube drücken und das nächste Level
-					erreichen!
-					<br /><br />
-					Sind Idee und Konzept überzeugend, finden wir gemeinsam
-					heraus, was du brauchst und welche idealen Bedingungen für
-					gesundes Wachstum beitragen.
+					<p>
+						Du bist für ein laufendes Projekt verantwortlich, glaubst an
+						das Potenzial und bist offen für partnerschaftliche
+						Kollaboration? Dann lass uns die Köpfe zusammenstecken, so
+						richtig auf die Tube drücken und das nächste Level
+						erreichen!
+						<br /><br />
+						Sind Idee und Konzept überzeugend, finden wir gemeinsam
+						heraus, was du brauchst und welche idealen Bedingungen für
+						gesundes Wachstum beitragen.
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
@@ -56,15 +58,17 @@ import JumboHeader from "@components/JumboHeader.vue";
 				<template #title> Allem ein Anfang. </template>
 
 				<template #paragraph>
-					Du hast eine Idee, die du umsetzen willst, weisst jedoch
-					nicht weiter? Du hast schon ein laufendes Projekt, aber es
-					klemmt und du brauchst einen Blick von aussen? Vielleicht
-					bist du mit deinen Gedanken auch noch in einem frühen
-					Stadium und möchtest dich einmal gezielt dazu austauschen?
-					<br /><br />
-					Lass uns gemeinsam den ersten Schritt gehen und
-					herausfinden, wie wir dich auf deinem Weg unterstützen
-					können.
+					<p>
+						Du hast eine Idee, die du umsetzen willst, weisst jedoch
+						nicht weiter? Du hast schon ein laufendes Projekt, aber es
+						klemmt und du brauchst einen Blick von aussen? Vielleicht
+						bist du mit deinen Gedanken auch noch in einem frühen
+						Stadium und möchtest dich einmal gezielt dazu austauschen?
+						<br /><br />
+						Lass uns gemeinsam den ersten Schritt gehen und
+						herausfinden, wie wir dich auf deinem Weg unterstützen
+						können.
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
@@ -82,14 +86,16 @@ import JumboHeader from "@components/JumboHeader.vue";
 				<template #title>Wirke mit uns zusammen. </template>
 
 				<template #paragraph>
-					Du bist offen für Neues, willst deinen eigenen positiven
-					Impact vergrössern, Teil von etwas Grösserem sein,
-					Gleichgesinnte kennenlernen und einen neuen Weg
-					ausprobieren?
-					<br /><br />
-					Wir freuen uns dich kennenzulernen und gemeinsam mit dir zu
-					entdecken, wo du dich in der re:morrow-Community am besten
-					entfalten kannst.
+					<p>
+						Du bist offen für Neues, willst deinen eigenen positiven
+						Impact vergrössern, Teil von etwas Grösserem sein,
+						Gleichgesinnte kennenlernen und einen neuen Weg
+						ausprobieren?
+						<br /><br />
+						Wir freuen uns dich kennenzulernen und gemeinsam mit dir zu
+						entdecken, wo du dich in der re:morrow-Community am besten
+						entfalten kannst.
+					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>

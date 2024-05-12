@@ -45,6 +45,10 @@ export default defineComponent({
 			type: String,
 			default: null,
 		},
+		externalLink: {
+			type: Boolean,
+			default: false,
+		},
 	},
 	setup() {
 		const uid = getCurrentInstance().uid;
@@ -78,7 +82,7 @@ export default defineComponent({
 
 <template>
 	<div class="button-wrapper max-w-screen-2xs">
-		<RouterLink v-if="this.to" :to="this.to">
+		<RouterLink v-if="this.to && !this.externalLink" :to="this.to">
 			<button
 				:style="{
 					clipPath: `url('#squircle-${uid}')`,
@@ -142,6 +146,46 @@ export default defineComponent({
 				</defs>
 			</svg>
 		</RouterLink>
+
+		<a
+			v-else-if="externalLink"
+			:href="this.to"
+			target="_blank"
+		>
+			<button
+				:style="{
+					clipPath: `url('#squircle-${uid}')`,
+				}"
+				:class="`m-0 w-full gap-4 h-14 text-snow cursor-pointer flex justify-between items-center px-4 font-extrabold transition duration-300 ease-in-out focus-within:drop-shadow ${this.classes}`"
+				ref="buttonRef"
+			>
+				<span
+					v-if="$slots.buttonRef"
+					class="text-left font-medium whitespace-nowrap tracking-wide"
+				>
+					<slot name="buttonRef"></slot>
+				</span>
+
+				<span>
+					<ArrowIcon
+						:class="`-rotate-90 self-center fill-inherit ${
+							(this.fillIcon, this.sizeIcon)
+						}`"
+					/>
+				</span>
+			</button>
+
+			<svg
+				v-if="svgPath"
+				style="width: 0; height: 0; pointer-events: none"
+			>
+				<defs>
+					<clipPath :id="`squircle-${uid}`">
+						<path :d="svgPath" />
+					</clipPath>
+				</defs>
+			</svg>
+		</a>
 
 		<button
 			v-else

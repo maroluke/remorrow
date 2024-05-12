@@ -36,7 +36,7 @@ export default {
 		<!-- <p class="mb-0 text-gray-500 font-light text-base">Kontakt</p> -->
 
 		<ul class="contact-icons flex justify-start gap-8 flex-grow">
-			<li>
+			<li class="flex">
 				<button
 					@click="navigationState.toggleModal"
 					type="button"
@@ -48,7 +48,7 @@ export default {
 				</button>
 			</li>
 
-			<li>
+			<li class="flex">
 				<a
 					href="https://twitter.com/remorrow_world"
 					target="_blank"
@@ -60,7 +60,7 @@ export default {
 				</a>
 			</li>
 
-			<li>
+			<li class="flex">
 				<a
 					href="https://linkedin.com/company/remorrow/"
 					target="_blank"
@@ -72,7 +72,7 @@ export default {
 				</a>
 			</li>
 
-			<li>
+			<li class="flex">
 				<a
 					href="https://instagram.com/remorrow.world/"
 					target="_blank"
