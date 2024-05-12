@@ -29,14 +29,16 @@ import JumboHeader from "@components/JumboHeader.vue";
 
 				<template #paragraph>
 					<p>
-						Wir arbeiten kollektiv am Aufbau von re:morrow und suchen dabei unseren eigenen Weg.
-						<br /><br />
-						Perspektivisch bauen wir eine digitale und globale Plattform zur Unterstützung von nachhaltigen <RouterLink class="glossar-link" to="/projekte/">Ideen, Projekten und Startups</RouterLink> auf. Gleichzeitig entwickeln wir <strong class="font-bold">eine <RouterLink class="glossar-link" to="/community/">Community</RouterLink> mit Menschen, die Ideen mit positiver Wirkung aktiv unterstützen</strong>. 
-						<br /><br />
-						Die treibenden Kräfte bei uns sind <strong class="font-bold">Marko</strong> und
-						<strong class="font-bold">Sirik</strong>.
-						<br /><br />
-						Du willst uns kennenlernen? Für einen Schwatz sind wir immer zu haben!
+						<p>Wir arbeiten kollektiv am Aufbau von re:morrow und suchen dabei unseren eigenen Weg.</p>
+						<p>Perspektivisch bauen wir eine digitale und globale Plattform zur Unterstützung von nachhaltigen <RouterLink class="glossar-link" to="/projekte/">Ideen, Projekten und Startups</RouterLink> auf. Gleichzeitig entwickeln wir <strong>eine <RouterLink class="glossar-link" to="/community/">Community</RouterLink> mit Menschen, die Ideen mit positiver Wirkung aktiv unterstützen</strong>.</p>
+						<div class="flex gap-5 mb-5 items-center justify-between">
+							<p class="mb-0 flex-1">Die treibenden Kräfte bei uns sind <strong>Sirik</strong> und <strong>Marko</strong>.</p>
+							<div class="flex-1 flex justify-end">
+								<img src="@/assets/media/profile-sirik.jpg" alt="Sirik Loosman" class="-rotate-3 mt-10 z-20 block rounded-full w-24 h-24 object-cover border-4 border-white md:w-32 md:h-32" />
+								<img src="@/assets/media/profile-marko.jpg" alt="Marko Lukac" class="rotate-6 -ml-5 z-10 block rounded-full w-24 h-24 object-cover border-4 border-white md:w-32 md:h-32" />
+							</div>
+						</div>
+						<p>Du willst uns kennenlernen? Für einen Schwatz sind wir immer zu haben!</p>
 					</p>
 				</template>
 			</TitleParagraphItem>
