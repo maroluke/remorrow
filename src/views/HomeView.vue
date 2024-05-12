@@ -156,23 +156,35 @@ export default defineComponent({
 		</section>
 
 		<section
-			class="px-5 py-10 bg-snow text-coal z-20 flex flex-col items-center md:py-20"
+			class="px-5 py-10 bg-snow text-coal z-20 flex flex-col gap-10 items-center md:py-20"
 		>
 			<TitleParagraphItem
-				:button="'Entdecken'"
 				:link="'/wer-wir-sind'"
 				class="max-w-screen-md flex flex-col !mb-0"
 			>
-				<template #title> Wer wir sind. </template>
+				<template #title>Besser gemeinsam wachsen</template>
 
 				<template #paragraph>
 					<p>
-						Bist du neugierig, wer und was hinter re:morrow steckt?
-						Erfahre mehr über die Menschen dahinter und unseren
-						Blickwinkel.
+						Uns sind nicht nur Verbindungen zwischen Menschen, sondern auch Partnerschaften zwischen Organisationen wichtig. Sie ermöglichen stärkeren Austausch, Zusammenhalt und eine gegenseitige Unterstützung, was uns kollektiv voranbringt. Die nachfolgenden Partner-Organisationen begleiten & unterstützen uns. 
 					</p>
 				</template>
 			</TitleParagraphItem>
+
+			<div class="w-32 h-32 flex justify-center items-center relative">
+				<div class="w-full h-full bg-gray-200 opacity-40 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 translate-x-32"></div>
+				<div class="w-full h-full bg-gray-200 opacity-40 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 -translate-x-32"></div>
+				<div class="w-full h-full bg-gray-300 opacity-40 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 translate-x-16"></div>
+				<div class="w-full h-full bg-gray-300 opacity-40 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 -translate-x-16"></div>
+
+				<a href="https://www.one-planet-lab.ch" target="_blank" class="relative flex items-stretch w-full h-full">
+					<img
+						src="@assets/media/one-planet-lab.png"
+						alt="Partner"
+						class="w-full h-full rounded-full object-contain shadow-none scale-100 transition-all duration-300 ease-[cubic-bezier(cubic-bezier(0.85, 0, 0.15, 1)] hover:shadow-xl hover:scale-105"
+					/>
+				</a>
+			</div>
 		</section>
 	</main>
 </template>
