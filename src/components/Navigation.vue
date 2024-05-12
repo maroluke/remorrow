@@ -90,9 +90,6 @@ export default {
 						<NavigationItem :to="'/glossar'"
 							>Glossar</NavigationItem
 						>
-						<NavigationItem :to="'/partner'"
-							>Partner</NavigationItem
-						>
 					</ul>
 
 					<div class="flex flex-col">
