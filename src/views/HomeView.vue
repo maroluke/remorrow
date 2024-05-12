@@ -168,7 +168,7 @@ export default defineComponent({
 				<p>
 					<label
 						>Your Email:
-						<input v-model="form.email" type="email" name="email"
+						<input type="email" name="email"
 					/></label>
 				</p>
 
