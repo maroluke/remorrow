@@ -156,6 +156,32 @@ export default defineComponent({
 		</section>
 
 		<section
+			class="text-snow px-5 py-10 bg-snow z-20 flex flex-col items-center md:py-20"
+		>
+			<form name="contact" method="POST" data-netlify="true">
+				<p>
+					<label>Your Name: <input type="text" name="name" /></label>
+				</p>
+				<p>
+					<label>Your Email: <input type="email" name="email" /></label>
+				</p>
+				<p>
+					<label>Your Role: <select name="role[]" multiple>
+					<option value="leader">Leader</option>
+					<option value="follower">Follower</option>
+					</select></label>
+				</p>
+				<p>
+					<label>Message: <textarea name="message"></textarea></label>
+				</p>
+				<p>
+					<button type="submit">Send</button>
+				</p>
+			</form>
+
+		</section>
+
+		<section
 			class="px-5 py-10 bg-snow text-coal z-20 flex flex-col gap-10 items-center md:py-20"
 		>
 			<TitleParagraphItem
