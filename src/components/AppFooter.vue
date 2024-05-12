@@ -121,7 +121,7 @@ export default {
 					class="contact-icons flex w-full gap-8 drop-shadow mt-4"
 				></div>
 
-				<div class="text-moon">
+				<div class="text-moon flex flex-col 2xs:gap-2">
 					<RouterLink to="/impressum" class="underline font-medium text-sm block">Impressum</RouterLink>
 					<RouterLink to="/datenschutz" class="underline font-medium text-sm block">Datenschutzerklärung</RouterLink>
 				</div>
