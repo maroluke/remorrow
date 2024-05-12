@@ -31,7 +31,10 @@ export default defineComponent({
 			try {
 				await fetch("/", {
 					method: "POST",
-					body: formData,
+					headers: {
+						"Content-Type": "application/x-www-form-urlencoded",
+					},
+					body: new URLSearchParams(formData).toString(),
 				});
 				// Form submitted successfully
 				// You can clear the form or show a success message
@@ -157,10 +160,6 @@ export default defineComponent({
 		<section
 			class="text-snow px-5 py-10 bg-snow z-20 flex flex-col items-center md:py-20"
 		>
-			<form name="contact" data-netlify="true" hidden>
-				<input type="email" name="email">
-			</form>
-			
 			<form
 				name="contact"
 				data-netlify="true"
@@ -172,6 +171,7 @@ export default defineComponent({
 						<input v-model="form.email" type="email" name="email"
 					/></label>
 				</p>
+				<input type="hidden" name="form-name" value="contact" />
 				<p>
 					<button type="submit">Send</button>
 				</p>
