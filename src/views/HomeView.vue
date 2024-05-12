@@ -24,7 +24,7 @@ export default defineComponent({
 	},
 	methods: {
 		async handleSubmit() {
-			const formData = new FormData();
+			const formData = new URLSearchParams();
 			formData.append("form-name", "contact");
 			formData.append("email", this.form.email);
 
@@ -34,7 +34,7 @@ export default defineComponent({
 					headers: {
 						"Content-Type": "application/x-www-form-urlencoded",
 					},
-					body: new URLSearchParams(formData).toString(),
+					body: formData.toString(),
 				});
 				// Form submitted successfully
 				// You can clear the form or show a success message
