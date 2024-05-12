@@ -17,38 +17,30 @@ export default defineComponent({
 			loading: false,
 			cmsData: [],
 			error: null,
+			form: {
+				email: "",
+			},
 		};
 	},
-	mounted() {
-		// this.loading = true;
-		// this.error = this.cmsData = null;
-		// const url = `/api/notion`;
-		// await fetch(url)
-		// 	.then((response) => response.json())
-		// 	.then((data) => {
-		// 		this.cmsData =
-		// 			data.results[0].properties.Content.rich_text[0].plain_text;
-		// 		console.log(data.results);
-		// 	})
-		// 	.catch((error) => {
-		// 		this.error = error.toString();
-		// 		console.log(this.error);
-		// 	})
-		// 	.finally(() => {
-		// 		this.loading = false;
-		// 	});
+	methods: {
+		async handleSubmit() {
+			const formData = new FormData();
+			formData.append("form-name", "contact");
+			formData.append("email", this.form.email);
+
+			try {
+				await fetch("/", {
+					method: "POST",
+					body: formData,
+				});
+				// Form submitted successfully
+				// You can clear the form or show a success message
+				this.form.email = "";
+			} catch (error) {
+				// Error handling
+			}
+		},
 	},
-	// async mounted() {
-	//     this.error = this.cmsData = null
-	//     this.loading = true
-	//     // use route params to build the API endpoint URL
-	//     const url = '/api/notion'
-	//     const response = await fetch(url).then(res => res.json())
-
-	//     this.cmsData = response
-
-	//     console.log(response)
-	// },
 });
 </script>
 
@@ -65,9 +57,8 @@ export default defineComponent({
 			</template>
 
 			<template #paragraph>
-				Wir unterstützen nachhaltige
-				Projekte dabei zu wachsen und einen positiven Beitrag für unsere
-				Zukunft zu erbringen.
+				Wir unterstützen nachhaltige Projekte dabei zu wachsen und einen
+				positiven Beitrag für unsere Zukunft zu erbringen.
 			</template>
 		</TheIntro>
 
@@ -90,11 +81,13 @@ export default defineComponent({
 							begeisterten & motivierten Menschen, Teil der
 							Veränderung. <br /><br />
 							Weg von endlosem Streben nach Profit und unendlichem
-							Wachstum, hin zu sinnvollen
-							Projekten, die ihre
+							Wachstum, hin zu sinnvollen Projekten, die ihre
 							<RouterLink
 								class="glossar-link"
-								:to="{ path: `/glossar/`, hash: `#regenerativ` }"
+								:to="{
+									path: `/glossar/`,
+									hash: `#regenerativ`,
+								}"
 								>regenerative</RouterLink
 							>
 							Kraft entfesseln.
@@ -120,9 +113,14 @@ export default defineComponent({
 
 				<template #paragraph>
 					<p>
-						Wir leisten einen Beitrag für ein besseres Morgen – und wenn wir das gemeinsam tun, ist dieser nur noch grösser! Dafür finden wir die guten Ideen und unterstützen deren Wachstum. Jeder von uns hat Stärken, die er dafür einsetzen kann. 
+						Wir leisten einen Beitrag für ein besseres Morgen – und
+						wenn wir das gemeinsam tun, ist dieser nur noch grösser!
+						Dafür finden wir die guten Ideen und unterstützen deren
+						Wachstum. Jeder von uns hat Stärken, die er dafür
+						einsetzen kann.
 						<br /><br />
-						Als Individuum kann man stark sein, aber als Kollektiv, sind wir Teil der Veränderung.
+						Als Individuum kann man stark sein, aber als Kollektiv,
+						sind wir Teil der Veränderung.
 					</p>
 				</template>
 			</TitleParagraphItem>
@@ -144,9 +142,10 @@ export default defineComponent({
 
 				<template #paragraph>
 					<p>
-						Hey, wir brauchen nichts zu verstecken. Erfahre hier, wie
-						unsere Roadmap aussieht. Ein Schritt nach dem anderen. So
-						entwickeln wir re:morrow, wachsen und schaffen Wachstum.
+						Hey, wir brauchen nichts zu verstecken. Erfahre hier,
+						wie unsere Roadmap aussieht. Ein Schritt nach dem
+						anderen. So entwickeln wir re:morrow, wachsen und
+						schaffen Wachstum.
 						<br /><br />
 						Bist du Teil unseres nächsten Schritts und hast Bock
 						mitzugestalten?
@@ -158,27 +157,21 @@ export default defineComponent({
 		<section
 			class="text-snow px-5 py-10 bg-snow z-20 flex flex-col items-center md:py-20"
 		>
-			<form name="contact" method="POST" data-netlify="true">
+			<form
+				name="contact"
+				data-netlify="true"
+				@submit.prevent="handleSubmit"
+			>
 				<p>
-					<label>Your Name: <input type="text" name="name" /></label>
-				</p>
-				<p>
-					<label>Your Email: <input type="email" name="email" /></label>
-				</p>
-				<p>
-					<label>Your Role: <select name="role[]" multiple>
-					<option value="leader">Leader</option>
-					<option value="follower">Follower</option>
-					</select></label>
-				</p>
-				<p>
-					<label>Message: <textarea name="message"></textarea></label>
+					<label
+						>Your Email:
+						<input v-model="form.email" type="email" name="email"
+					/></label>
 				</p>
 				<p>
 					<button type="submit">Send</button>
 				</p>
 			</form>
-
 		</section>
 
 		<section
@@ -192,18 +185,35 @@ export default defineComponent({
 
 				<template #paragraph>
 					<p>
-						Uns sind nicht nur Verbindungen zwischen Menschen, sondern auch Partnerschaften zwischen Organisationen wichtig. Sie ermöglichen stärkeren Austausch, Zusammenhalt und eine gegenseitige Unterstützung, was uns kollektiv voranbringt. Die nachfolgenden Partner-Organisationen begleiten & unterstützen uns. 
+						Uns sind nicht nur Verbindungen zwischen Menschen,
+						sondern auch Partnerschaften zwischen Organisationen
+						wichtig. Sie ermöglichen stärkeren Austausch,
+						Zusammenhalt und eine gegenseitige Unterstützung, was
+						uns kollektiv voranbringt. Die nachfolgenden
+						Partner-Organisationen begleiten & unterstützen uns.
 					</p>
 				</template>
 			</TitleParagraphItem>
 
 			<div class="w-32 h-32 flex justify-center items-center relative">
-				<div class="w-full h-full bg-gray-200 opacity-40 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 translate-x-32"></div>
-				<div class="w-full h-full bg-gray-200 opacity-40 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 -translate-x-32"></div>
-				<div class="w-full h-full bg-gray-300 opacity-40 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 translate-x-16"></div>
-				<div class="w-full h-full bg-gray-300 opacity-40 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 -translate-x-16"></div>
+				<div
+					class="w-full h-full bg-gray-200 opacity-40 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 translate-x-32"
+				></div>
+				<div
+					class="w-full h-full bg-gray-200 opacity-40 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 -translate-x-32"
+				></div>
+				<div
+					class="w-full h-full bg-gray-300 opacity-40 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 translate-x-16"
+				></div>
+				<div
+					class="w-full h-full bg-gray-300 opacity-40 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 -translate-x-16"
+				></div>
 
-				<a href="https://www.one-planet-lab.ch" target="_blank" class="relative flex items-stretch w-full h-full">
+				<a
+					href="https://www.one-planet-lab.ch"
+					target="_blank"
+					class="relative flex items-stretch w-full h-full"
+				>
 					<img
 						src="@assets/media/one-planet-lab.png"
 						alt="Partner"
