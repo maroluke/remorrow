@@ -164,7 +164,6 @@ export default defineComponent({
 			<form
 				name="contact"
 				data-netlify="true"
-				@submit.prevent="handleSubmit"
 			>
 				<p>
 					<label
