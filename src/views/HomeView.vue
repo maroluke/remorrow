@@ -23,26 +23,27 @@ export default defineComponent({
 		};
 	},
 	methods: {
-		async handleSubmit() {
-			const formData = new URLSearchParams();
-			formData.append("form-name", "contact");
-			formData.append("email", this.form.email);
+		// async handleSubmit() {
+		// 	const formData = new URLSearchParams();
+		// 	formData.append("form-name", "contact");
+		// 	formData.append("email", this.form.email);
 
-			try {
-				await fetch("/", {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/x-www-form-urlencoded",
-					},
-					body: formData.toString(),
-				});
-				// Form submitted successfully
-				// You can clear the form or show a success message
-				this.form.email = "";
-			} catch (error) {
-				// Error handling
-			}
-		},
+		// 	try {
+		// 		await fetch("/", {
+		// 			method: "POST",
+		// 			headers: {
+		// 				"Content-Type": "application/x-www-form-urlencoded",
+		// 			},
+		// 			body: formData.toString(),
+		// 		});
+		// 		// Form submitted successfully
+		// 		// You can clear the form or show a success message
+		// 		this.form.email = "";
+		// 	} catch (error) {
+		// 		// Error handling
+		// 		console.error("Error submitting the form", error);
+		// 	}
+		// },
 	},
 });
 </script>
@@ -171,7 +172,7 @@ export default defineComponent({
 						<input v-model="form.email" type="email" name="email"
 					/></label>
 				</p>
-				<input type="hidden" name="form-name" value="contact" />
+
 				<p>
 					<button type="submit">Send</button>
 				</p>
