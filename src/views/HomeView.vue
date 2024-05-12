@@ -16,10 +16,10 @@ export default defineComponent({
 		return {
 			loading: false,
 			cmsData: [],
-			error: null,
-			form: {
-				email: "",
-			},
+			// error: null,
+			// form: {
+			// 	email: "",
+			// },
 		};
 	},
 	methods: {
