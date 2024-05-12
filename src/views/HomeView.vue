@@ -157,6 +157,10 @@ export default defineComponent({
 		<section
 			class="text-snow px-5 py-10 bg-snow z-20 flex flex-col items-center md:py-20"
 		>
+			<form name="contact" data-netlify="true" hidden>
+				<input type="email" name="email">
+			</form>
+			
 			<form
 				name="contact"
 				data-netlify="true"
