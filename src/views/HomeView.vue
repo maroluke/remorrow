@@ -158,7 +158,7 @@ export default defineComponent({
 			</TitleParagraphItem>
 		</section>
 
-		<section
+		<!-- <section
 			class="text-snow px-5 py-10 bg-snow z-20 flex flex-col items-center md:py-20"
 		>
 			<form
@@ -176,7 +176,7 @@ export default defineComponent({
 					<button type="submit">Send</button>
 				</p>
 			</form>
-		</section>
+		</section> -->
 
 		<section
 			class="px-5 py-10 bg-snow text-coal z-20 flex flex-col gap-10 items-center md:py-20"
