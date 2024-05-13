@@ -6,7 +6,7 @@
 			class="max-w-screen-md w-full flex flex-col gap-10 !mb-0 !items-start md:flex-row md:max-w-full md:gap-20"
 		>
 			<div
-				class="flex gap-10 flex-col px-5 pt-5 z-20 shrink items-center md:p-0 md:text-dark md:w-1/3"
+				class="flex gap-10 flex-col pt-5 z-20 shrink items-center md:p-0 md:text-dark md:w-1/3"
 			>
 				<h1
 					class="drop-shadow-contrast self-start hyphens-auto md:drop-shadow-none"
