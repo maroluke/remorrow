@@ -36,7 +36,7 @@
 					<div
 						class="flex gap-5 justify-between items-center mb-5 grow xl:items-start"
 					>
-						<h2>Vertretungsberechtigte Person</h2>
+						<h2>Vertretungsberechtigte Personen</h2>
 					</div>
 					<div>
 						<p class="mb-0">Sirik Loosman</p>
