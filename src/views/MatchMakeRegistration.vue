@@ -1,17 +1,32 @@
 <script>
-import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import JumboHeader from "@components/JumboHeader.vue";
 
 export default {
     name: "QAForm",
     components: {
-        TitleParagraphItem,
         JumboHeader
     },
     methods: {
-        updatePanelist (ev) {
-        this.currentPanelist = ev.target.value
+        async updatePanelist(ev) {
+        this.currentPanelist = ev.target.value;
+
+        const formData = new URLSearchParams();
+        formData.append("form-name", "ask-question");
+        formData.append("panelist", this.currentPanelist);
+
+        try {
+            await fetch("/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: formData.toString(),
+            });
+            // Form submitted successfully
+        } catch (error) {
+            // Error handling
         }
+    },
     },
     data () {
         return {
