@@ -1,44 +1,13 @@
 <script>
 import JumboHeader from "@components/JumboHeader.vue";
+import QuestionForm from '@components/QuestionForm.vue';
 
 export default {
     name: "QAForm",
     components: {
-        JumboHeader
+        JumboHeader,
+		QuestionForm
     },
-    methods: {
-        updatePanelist(ev) {
-			this.currentPanelist = ev.target.value;
-		},
-		async submitForm() {
-			const formData = {
-				'form-name': 'ask-question',
-				'panelist': this.currentPanelist,
-			};
-
-			try {
-				await fetch("/", {
-					method: "POST",
-					headers: { "Content-Type": "application/x-www-form-urlencoded" },
-					body: this.encode(formData),
-				});
-				// Form submitted successfully
-			} catch (error) {
-				// Error handling
-			}
-		},
-        encode(data) {
-            return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&");
-        }
-    },
-    data () {
-        return {
-        panelists: ['Evan You', 'Chris Fritz'],
-        currentPanelist: 'Evan You'
-        }
-    }
 }
 </script>
 
@@ -56,31 +25,7 @@ export default {
 			</template>
 		</JumboHeader>
 
-        <form
-			@submit.prevent="submitForm"
-            name="main-form"
-            method="post"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            >
-            <input type="hidden" name="form-name" value="ask-question" />
-            <label v-for="(panelist, index) in panelists" :key="index">
-            <input
-				type="radio"
-				name="panelist"
-				:value="panelist"
-				@input="updatePanelist"
-				:checked="panelist === currentPanelist"
-			/>
-            <span>{{ panelist }}</span>
-            </label>
-            ...
-            <button>Submit</button>
-        </form>
-
-        <form name="hidden-form" netlify netlify-honeypot="bot-field" hidden>
-            <input type="text" name="panelist">
-        </form>
+        <QuestionForm />
 	</main>
 	<!-- <div class="bg-[url('./src/assets/media/Sunrise-ISS.jpg')] absolute top-[90vh] w-full h-96 bg-cover bg-center bg-no-repeat"></div> -->
 	<!-- <div class="intro-bg bg-[url('media/sunrise-over-Earth_1600.jpg')] bg-[length:150%_auto] bg-center bg-no-repeat absolute top-[80vh] w-full h-[500px] rotate-180">

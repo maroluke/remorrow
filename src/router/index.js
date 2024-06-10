@@ -10,6 +10,8 @@ import GlossarView from "../views/GlossarView.vue";
 import ImpressumView from "../views/ImpressumView.vue";
 import PrivacyPolicyView from "../views/PrivacyPolicyView.vue";
 import MatchMakeRegistration from "../views/MatchMakeRegistration.vue";
+import SubmissionSuccess from "@components/SubmissionSuccess.vue";
+import SubmissionFail from "@components/SubmissionFail.vue";
 
 const routes = [
 	{
@@ -71,6 +73,16 @@ const routes = [
 		path: "/matchmake-registration",
 		name: "MatchMakeRegistration",
 		component: MatchMakeRegistration,
+	},
+	{
+		path: "/thanks",
+		name: "success",
+		component: SubmissionSuccess,
+	},
+	{
+		path: "/404",
+		name: "fail",
+		component: SubmissionFail,
 	},
 ];
 
