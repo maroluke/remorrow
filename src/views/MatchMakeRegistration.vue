@@ -7,25 +7,26 @@ export default {
         JumboHeader
     },
     methods: {
-        async updatePanelist(ev) {
-            this.currentPanelist = ev.target.value;
+        updatePanelist(ev) {
+			this.currentPanelist = ev.target.value;
+		},
+		async submitForm() {
+			const formData = {
+				'form-name': 'ask-question',
+				'panelist': this.currentPanelist,
+			};
 
-            const formData = {
-            'form-name': 'ask-question',
-            'panelist': this.currentPanelist,
-            };
-
-            try {
-            await fetch("/", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: this.encode(formData),
-            });
-            // Form submitted successfully
-            } catch (error) {
-            // Error handling
-            }
-        },
+			try {
+				await fetch("/", {
+					method: "POST",
+					headers: { "Content-Type": "application/x-www-form-urlencoded" },
+					body: this.encode(formData),
+				});
+				// Form submitted successfully
+			} catch (error) {
+				// Error handling
+			}
+		},
         encode(data) {
             return Object.keys(data)
             .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -56,7 +57,7 @@ export default {
 		</JumboHeader>
 
         <form
-            @submit.prevent="updatePanelist"
+			@submit.prevent="submitForm"
             name="ask-question"
             method="post"
             data-netlify="true"
@@ -65,12 +66,12 @@ export default {
             <input type="hidden" name="form-name" value="ask-question" />
             <label v-for="(panelist, index) in panelists" :key="index">
             <input
-                type="radio"
-                name="panelist"
-                :value="panelist"
-                @input="ev => updatePanelist"
-                :checked="panelist === currentPanelist"
-            />
+				type="radio"
+				name="panelist"
+				:value="panelist"
+				@input="updatePanelist"
+				:checked="panelist === currentPanelist"
+			/>
             <span>{{ panelist }}</span>
             </label>
             ...
