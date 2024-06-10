@@ -8,25 +8,29 @@ export default {
     },
     methods: {
         async updatePanelist(ev) {
-        this.currentPanelist = ev.target.value;
+            this.currentPanelist = ev.target.value;
 
-        const formData = new URLSearchParams();
-        formData.append("form-name", "ask-question");
-        formData.append("panelist", this.currentPanelist);
+            const formData = {
+            'form-name': 'ask-question',
+            'panelist': this.currentPanelist,
+            };
 
-        try {
+            try {
             await fetch("/", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                },
-                body: formData.toString(),
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: this.encode(formData),
             });
             // Form submitted successfully
-        } catch (error) {
+            } catch (error) {
             // Error handling
+            }
+        },
+        encode(data) {
+            return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
         }
-    },
     },
     data () {
         return {
@@ -52,6 +56,7 @@ export default {
 		</JumboHeader>
 
         <form
+            @submit.prevent="updatePanelist"
             name="ask-question"
             method="post"
             data-netlify="true"
@@ -70,6 +75,10 @@ export default {
             </label>
             ...
             <button>Submit</button>
+        </form>
+
+        <form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
+            <input type="text" name="panelist">
         </form>
 	</main>
 	<!-- <div class="bg-[url('./src/assets/media/Sunrise-ISS.jpg')] absolute top-[90vh] w-full h-96 bg-cover bg-center bg-no-repeat"></div> -->
