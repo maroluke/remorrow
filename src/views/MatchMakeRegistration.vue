@@ -58,7 +58,7 @@ export default {
 
         <form
 			@submit.prevent="submitForm"
-            name="ask-question"
+            name="main-form"
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
@@ -78,7 +78,7 @@ export default {
             <button>Submit</button>
         </form>
 
-        <form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
+        <form name="hidden-form" netlify netlify-honeypot="bot-field" hidden>
             <input type="text" name="panelist">
         </form>
 	</main>
