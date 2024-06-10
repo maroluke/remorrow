@@ -9,6 +9,7 @@ import ProjectsView from "../views/ProjectsView.vue";
 import GlossarView from "../views/GlossarView.vue";
 import ImpressumView from "../views/ImpressumView.vue";
 import PrivacyPolicyView from "../views/PrivacyPolicyView.vue";
+import MatchMakeRegistration from "../views/MatchMakeRegistration.vue";
 
 const routes = [
 	{
@@ -65,6 +66,11 @@ const routes = [
 		path: "/datenschutz",
 		name: "PrivacyPolicy",
 		component: PrivacyPolicyView,
+	},
+	{
+		path: "/matchmake-registration",
+		name: "MatchMakeRegistration",
+		component: MatchMakeRegistration,
 	},
 ];
 
