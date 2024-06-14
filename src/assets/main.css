@@ -87,7 +87,7 @@
     }
 
     h1 {
-        @apply mb-5 md:text-5xl lg:text-6xl xl:text-7xl;
+        @apply mb-5 md:text-4xl lg:text-5xl xl:text-7xl;
     }
 
     h2 {
@@ -95,7 +95,7 @@
     }
 
     p {
-        @apply font-medium mb-5 leading-normal last:mb-0 md:text-xl md:font-light md:leading-relaxed;
+        @apply font-medium mb-5 leading-normal md:text-xl md:font-light md:leading-relaxed;
     }
 
     strong {

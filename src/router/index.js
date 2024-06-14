@@ -73,16 +73,25 @@ const routes = [
 		path: "/matchmake-registration",
 		name: "MatchMakeRegistration",
 		component: MatchMakeRegistration,
+		meta: {
+			robots: "noindex",
+		},
 	},
 	{
 		path: "/thanks",
 		name: "success",
 		component: SubmissionSuccess,
+		meta: {
+			robots: "noindex",
+		},
 	},
 	{
 		path: "/404",
 		name: "fail",
 		component: SubmissionFail,
+		meta: {
+			robots: "noindex",
+		},
 	},
 ];
 

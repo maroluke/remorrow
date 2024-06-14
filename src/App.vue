@@ -21,6 +21,10 @@ export default defineComponent({
 			navigationState,
 		};
 	},
+
+	mounted() {
+		document.querySelector('meta[name="robots"]').setAttribute("content", this.$route.meta.robots);
+	},
 });
 </script>
 
