@@ -1,13 +1,36 @@
 <script>
-import JumboHeader from "@components/JumboHeader.vue";
 import QuestionForm from '@components/QuestionForm.vue';
+import FormModal from '@components/FormModal.vue';
 
 export default {
     name: "QAForm",
     components: {
-        JumboHeader,
-		QuestionForm
+		QuestionForm,
+		FormModal,
     },
+	data() {
+        return {
+            showModal: false,
+            modalText: '',
+			reset: false,
+        };
+    },
+	methods: {
+		handleShowModal(value) {
+			this.showModal = value;
+		},
+		handleModalText(value) {
+			this.modalText = value;
+		},
+		resetForm() {
+			this.showModal = false;
+			this.modalText = '';
+			this.reset = true;
+		},
+		resetComplete() {
+			this.reset = false;
+		},
+	}
 }
 </script>
 
@@ -30,13 +53,11 @@ export default {
 
 			<div class="flex gap-10 flex-col lg:w-2/3 lg:max-w-screen-sm">
 				<div>
-					<QuestionForm />
+					<QuestionForm @updateShowModal="handleShowModal" @updateModalText="handleModalText" @resetComplete="reset = false" :reset="reset" />
 				</div>
 			</div>
 		</div>
 	</section>
-	<!-- <div class="bg-[url('./src/assets/media/Sunrise-ISS.jpg')] absolute top-[90vh] w-full h-96 bg-cover bg-center bg-no-repeat"></div> -->
-	<!-- <div class="intro-bg bg-[url('media/sunrise-over-Earth_1600.jpg')] bg-[length:150%_auto] bg-center bg-no-repeat absolute top-[80vh] w-full h-[500px] rotate-180">
-        <div class="bg-gradient-to-b from-black via-transparent to-transparent w-full h-full"></div>
-    </div> -->
+	
+	<FormModal v-if="showModal" :message="modalText" @close="resetForm" />
 </template>
