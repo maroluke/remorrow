@@ -58,6 +58,8 @@ export default {
 			</div>
 		</div>
 	</section>
+
+	<div v-show="showModal" class="bg-dark bg-opacity-25 w-full h-full absolute top-0 left-0 bottom-0 right-0 backdrop-blur-md z-50"></div>
 	
 	<FormModal v-if="showModal" :message="modalText" @close="resetForm" />
 </template>
