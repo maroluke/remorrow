@@ -1,7 +1,13 @@
 <script>
+import IconCheck from "./icons/IconCheck.vue";
+import IconAddUser from "./icons/IconAddUser.vue";
 
 export default {
 	name: "FormModal",
+	components: {
+		IconCheck,
+		IconAddUser,
+	},
 	data() {
 		return {};
 	},
@@ -22,7 +28,7 @@ export default {
 		aria-hidden="true"
 		class="fixed flex items-center justify-center top-0 left-0 right-0 z-[100] w-full p-4 overflow-x-hidden overflow-y-auto inset-0 h-full"
 	>
-		<div class="relative w-full h-auto max-w-screen-xs">
+		<div class="relative w-full h-auto max-w-sm">
 			<!-- Modal content -->
 			<div class="relative bg-snow text-coal rounded-xl shadow-2xl">
 				<!-- Modal header -->
@@ -50,24 +56,28 @@ export default {
 				</div>
 				<!-- Modal body -->
 				<div class="p-6 pt-0 space-y-6 md:pt-0 md:mt-0 text-coal">
-					<p v-html="message" class="text-base"></p>
+					<p v-html="message"></p>
 					<hr />
-					<p>Möchtest du weitere Personen erfassen?</p>
-					<div class="flex gap-5">
+					<p>Möchtest du weitere Teilnehmer*innen erfassen?</p>
+					<div class="flex flex-col gap-5">
 						<button
 							@click="$emit('addPerson')"
 							type="button"
-							class="flex-1 text-snow bg-caribbean-green hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center disabled:opacity-25 disabled:cursor-not-allowed"
+							class="flex-1 flex justify-between text-snow bg-rich-electric-blue hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-4 text-center disabled:opacity-25 disabled:cursor-not-allowed"
 						>
-							Person hinzufügen
+							<span>Teilnehmenr*in hinzufügen</span>
+							
+							<IconAddUser class="h-5 text-inherit" />
 						</button>
 
 						<button
 							@click="$emit('close', true)"
 							type="button"
-							class="flex-1 text-snow bg-burning-orange hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center disabled:opacity-25 disabled:cursor-not-allowed"
+							class="flex-1 flex justify-between text-snow bg-coal hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-4 text-center disabled:opacity-25 disabled:cursor-not-allowed"
 						>
-							Fertig
+							<span>Fertig</span>
+
+							<IconCheck class="h-5 text-inherit" />
 						</button>
 					</div>
 				</div>

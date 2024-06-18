@@ -13,6 +13,15 @@ import MatchMakeRegistration from "../views/MatchMakeRegistration.vue";
 import SubmissionSuccess from "@components/SubmissionSuccess.vue";
 import SubmissionFail from "@components/SubmissionFail.vue";
 
+const ExternalRedirect = {
+	mounted() {
+		window.location.href = this.$route.meta.externalURL;
+	},
+	render: function () {
+		return null;
+	},
+};
+
 const routes = [
 	{
 		path: "/",
@@ -92,6 +101,11 @@ const routes = [
 		meta: {
 			robots: "noindex",
 		},
+	},
+	{
+		path: "/matchmake-linkedin",
+		component: ExternalRedirect,
+		meta: { externalURL: "https://linkedin.com/company/remorrow/" },
 	},
 ];
 

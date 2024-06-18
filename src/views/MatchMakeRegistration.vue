@@ -35,6 +35,10 @@ export default {
 			this.newPerson = true;
 			this.showModal = false;
 		},
+		finish() {
+			this.complete = false;
+			this.$router.push("/");
+		},
 	},
 };
 </script>
@@ -63,7 +67,7 @@ export default {
 						@updateModalText="handleModalText"
 						@resetComplete="reset = false"
 						@addPersonComplete="newPerson = false"
-						@finish="this.complete = false"
+						@finish="finish"
 						:reset="reset"
 						:addPerson="newPerson"
 						:complete="complete"
