@@ -65,7 +65,7 @@ export default {
 							type="button"
 							class="flex-1 flex justify-between text-snow bg-rich-electric-blue hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-4 text-center disabled:opacity-25 disabled:cursor-not-allowed"
 						>
-							<span>Teilnehmenr*in hinzufügen</span>
+							<span>Weitere*n Teilnehmer*in erfassen</span>
 							
 							<IconAddUser class="h-5 text-inherit" />
 						</button>
