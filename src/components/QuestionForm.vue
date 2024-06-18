@@ -7,7 +7,15 @@
 				value="machtmake-registration"
 			/>
 			<ul class="flex flex-col">
+                <div v-if="addedPersons && !complete">
+                    <div class="border-b border-white border-opacity-25 pb-4 mb-4">
+                        <p class="mb-0"><span class="opacity-75">Unternehmen: </span> {{ form.company }}</p>
+                        <p class="mb-0"><span class="opacity-75">E-Mail Kontakt: </span> {{ form.email }}</p>
+                    </div>
+                    <p>{{ addedPersons + 1 }}. Teilnehmer*in</p>
+                </div>
 				<FormInput
+                    v-if="addedPersons === 0 || complete"
 					type="text"
 					placeholder="Unternehmen"
 					v-model="form.company"
@@ -23,26 +31,24 @@
 					</template>
 				</FormInput>
 
-				<FormInput type="text" placeholder="Name" v-model="form.name">
-					<template v-slot:label> Name (Vor- und Nachname) </template>
-				</FormInput>
+				<FormInput type="text" placeholder="Vorname" v-model="form.firstname"></FormInput>
+
+                <FormInput type="text" placeholder="Nachname" v-model="form.lastname"></FormInput>
 
 				<FormInput
 					type="text"
 					placeholder="Position"
 					v-model="form.position"
 				>
-					<template v-slot:label> Positionsbezeichnung </template>
+					
 				</FormInput>
 
 				<FormInput
+                    v-if="addedPersons === 0 || complete"
 					type="email"
-					placeholder="E-Mail"
+					placeholder="E-Mail Adresse für Event-Details"
 					v-model="form.email"
 				>
-					<template v-slot:label>
-						E-Mail Adresse für Event-Details
-					</template>
 				</FormInput>
 			</ul>
 
@@ -66,6 +72,8 @@ export default {
 	},
 	props: {
 		reset: Boolean,
+        addPerson: Boolean,
+        complete: Boolean,
 	},
 	watch: {
 		reset(newVal) {
@@ -74,12 +82,25 @@ export default {
 				this.$emit("resetComplete");
 			}
 		},
+        addPerson(newVal) {
+            if (newVal) {
+                this.newPerson();
+            }
+        },
+        complete(newVal) {
+            if (newVal === true) {
+                this.resetForm();
+                this.$emit("finish");
+                this.addedPersons = 0;
+            }
+        },
 	},
 	data() {
 		return {
 			form: {
 				company: "",
-				name: "",
+				firstname: "",
+                lastname: "",
 				position: "",
 				email: "",
 			},
@@ -89,13 +110,15 @@ export default {
 				type: "",
 			},
 			showModal: false,
+            addedPersons: 0,
 		};
 	},
 	computed: {
 		isFormValid() {
 			if (
 				this.form.company &&
-				this.form.name &&
+				this.form.firstname &&
+                this.form.lastname &&
 				this.form.position &&
 				this.validateEmail(this.form.email)
 			) {
@@ -137,7 +160,7 @@ export default {
 				this.showModal = true;
 
 				this.status = {
-					text: "Deine Registrierung ist bei uns eingegangen. Wir freuen uns auf deine Teilnahme.",
+					text: "Deine Registrierung ist bei uns eingegangen.<br />Wir freuen uns auf deine Teilnahme.",
 					type: "success",
 				};
 
@@ -154,13 +177,28 @@ export default {
 
 			this.form = {
 				company: "",
-				name: "",
+				firstname: "",
+                lastname: "",
 				position: "",
 				email: "",
 			};
 
 			this.sent = false;
 		},
+
+        newPerson() {
+            const company = this.form.company;
+            const email = this.form.email;
+
+            this.resetForm();
+
+            this.form.company = company;
+            this.form.email = email;
+
+            this.addedPersons++;
+
+            this.$emit("addPersonComplete");
+        }
 	},
 };
 </script>

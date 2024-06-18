@@ -20,14 +20,14 @@ export default {
 		id="contact-modal"
 		tabindex="-1"
 		aria-hidden="true"
-		class="fixed flex items-center justify-center top-0 left-0 right-0 z-[100] w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+		class="fixed flex items-center justify-center top-0 left-0 right-0 z-[100] w-full p-4 overflow-x-hidden overflow-y-auto inset-0 h-full"
 	>
 		<div class="relative w-full h-auto max-w-screen-xs">
 			<!-- Modal content -->
 			<div class="relative bg-snow text-coal rounded-xl shadow-2xl">
 				<!-- Modal header -->
 				<div class="flex items-start justify-between p-5 rounded-t">
-					<h3>Danke</h3>
+					<h3>Danke!</h3>
 
 					<button
 						@click="$emit('close')"
@@ -50,9 +50,26 @@ export default {
 				</div>
 				<!-- Modal body -->
 				<div class="p-6 pt-0 space-y-6 md:pt-0 md:mt-0 text-coal">
-					<p class="text-base">
-						{{ message }}
-					</p>
+					<p v-html="message" class="text-base"></p>
+					<hr />
+					<p>Möchtest du weitere Personen erfassen?</p>
+					<div class="flex gap-5">
+						<button
+							@click="$emit('addPerson')"
+							type="button"
+							class="flex-1 text-snow bg-caribbean-green hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center disabled:opacity-25 disabled:cursor-not-allowed"
+						>
+							Person hinzufügen
+						</button>
+
+						<button
+							@click="$emit('close', true)"
+							type="button"
+							class="flex-1 text-snow bg-burning-orange hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center disabled:opacity-25 disabled:cursor-not-allowed"
+						>
+							Fertig
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
