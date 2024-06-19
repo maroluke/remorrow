@@ -9,15 +9,11 @@
 			<ul class="flex flex-col">
 				<div v-if="addedPersons && !complete">
 					<div
-						class="border-b border-white border-opacity-25 pb-4 mb-4"
+						class="border-b border-white border-opacity-25"
 					>
 						<p class="mb-0">
 							<span class="opacity-75">Unternehmen: </span>
 							{{ form.company }}
-						</p>
-						<p class="mb-0">
-							<span class="opacity-75">E-Mail Kontakt: </span>
-							{{ form.email }}
 						</p>
 					</div>
 					<p>{{ addedPersons + 1 }}. Teilnehmer*in</p>
@@ -59,7 +55,6 @@
 				</FormInput>
 
 				<FormInput
-					v-if="addedPersons === 0 || complete"
 					type="email"
 					placeholder="E-Mail Adresse für Event-Details"
 					v-model="form.email"
@@ -203,12 +198,10 @@ export default {
 
 		newPerson() {
 			const company = this.form.company;
-			const email = this.form.email;
 
 			this.resetForm();
 
 			this.form.company = company;
-			this.form.email = email;
 
 			this.addedPersons++;
 
