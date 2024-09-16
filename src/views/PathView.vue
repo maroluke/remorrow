@@ -31,9 +31,9 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 						<p>
 							In erster Linie möchten wir organisch wachsen. Wir
 							möchten begeisterte Menschen finden, die Teil dieser
-							Vision sein wollen und Partnerschaften schliessen, mit
-							denen wir uns gemeinsam entwickeln und für künftiges
-							Wachstum wurzeln können.
+							Vision sein wollen und Partnerschaften schliessen,
+							mit denen wir uns gemeinsam entwickeln und für
+							künftiges Wachstum wurzeln können.
 							<br /><br />
 							re:morrow entwickeln wir durch die nachfolgenden
 							Etappen:
@@ -56,7 +56,8 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 							<ul class="list">
 								<li class="!bg-green-400">
 									<span>
-										Entwicklung der Idee und zentraler Konzepte
+										Entwicklung der Idee und zentraler
+										Konzepte
 									</span>
 									<div>
 										<IconChecked2
@@ -65,9 +66,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 									</div>
 								</li>
 								<li class="!bg-green-400">
-									<span>
-										Repräsentation / Branding
-									</span>
+									<span> Repräsentation / Branding </span>
 									<div>
 										<IconChecked2
 											class="fill-snow w-6 self-start"
@@ -85,9 +84,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 									</div>
 								</li>
 								<li class="!bg-green-400">
-									<span>
-										Purpose, Vision und Mission
-									</span>
+									<span> Purpose, Vision und Mission </span>
 									<div>
 										<IconChecked2
 											class="fill-snow w-6 self-start"
@@ -110,7 +107,8 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 							<ul class="list">
 								<li class="!bg-green-400">
 									<span>
-										Offizieller Launch von Webseite & Social Media
+										Offizieller Launch von Webseite & Social
+										Media
 									</span>
 									<div>
 										<IconChecked2
@@ -119,9 +117,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 									</div>
 								</li>
 								<li class="!bg-green-400">
-									<span>
-										Schärfung Value Proposition
-									</span>
+									<span> Schärfung Value Proposition </span>
 									<div>
 										<IconChecked2
 											class="fill-snow w-6 self-start"
@@ -168,24 +164,43 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 						:iconStyle="'fill-coal md:fill-moon'"
 						class="text-coal py-5 md:text-snow"
 					>
-						<template #title>2024 - Working with the plants </template>
+						<template #title
+							>2024 - Working with the plants
+						</template>
 
 						<template #paragraph>
 							<ul class="list">
-								<li>
+								<li class="!bg-green-400">
 									<span>
-										Strukturiertes Onboarding von Projekten & Startups
+										Strukturiertes Onboarding von Projekten
+										& Startups
 									</span>
 									<div>
-										<img class="w-6" src="/loader.gif" alt="On progress animation">
+										<IconChecked2
+											class="fill-snow w-6 self-start"
+										/>
 									</div>
 								</li>
-								<li>
+								<li class="!bg-green-400">
 									<span>
-										Kontinuierliche Verbesserung des holistischen Scorings
+										Kontinuierliche Verbesserung des
+										holistischen Scorings
 									</span>
 									<div>
-										<img class="w-6" src="/loader.gif" alt="On progress animation">
+										<IconChecked2
+											class="fill-snow w-6 self-start"
+										/>
+									</div>
+								</li>
+								<li class="!bg-green-400">
+									<span>
+										Umsetzen von Events / kommunikativen
+										Massnahmen
+									</span>
+									<div>
+										<IconChecked2
+											class="fill-snow w-6 self-start"
+										/>
 									</div>
 								</li>
 								<li>
@@ -193,15 +208,11 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 										Erweiterung der Pioneer- & Hero-Teams
 									</span>
 									<div>
-										<img class="w-6" src="/loader.gif" alt="On progress animation">
-									</div>
-								</li>
-								<li>
-									<span>
-										Umsetzen von Events / kommunikativen Massnahmen
-									</span>
-									<div>
-										<img class="w-6" src="/loader.gif" alt="On progress animation">
+										<img
+											class="w-6"
+											src="/loader.gif"
+											alt="On progress animation"
+										/>
 									</div>
 								</li>
 								<li>
@@ -209,7 +220,11 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 										Lancierung des initialen Angebots
 									</span>
 									<div>
-										<img class="w-6" src="/loader.gif" alt="On progress animation">
+										<img
+											class="w-6"
+											src="/loader.gif"
+											alt="On progress animation"
+										/>
 									</div>
 								</li>
 							</ul>
@@ -229,9 +244,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 								<li>
 									Fokussierung der Arbeiten an der Plattform
 								</li>
-								<li>
-									Erweiterung der Pioneer- & Hero-Teams
-								</li>
+								<li>Erweiterung der Pioneer- & Hero-Teams</li>
 								<li>Stabilisierung des Angebots</li>
 								<li>Vorbereitung für breitere Skalierung</li>
 							</ul>
@@ -253,7 +266,11 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 					<template #paragraph>
 						<p>
-							<strong>Auf den Punkt:</strong> Wir wollen eine hoffnungsvolle und inspirierende Zukunft. Wir leisten unseren Beitrag, indem wir nachhaltige Ideen mit positiver Wirkung aktiv unterstützen und fördern.
+							<strong>Auf den Punkt:</strong> Wir wollen eine
+							hoffnungsvolle und inspirierende Zukunft. Wir
+							leisten unseren Beitrag, indem wir nachhaltige Ideen
+							mit positiver Wirkung aktiv unterstützen und
+							fördern.
 						</p>
 					</template>
 				</TitleParagraphItem>
@@ -273,7 +290,13 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 				<TitleParagraphItem>
 					<template #paragraph>
 						<p>
-							Konkret entwickeln wir eine Community von interessierten und motivierten Menschen, die gemeinsam das Morgen mitgestalten wollen, sich gegenseitig unterstützen und an guten, nachhaltigen Ideen arbeiten. Perspektivisch bauen wir eine digitale Plattform, die diese Unterstützung auf globaler Ebene zu skaliert.
+							Konkret entwickeln wir eine Community von
+							interessierten und motivierten Menschen, die
+							gemeinsam das Morgen mitgestalten wollen, sich
+							gegenseitig unterstützen und an guten, nachhaltigen
+							Ideen arbeiten. Perspektivisch bauen wir eine
+							digitale Plattform, die diese Unterstützung auf
+							globaler Ebene zu skaliert.
 						</p>
 					</template>
 				</TitleParagraphItem>
@@ -292,12 +315,20 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 					<template #paragraph>
 						<p>
-							<strong>Ein besseres Morgen für Mensch und Planet</strong>, in dem Hoffnung, Inspiration und Begeisterung gegenwärtig ist und Mut für Veränderung macht. 
+							<strong
+								>Ein besseres Morgen für Mensch und
+								Planet</strong
+							>, in dem Hoffnung, Inspiration und Begeisterung
+							gegenwärtig ist und Mut für Veränderung macht.
 							<br /><br />
-							Wir sehen re:morrow als globale Plattform, um die richtigen Menschen zusammenzubringen. 
-							Die Menschen, die aktiv mitgestalten und jene, die Ideen mit positiver Wirkung vorantreiben. 
+							Wir sehen re:morrow als globale Plattform, um die
+							richtigen Menschen zusammenzubringen. Die Menschen,
+							die aktiv mitgestalten und jene, die Ideen mit
+							positiver Wirkung vorantreiben.
 							<br /><br />
-							So schaffen wir eine Basis für kollaboratives Wirken, die Lösung von Problemen und mehr Hoffnung in eine bessere Zukunft für alle.
+							So schaffen wir eine Basis für kollaboratives
+							Wirken, die Lösung von Problemen und mehr Hoffnung
+							in eine bessere Zukunft für alle.
 						</p>
 					</template>
 				</TitleParagraphItem>
