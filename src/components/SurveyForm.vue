@@ -7,7 +7,7 @@
 				<li class="mb-5 max-w-md">
 					<label class="m-0 md:flex md:flex-col" for="rating">
 						<p class="flex-1 leading-normal mb-2">
-							Hat dir die match:make gefallen?
+							Hat dir die match:make gefallen? *
 						</p>
 					</label>
 
@@ -64,7 +64,7 @@
 				>
 					<template v-slot:label>
 						Was haben wir gut gemacht und was könnten wir
-						verbessern?
+						verbessern? *
 					</template>
 				</FormInput>
 
@@ -77,7 +77,7 @@
 				>
 					<template v-slot:label>
 						Welche anderen Organisationen sollten an der nächsten
-						match:make teilnehmen?
+						match:make teilnehmen? *
 					</template>
 				</FormInput>
 

@@ -84,7 +84,7 @@ export default {
 									'close',
 									true,
 									type === 'survey'
-										? 'https://linkedin.com'
+										? 'https://www.linkedin.com/company/remorrow/'
 										: null
 								)
 							"
