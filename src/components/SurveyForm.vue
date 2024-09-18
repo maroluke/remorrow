@@ -11,9 +11,9 @@
 						</p>
 					</label>
 
-					<div class="flex gap-5">
+					<div class="flex gap-1 justify-between">
 						<div
-							class="flex gap-3 items-center border rounded px-3 py-1 bg-white"
+							class="flex justify-between w-full items-center border rounded px-3 py-1 pr-6 bg-white"
 						>
 							<input
 								type="radio"
@@ -21,10 +21,10 @@
 								v-model="form.rating"
 								value="1"
 								class="cursor-pointer"
-							/><span>1</span>
+							/><span class="text-black">1</span>
 						</div>
 						<div
-							class="flex gap-3 items-center border rounded px-3 py-1 bg-white"
+							class="flex justify-between w-full items-center border rounded px-3 py-1 pr-6 bg-white"
 						>
 							<input
 								type="radio"
@@ -32,10 +32,10 @@
 								v-model="form.rating"
 								value="2"
 								class="cursor-pointer"
-							/><span>2</span>
+							/><span class="text-black">2</span>
 						</div>
 						<div
-							class="flex gap-3 items-center border rounded px-3 py-1 bg-white"
+							class="flex justify-between w-full items-center border rounded px-3 py-1 pr-6 bg-white"
 						>
 							<input
 								type="radio"
@@ -43,10 +43,10 @@
 								v-model="form.rating"
 								value="3"
 								class="cursor-pointer"
-							/><span>3</span>
+							/><span class="text-black">3</span>
 						</div>
 						<div
-							class="flex gap-3 items-center border rounded px-3 py-1 bg-white"
+							class="flex justify-between w-full items-center border rounded px-3 py-1 pr-6 bg-white"
 						>
 							<input
 								type="radio"
@@ -54,10 +54,10 @@
 								v-model="form.rating"
 								value="4"
 								class="cursor-pointer"
-							/><span>4</span>
+							/><span class="text-black">4</span>
 						</div>
 						<div
-							class="flex gap-3 items-center border rounded px-3 py-1 bg-white"
+							class="flex justify-between w-full items-center border rounded px-3 py-1 pr-6 bg-white"
 						>
 							<input
 								type="radio"
@@ -65,7 +65,7 @@
 								v-model="form.rating"
 								value="5"
 								class="cursor-pointer"
-							/><span>5</span>
+							/><span class="text-black">5</span>
 						</div>
 					</div>
 				</li>
