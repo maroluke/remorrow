@@ -12,7 +12,7 @@
 					</label>
 
 					<div class="flex gap-5">
-						<div class="flex gap-3">
+						<div class="flex gap-3 items-center">
 							<input
 								type="radio"
 								name="rating"
