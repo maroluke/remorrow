@@ -12,44 +12,59 @@
 					</label>
 
 					<div class="flex gap-5">
-						<div class="flex gap-3 items-center">
+						<div
+							class="flex gap-3 items-center border rounded px-3 py-1 bg-white"
+						>
 							<input
 								type="radio"
 								name="rating"
 								v-model="form.rating"
 								value="1"
+								class="cursor-pointer"
 							/><span>1</span>
 						</div>
-						<div class="flex gap-3">
+						<div
+							class="flex gap-3 items-center border rounded px-3 py-1 bg-white"
+						>
 							<input
 								type="radio"
 								name="rating"
 								v-model="form.rating"
 								value="2"
+								class="cursor-pointer"
 							/><span>2</span>
 						</div>
-						<div class="flex gap-3">
+						<div
+							class="flex gap-3 items-center border rounded px-3 py-1 bg-white"
+						>
 							<input
 								type="radio"
 								name="rating"
 								v-model="form.rating"
 								value="3"
+								class="cursor-pointer"
 							/><span>3</span>
 						</div>
-						<div class="flex gap-3">
+						<div
+							class="flex gap-3 items-center border rounded px-3 py-1 bg-white"
+						>
 							<input
 								type="radio"
 								name="rating"
 								v-model="form.rating"
 								value="4"
+								class="cursor-pointer"
 							/><span>4</span>
 						</div>
-						<div class="flex gap-3">
+						<div
+							class="flex gap-3 items-center border rounded px-3 py-1 bg-white"
+						>
 							<input
 								type="radio"
 								name="rating"
 								v-model="form.rating"
 								value="5"
+								class="cursor-pointer"
 							/><span>5</span>
 						</div>
 					</div>
