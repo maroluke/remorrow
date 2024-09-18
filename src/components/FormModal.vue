@@ -17,6 +17,11 @@ export default {
 			type: String,
 			required: true,
 		},
+
+		type: {
+			type: String,
+			default: "",
+		},
 	},
 };
 </script>
@@ -58,20 +63,31 @@ export default {
 				<div class="p-6 pt-0 space-y-6 md:pt-0 md:mt-0 text-coal">
 					<p v-html="message"></p>
 					<hr />
-					<p>Möchtest du weitere Teilnehmer*innen erfassen?</p>
+					<p v-if="type !== 'survey'">
+						Möchtest du weitere Teilnehmer*innen erfassen?
+					</p>
 					<div class="flex flex-col gap-5">
 						<button
+							v-if="type !== 'survey'"
 							@click="$emit('addPerson')"
 							type="button"
 							class="flex-1 flex justify-between text-snow bg-rich-electric-blue hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-4 text-center disabled:opacity-25 disabled:cursor-not-allowed"
 						>
 							<span>Weitere*n Teilnehmer*in erfassen</span>
-							
+
 							<IconAddUser class="h-5 text-inherit" />
 						</button>
 
 						<button
-							@click="$emit('close', true)"
+							@click="
+								$emit(
+									'close',
+									true,
+									type === 'survey'
+										? 'https://linkedin.com'
+										: null
+								)
+							"
 							type="button"
 							class="flex-1 flex justify-between text-snow bg-coal hover:bg-coal hover:text-rich-electric-blue focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-4 text-center disabled:opacity-25 disabled:cursor-not-allowed"
 						>

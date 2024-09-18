@@ -12,6 +12,7 @@ import PrivacyPolicyView from "../views/PrivacyPolicyView.vue";
 import MatchMakeRegistration from "../views/MatchMakeRegistration.vue";
 import SubmissionSuccess from "@components/SubmissionSuccess.vue";
 import SubmissionFail from "@components/SubmissionFail.vue";
+import MatchMakeSurvey from "../views/MatchMakeSurvey.vue";
 
 const ExternalRedirect = {
 	mounted() {
@@ -82,6 +83,14 @@ const routes = [
 		path: "/matchmake-registration",
 		name: "MatchMakeRegistration",
 		component: MatchMakeRegistration,
+		meta: {
+			robots: "noindex",
+		},
+	},
+	{
+		path: "/matchmake-survey",
+		name: "MatchMakeSurvey",
+		component: MatchMakeSurvey,
 		meta: {
 			robots: "noindex",
 		},
