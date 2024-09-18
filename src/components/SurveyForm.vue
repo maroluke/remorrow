@@ -13,58 +13,58 @@
 
 					<div class="flex gap-1 justify-between">
 						<div
-							class="flex justify-between w-full items-center border rounded px-3 py-1 pr-6 bg-white"
+							class="flex justify-between w-full items-center border rounded px-3 py-1 bg-white sm:pr-6"
 						>
 							<input
 								type="radio"
 								name="rating"
 								v-model="form.rating"
 								value="1"
-								class="cursor-pointer"
+								class="cursor-pointer w-4 h-full"
 							/><span class="text-black">1</span>
 						</div>
 						<div
-							class="flex justify-between w-full items-center border rounded px-3 py-1 pr-6 bg-white"
+							class="flex justify-between w-full items-center border rounded px-3 py-1 bg-white sm:pr-6"
 						>
 							<input
 								type="radio"
 								name="rating"
 								v-model="form.rating"
 								value="2"
-								class="cursor-pointer"
+								class="cursor-pointer w-4 h-full"
 							/><span class="text-black">2</span>
 						</div>
 						<div
-							class="flex justify-between w-full items-center border rounded px-3 py-1 pr-6 bg-white"
+							class="flex justify-between w-full items-center border rounded px-3 py-1 bg-white sm:pr-6"
 						>
 							<input
 								type="radio"
 								name="rating"
 								v-model="form.rating"
 								value="3"
-								class="cursor-pointer"
+								class="cursor-pointer w-4 h-full"
 							/><span class="text-black">3</span>
 						</div>
 						<div
-							class="flex justify-between w-full items-center border rounded px-3 py-1 pr-6 bg-white"
+							class="flex justify-between w-full items-center border rounded px-3 py-1 bg-white sm:pr-6"
 						>
 							<input
 								type="radio"
 								name="rating"
 								v-model="form.rating"
 								value="4"
-								class="cursor-pointer"
+								class="cursor-pointer w-4 h-full"
 							/><span class="text-black">4</span>
 						</div>
 						<div
-							class="flex justify-between w-full items-center border rounded px-3 py-1 pr-6 bg-white"
+							class="flex justify-between w-full items-center border rounded px-3 py-1 bg-white sm:pr-6"
 						>
 							<input
 								type="radio"
 								name="rating"
 								v-model="form.rating"
 								value="5"
-								class="cursor-pointer"
+								class="cursor-pointer w-4 h-full"
 							/><span class="text-black">5</span>
 						</div>
 					</div>
