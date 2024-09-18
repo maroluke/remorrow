@@ -9,3 +9,5 @@
     from = "/*"
     to = "/"
     status = 200
+[build.environment]
+  GO_VERSION = "1.19.4"
