@@ -84,7 +84,7 @@ export default {
 									'close',
 									true,
 									type === 'survey'
-										? 'https://www.linkedin.com/company/remorrow/'
+										? 'https://www.linkedin.com/posts/remorrow_matchmake-activity-7242767425434243072-PK6h'
 										: null
 								)
 							"
