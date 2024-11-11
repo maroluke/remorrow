@@ -63,7 +63,7 @@ const router = useRouter();
 
 .logo-toggle-enter-from,
 .logo-toggle-leave-to {
-	@apply opacity-0 -translate-x-3 transition-none delay-[0ms] sm:transition-all;
+	@apply opacity-0 -translate-x-3 transition-none sm:transition-all;
 }
 
 /* .nav-open .logo {

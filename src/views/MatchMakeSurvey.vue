@@ -45,7 +45,7 @@ export default {
 		class="px-5 py-24 bg-dark text-snow lg:bg-snow lg:text-dark lg:flex lg:justify-center lg:px-20 lg:pt-40"
 	>
 		<div
-			class="max-w-md !mb-0 !items-start lg:max-w-screen-lg lg:flex-row lg:flex lg:gap-10 lg:gap-20 lg:justify-between mx-auto"
+			class="max-w-md !mb-0 !items-start lg:max-w-screen-lg lg:flex-row lg:flex lg:gap-20 lg:justify-between mx-auto"
 		>
 			<div
 				class="flex gap-10 flex-col flex-1 pt-5 z-20 shrink items-center lg:p-0 lg:text-dark"

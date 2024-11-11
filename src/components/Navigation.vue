@@ -78,9 +78,7 @@ export default {
 						<NavigationItem :to="'/wer-wir-sind'"
 							>Wer wir sind</NavigationItem
 						>
-						<NavigationItem :to="'/events'"
-							>Events</NavigationItem
-						>
+						<NavigationItem :to="'/events'">Events</NavigationItem>
 						<NavigationItem :to="'/sei-dabei'"
 							>Sei ein Teil davon</NavigationItem
 						>
@@ -113,15 +111,23 @@ export default {
 
 						<ContactIcons class="px-8 bg-snow" />
 
-						<ul 
+						<ul
 							@click="
 								navigationState.navigationIsOpen =
 									!navigationState.navigationIsOpen
 							"
 							class="px-8 pb-4 text-moon flex gap-4"
 						>
-							<RouterLink to="/impressum" class="underline font-medium text-sm block">Impressum</RouterLink>
-							<RouterLink to="/datenschutz" class="underline font-medium text-sm block">Datenschutzerklärung</RouterLink>
+							<RouterLink
+								to="/impressum"
+								class="underline font-medium text-sm block"
+								>Impressum</RouterLink
+							>
+							<RouterLink
+								to="/datenschutz"
+								class="underline font-medium text-sm block"
+								>Datenschutzerklärung</RouterLink
+							>
 						</ul>
 					</div>
 				</div>
@@ -152,7 +158,7 @@ export default {
 
 .logo-mini-toggle-enter-from,
 .logo-mini-toggle-leave-to {
-	@apply opacity-0 -translate-x-3 duration-200 delay-[0ms];
+	@apply opacity-0 -translate-x-3 duration-200;
 }
 
 .router-link-active {

@@ -69,16 +69,62 @@ export default defineComponent({
 
 				<template #paragraph>
 					<p>
-						<p>Wir arbeiten kollektiv am Aufbau von re:morrow und suchen dabei unseren eigenen Weg.</p>
-						<p>Perspektivisch bauen wir eine digitale und globale Plattform zur Unterstützung von nachhaltigen <RouterLink class="glossar-link" to="/projekte/">Ideen, Projekten und Startups</RouterLink> auf. Gleichzeitig entwickeln wir <strong>eine <RouterLink class="glossar-link" to="/community/">Community</RouterLink> mit Menschen, die Ideen mit positiver Wirkung aktiv unterstützen</strong>.</p>
-						<div class="flex gap-5 mb-5 items-center justify-between">
-							<p class="mb-0 flex-1">Die treibenden Kräfte bei uns sind <strong id="sirik" class="transition-all duration-300">Sirik</strong> und <strong id="marko" class="transition-all duration-300">Marko</strong>.</p>
-							<div class="flex-1 flex justify-end">
-								<img @mouseenter="markText('sirik', $event)" @mouseleave="demarkText()" @click="markText('sirik', $event)" src="@/assets/media/profile-sirik.jpg" alt="Sirik Loosman" class="z-20 transition-all duration-300 -rotate-3 mt-10 z-20 block rounded-full w-24 h-24 object-cover border-4 border-white md:w-32 md:h-32" />
-								<img @mouseenter="markText('marko', $event)" @mouseleave="demarkText()" @click="markText('marko', $event)" src="@/assets/media/profile-marko.jpg" alt="Marko Lukac" class="z-10 transition-all duration-300 rotate-6 -ml-5 z-10 block rounded-full w-24 h-24 object-cover border-4 border-white md:w-32 md:h-32" />
-							</div>
+						Wir arbeiten kollektiv am Aufbau von re:morrow und
+						suchen dabei unseren eigenen Weg.
+					</p>
+					<p>
+						Perspektivisch bauen wir eine digitale und globale
+						Plattform zur Unterstützung von nachhaltigen
+						<RouterLink class="glossar-link" to="/projekte/"
+							>Ideen, Projekten und Startups</RouterLink
+						>
+						auf. Gleichzeitig entwickeln wir
+						<strong
+							>eine
+							<RouterLink class="glossar-link" to="/community/"
+								>Community</RouterLink
+							>
+							mit Menschen, die Ideen mit positiver Wirkung aktiv
+							unterstützen</strong
+						>.
+					</p>
+					<div class="flex gap-5 mb-5 items-center justify-between">
+						<p class="mb-0 flex-1">
+							Die treibenden Kräfte bei uns sind
+							<strong
+								id="sirik"
+								class="transition-all duration-300"
+								>Sirik</strong
+							>
+							und
+							<strong
+								id="marko"
+								class="transition-all duration-300"
+								>Marko</strong
+							>.
+						</p>
+						<div class="flex-1 flex justify-end">
+							<img
+								@mouseenter="markText('sirik', $event)"
+								@mouseleave="demarkText()"
+								@click="markText('sirik', $event)"
+								src="@/assets/media/profile-sirik.jpg"
+								alt="Sirik Loosman"
+								class="z-20 transition-all duration-300 -rotate-3 mt-10 block rounded-full w-24 h-24 object-cover border-4 border-white md:w-32 md:h-32"
+							/>
+							<img
+								@mouseenter="markText('marko', $event)"
+								@mouseleave="demarkText()"
+								@click="markText('marko', $event)"
+								src="@/assets/media/profile-marko.jpg"
+								alt="Marko Lukac"
+								class="z-10 transition-all duration-300 rotate-6 -ml-5 block rounded-full w-24 h-24 object-cover border-4 border-white md:w-32 md:h-32"
+							/>
 						</div>
-						<p>Du willst uns kennenlernen? Für einen Schwatz sind wir immer zu haben!</p>
+					</div>
+					<p>
+						Du willst uns kennenlernen? Für einen Schwatz sind wir
+						immer zu haben!
 					</p>
 				</template>
 			</TitleParagraphItem>
@@ -96,11 +142,18 @@ export default defineComponent({
 
 				<template #paragraph>
 					<p>
-						Die Analogie des Gartens mögen wir gern. Ein Garten voller
-						Pflanzen in all ihren Wachstumsstadien. Ein Garten, der
-						darum bemüht ist, den idealen Boden für gesundes Wachstum
-						von neuen, nachhaltigen und
-						<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#zukunftsorientiert' }">zukunftsorientierten</RouterLink>
+						Die Analogie des Gartens mögen wir gern. Ein Garten
+						voller Pflanzen in all ihren Wachstumsstadien. Ein
+						Garten, der darum bemüht ist, den idealen Boden für
+						gesundes Wachstum von neuen, nachhaltigen und
+						<RouterLink
+							class="glossar-link"
+							:to="{
+								path: '/glossar/',
+								hash: '#zukunftsorientiert',
+							}"
+							>zukunftsorientierten</RouterLink
+						>
 						Projekten herzustellen. <br /><br />
 						Egal ob diese gerade erst keimen oder bereits kleine
 						Pflänzchen sind. Wir schaffen die individuellen
@@ -128,9 +181,23 @@ export default defineComponent({
 						Alle Projekte bei re:morrow haben einen klaren,
 						nachhaltigen Bezug – das ist uns besonders wichtig. Aus
 						ökologischer Sicht sind sie so bspw.
-						<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#klimaneutral' }">klimaneutral</RouterLink>/<RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#klimapositiv' }">klimapositiv</RouterLink>, <RouterLink class="glossar-link" :to="{ path: '/glossar/', hash: '#regenerativ' }">regenerativ</RouterLink> oder
-						unterwegs dahin. Wir stellen diesen Bezug sicher und
-						unterstützen die Projekte aktiv auf diesem Weg. <br /><br />
+						<RouterLink
+							class="glossar-link"
+							:to="{ path: '/glossar/', hash: '#klimaneutral' }"
+							>klimaneutral</RouterLink
+						>/<RouterLink
+							class="glossar-link"
+							:to="{ path: '/glossar/', hash: '#klimapositiv' }"
+							>klimapositiv</RouterLink
+						>,
+						<RouterLink
+							class="glossar-link"
+							:to="{ path: '/glossar/', hash: '#regenerativ' }"
+							>regenerativ</RouterLink
+						>
+						oder unterwegs dahin. Wir stellen diesen Bezug sicher
+						und unterstützen die Projekte aktiv auf diesem Weg.
+						<br /><br />
 						So streben wir gemeinsam ein besseres Morgen an. Für uns
 						zählt jede Pflanze, die eine positive Wirkung auf unsere
 						Zukunft hat.
@@ -150,8 +217,8 @@ export default defineComponent({
 
 				<template #paragraph>
 					<p>
-						Lerne unseren Purpose, unsere Ziele und die dahinterliegende
-						Vision kennen.
+						Lerne unseren Purpose, unsere Ziele und die
+						dahinterliegende Vision kennen.
 					</p>
 				</template>
 			</TitleParagraphItem>
@@ -164,11 +231,11 @@ export default defineComponent({
 </template>
 
 <style scoped>
-	.mark {
-		@apply text-rich-electric-blue inline-block;
-	}
+.mark {
+	@apply text-rich-electric-blue inline-block;
+}
 
-	img.mark {
-		@apply border-rich-electric-blue z-30;
-	}
+img.mark {
+	@apply border-rich-electric-blue z-30;
+}
 </style>

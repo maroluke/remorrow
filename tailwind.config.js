@@ -1,13 +1,26 @@
-/** @type {import('tailwindcss').Config} */
+const animate = require("tailwindcss-animate");
 const plugin = require("tailwindcss/plugin");
+
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+	darkMode: ["class"],
 	content: [
-		"./index.html",
-		"./src/**/*.{vue,js,ts,jsx,tsx}",
-		"./node_modules/flowbite/**/*.js",
+		"./pages/**/*.{ts,tsx,vue}",
+		"./components/**/*.{ts,tsx,vue}",
+		"./app/**/*.{ts,tsx,vue}",
+		"./src/**/*.{ts,tsx,vue}",
 	],
+	prefix: "",
 	theme: {
+		container: {
+			center: true,
+			padding: "2rem",
+		},
 		extend: {
+			screens: {
+				"2xs": "375px",
+				xs: "475px",
+			},
 			colors: {
 				"dark-sky-blue": "#81B5D0",
 				"rich-electric-blue": "#0892D0",
@@ -46,14 +59,20 @@ module.exports = {
 					"50%": { transform: "translateY(0px)", opacity: "1" },
 					"100%": { transform: "translateY(15px)", opacity: "0" },
 				},
+				"accordion-down": {
+					from: { height: 0 },
+					to: { height: "var(--radix-accordion-content-height)" },
+				},
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					to: { height: 0 },
+				},
 			},
 			animation: {
 				"fade-in-top-bottom":
 					"fade-in-top-bottom 5s cubic-bezier(0.83, 0, 0.17, 1) infinite",
-			},
-			screens: {
-				"2xs": "375px",
-				xs: "475px",
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
 			},
 		},
 	},
@@ -69,7 +88,6 @@ module.exports = {
 				h3: { fontSize: theme("fontSize.2xl") },
 			});
 		}),
-
-		// require("flowbite/plugin"),
+		animate,
 	],
 };

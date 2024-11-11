@@ -1,16 +1,27 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import path from "path";
+import vueJsx from "@vitejs/plugin-vue-jsx";
+import { fileURLToPath } from "url";
+import autoprefixer from "autoprefixer";
+import tailwind from "tailwindcss";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [vue()],
+	css: {
+		postcss: {
+			plugins: [tailwind(), autoprefixer()],
+		},
+	},
+	plugins: [vue(), vueJsx()],
 	resolve: {
 		alias: {
-			"@": path.resolve(__dirname, "./src"),
-			"@assets": path.resolve(__dirname, "./src/assets"),
-			"@components": path.resolve(__dirname, "./src/components"),
-			"@partials": path.resolve(__dirname, "./src/partials"),
+			"@": fileURLToPath(new URL("./src", import.meta.url)),
+			"@assets": fileURLToPath(new URL("./src/assets", import.meta.url)),
+			"@components": fileURLToPath(
+				new URL("./src/components", import.meta.url)
+			),
+			"@partials": fileURLToPath(
+				new URL("./src/partials", import.meta.url)
+			),
 		},
 	},
 });

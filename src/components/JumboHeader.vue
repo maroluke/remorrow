@@ -64,6 +64,6 @@ export default {
 
 .scroll-down-animation-enter-from,
 .scroll-down-animation-leave-to {
-	@apply opacity-0 -translate-x-3 duration-200 delay-[0ms];
+	@apply opacity-0 -translate-x-3 duration-200;
 }
 </style>
