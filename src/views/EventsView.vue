@@ -123,13 +123,9 @@ const quoteList = [
 			class="bg-dark text-snow md:bg-snow md:text-dark px-5 py-10 md:py-20"
 		>
 			<TitleParagraphItem
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-center mx-auto max-w-screen-md"
+				class="rounded-sm flex flex-col gap-10 !mb-0 !items-center mx-auto max-w-screen-md text-center"
 			>
-				<template #title
-					><span class="w-full block text-center align-center"
-						>Unsere Unterstützer im 2024</span
-					></template
-				>
+				<template #title>Unsere Unterstützer im 2024</template>
 			</TitleParagraphItem>
 
 			<div class="w-full max-w-screen-md mx-auto mt-10">
