@@ -35,9 +35,9 @@ const props = defineProps({
 
 			<button
 				@click="$emit('open-video-modal')"
-				class="text-rich-electric-blue sm:mb-10 flex gap-3"
+				class="text-rich-electric-blue flex-none sm:mb-10 flex w-fit gap-5 rounded-full border-2 border-rich-electric-blue p-2 pr-4 hover:bg-rich-electric-blue hover:text-snow transition-colors duration-300 ease-in-out"
 			>
-				<CirclePlay class="w-6 h-6" /> Zum Statement
+				<CirclePlay class="w-6 h-6" /> Statement abspielen
 			</button>
 		</div>
 

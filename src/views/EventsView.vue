@@ -65,9 +65,8 @@ const quoteList = [
 			<template #title>match:make</template>
 
 			<template #paragraph>
-				Die match:make ist ein exklusives Event-Format von re:morrow an
-				dem nachhaltige Startups und etablierte Unternehmen
-				zusammengeführt werden.
+				Die match:make ist ein exklusives Event-Format von re:morrow und
+				führt nachhaltige Startups und etablierte Unternehmen zusammen.
 				<br /><br />
 				Das Ziel ist die gegenseitige Unterstützung für einen
 				gemeinsamen Beitrag zu einem besseren Morgen.
