@@ -1,82 +1,91 @@
 <template>
 	<div>
 		<div class="max-w-screen-xl">
-			<div
-				v-if="$slots.title"
-				class="flex gap-5 justify-between items-center mb-5 grow xl:items-start"
-			>
-				<h2 v-if="heading === 2">
-					<slot name="title"></slot>
-				</h2>
+			<template v-if="$slots.title">
+				<div
+					class="flex gap-5 justify-between items-center mb-5 grow xl:items-start"
+				>
+					<template v-if="heading === 2">
+						<h2 class="w-full">
+							<slot name="title"></slot>
+						</h2>
+					</template>
 
-				<h3 v-if="heading === 3">
-					<slot name="title"></slot>
-				</h3>
+					<template v-if="heading === 3">
+						<h3 class="w-full">
+							<slot name="title"></slot>
+						</h3>
+					</template>
 
-				<div v-if="icon">
-					<IconChecked
-						v-if="icon === 'checked'"
-						:class="iconStyle"
-						class="w-12 self-start"
-					/>
-					<IconRunning
-						v-if="icon === 'running'"
-						:class="iconStyle"
-						class="w-12 self-start"
-					/>
-					<IconPlaned
-						v-if="icon === 'planed'"
-						:class="iconStyle"
-						class="w-12 self-start"
-					/>
-					<IconWorld
-						v-if="icon === 'world'"
-						:class="iconStyle"
-						class="w-12 self-start"
-					/>
-					<IconNorming
-						v-if="icon === 'norming'"
-						:class="iconStyle"
-						class="w-12 self-start"
-					/>
-					<IconGrow
-						v-if="icon === 'grow'"
-						:class="iconStyle"
-						class="w-12 self-start"
-					/>
-					<IconFusion
-						v-if="icon === 'fusion'"
-						:class="iconStyle"
-						class="w-12 self-start"
-					/>
+					<template v-if="icon">
+						<IconChecked
+							v-if="icon === 'checked'"
+							:class="iconStyle"
+							class="w-12 self-start"
+						/>
+						<IconRunning
+							v-if="icon === 'running'"
+							:class="iconStyle"
+							class="w-12 self-start"
+						/>
+						<IconPlaned
+							v-if="icon === 'planed'"
+							:class="iconStyle"
+							class="w-12 self-start"
+						/>
+						<IconWorld
+							v-if="icon === 'world'"
+							:class="iconStyle"
+							class="w-12 self-start"
+						/>
+						<IconNorming
+							v-if="icon === 'norming'"
+							:class="iconStyle"
+							class="w-12 self-start"
+						/>
+						<IconGrow
+							v-if="icon === 'grow'"
+							:class="iconStyle"
+							class="w-12 self-start"
+						/>
+						<IconFusion
+							v-if="icon === 'fusion'"
+							:class="iconStyle"
+							class="w-12 self-start"
+						/>
+					</template>
 				</div>
-			</div>
+			</template>
 
-			<div v-if="$slots.paragraph">
-				<slot name="paragraph"></slot>
-			</div>
+			<template v-if="$slots.paragraph">
+				<div>
+					<slot name="paragraph"></slot>
+				</div>
+			</template>
 		</div>
 
-		<SquircleButton
-			v-if="contact"
-			:icon="icon"
-			:classes="classes"
-			@click="navigationState.toggleModal"
-			class="mt-5 w-full"
-		>
-			<template #buttonRef>{{ button }}</template>
-		</SquircleButton>
+		<template v-if="contact">
+			<SquircleButton
+				:icon="icon"
+				:classes="classes"
+				@click="navigationState.toggleModal"
+				class="mt-5 w-full"
+			>
+				<template #buttonRef>{{ button }}</template>
+			</SquircleButton>
+		</template>
 
-		<SquircleButton
-			v-else-if="button"
-			:icon="icon"
-			:classes="classes"
-			:to="link"
-			:external-link="externalLink"
-			class="mt-5 w-full"
-		>
-			<template #buttonRef>{{ button }}</template>
-		</SquircleButton>
+		<template v-else-if="button">
+			<SquircleButton
+				:icon="icon"
+				:classes="classes"
+				:to="link"
+				:external-link="externalLink"
+				class="mt-5 w-full"
+			>
+				<template #buttonRef>{{ button }}</template>
+			</SquircleButton>
+		</template>
 	</div>
 </template>
 

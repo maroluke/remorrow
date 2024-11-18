@@ -125,7 +125,11 @@ const quoteList = [
 			<TitleParagraphItem
 				class="rounded-sm flex flex-col gap-10 !mb-0 !items-center mx-auto max-w-screen-md"
 			>
-				<template #title>Unsere Unterstützer im 2024</template>
+				<template #title
+					><span class="w-full block text-center align-center"
+						>Unsere Unterstützer im 2024</span
+					></template
+				>
 			</TitleParagraphItem>
 
 			<div class="w-full max-w-screen-md mx-auto mt-10">
