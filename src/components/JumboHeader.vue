@@ -16,7 +16,7 @@ export default {
 <template>
 	<section
 		id="jumboHeader"
-		class="min-h-screen relative text-snow transition-all duration-500 flex flex-col pb-28 md:flex-row md:gap-10 md:items-center md:p-20 xl:p-10 md:bg-snow"
+		class="min-h-screen relative text-snow transition-all duration-500 flex flex-col pb-10 md:flex-row md:gap-10 md:items-center md:p-20 xl:p-10 md:bg-snow"
 	>
 		<div
 			id="jumbo"
@@ -30,7 +30,7 @@ export default {
 		</div>
 
 		<div
-			class="flex gap-10 flex-col px-5 pt-5 z-20 shrink items-center md:p-0 md:text-dark"
+			class="flex gap-5 flex-col px-5 pt-5 z-20 shrink items-center md:p-0 md:text-dark"
 		>
 			<h1
 				class="pt-5 drop-shadow-contrast hidden max-w-screen-sm self-start md:block md:drop-shadow-none"
@@ -39,7 +39,7 @@ export default {
 			</h1>
 
 			<div class="max-w-screen-sm">
-				<p class="md:text-2xl">
+				<p class="text-xl md:text-2xl">
 					<slot name="paragraph">Paragraph</slot>
 				</p>
 			</div>

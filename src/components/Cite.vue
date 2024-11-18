@@ -1,77 +1,68 @@
-<script setup>
-import { CarouselItem } from "@/components/ui/carousel";
+<script setup lang="ts">
 import { CirclePlay } from "lucide-vue-next";
-
-import {
-	Dialog,
-	DialogContent,
-	DialogDescription,
-	DialogFooter,
-	DialogHeader,
-	DialogTitle,
-	DialogTrigger,
-} from "@/components/ui/dialog";
 
 const props = defineProps({
 	profileImageUrl: {
 		type: String,
 		required: true,
 	},
-
 	profileName: {
 		type: String,
 		required: true,
 	},
-
 	companyName: {
 		type: String,
 		required: true,
 	},
-
 	companyUrl: {
 		type: String,
 		required: true,
 	},
+	reverseOrder: {
+		type: Boolean,
+		default: false,
+	},
 });
-
-const emit = defineEmits(["open-video-modal"]);
-
-function openModal() {
-	emit("open-video-modal");
-}
 </script>
 
 <template>
-	<CarouselItem class="-pl-0 flex flex-col gap-10">
-		<div class="order-2 xs:order-1">
-			<p>
-				<slot name="quote"></slot>
-			</p>
+	<div class="flex flex-col gap-4 sm:flex-row">
+		<div
+			:class="{ 'sm:order-2': reverseOrder }"
+			class="sm:w-4/5 flex flex-col gap-5"
+		>
+			<cite class="text-2xl"> "<slot name="quote"></slot>" </cite>
 
 			<button
-				@click="openModal"
-				class="text-rich-electric-blue mb-10 flex gap-3"
+				@click="$emit('open-video-modal')"
+				class="text-rich-electric-blue sm:mb-10 flex gap-3"
 			>
 				<CirclePlay class="w-6 h-6" /> Zum Statement
 			</button>
 		</div>
 
-		<div class="flex justify-between items-center order-1 xs:order-2">
-			<div class="flex items-center gap-5">
+		<div :class="{ 'sm:order-1': reverseOrder }" class="sm:w-1/5">
+			<div
+				:class="!reverseOrder ? 'sm:items-end' : 'sm:items-start'"
+				class="flex flex-row gap-5 justify-end items-center sm:flex-col"
+			>
 				<img
 					:src="profileImageUrl"
 					:alt="profileName"
-					class="w-24 rounded-full"
+					class="w-16 rounded-full order-2 sm:order-1 sm:w-24"
 				/>
-				<div class="flex flex-col">
-					<cite>– {{ profileName }}</cite>
-					<cite class="opacity-50">{{ companyName }}</cite>
+				<div
+					:class="{ 'sm:items-end': !reverseOrder }"
+					class="flex flex-col order-1 items-end sm:items-start sm:order-2"
+				>
+					<p class="m-0 text-sm">{{ profileName }}</p>
+					<a
+						class="opacity-50 m-0 text-sm underline hover:text-rich-electric-blue hover:opacity-100"
+						:href="companyUrl"
+						>{{ companyName }}</a
+					>
 				</div>
 			</div>
-
-			<a :href="companyUrl" target="_blank" rel="noopener">
-				<slot name="company-logo"></slot>
-			</a>
 		</div>
-	</CarouselItem>
+	</div>
 </template>

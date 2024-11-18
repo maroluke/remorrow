@@ -17,10 +17,10 @@ export default defineConfig({
 			"@": fileURLToPath(new URL("./src", import.meta.url)),
 			"@assets": fileURLToPath(new URL("./src/assets", import.meta.url)),
 			"@components": fileURLToPath(
-				new URL("./src/components", import.meta.url)
+				new URL("./src/components", import.meta.url),
 			),
 			"@partials": fileURLToPath(
-				new URL("./src/partials", import.meta.url)
+				new URL("./src/partials", import.meta.url),
 			),
 		},
 	},

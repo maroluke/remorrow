@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory } from "vue-router";
-import { defineComponent, getCurrentInstance } from "vue";
+import { useRoute, createRouter, createWebHistory } from "vue-router";
+import { defineComponent, onMounted } from "vue";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import EventsView from "../views/EventsView.vue";
@@ -16,15 +16,12 @@ import SubmissionFail from "@components/SubmissionFail.vue";
 import MatchMakeSurvey from "../views/MatchMakeSurvey.vue";
 
 const ExternalRedirect = defineComponent({
-	mounted() {
-		const instance = getCurrentInstance();
-		if (instance && instance.proxy) {
-			window.location.href = instance.proxy.$route.meta
-				.externalURL as string;
-		}
-	},
-	render() {
-		return null;
+	setup() {
+		const route = useRoute();
+		onMounted(() => {
+			window.location.href = route.meta.externalURL as string;
+		});
+		return () => null;
 	},
 });
 
@@ -40,8 +37,8 @@ const routes = [
 		component: AboutView,
 	},
 	{
-		path: "/events",
-		name: "Events",
+		path: "/matchmake",
+		name: "match:make",
 		component: EventsView,
 	},
 	{

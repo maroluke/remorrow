@@ -78,7 +78,9 @@ export default {
 						<NavigationItem :to="'/wer-wir-sind'"
 							>Wer wir sind</NavigationItem
 						>
-						<NavigationItem :to="'/events'">Events</NavigationItem>
+						<NavigationItem :to="'/matchmake'"
+							>match:make</NavigationItem
+						>
 						<NavigationItem :to="'/sei-dabei'"
 							>Sei ein Teil davon</NavigationItem
 						>
