@@ -30,7 +30,7 @@ export default {
 		id="contact-modal"
 		tabindex="-1"
 		aria-hidden="true"
-		class="fixed top-0 left-0 right-0 z-[100] w-full p-4 hidden overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full"
+		class="fixed top-0 left-0 right-0 z-[100] w-full p-4 hidden overflow-x-hidden overflow-y-auto inset-0 h-full"
 	>
 		<div class="relative w-full h-auto max-w-screen-sm">
 			<!-- Modal content -->
@@ -42,7 +42,7 @@ export default {
 					<button
 						@click="navigationState.closeModal"
 						type="button"
-						class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+						class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 -mr-1.5 -mt-1.5 ml-auto inline-flex items-center"
 					>
 						<svg
 							class="w-5 h-5"

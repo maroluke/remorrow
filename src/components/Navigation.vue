@@ -69,14 +69,14 @@ export default {
 						"
 						class="flex gap-1 flex-col z-10 flex-grow pt-5 text-dark"
 					>
+						<NavigationItem :to="'/wer-wir-sind'"
+							>Wer wir sind</NavigationItem
+						>
 						<NavigationItem :to="'/community'"
 							>Wir bauen eine Community</NavigationItem
 						>
 						<NavigationItem :to="'/projekte'"
 							>Wir fördern Projekte</NavigationItem
-						>
-						<NavigationItem :to="'/wer-wir-sind'"
-							>Wer wir sind</NavigationItem
 						>
 						<NavigationItem :to="'/matchmake'"
 							>match:make</NavigationItem
@@ -87,8 +87,8 @@ export default {
 						<NavigationItem :to="'/unser-weg'"
 							>Unser Weg</NavigationItem
 						>
-						<NavigationItem :to="'/glossar'"
-							>Glossar</NavigationItem
+						<NavigationItem :to="'/supporter'"
+							>Supporter werden</NavigationItem
 						>
 					</ul>
 

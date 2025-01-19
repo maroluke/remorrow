@@ -147,11 +147,7 @@ export default defineComponent({
 			</svg>
 		</RouterLink>
 
-		<a
-			v-else-if="externalLink"
-			:href="this.to"
-			target="_blank"
-		>
+		<a v-else-if="externalLink" :href="this.to" target="_blank">
 			<button
 				:style="{
 					clipPath: `url('#squircle-${uid}')`,

@@ -61,7 +61,7 @@ export default {
 				contact.append(duplicate);
 				if (duplicate.type === "button") {
 					duplicate.addEventListener("click", () => {
-						this.navigationState.toggleModal();
+						this.navigationState.toggleModal("#contact-modal");
 					});
 				}
 			});
@@ -122,14 +122,20 @@ export default {
 				></div>
 
 				<div class="text-moon flex flex-col 2xs:gap-2">
-					<RouterLink to="/impressum" class="underline font-medium text-sm block">Impressum</RouterLink>
-					<RouterLink to="/datenschutz" class="underline font-medium text-sm block">Datenschutzerklärung</RouterLink>
+					<RouterLink
+						to="/impressum"
+						class="underline font-medium text-sm block"
+						>Impressum</RouterLink
+					>
+					<RouterLink
+						to="/datenschutz"
+						class="underline font-medium text-sm block"
+						>Datenschutzerklärung</RouterLink
+					>
 				</div>
 
 				<div class="mt-5">
-					<p class="font-medium text-base mb-3">
-						Image Credits
-					</p>
+					<p class="font-medium text-base mb-3">Image Credits</p>
 					<p
 						class="font-medium text-sm text-moon mb-2 grid grid-cols-1 xs:grid-cols-3 2xs:gap-2"
 					>

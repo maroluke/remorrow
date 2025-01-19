@@ -1,12 +1,16 @@
 <template>
 	<div>
-		<div class="max-w-screen-xl">
+		<div>
 			<template v-if="$slots.title">
 				<div
-					class="flex gap-5 justify-between items-center mb-5 grow xl:items-start"
+					:class="{
+						'justify-center': center,
+						'text-between': !center,
+					}"
+					class="flex gap-5 items-center mb-5 grow xl:items-start"
 				>
 					<template v-if="heading === 2">
-						<h2 class="w-full">
+						<h2 :class="{ 'w-full': !center }">
 							<slot name="title"></slot>
 						</h2>
 					</template>
@@ -68,7 +72,7 @@
 			<SquircleButton
 				:icon="icon"
 				:classes="classes"
-				@click="navigationState.toggleModal"
+				@click="navigationState.toggleModal('#contact-modal')"
 				class="mt-5 w-full"
 			>
 				<template #buttonRef>{{ button }}</template>
@@ -129,6 +133,10 @@ export default {
 		iconStyle: {
 			type: String,
 			default: "fill-snow",
+		},
+		center: {
+			type: Boolean,
+			default: false,
 		},
 
 		title: { type: String, default: null },

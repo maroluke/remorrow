@@ -11,9 +11,9 @@ export const useNavigationStore = defineStore("navigation", {
 		},
 	}),
 	actions: {
-		toggleModal() {
+		toggleModal(modalId) {
 			this.navigationIsOpen = false;
-			const modalEl = document.querySelector("#contact-modal");
+			const modalEl = document.querySelector(modalId);
 			this.modal = new Modal(modalEl, this.modalOptions);
 			this.modal.toggle();
 		},

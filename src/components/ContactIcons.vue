@@ -38,7 +38,7 @@ export default {
 		<ul class="contact-icons flex justify-start gap-8 flex-grow">
 			<li class="flex">
 				<button
-					@click="navigationState.toggleModal"
+					@click="navigationState.toggleModal('#contact-modal')"
 					type="button"
 					class="text-silver"
 				>
