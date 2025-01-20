@@ -161,7 +161,7 @@ onMounted(() => {
 									@click="playAnimation(i)"
 								>
 									<div
-										class="flex flex-col justify-between items-center md:mb-5"
+										class="flex flex-col justify-between items-center mb-5 gap-3"
 									>
 										<div
 											v-if="item.icon"
