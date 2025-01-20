@@ -142,7 +142,7 @@ onMounted(() => {
 
 						<div>
 							<div
-								class="grid mt-10 sm:gap-12 xl:gap-4 md:grid-cols-2 xl:grid-cols-4 xl:p-4"
+								class="grid mt-10 sm:gap-16 xl:gap-4 md:grid-cols-2 xl:grid-cols-4 xl:p-4"
 							>
 								<div
 									v-for="(item, i) in data.section1
@@ -208,8 +208,8 @@ onMounted(() => {
 											class="flex justify-start items-end mb-0 gap-2"
 										>
 											<span
-												class="order-2 mb-4 leading-none font-"
-												>CHF<br />pro Monat</span
+												class="order-2 mb-4 leading-none font-bold"
+												>CHF / Monat</span
 											>
 
 											<span
@@ -222,7 +222,7 @@ onMounted(() => {
 											:classes="'bg-snow'"
 											:to="`https://remorrow.payrexx.com/de/pay?cid=0cf7b5ef&donation[preselect_amount]=${item.price}&hide_description=1`"
 											:externalLink="true"
-											class="max-w-none w-full"
+											class="!max-w-none w-full"
 										>
 											<template #buttonRef
 												>Jetzt unterstützen</template
