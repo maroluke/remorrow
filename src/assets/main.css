@@ -95,7 +95,7 @@
     }
 
     p {
-        @apply font-medium mb-5 leading-normal md:text-xl md:font-light md:leading-relaxed;
+        @apply font-medium mb-5 leading-normal text-xl md:font-light;
     }
 
     strong {

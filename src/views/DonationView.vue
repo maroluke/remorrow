@@ -1,4 +1,8 @@
 <script setup>
+import { ref } from "vue";
+import { useNavigationStore } from "@/stores/navigation";
+import { onMounted } from "vue";
+import { Vue3Lottie } from "vue3-lottie";
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
 import SquircleButton from "@components/SquircleButton.vue";
 import JumboHeader from "@components/JumboHeader.vue";
@@ -10,16 +14,29 @@ import {
 	TreeDeciduous,
 	Pointer,
 } from "lucide-vue-next";
-import { useNavigationStore } from "@/stores/navigation";
-import { onMounted } from "vue";
+import Plan5 from "@/assets/media/animations/plan-sun.json";
+import Plan10 from "@/assets/media/animations/plan-ecological.json";
+import Plan20 from "@/assets/media/animations/plan-pathway.json";
+import Plan50 from "@/assets/media/animations/plan-wind.json";
 
 const navigationState = useNavigationStore();
 
+const lottieRefs = ref([]);
+
+const playAnimation = (index) => {
+	console.log(lottieRefs.value[index]);
+	lottieRefs.value[index]?.play();
+};
+
+const stopAnimation = (index) => {
+	lottieRefs.value[index]?.stop();
+};
+
 const iconMap = {
-	sparkles: Sparkles,
-	bean: Bean,
-	sprout: Sprout,
-	tree: TreeDeciduous,
+	sparkles: Plan5,
+	bean: Plan10,
+	sprout: Plan20,
+	tree: Plan50,
 };
 
 const data = {
@@ -32,30 +49,30 @@ const data = {
 		title: "Wie du unterstützen kannst",
 		subscription: [
 			{
-				title: `${"Hoffnungs&shy;schimmer"}`,
+				title: "Lichtblick",
 				paragraph:
 					"Mit nur CHF 5 pro Monat zeigst du, dass Veränderung möglich ist – ganz nach dem Motto: «Steter Tropfen höhlt den Stein».",
 				icon: "sparkles",
 				price: 5,
 			},
 			{
-				title: "Starker Wille<br><br>",
+				title: "Starker Wille",
 				paragraph:
 					"CHF 10 klingen nicht nach viel, doch sie stehen für deinen festen Glauben an eine bessere Zukunft – «Wo ein Wille, da ein Weg».",
 				icon: "bean",
 				price: 10,
 			},
 			{
-				title: "Mut-Macher<br><br>",
+				title: "Mut-Macher",
 				paragraph:
 					"Du gehst einen Schritt weiter! Mit CHF 20 pro Monat schenkst du nicht nur Hoffnung, sondern auch Mut, sodass re:morrow weiter wachsen kann.",
 				icon: "sprout",
 				price: 20,
 			},
 			{
-				title: "Wegbereiter<br><br>",
+				title: "Wegbereiter",
 				paragraph:
-					"Ein Mensch, der nicht nur träumt, sondern direkt mit anpackt. Wer CHF 50 pro Monat gibt, packt richtig an und ebnet den Weg für Neues. Eigentlich gehörst du damit schon fast in unser Team!",
+					"Ein Mensch, der nicht nur träumt, sondern auch macht. Wer CHF 50 pro Monat gibt, packt richtig an und ebnet den Weg für Neues. Eigentlich gehörst du damit schon fast in unser Team!",
 				icon: "tree",
 				price: 50,
 			},
@@ -116,36 +133,61 @@ onMounted(() => {
 			>
 				<section
 					id="subscription"
-					class="px-5 py-10 bg-snow grow md:py-20 md:flex md:justify-center text-dark sm:p-0 md:flex-initial md:bg-dark md:text-snow"
+					class="px-5 py-10 bg-dark grow md:py-20 md:flex md:justify-center text-snow sm:p-0 md:flex-initial sm:bg-snow sm:text-dark md:bg-dark md:text-snow"
 				>
-					<TitleParagraphItem :center="true">
-						<template #title>{{ data.section1.title }}</template>
-						<template #paragraph>
+					<div>
+						<h2 class="text-center sm:mb-20">
+							{{ data.section1.title }}
+						</h2>
+
+						<div>
 							<div
-								class="grid md:grid-cols-2 2xl:grid-cols-4 gap-4 mt-10 xl:p-4"
+								class="grid mt-10 sm:gap-12 xl:gap-4 md:grid-cols-2 xl:grid-cols-4 xl:p-4"
 							>
 								<div
 									v-for="(item, i) in data.section1
 										.subscription"
 									:key="i"
-									class="p-4 pt-10 text-snow flex-1 rounded-xl flex flex-col min-w-screen-2x"
+									class="p-4 pt-4 text-snow flex-1 flex flex-col min-w-screen-2x -mx-5 sm:mx-0 sm:rounded-xl"
 									:class="{
 										'bg-dark-sky-blue': i === 0,
 										'bg-macaroni-and-cheese': i === 1,
 										'bg-burning-orange': i === 2,
 										'bg-caribbean-green': i === 3,
 									}"
+									@mouseenter="playAnimation(i)"
+									@mouseleave="stopAnimation(i)"
 								>
 									<div
-										class="flex flex-col justify-between items-center gap-5 md:mb-5"
+										class="flex flex-col justify-between items-center md:mb-5"
 									>
 										<div
 											v-if="item.icon"
-											class="rounded-full p-2 flex flex-col items-center justify-center mt-1"
+											class="flex flex-col items-center justify-center rounded-full bg-white border-4 sm:-mt-14"
+											:class="{
+												'border-dark-sky-blue': i === 0,
+												'border-macaroni-and-cheese':
+													i === 1,
+												'border-burning-orange':
+													i === 2,
+												'border-caribbean-green':
+													i === 3,
+											}"
 										>
-											<component
-												:is="iconMap[item.icon]"
-												class="w-12 h-12 stroke-[1.5]"
+											<!-- <img
+														:src="iconMap[item.icon]"
+														alt="profileName"
+														class="order-2 sm:order-1 w-24"
+													/> -->
+											<Vue3Lottie
+												ref="lottieRefs"
+												:animationData="
+													iconMap[item.icon]
+												"
+												:height="72"
+												:width="72"
+												:auto-play="false"
+												:loop="false"
 											/>
 										</div>
 
@@ -155,36 +197,37 @@ onMounted(() => {
 										></h2>
 									</div>
 
-									<p class="grow mb-10 font-bold">
+									<p class="grow font-bold">
 										{{ item.paragraph }}
 									</p>
 
-									<div class="flex justify-between">
+									<div
+										class="flex flex-col justify-start items-start"
+									>
 										<p
-											class="flex flex-col justify-start items-start shrink w-24 mb-0"
+											class="flex justify-start items-end mb-0 gap-2"
 										>
-											<span class="text-sm order-2"
-												>CHF / Monat</span
+											<span
+												class="order-2 mb-4 leading-none font-"
+												>CHF<br />pro Monat</span
 											>
 
 											<span
-												class="text-[4rem] font-bold leading-none order-1"
+												class="text-[6rem] font-bold leading-none order-1"
 												>{{ item.price }}</span
 											>
 										</p>
 
-										<div class="mt-1 w-52 lg:w-72 2xl:w-52">
-											<SquircleButton
-												:classes="'bg-snow'"
-												:to="`https://remorrow.payrexx.com/de/pay?cid=0cf7b5ef&donation[preselect_amount]=${item.price}&hide_description=1`"
-												:externalLink="true"
+										<SquircleButton
+											:classes="'bg-snow'"
+											:to="`https://remorrow.payrexx.com/de/pay?cid=0cf7b5ef&donation[preselect_amount]=${item.price}&hide_description=1`"
+											:externalLink="true"
+											class="max-w-none w-full"
+										>
+											<template #buttonRef
+												>Jetzt unterstützen</template
 											>
-												<template #buttonRef
-													>Jetzt
-													unterstützen</template
-												>
-											</SquircleButton>
-										</div>
+										</SquircleButton>
 									</div>
 								</div>
 							</div>
@@ -215,8 +258,8 @@ onMounted(() => {
 									>
 								</SquircleButton>
 							</div>
-						</template>
-					</TitleParagraphItem>
+						</div>
+					</div>
 				</section>
 			</div>
 		</div>

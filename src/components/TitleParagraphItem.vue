@@ -10,7 +10,12 @@
 					class="flex gap-5 items-center mb-5 grow xl:items-start"
 				>
 					<template v-if="heading === 2">
-						<h2 :class="{ 'w-full': !center }">
+						<h2
+							:class="{
+								'w-full': !center,
+								'text-center': center,
+							}"
+						>
 							<slot name="title"></slot>
 						</h2>
 					</template>
