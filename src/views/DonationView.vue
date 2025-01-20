@@ -15,7 +15,7 @@ import {
 	Pointer,
 } from "lucide-vue-next";
 import Plan5 from "@/assets/media/animations/plan-sun.json";
-import Plan10 from "@/assets/media/animations/plan-ecological.json";
+import Plan10 from "@/assets/media/animations/plan-plant.json";
 import Plan20 from "@/assets/media/animations/plan-pathway.json";
 import Plan50 from "@/assets/media/animations/plan-wind.json";
 
@@ -148,7 +148,7 @@ onMounted(() => {
 									v-for="(item, i) in data.section1
 										.subscription"
 									:key="i"
-									class="p-4 pt-4 text-snow flex-1 flex flex-col min-w-screen-2x -mx-5 sm:mx-0 sm:rounded-xl"
+									class="px-4 py-8 text-snow flex-1 flex flex-col min-w-screen-2x -mx-5 sm:mx-0 sm:rounded-xl"
 									:class="{
 										'bg-dark-sky-blue': i === 0,
 										'bg-macaroni-and-cheese': i === 1,
