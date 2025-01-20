@@ -157,6 +157,8 @@ onMounted(() => {
 									}"
 									@mouseenter="playAnimation(i)"
 									@mouseleave="stopAnimation(i)"
+									@touchstart="playAnimation(i)"
+									@click="playAnimation(i)"
 								>
 									<div
 										class="flex flex-col justify-between items-center md:mb-5"
