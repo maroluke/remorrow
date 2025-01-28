@@ -106,7 +106,7 @@ export default defineComponent({
 					/>
 					<EmailIcon
 						v-if="icon === 'mail'"
-						:class="`self-center w-6 fill-inherit ${this.fillIcon}`"
+						:class="`self-center h-8 fill-inherit ${this.fillIcon}`"
 					/>
 					<CommunityIcon
 						v-if="icon === 'community'"

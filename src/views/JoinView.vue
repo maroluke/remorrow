@@ -25,23 +25,20 @@ import JumboHeader from "@components/JumboHeader.vue";
 				:contact="true"
 				:icon="'mail'"
 				:classes="'bg-coal w-full modal-toggle'"
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md"
+				class="rounded-sm flex flex-col !mb-0 !items-start mx-auto max-w-screen-md"
 			>
-				<template #title>
-					Projekt, Unternehmen oder Initiative.
-				</template>
+				<template #title> Bist du Macher:in? </template>
 
 				<template #paragraph>
 					<p>
-						Du bist für ein laufendes Projekt verantwortlich, glaubst an
-						das Potenzial und bist offen für partnerschaftliche
-						Kollaboration? Dann lass uns die Köpfe zusammenstecken, so
-						richtig auf die Tube drücken und das nächste Level
-						erreichen!
+						Egal, ob du bereits gegründet hast oder es noch tun
+						willst, ob du ein Projekt verantwortest oder einfach nur
+						begeistert bist vom Potenzial einer neuen Idee, die zu
+						einer lebenswerten Zukunft beitragen kann – wir sind
+						überzeugt, dass wir perfekt zusammenpassen.
 						<br /><br />
-						Sind Idee und Konzept überzeugend, finden wir gemeinsam
-						heraus, was du brauchst und welche idealen Bedingungen für
-						gesundes Wachstum beitragen.
+						Schreib uns einfach und wir finden gemeinsam heraus, wie
+						wir dich am besten unterstützen können!
 					</p>
 				</template>
 			</TitleParagraphItem>
@@ -53,21 +50,25 @@ import JumboHeader from "@components/JumboHeader.vue";
 				:contact="true"
 				:icon="'mail'"
 				:classes="'bg-coal w-full modal-toggle'"
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md"
+				class="rounded-sm flex flex-col !mb-0 !items-start mx-auto max-w-screen-md"
 			>
-				<template #title> Allem ein Anfang. </template>
+				<template #title>Unternehmen + Zukunft = Match?</template>
 
 				<template #paragraph>
 					<p>
-						Du hast eine Idee, die du umsetzen willst, weisst jedoch
-						nicht weiter? Du hast schon ein laufendes Projekt, aber es
-						klemmt und du brauchst einen Blick von aussen? Vielleicht
-						bist du mit deinen Gedanken auch noch in einem frühen
-						Stadium und möchtest dich einmal gezielt dazu austauschen?
+						Dein Unternehmen oder deine Organisation möchte
+						nachhaltige Startups unterstützen, fördern und
+						innovative Kollaborationen erkunden? Wir helfen euch
+						dabei, eure Leistungen und Expertise fokussiert
+						bereitzustellen und so einen direkten Beitrag zu
+						leisten. Meldet euch bei uns und wir begleiten euch
+						dabei.
 						<br /><br />
-						Lass uns gemeinsam den ersten Schritt gehen und
-						herausfinden, wie wir dich auf deinem Weg unterstützen
-						können.
+						Ihr möchtet noch mehr bewegen und eure
+						Nachhaltigkeitsreise gemeinsam mit uns angehen? Wir
+						bieten spezielle Sponsoring-Partnerschaften, um euren
+						Beitrag weiter zu verstärken. Lass uns gerne darüber
+						sprechen, wie wir gemeinsam eure Ziele erreichen können.
 					</p>
 				</template>
 			</TitleParagraphItem>
@@ -81,20 +82,48 @@ import JumboHeader from "@components/JumboHeader.vue";
 				:contact="true"
 				:icon="'mail'"
 				:classes="'bg-coal w-full modal-toggle'"
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-md"
+				class="rounded-sm flex flex-col !mb-0 !items-start mx-auto max-w-screen-md"
 			>
-				<template #title>Wirke mit uns zusammen. </template>
+				<template #title
+					>Anpacken und selbst bewegen – das geht auch!
+				</template>
 
 				<template #paragraph>
 					<p>
 						Du bist offen für Neues, willst deinen eigenen positiven
-						Impact vergrössern, Teil von etwas Grösserem sein,
-						Gleichgesinnte kennenlernen und einen neuen Weg
-						ausprobieren?
+						Impact vergrössern, Teil von etwas Größerem sein,
+						Gleichgesinnte treffen und neue Wege beschreiten?
 						<br /><br />
-						Wir freuen uns dich kennenzulernen und gemeinsam mit dir zu
-						entdecken, wo du dich in der re:morrow-Community am besten
-						entfalten kannst.
+						Dann freuen wir uns darauf, dich kennenzulernen und
+						gemeinsam herauszufinden, wo du dich in unserer
+						re:morrow-Community am besten entfalten kannst.
+					</p>
+				</template>
+			</TitleParagraphItem>
+		</section>
+
+		<section
+			class="px-5 py-10 bg-dark text-coal md:bg-snow md:text-coal md:py-20"
+		>
+			<TitleParagraphItem
+				:button="'Melde dich'"
+				:contact="true"
+				:icon="'mail'"
+				:classes="'bg-coal w-full modal-toggle'"
+				class="rounded-sm flex flex-col !mb-0 !items-start mx-auto max-w-screen-md"
+			>
+				<template #title
+					>2 Franken und du spendest Hoffnung – auch ein Weg!
+				</template>
+
+				<template #paragraph>
+					<p>
+						Schon mit einer kleinen Spende kannst du uns aktiv
+						helfen: Du entlastest uns beim Aufbau von re:morrow,
+						ermöglichst die jährliche match:make (Link) und stärkst
+						unsere Sichtbarkeit! Liest sich etwas «abgeluscht», ist
+						aber so: Jeder Beitrag, ob gross oder klein, ist Wind in
+						unseren Segeln!
 					</p>
 				</template>
 			</TitleParagraphItem>

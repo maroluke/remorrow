@@ -8,10 +8,6 @@ export default defineComponent({
 		TitleParagraphItem,
 		JumboHeader,
 	},
-	// data() {
-	// 	return {
-	// 	};
-	// },
 	methods: {
 		markText(id, event) {
 			// get the element where this function was triggered
@@ -59,82 +55,138 @@ export default defineComponent({
 			class="px-5 py-10 bg-snow text-dark md:bg-dark md:py-20 md:text-snow"
 		>
 			<TitleParagraphItem
-				:button="'Kontakt'"
-				:icon="'mail'"
-				:contact="true"
 				:classes="'bg-coal w-full'"
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-sm"
+				class="rounded-sm flex flex-col !mb-0 !items-start mx-auto max-w-screen-md"
 			>
-				<template #title>Eigener Weg.</template>
+				<template #title>Das sind wir.</template>
 
 				<template #paragraph>
 					<p>
 						Wir arbeiten kollektiv am Aufbau von re:morrow und
-						suchen dabei unseren eigenen Weg.
+						suchen dabei unseren eigenen Weg. Das Kernteam setzt
+						sich aus den folgenden Menschen zusammen, die darin
+						wirken:
 					</p>
-					<p>
-						Perspektivisch bauen wir eine digitale und globale
-						Plattform zur Unterstützung von nachhaltigen
-						<RouterLink class="glossar-link" to="/projekte/"
-							>Ideen, Projekten und Startups</RouterLink
+
+					<div
+						class="flex flex-col gap-5 mb-5 items-center justify-between sm:gap-0"
+					>
+						<div
+							class="flex flex-col gap-5 border-b border-stone-300 py-5 sm:border-stone-700 sm:flex-row"
 						>
-						auf. Gleichzeitig entwickeln wir
-						<strong
-							>eine
-							<RouterLink class="glossar-link" to="/community/"
-								>Community</RouterLink
+							<div
+								class="flex items-center gap-5 justify-between sm:flex-col sm:justify-start sm:min-w-64 sm:items-start"
 							>
-							mit Menschen, die Ideen mit positiver Wirkung aktiv
-							unterstützen</strong
-						>.
-					</p>
-					<div class="flex gap-5 mb-5 items-center justify-between">
-						<p class="mb-0 flex-1">
-							Die treibenden Kräfte bei uns sind
-							<strong
-								id="sirik"
-								class="transition-all duration-300"
-								>Sirik</strong
+								<h3>Sirik Loosman</h3>
+								<img
+									src="@/assets/media/profile-sirik.jpg"
+									alt="Sirik Loosman"
+									class="transition-all duration-300 block rounded-full w-24 h-24 object-cover border-4 border-rich-electric-blue md:w-32 md:h-32"
+								/>
+							</div>
+
+							<p>
+								<strong
+									id="sirik"
+									class="transition-all duration-300"
+									>Sirik</strong
+								>
+								hat re:morrow mit Marko gegründet und ist eine
+								treibende Kraft überall da, wo es gerade
+								notwendig ist – ob Social Media, App, Scoring
+								oder Strategieentwicklung. Wenn's viel wird,
+								hält er die Fäden zusammen.
+							</p>
+						</div>
+
+						<div
+							class="flex flex-col gap-5 border-b border-stone-300 py-5 sm:border-stone-700 sm:flex-row"
+						>
+							<div
+								class="flex items-center gap-5 justify-between sm:flex-col sm:justify-start sm:min-w-64 sm:items-start"
 							>
-							und
-							<strong
-								id="marko"
-								class="transition-all duration-300"
-								>Marko</strong
-							>.
-						</p>
-						<div class="flex-1 flex justify-end">
-							<img
-								@mouseenter="markText('sirik', $event)"
-								@mouseleave="demarkText()"
-								@click="markText('sirik', $event)"
-								src="@/assets/media/profile-sirik.jpg"
-								alt="Sirik Loosman"
-								class="z-20 transition-all duration-300 -rotate-3 mt-10 block rounded-full w-24 h-24 object-cover border-4 border-white md:w-32 md:h-32"
-							/>
-							<img
-								@mouseenter="markText('marko', $event)"
-								@mouseleave="demarkText()"
-								@click="markText('marko', $event)"
-								src="@/assets/media/profile-marko.jpg"
-								alt="Marko Lukac"
-								class="z-10 transition-all duration-300 rotate-6 -ml-5 block rounded-full w-24 h-24 object-cover border-4 border-white md:w-32 md:h-32"
-							/>
+								<h3>Marko Lukac</h3>
+								<img
+									src="@/assets/media/profile-marko.jpg"
+									alt="Marko Lukac"
+									class="transition-all duration-300 block rounded-full w-24 h-24 object-cover border-4 border-rich-electric-blue md:w-32 md:h-32"
+								/>
+							</div>
+
+							<p>
+								<strong
+									id="marko"
+									class="transition-all duration-300"
+									>Marko</strong
+								>
+								verantwortet unseren gesamten digitalen Auftritt
+								inkl. Infrastruktur und Tools. Gleichzeitig
+								entwickelt er mit Matthias die App und sorgt
+								dabei für ein reibungsloses Nutzererlebnis.
+							</p>
+						</div>
+
+						<div
+							class="flex flex-col gap-5 border-b border-stone-300 py-5 sm:border-stone-700 sm:flex-row"
+						>
+							<div
+								class="flex items-center gap-5 justify-between sm:flex-col sm:justify-start sm:min-w-64 sm:items-start"
+							>
+								<h3>Matthias Fuhrimann</h3>
+								<img
+									src="@/assets/media/profile-matthias.jpg"
+									alt="Matthias Fuhrimann"
+									class="transition-all duration-300 block rounded-full w-24 h-24 object-cover border-4 border-rich-electric-blue md:w-32 md:h-32"
+								/>
+							</div>
+
+							<p>
+								<strong
+									id="matthias"
+									class="transition-all duration-300"
+									>Matthias</strong
+								>
+								ist vielseitiger Allrounder mit breitem
+								technischem Hintergrund und verantwortet unser
+								Social Media Game. Mit Marko kümmert er sich um
+								den Aufbau der digitalen App und trägt mit
+								seinem kritischen Feedback allgemein zur
+								Optimierung bei.
+							</p>
+						</div>
+
+						<div class="flex flex-col gap-5 py-5 sm:flex-row">
+							<div
+								class="flex items-center gap-5 justify-between sm:flex-col sm:justify-start sm:min-w-64 sm:items-start"
+							>
+								<h3>Henri zur Nieden</h3>
+								<img
+									src="@/assets/media/profile-henri.jpg"
+									alt="Henri zur Nieden"
+									class="transition-all duration-300 block rounded-full w-24 h-24 object-cover border-4 border-rich-electric-blue md:w-32 md:h-32"
+								/>
+							</div>
+
+							<p>
+								<strong
+									id="henri"
+									class="transition-all duration-300"
+									>Henri</strong
+								>
+								verantwortet unser holistisches Scoring sowie
+								dessen Weiterentwicklung. Mit seiner Expertise
+								im Nachhaltigkeitsbereich stellt er sicher, dass
+								unsere Richtung stimmt und wir den Fokus bei
+								unseren begleiteten Projekten richtig setzen.
+							</p>
 						</div>
 					</div>
-					<p>
-						Du willst uns kennenlernen? Für einen Schwatz sind wir
-						immer zu haben!
-					</p>
 				</template>
 			</TitleParagraphItem>
 		</section>
 
 		<section class="text-snow px-5 py-10 md:bg-snow md:text-dark md:py-20">
 			<TitleParagraphItem
-				:button="'Wir bauen eine Community'"
-				:link="'/community'"
-				:icon="'community'"
 				:classes="'bg-coal w-full'"
 				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-sm"
 			>
@@ -165,53 +217,13 @@ export default defineComponent({
 		</section>
 
 		<section
-			class="text-dark px-5 py-10 bg-snow md:bg-dark md:text-snow md:py-20"
+			class="text-coal px-5 py-10 bg-snow md:py-20 md:bg-dark md:text-snow"
 		>
-			<TitleParagraphItem
-				:button="'Wir fördern Projekte'"
-				:link="'/projekte'"
-				:icon="'project'"
-				:classes="'bg-coal w-full'"
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-sm"
-			>
-				<template #title>Die Projekte.</template>
-
-				<template #paragraph>
-					<p>
-						Alle Projekte bei re:morrow haben einen klaren,
-						nachhaltigen Bezug – das ist uns besonders wichtig. Aus
-						ökologischer Sicht sind sie so bspw.
-						<RouterLink
-							class="glossar-link"
-							:to="{ path: '/glossar/', hash: '#klimaneutral' }"
-							>klimaneutral</RouterLink
-						>/<RouterLink
-							class="glossar-link"
-							:to="{ path: '/glossar/', hash: '#klimapositiv' }"
-							>klimapositiv</RouterLink
-						>,
-						<RouterLink
-							class="glossar-link"
-							:to="{ path: '/glossar/', hash: '#regenerativ' }"
-							>regenerativ</RouterLink
-						>
-						oder unterwegs dahin. Wir stellen diesen Bezug sicher
-						und unterstützen die Projekte aktiv auf diesem Weg.
-						<br /><br />
-						So streben wir gemeinsam ein besseres Morgen an. Für uns
-						zählt jede Pflanze, die eine positive Wirkung auf unsere
-						Zukunft hat.
-					</p>
-				</template>
-			</TitleParagraphItem>
-		</section>
-
-		<section class="text-snow px-5 py-10 md:bg-snow md:text-dark md:py-20">
 			<TitleParagraphItem
 				:button="'Mehr erfahren'"
 				:link="'/unser-weg'"
 				:classes="'bg-coal w-full'"
-				class="rounded-sm flex flex-col gap-10 !mb-0 !items-start mx-auto max-w-screen-sm"
+				class="rounded-sm flex flex-col !mb-0 !items-start mx-auto max-w-screen-sm"
 			>
 				<template #title> Entdecke das Warum. </template>
 

@@ -30,9 +30,9 @@ export default {
 		id="contact-modal"
 		tabindex="-1"
 		aria-hidden="true"
-		class="fixed top-0 left-0 right-0 z-[100] w-full p-4 hidden overflow-x-hidden overflow-y-auto inset-0 h-full"
+		class="fixed top-0 left-0 right-0 z-[60] hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full"
 	>
-		<div class="relative w-full h-auto max-w-screen-sm">
+		<div class="relative max-w-screen-sm">
 			<!-- Modal content -->
 			<div class="relative bg-snow text-coal rounded-xl shadow-2xl">
 				<!-- Modal header -->

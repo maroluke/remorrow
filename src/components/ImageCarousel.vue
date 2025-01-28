@@ -65,11 +65,6 @@ const handleImageLoad = (imageUrl) => {
 				:key="index"
 				class="-pl-0 md:pt-20 flex justify-center items-center"
 			>
-				<div
-					class="absolute inset-0 flex items-center justify-center bg-transparent -z-10"
-				>
-					<div class="loader"></div>
-				</div>
 				<img
 					:src="imageUrl"
 					alt="Carousel Image"

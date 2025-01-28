@@ -14,7 +14,7 @@ const props = defineProps(["paid"]);
 		id="subscription-modal"
 		tabindex="-1"
 		aria-hidden="true"
-		class="fixed top-0 left-0 right-0 z-[100] w-full p-4 hidden overflow-x-hidden overflow-y-auto inset-0 h-full"
+		class="fixed top-0 left-0 right-0 z-[100] w-full p-4 hidden overflow-x-hidden overflow-y-auto h-full"
 	>
 		<div class="relative w-full h-auto max-w-screen-sm">
 			<!-- Modal content -->

@@ -16,34 +16,7 @@ export default defineComponent({
 		return {
 			loading: false,
 			cmsData: [],
-			// error: null,
-			// form: {
-			// 	email: "",
-			// },
 		};
-	},
-	methods: {
-		// async handleSubmit() {
-		// 	const formData = new URLSearchParams();
-		// 	formData.append("form-name", "contact");
-		// 	formData.append("email", this.form.email);
-
-		// 	try {
-		// 		await fetch("/", {
-		// 			method: "POST",
-		// 			headers: {
-		// 				"Content-Type": "application/x-www-form-urlencoded",
-		// 			},
-		// 			body: formData.toString(),
-		// 		});
-		// 		// Form submitted successfully
-		// 		// You can clear the form or show a success message
-		// 		this.form.email = "";
-		// 	} catch (error) {
-		// 		// Error handling
-		// 		console.error("Error submitting the form", error);
-		// 	}
-		// },
 	},
 });
 </script>
@@ -74,27 +47,19 @@ export default defineComponent({
 			>
 				<TitleParagraphItem class="text-coal md:basis-2/3">
 					<template #title>
-						Nachhaltigkeit ist nur ein erster Schritt – wir brauchen
-						regenerative Ideen!
+						Wir leben in einer Zeit grosser Herausforderungen für
+						unseren Planeten, unsere Gesellschaft und unsere
+						Lebensgrundlagen.
 					</template>
 
 					<template #paragraph>
 						<p>
-							Als Kollektiv ist
-							<span class="font-bold">re:morrow</span>, mit
-							begeisterten & motivierten Menschen, Teil der
-							Veränderung. <br /><br />
-							Weg von endlosem Streben nach Profit und unendlichem
-							Wachstum, hin zu sinnvollen Projekten, die ihre
-							<RouterLink
-								class="glossar-link"
-								:to="{
-									path: `/glossar/`,
-									hash: `#regenerativ`,
-								}"
-								>regenerative</RouterLink
-							>
-							Kraft entfesseln.
+							Die Probleme sind allgegenwärtig, komplex und
+							dominieren oftmals die Negativschlagzeilen der
+							Medien. Klimawandel, Verlust der Biodiversität,
+							demografischer Wandel und die dramatische
+							Veränderung unserer Lebensgrundlagen – die Liste der
+							Herausforderungen ist lang.
 						</p>
 					</template>
 				</TitleParagraphItem>
@@ -107,24 +72,18 @@ export default defineComponent({
 			class="text-snow px-5 py-10 bg-dark z-20 flex flex-col items-center md:py-20"
 		>
 			<TitleParagraphItem
-				:button="'Unser Weg'"
-				:link="'/unser-weg'"
-				class="max-w-screen-md flex flex-col gap-10 !mb-0"
+				class="max-w-screen-md flex flex-col gap-10 !mb-0 modal-toggle"
 			>
-				<template #title>
-					Wir wissen, dass wir zusammen stärker sind!
-				</template>
+				<template #title> Es gibt Hoffnung! </template>
 
 				<template #paragraph>
 					<p>
-						Wir leisten einen Beitrag für ein besseres Morgen – und
-						wenn wir das gemeinsam tun, ist dieser nur noch grösser!
-						Dafür finden wir die guten Ideen und unterstützen deren
-						Wachstum. Jeder von uns hat Stärken, die er dafür
-						einsetzen kann.
-						<br /><br />
-						Als Individuum kann man stark sein, aber als Kollektiv,
-						sind wir Teil der Veränderung.
+						Und viele gute Gründe, den Kopf nicht in den Sand zu
+						stecken. Positive Ideen spriessen immer schneller, und
+						die Lösungen, die wir für den notwendigen Wandel
+						brauchen, sind bereits da. Als Gemeinschaft müssen wir
+						nicht auf einen zukünftigen Quantensprung warten – denn
+						die nötigen Lösungsbausteine existieren bereits.
 					</p>
 				</template>
 			</TitleParagraphItem>
@@ -135,82 +94,36 @@ export default defineComponent({
 		/>
 
 		<section
-			class="text-snow px-5 py-10 bg-dark z-20 flex flex-col items-center md:py-20"
-		>
-			<TitleParagraphItem
-				:button="'Melde dich'"
-				:contact="true"
-				class="max-w-screen-md flex flex-col gap-10 !mb-0 modal-toggle"
-			>
-				<template #title> Wohin die Reise führt. </template>
-
-				<template #paragraph>
-					<p>
-						Hey, wir brauchen nichts zu verstecken. Erfahre hier,
-						wie unsere Roadmap aussieht. Ein Schritt nach dem
-						anderen. So entwickeln wir re:morrow, wachsen und
-						schaffen Wachstum.
-						<br /><br />
-						Bist du Teil unseres nächsten Schritts und hast Bock
-						mitzugestalten?
-					</p>
-				</template>
-			</TitleParagraphItem>
-		</section>
-
-		<!-- <section
-			class="text-snow px-5 py-10 bg-snow z-20 flex flex-col items-center md:py-20"
-		>
-			<form
-				name="contact"
-				data-netlify="true"
-			>
-				<p>
-					<label
-						>Your Email:
-						<input type="email" name="email"
-					/></label>
-				</p>
-
-				<p>
-					<button type="submit">Send</button>
-				</p>
-			</form>
-		</section> -->
-
-		<section
-			class="px-5 py-10 bg-snow text-coal z-20 flex flex-col gap-10 items-center md:py-20"
+			class="px-5 py-10 bg-dark text-snow z-20 flex flex-col gap-10 items-center md:py-20"
 		>
 			<TitleParagraphItem
 				:link="'/wer-wir-sind'"
 				class="max-w-screen-md flex flex-col !mb-0"
 			>
-				<template #title>Besser gemeinsam wachsen</template>
+				<template #title>Besser gemeinsam wachsen!</template>
 
 				<template #paragraph>
 					<p>
-						Uns sind nicht nur Verbindungen zwischen Menschen,
-						sondern auch Partnerschaften zwischen Organisationen
-						wichtig. Sie ermöglichen stärkeren Austausch,
-						Zusammenhalt und eine gegenseitige Unterstützung, was
-						uns kollektiv voranbringt. Die nachfolgenden
-						Partner-Organisationen begleiten & unterstützen uns.
+						Unsere heutige Welt ist komplex und facettenreich. Aus
+						diesem Grund freuen wir uns, auch mit unterschiedlichen
+						Organisationen und Unternehmen partnerschaftlich
+						zusammenzuarbeiten.
 					</p>
 				</template>
 			</TitleParagraphItem>
 
 			<div class="w-32 h-32 flex justify-center items-center relative">
 				<div
-					class="w-full h-full bg-gray-200 opacity-40 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 translate-x-32"
+					class="w-full h-full bg-stone-700 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 translate-x-32"
 				></div>
 				<div
-					class="w-full h-full bg-gray-200 opacity-40 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 -translate-x-32"
+					class="w-full h-full bg-stone-700 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 -translate-x-32"
 				></div>
 				<div
-					class="w-full h-full bg-gray-300 opacity-40 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 translate-x-16"
+					class="w-full h-full bg-stone-800 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 translate-x-16"
 				></div>
 				<div
-					class="w-full h-full bg-gray-300 opacity-40 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 -translate-x-16"
+					class="w-full h-full bg-stone-800 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 -translate-x-16"
 				></div>
 
 				<a
@@ -225,6 +138,30 @@ export default defineComponent({
 					/>
 				</a>
 			</div>
+		</section>
+
+		<section
+			class="text-coal px-5 py-10 bg-snow z-20 flex flex-col items-center md:py-20"
+		>
+			<TitleParagraphItem
+				:button="'Melde dich'"
+				:contact="true"
+				class="max-w-screen-md flex flex-col gap-10 !mb-0 modal-toggle"
+			>
+				<template #title>Wo unsere Reise hinführt?</template>
+
+				<template #paragraph>
+					<p>
+						Hey, wir brauchen nichts zu verstecken. Erfahre hier,
+						wie unsere Roadmap (Link) aussieht. Wir machen einen
+						Schritt nach dem anderen und wachsen mit re:morrow in
+						Richtung unserer Vision.
+						<br /><br />
+						Lust, auch dabei zu sein? Melde dich – um die Welt zu
+						verändern, brauchen wir noch ein paar Hände.
+					</p>
+				</template>
+			</TitleParagraphItem>
 		</section>
 	</main>
 </template>

@@ -2,10 +2,14 @@
 	<section class="md:flex md:justify-center">
 		<div class="max-w-screen-lg md:flex md:justify-center md:gap-20">
 			<TitleParagraphItem class="md:!w-1/3">
-				<template #title>Was wir tun.</template>
+				<template #title>Wir schaffen Raum für Unterstützung.</template>
 
 				<template #paragraph>
-					Bei <span class="font-bold">re:morrow</span> steht die Unterstützung nachhaltiger & regenerativer Ideen im Zentrum.
+					<p class="text-xl">
+						Nachhaltige Projekte und Startups möchten wir auf ihrem
+						Weg zu gesundem Wachstum begleiten und unterstützen –
+						dafür schaffen wir die notwendigen Räume.
+					</p>
 				</template>
 			</TitleParagraphItem>
 
@@ -14,32 +18,32 @@
 			>
 				<div class="flex flex-col">
 					<h3 class="leading-loose">1. Suche</h3>
-					<p class="text-sm mt-0 flex-grow m-0 md:text-xl">
-						Aufspüren von <RouterLink
-							class="glossar-link"
-							to="/projekte/"
-							>Projekten & Startups</RouterLink
-						> mit positiver Wirkung.
+					<p class="mt-0 flex-grow m-0 text-xl">
+						Wir finden die Projekte & Startups da draussen, die
+						einen positiven Beitrag zu unserer Zukunft leisten
+						wollen.
 					</p>
 				</div>
 
 				<div class="flex flex-col">
 					<h3 class="leading-loose">2. Scoring</h3>
-					<p class="text-sm mt-0 flex-grow m-0 md:text-xl">
-						Mit einem holistischen Scoring finden wir heraus, ob die Idee zu uns und unseren Werten passt.
+					<p class="mt-0 flex-grow m-0 text-xl">
+						Mit einem holistischen Scoring finden wir heraus, ob die
+						Idee zu uns und unseren Werten rundum Nachhaltigkeit und
+						Wachstum passt.
 					</p>
 				</div>
 
 				<div class="flex flex-col">
 					<h3 class="leading-loose">3. Unterstützung</h3>
-					<p class="text-sm mt-0 flex-grow m-0 md:text-xl">
-						Jetzt wollen wir nur noch eins: Gesundes Wachstum.
-					</p>
-				</div>
-
-				<div class="flex flex col">
-					<p class="text-sm md:text-xl mt-4">Und da wir wissen, dass wir gemeinsam mehr erreichen können, bauen wir dafür eine 
-						<RouterLink class="glossar-link" to="/community/">Community</RouterLink> auf.
+					<p class="mt-0 flex-grow m-0 text-xl">
+						Jetzt ist das Credo: gesund wachsen! Unsere
+						Unterstützung ist so vielfältig wie die Bedürfnisse. Aus
+						diesem Grund arbeiten wir aktuell auch an einer
+						digitalen Lösung. Unterdessen liegt unser Fokus auf
+						direktem Support, der match:make (Link), dem Aufbau
+						einer Community und der individuellen Begleitung von
+						Macher:innen.
 					</p>
 				</div>
 			</div>

@@ -30,7 +30,7 @@ export default {
 		</div>
 
 		<div
-			class="flex gap-5 flex-col px-5 pt-5 z-20 shrink items-center self-center md:p-0 md:text-dark"
+			class="flex gap-5 flex-col px-5 pt-5 shrink items-center self-center md:p-0 md:text-dark"
 		>
 			<h1
 				class="pt-5 drop-shadow-contrast hidden max-w-screen-sm self-start md:block md:drop-shadow-none"
