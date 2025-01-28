@@ -28,6 +28,7 @@ module.exports = {
 				"burning-orange": "#F76D2F",
 				"macaroni-and-cheese": "#EFB435",
 				"medium-teal-blue": "#0054B4",
+				success: "#93d408",
 				dark: "#18181A",
 				coal: "#333333",
 				nickel: "#666666",

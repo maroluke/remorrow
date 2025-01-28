@@ -223,7 +223,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 								</li>
 								<li class="!bg-green-400">
 									<span>
-										Durchführung der match:make 2024 (Link)
+										Durchführung der match:make 2024
 									</span>
 									<div>
 										<IconChecked2
@@ -280,7 +280,7 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 								</li>
 								<li>
 									<span>
-										Durchführung der match:make 2025 (Link)
+										Durchführung der match:make 2025
 									</span>
 									<div>
 										<img

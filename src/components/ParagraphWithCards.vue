@@ -29,8 +29,8 @@
 					<h3 class="leading-loose">2. Scoring</h3>
 					<p class="mt-0 flex-grow m-0 text-xl">
 						Mit einem holistischen Scoring finden wir heraus, ob die
-						Idee zu uns und unseren Werten rundum Nachhaltigkeit und
-						Wachstum passt.
+						Idee zu uns und unseren Werten rund um Nachhaltigkeit
+						und Wachstum passt.
 					</p>
 				</div>
 
@@ -41,9 +41,15 @@
 						Unterstützung ist so vielfältig wie die Bedürfnisse. Aus
 						diesem Grund arbeiten wir aktuell auch an einer
 						digitalen Lösung. Unterdessen liegt unser Fokus auf
-						direktem Support, der match:make (Link), dem Aufbau
-						einer Community und der individuellen Begleitung von
-						Macher:innen.
+						direktem Support, der
+						<RouterLink
+							class="glossar-link"
+							:to="{
+								path: '/matchmake',
+							}"
+							>match:make</RouterLink
+						>, dem Aufbau einer Community und der individuellen
+						Begleitung von Macher:innen.
 					</p>
 				</div>
 			</div>

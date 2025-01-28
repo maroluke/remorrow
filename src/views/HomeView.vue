@@ -3,6 +3,8 @@ import TheIntro from "@components/TheIntro.vue";
 import QuoteCard from "@components/QuoteCard.vue";
 import ParagraphWithCards from "@components/ParagraphWithCards.vue";
 import TitleParagraphItem from "@components/TitleParagraphItem.vue";
+import Lymbus from "@/components/icons/logo-lymbus.vue";
+import OnePlanetLab from "@/components/icons/logo-one-planet-lab.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -11,6 +13,8 @@ export default defineComponent({
 		QuoteCard,
 		ParagraphWithCards,
 		TitleParagraphItem,
+		Lymbus,
+		OnePlanetLab,
 	},
 	data() {
 		return {
@@ -112,30 +116,22 @@ export default defineComponent({
 				</template>
 			</TitleParagraphItem>
 
-			<div class="w-32 h-32 flex justify-center items-center relative">
-				<div
-					class="w-full h-full bg-stone-700 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 translate-x-32"
-				></div>
-				<div
-					class="w-full h-full bg-stone-700 rounded-full scale-75 absolute left-0 right-0 top-0 bottom-0 -translate-x-32"
-				></div>
-				<div
-					class="w-full h-full bg-stone-800 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 translate-x-16"
-				></div>
-				<div
-					class="w-full h-full bg-stone-800 rounded-full scale-90 absolute left-0 right-0 top-0 bottom-0 -translate-x-16"
-				></div>
-
+			<div
+				class="w-32 h-32 flex justify-center items-center relative gap-10"
+			>
 				<a
 					href="https://www.one-planet-lab.ch"
 					target="_blank"
 					class="relative flex items-stretch w-full h-full"
 				>
-					<img
-						src="@assets/media/one-planet-lab.png"
-						alt="Partner"
-						class="w-full h-full rounded-full object-contain shadow-none scale-100 transition-all duration-300 ease-[cubic-bezier(cubic-bezier(0.85, 0, 0.15, 1)] hover:shadow-xl hover:scale-105"
-					/>
+					<OnePlanetLab class="w-32 h-auto" />
+				</a>
+				<a
+					href="https://www.lymbus.ch/"
+					target="_blank"
+					class="relative flex items-stretch w-full h-full"
+				>
+					<Lymbus class="w-32 h-auto text-snow" />
 				</a>
 			</div>
 		</section>
@@ -153,9 +149,16 @@ export default defineComponent({
 				<template #paragraph>
 					<p>
 						Hey, wir brauchen nichts zu verstecken. Erfahre hier,
-						wie unsere Roadmap (Link) aussieht. Wir machen einen
-						Schritt nach dem anderen und wachsen mit re:morrow in
-						Richtung unserer Vision.
+						wie unsere
+						<RouterLink
+							class="glossar-link"
+							:to="{
+								path: '/matchmake',
+							}"
+							>Roadmap</RouterLink
+						>
+						aussieht. Wir machen einen Schritt nach dem anderen und
+						wachsen mit re:morrow in Richtung unserer Vision.
 						<br /><br />
 						Lust, auch dabei zu sein? Melde dich – um die Welt zu
 						verändern, brauchen wir noch ein paar Hände.

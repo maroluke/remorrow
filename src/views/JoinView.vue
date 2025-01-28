@@ -106,24 +106,30 @@ import JumboHeader from "@components/JumboHeader.vue";
 			class="px-5 py-10 bg-dark text-snow md:bg-snow md:text-coal md:py-20"
 		>
 			<TitleParagraphItem
-				:button="'Melde dich'"
-				:contact="true"
-				:icon="'mail'"
+				:button="'Jetzt unterstützen'"
+				:link="'/supporter#subscription'"
 				:classes="'bg-coal w-full modal-toggle'"
 				class="rounded-sm flex flex-col !mb-0 !items-start mx-auto max-w-screen-md"
 			>
 				<template #title
-					>2 Franken und du spendest Hoffnung – auch ein Weg!
+					>5 Franken und du spendest Hoffnung – auch ein Weg!
 				</template>
 
 				<template #paragraph>
 					<p>
 						Schon mit einer kleinen Spende kannst du uns aktiv
 						helfen: Du entlastest uns beim Aufbau von re:morrow,
-						ermöglichst die jährliche match:make (Link) und stärkst
-						unsere Sichtbarkeit! Liest sich etwas «abgeluscht», ist
-						aber so: Jeder Beitrag, ob gross oder klein, ist Wind in
-						unseren Segeln!
+						ermöglichst die jährliche
+						<RouterLink
+							class="glossar-link"
+							:to="{
+								path: '/unser-weg',
+							}"
+							>match:make</RouterLink
+						>
+						und stärkst unsere Sichtbarkeit! Liest sich etwas
+						«abgeluscht», ist aber so: Jeder Beitrag, ob gross oder
+						klein, ist Wind in unseren Segeln!
 					</p>
 				</template>
 			</TitleParagraphItem>
