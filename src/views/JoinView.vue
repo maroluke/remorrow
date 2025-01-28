@@ -103,7 +103,7 @@ import JumboHeader from "@components/JumboHeader.vue";
 		</section>
 
 		<section
-			class="px-5 py-10 bg-dark text-coal md:bg-snow md:text-coal md:py-20"
+			class="px-5 py-10 bg-dark text-snow md:bg-snow md:text-coal md:py-20"
 		>
 			<TitleParagraphItem
 				:button="'Melde dich'"
