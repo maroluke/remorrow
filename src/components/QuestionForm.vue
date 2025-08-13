@@ -4,13 +4,11 @@
 			<input
 				type="hidden"
 				name="form-name"
-				value="machtmake-registration"
+				value="machtmake-registration-2025"
 			/>
 			<ul class="flex flex-col">
 				<div v-if="addedPersons && !complete">
-					<div
-						class="border-b border-white border-opacity-25"
-					>
+					<div class="border-b border-white border-opacity-25">
 						<p class="mb-0">
 							<span class="opacity-75">Unternehmen: </span>
 							{{ form.company }}
@@ -26,7 +24,7 @@
 				>
 					<template v-slot:label>
 						Mit welchem Unternehmen (Startup oder Business Partner)
-						nimmst du an der match:make 2024 teil?
+						nimmst du an der match:make 2025 teil?
 					</template>
 
 					<template v-slot:description>
@@ -149,8 +147,8 @@ export default {
 				.map(
 					(key) =>
 						`${encodeURIComponent(key)}=${encodeURIComponent(
-							data[key]
-						)}`
+							data[key],
+						)}`,
 				)
 				.join("&");
 		},
@@ -161,7 +159,7 @@ export default {
 					"Content-Type": "application/x-www-form-urlencoded",
 				},
 				body: this.encode({
-					"form-name": "machtmake-registration",
+					"form-name": "machtmake-registration-2025",
 					...this.form,
 				}),
 			}).then(() => {
