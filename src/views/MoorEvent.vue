@@ -186,7 +186,7 @@ import SquircleButton from "@components/SquircleButton.vue";
 
 							<SquircleButton
 								:externalLink="true"
-								:to="'https://frame.ch'"
+								:to="'https://cinema.kinokoni.ch/order/showtimes/50-685/seats'"
 								class="my-5 w-full"
 							>
 								<template #buttonRef
