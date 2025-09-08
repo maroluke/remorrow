@@ -62,54 +62,6 @@
 			data-domain="remorrow.world"
 			src="https://plausible.io/js/script.js"
 		></script>
-		
-		<!-- UTM Parameter Tracking -->
-		<script>
-			// UTM Parameter sofort tracken
-			(function() {
-				const urlParams = new URLSearchParams(window.location.search);
-				const utmParams = {};
-				
-				// UTM Parameter sammeln
-				['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(param => {
-					if (urlParams.has(param)) {
-						utmParams[param] = urlParams.get(param);
-					}
-				});
-				
-				// An Plausible senden wenn Parameter vorhanden
-				if (Object.keys(utmParams).length > 0) {
-					console.log('🔍 UTM Parameters found:', utmParams);
-					
-					// Warten bis Plausible geladen ist
-					const checkPlausible = () => {
-						if (window.plausible) {
-							console.log('✅ Plausible found, sending UTM data...');
-							
-							// Jeden UTM-Parameter einzeln tracken
-							Object.keys(utmParams).forEach(key => {
-								window.plausible('UTM ' + key, {
-									props: { value: utmParams[key] }
-								});
-								console.log('📊 Tracked UTM ' + key + ':', utmParams[key]);
-							});
-							
-							// Auch als Gesamtevent
-							window.plausible('UTM Parameters', {
-								props: utmParams
-							});
-							console.log('🎉 All UTM Parameters tracked:', utmParams);
-						} else {
-							console.log('⏳ Waiting for Plausible...');
-							setTimeout(checkPlausible, 100);
-						}
-					};
-					checkPlausible();
-				} else {
-					console.log('❌ No UTM parameters found');
-				}
-			})();
-		</script>
 	</head>
 	<body class="bg-dark">
 		<div id="app" class="text-snow flex flex-col overflow-hidden"></div>
