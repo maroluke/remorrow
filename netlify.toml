@@ -10,12 +10,12 @@
     status = 200
 [[redirects]]
     from = "/abend-fuer-die-moore-tickets"
-    to = "/tickets-redirect.html"
+    to = "/.netlify/functions/utm-track"
     status = 200
     force = true
 [[redirects]]
     from = "/abend-fuer-die-moore-wwf"
-    to = "/wwf-redirect.html"
+    to = "/.netlify/functions/wwf-track"
     status = 200
     force = true
 [[redirects]]
