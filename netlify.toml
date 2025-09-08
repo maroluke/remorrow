@@ -1,17 +1,13 @@
 [build]
     functions = "functions"
     base = "/"
-    command = "npm run build"
-[build.environment]
-    NODE_VERSION = "22.12.0"
-    GO_VERSION = "1.19.4"
 [[redirects]]
     from = "/api/*"
     to = "/.netlify/functions/:splat"
     status = 200
 [[redirects]]
     from = "/abend-fuer-die-moore-tickets"
-    to = "https://cinema.kinokoni.ch/order/showtimes/50-685/seats"
+    to = "https://example-frame-tickets.com"
     status = 302
     force = true
 [[redirects]]
@@ -23,3 +19,5 @@
     from = "/*"
     to = "/"
     status = 200
+[build.environment]
+  GO_VERSION = "1.19.4"
