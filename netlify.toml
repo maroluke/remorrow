@@ -2,6 +2,8 @@
     functions = "functions"
     base = "/"
     command = "pnpm build"
+[build.environment]
+    NODE_VERSION = "22.12.0"
 [[redirects]]
     from = "/api/*"
     to = "/.netlify/functions/:splat"
