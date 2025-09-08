@@ -255,8 +255,18 @@ import IconChecked2 from "@components/icons/IconChecked2.vue";
 
 						<template #paragraph>
 							<ul class="list">
-								<li>
+								<li class="!bg-green-400">
 									<span> Next-Level mit Scoring V3 </span>
+									<div>
+										<IconChecked2
+											class="fill-snow w-6 self-start"
+										/>
+									</div>
+								</li>
+								<li>
+									<span>
+										1. Community-Event durchgeführt
+									</span>
 									<div>
 										<img
 											class="w-6"

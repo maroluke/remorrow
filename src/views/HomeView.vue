@@ -153,7 +153,8 @@ export default defineComponent({
 						<RouterLink
 							class="glossar-link"
 							:to="{
-								path: '/matchmake',
+								path: '/unser-weg/',
+								hash: '#roadmap',
 							}"
 							>Roadmap</RouterLink
 						>

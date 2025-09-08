@@ -75,6 +75,9 @@ export default {
 						<NavigationItem :to="'/matchmake'"
 							>match:make</NavigationItem
 						>
+						<NavigationItem :to="'/abend-fuer-die-moore'"
+							>Abend für die Moore</NavigationItem
+						>
 						<NavigationItem :to="'/sei-dabei'"
 							>Sei ein Teil davon</NavigationItem
 						>

@@ -15,6 +15,7 @@ import SubmissionFail from "@components/SubmissionFail.vue";
 import MatchMakeSurvey from "../views/MatchMakeSurvey.vue";
 import CommunityView from "../views/CommunityView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
+import MooreventView from "../views/MoorEvent.vue";
 
 const ExternalRedirect = defineComponent({
 	setup() {
@@ -41,6 +42,11 @@ const routes = [
 		path: "/matchmake",
 		name: "match:make",
 		component: EventsView,
+	},
+	{
+		path: "/abend-fuer-die-moore",
+		name: "Moorevent",
+		component: MooreventView,
 	},
 	{
 		path: "/sei-dabei",
