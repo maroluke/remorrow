@@ -1,7 +1,7 @@
 [build]
     functions = "functions"
     base = "/"
-    command = "pnpm build"
+    command = "npm install -g pnpm@10.12.3 && pnpm build"
 [build.environment]
     NODE_VERSION = "22.12.0"
     GO_VERSION = "1.19.4"
