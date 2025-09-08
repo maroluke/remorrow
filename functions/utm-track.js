@@ -1,5 +1,3 @@
-const { IncomingWebhook } = require('@slack/webhook');
-
 exports.handler = async (event, context) => {
   // CORS Headers
   const headers = {
