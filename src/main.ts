@@ -20,13 +20,19 @@ function trackUTMParameters() {
 	
 	// An Plausible senden
 	if (Object.keys(utmParams).length > 0) {
-		// @ts-ignore
-		if (window.plausible) {
+		// Warten bis Plausible geladen ist
+		const checkPlausible = () => {
 			// @ts-ignore
-			window.plausible('UTM Parameters', {
-				props: utmParams
-			});
-		}
+			if (window.plausible) {
+				// @ts-ignore
+				window.plausible('UTM Parameters', {
+					props: utmParams
+				});
+			} else {
+				setTimeout(checkPlausible, 100);
+			}
+		};
+		checkPlausible();
 	}
 }
 
