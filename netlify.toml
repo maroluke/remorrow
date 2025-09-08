@@ -8,12 +8,7 @@
     status = 200
 [[redirects]]
     from = "/abend-fuer-die-moore-tickets"
-    to = "https://example-frame-tickets.com"
-    status = 302
-    force = true
-[[redirects]]
-    from = "/abend-fuer-die-moore-wwf"
-    to = "https://example-wwf-event.com"
+    to = "https://cinema.kinokoni.ch/order/showtimes/50-685/seats"
     status = 302
     force = true
 [[redirects]]
