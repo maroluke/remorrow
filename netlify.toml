@@ -1,6 +1,7 @@
 [build]
     functions = "functions"
     base = "/"
+    command = "pnpm build"
 [[redirects]]
     from = "/api/*"
     to = "/.netlify/functions/:splat"
