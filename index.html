@@ -79,18 +79,34 @@
 				
 				// An Plausible senden wenn Parameter vorhanden
 				if (Object.keys(utmParams).length > 0) {
+					console.log('🔍 UTM Parameters found:', utmParams);
+					
 					// Warten bis Plausible geladen ist
 					const checkPlausible = () => {
 						if (window.plausible) {
+							console.log('✅ Plausible found, sending UTM data...');
+							
+							// Jeden UTM-Parameter einzeln tracken
+							Object.keys(utmParams).forEach(key => {
+								window.plausible('UTM ' + key, {
+									props: { value: utmParams[key] }
+								});
+								console.log('📊 Tracked UTM ' + key + ':', utmParams[key]);
+							});
+							
+							// Auch als Gesamtevent
 							window.plausible('UTM Parameters', {
 								props: utmParams
 							});
-							console.log('UTM Parameters tracked:', utmParams);
+							console.log('🎉 All UTM Parameters tracked:', utmParams);
 						} else {
+							console.log('⏳ Waiting for Plausible...');
 							setTimeout(checkPlausible, 100);
 						}
 					};
 					checkPlausible();
+				} else {
+					console.log('❌ No UTM parameters found');
 				}
 			})();
 		</script>
