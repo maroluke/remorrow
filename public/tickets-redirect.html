@@ -35,8 +35,6 @@
 </head>
 <body>
     <div class="container">
-        <h1>Halt dich fest…</h1>
-        <p>wir leiten dich weiter!</p>
         <div class="spinner"></div>
     </div>
     <script>
@@ -55,31 +53,26 @@
         if (Object.keys(utmParams).length > 0) {
             console.log('UTM Parameters gefunden:', utmParams);
             
-            // Warten bis Plausible geladen ist
-            window.addEventListener('load', () => {
-                // Custom Event für UTM Parameters
-                if (window.plausible) {
-                    window.plausible('UTM Parameters', {
-                        props: utmParams
-                    });
-                    console.log('UTM Parameters an Plausible gesendet');
-                }
-            });
+            // Sofort an Plausible senden (falls verfügbar)
+            if (window.plausible) {
+                window.plausible('UTM Parameters', {
+                    props: utmParams
+                });
+                console.log('UTM Parameters an Plausible gesendet');
+            }
         }
         
-        // Nach 2 Sekunden weiterleiten
-        setTimeout(() => {
-            const targetUrl = 'https://cinema.kinokoni.ch/order/showtimes/50-685/seats';
-            const redirectUrl = new URL(targetUrl);
-            
-            // UTM Parameter an Ziel-URL anhängen
-            Object.keys(utmParams).forEach(key => {
-                redirectUrl.searchParams.set(key, utmParams[key]);
-            });
-            
-            console.log('Weiterleitung zu:', redirectUrl.toString());
-            window.location.href = redirectUrl.toString();
-        }, 2000);
+        // Sofort weiterleiten
+        const targetUrl = 'https://cinema.kinokoni.ch/order/showtimes/50-685/seats';
+        const redirectUrl = new URL(targetUrl);
+        
+        // UTM Parameter an Ziel-URL anhängen
+        Object.keys(utmParams).forEach(key => {
+            redirectUrl.searchParams.set(key, utmParams[key]);
+        });
+        
+        console.log('Weiterleitung zu:', redirectUrl.toString());
+        window.location.href = redirectUrl.toString();
     </script>
 </body>
 </html>
