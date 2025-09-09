@@ -15,27 +15,18 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 onMounted(() => {
-  // UTM Parameter sammeln
-  const urlParams = new URLSearchParams(window.location.search)
-  const utmParams = {}
-  
-  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(param => {
-    if (urlParams.has(param)) {
-      utmParams[param] = urlParams.get(param)
-    }
-  })
-  
-  console.log('🔍 UTM Parameters found:', utmParams)
-  
-  // Plausible sollte automatisch die UTM-Parameter erfassen
+  // Plausible erfasst UTM-Parameter automatisch
   // Kurz warten, dann weiterleiten
   setTimeout(() => {
     const targetUrl = 'https://cinema.kinokoni.ch/order/showtimes/50-685/seats'
     const redirectUrl = new URL(targetUrl)
     
-    // UTM Parameter an Ziel-URL anhängen
-    Object.keys(utmParams).forEach(key => {
-      redirectUrl.searchParams.set(key, utmParams[key])
+    // UTM Parameter von der aktuellen URL an Ziel-URL anhängen
+    const currentParams = new URLSearchParams(window.location.search)
+    currentParams.forEach((value, key) => {
+      if (key.startsWith('utm_')) {
+        redirectUrl.searchParams.set(key, value)
+      }
     })
     
     console.log('🚀 Redirecting to:', redirectUrl.toString())
