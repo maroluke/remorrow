@@ -49,19 +49,6 @@
             }
         });
         
-        // UTM Parameter als Custom Event an Plausible senden
-        if (Object.keys(utmParams).length > 0) {
-            console.log('WWF UTM Parameters gefunden:', utmParams);
-            
-            // Sofort an Plausible senden (falls verfügbar)
-            if (window.plausible) {
-                window.plausible('WWF UTM Parameters', {
-                    props: utmParams
-                });
-                console.log('WWF UTM Parameters an Plausible gesendet');
-            }
-        }
-        
         // Sofort weiterleiten
         const targetUrl = 'https://example-wwf-event.com';
         const redirectUrl = new URL(targetUrl);

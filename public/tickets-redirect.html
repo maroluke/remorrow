@@ -49,19 +49,6 @@
             }
         });
         
-        // UTM Parameter als Custom Event an Plausible senden
-        if (Object.keys(utmParams).length > 0) {
-            console.log('UTM Parameters gefunden:', utmParams);
-            
-            // Sofort an Plausible senden (falls verfügbar)
-            if (window.plausible) {
-                window.plausible('UTM Parameters', {
-                    props: utmParams
-                });
-                console.log('UTM Parameters an Plausible gesendet');
-            }
-        }
-        
         // Sofort weiterleiten
         const targetUrl = 'https://cinema.kinokoni.ch/order/showtimes/50-685/seats';
         const redirectUrl = new URL(targetUrl);
