@@ -54,6 +54,8 @@
 </head>
 <body>
     <div class="container">
+        <h1>Halt dich fest…</h1>
+        <p>wir leiten dich weiter!</p>
         <div class="spinner"></div>
     </div>
 
@@ -68,11 +70,8 @@
         });
         
         // UTM Parameter werden automatisch von Plausible erfasst
-        // Dann weiterleiten nach 3 Sekunden (mehr Zeit für Debug)
-        setTimeout(() => {
-            console.log('🚀 Redirecting to tickets...');
-            window.location.href = 'https://cinema.kinokoni.ch/order/showtimes/50-685/seats' + window.location.search;
-        }, 3000);
+        // Dann weiterleiten
+        window.location.href = 'https://cinema.kinokoni.ch/order/showtimes/50-685/seats' + window.location.search;
     </script>
 </body>
 </html>
