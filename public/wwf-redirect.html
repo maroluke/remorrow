@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weiterleitung...</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            background-color: #1a202c; 
+            color: #e2e8f0; 
+        }
+        .container { text-align: center; }
+        .spinner { 
+            border: 4px solid rgba(255,255,255,.3); 
+            border-radius: 50%; 
+            border-top: 4px solid #e2e8f0; 
+            width: 40px; 
+            height: 40px; 
+            animation: spin 1s linear infinite; 
+            margin: 20px auto; 
+        }
+        @keyframes spin { 
+            0% { transform: rotate(0deg); } 
+            100% { transform: rotate(360deg); } 
+        }
+    </style>
+    <!-- Plausible Analytics -->
+    <script defer data-domain="remorrow.world" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Halt dich fest…</h1>
+        <p>wir leiten dich weiter!</p>
+        <div class="spinner"></div>
+    </div>
+    <script>
+        // UTM Parameter erfassen und an Plausible senden
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmParams = {};
+        
+        // Standard UTM Parameter sammeln
+        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'].forEach(param => {
+            if (urlParams.has(param)) {
+                utmParams[param] = urlParams.get(param);
+            }
+        });
+        
+        // UTM Parameter als Custom Event an Plausible senden
+        if (Object.keys(utmParams).length > 0) {
+            console.log('WWF UTM Parameters gefunden:', utmParams);
+            
+            // Warten bis Plausible geladen ist
+            window.addEventListener('load', () => {
+                if (window.plausible) {
+                    window.plausible('WWF UTM Parameters', {
+                        props: utmParams
+                    });
+                    console.log('WWF UTM Parameters an Plausible gesendet');
+                }
+            });
+        }
+        
+        // Nach 2 Sekunden weiterleiten
+        setTimeout(() => {
+            const targetUrl = 'https://example-wwf-event.com';
+            const redirectUrl = new URL(targetUrl);
+            
+            // UTM Parameter an Ziel-URL anhängen
+            Object.keys(utmParams).forEach(key => {
+                redirectUrl.searchParams.set(key, utmParams[key]);
+            });
+            
+            console.log('Weiterleitung zu:', redirectUrl.toString());
+            window.location.href = redirectUrl.toString();
+        }, 2000);
+    </script>
+</body>
+</html>
