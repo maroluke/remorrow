@@ -16,6 +16,8 @@ import MatchMakeSurvey from "../views/MatchMakeSurvey.vue";
 import CommunityView from "../views/CommunityView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
 import MooreventView from "../views/MoorEvent.vue";
+import TicketsRedirect from "../views/TicketsRedirect.vue";
+import WWFRedirect from "../views/WWFRedirect.vue";
 
 const ExternalRedirect = defineComponent({
 	setup() {
@@ -129,6 +131,16 @@ const routes = [
 		path: "/matchmake-linkedin",
 		component: ExternalRedirect,
 		meta: { externalURL: "https://linkedin.com/company/remorrow/" },
+	},
+	{
+		path: "/abend-fuer-die-moore-tickets",
+		name: "TicketsRedirect",
+		component: TicketsRedirect,
+	},
+	{
+		path: "/abend-fuer-die-moore-wwf",
+		name: "WWFRedirect",
+		component: WWFRedirect,
 	},
 ];
 

@@ -9,16 +9,6 @@
     to = "/.netlify/functions/:splat"
     status = 200
 [[redirects]]
-    from = "/abend-fuer-die-moore-tickets"
-    to = "/tickets-redirect.html"
-    status = 200
-    force = true
-[[redirects]]
-    from = "/abend-fuer-die-moore-wwf"
-    to = "/wwf-redirect.html"
-    status = 200
-    force = true
-[[redirects]]
     from = "/*"
     to = "/"
     status = 200
