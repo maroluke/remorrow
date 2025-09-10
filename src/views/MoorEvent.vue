@@ -124,6 +124,13 @@ import SquircleButton from "@components/SquircleButton.vue";
 				<template #title>Facts zum Abend</template>
 
 				<template #paragraph>
+					<video
+						class="object-cover mb-10"
+						controls
+						src="/videos/MTM_Trailer_2025_DE_sub.mp4"
+						poster="/src/assets/media/mtm-video-poster.jpeg"
+					></video>
+
 					<div class="flex gap-10">
 						<div>
 							<p>
