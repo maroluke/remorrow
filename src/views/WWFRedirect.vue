@@ -18,7 +18,7 @@ onMounted(() => {
   // Plausible erfasst UTM-Parameter automatisch
   // Kurz warten, dann weiterleiten
   setTimeout(() => {
-    const targetUrl = 'https://remorrow.world/abend-fuer-die-moore-wwf'
+    const targetUrl = 'https://events.wwf.ch/de/3X3HOJw7/mission-to-marsh-ein-abend-fur-die-moore-4a6vVj1FZh/overview'
     const redirectUrl = new URL(targetUrl)
     
     // UTM Parameter von der aktuellen URL an Ziel-URL anhängen
