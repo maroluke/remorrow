@@ -18,7 +18,7 @@ onMounted(() => {
   // Plausible erfasst UTM-Parameter automatisch
   // Kurz warten, dann weiterleiten
   setTimeout(() => {
-    const targetUrl = 'https://example-wwf-event.com'
+    const targetUrl = 'https://remorrow.world/abend-fuer-die-moore-wwf'
     const redirectUrl = new URL(targetUrl)
     
     // UTM Parameter von der aktuellen URL an Ziel-URL anhängen
