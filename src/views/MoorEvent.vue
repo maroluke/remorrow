@@ -55,7 +55,7 @@ import SquircleButton from "@components/SquircleButton.vue";
 
 									<p class="m-0">
 										der weltweiten Kohlenstoffspeicher
-										befinden sich in Moore.
+										befinden sich in Mooren
 									</p>
 								</div>
 
@@ -136,7 +136,7 @@ import SquircleButton from "@components/SquircleButton.vue";
 							<p>
 								<span class="text-2xl font-bold">Wann?</span
 								><br />
-								Am 4. November 2025
+								Am 4. November 2025, ab 18:30
 							</p>
 
 							<p>
