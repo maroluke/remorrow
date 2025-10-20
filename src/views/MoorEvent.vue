@@ -17,8 +17,15 @@ import SquircleButton from "@components/SquircleButton.vue";
 					href="https://www.wwf.ch"
 					target="_blank"
 					>WWF Schweiz</a
-				>, einen ganz besonderen Abend und bringen das Thema Moorschutz
-				dorthin, wo es hingehört: auf die grosse Leinwand.
+				>, einen ganz besonderen Abend, der auch Teil des
+				<a
+					class="glossar-link"
+					href="https://www.films-for-future.org/"
+					target="_blank"
+					>Films for Future Festivals</a
+				>
+				ist, und bringen das Thema Moorschutz dorthin, wo es hingehört:
+				auf die grosse Leinwand.
 			</template>
 		</JumboHeader>
 
